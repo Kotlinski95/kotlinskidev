@@ -17,3 +17,7 @@
 .text-typed::placeholder{
     color: var(--light-blue);
 }
+
+.text-typed:hover{
+    cursor: default;
+}

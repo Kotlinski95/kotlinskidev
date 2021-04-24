@@ -13,7 +13,7 @@ const TypedText = () => {
         backSpeed={50}
         attr="placeholder"
         loop >
-        <input type="text" className="text-typed"/>
+        <input type="text" className="text-typed" disabled/>
       </Typed>
     </div>
   );

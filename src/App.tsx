@@ -1,5 +1,3 @@
-import React from 'react';
-import logo from './assets/logo.svg';
 import Home from '../src/pages/home'
 import Nav from '../src/components/nav'
 import About from '../src/pages//about'
