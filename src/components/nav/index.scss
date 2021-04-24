@@ -7,9 +7,10 @@
   padding: 5px 20px;
   box-sizing: border-box;
   position: relative;
-  min-height: 80px;
+  min-height: 90px;
   background-color: var(--light-background);
-  color: var(--dark-beige);
+  color: var(--dark---light-blue);
+  font-size: 25px;
   .nav-left,
   .nav-right {
     width: 50%;
@@ -17,7 +18,7 @@
       list-style: none;
       padding: 0;
       li {
-        color: var(--dark-beige);
+        color: var(--light-blue);
         display: inline-block;
         padding: 0 10px;
         cursor: pointer;
@@ -40,13 +41,14 @@
   .nav-center {
     width: 40px;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 0;
     .nav-logo {
-      width: 50px;
+      width: 60px;
       height: auto;
       position: absolute;
       left: calc(50vw - 25px);
+      border-radius: 10px;
     }
   }
 }
@@ -68,31 +70,25 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   right: 36px;
-  top: 13px;
+  top: 25px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: var(--dark-background);
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
+  background: var(--dark-background);
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: var(--dark-beige);
+  background: var(--light-blue);
 }
 
 /*
@@ -103,11 +99,15 @@
   position: fixed;
   height: 100%;
   top: 0;
+  @media (max-width: 426px){
+    width: 100vw !important;
+  }
+
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: var(--light-beige);
+  background: var(--light-background);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -119,18 +119,22 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: var(--dark-beige);
+  color: var(--light-blue);
   padding: 0.8em;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: var(--dark-beige);
+  color: var(--light-blue);
   padding-top: 8px;
 }
 
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
 }
