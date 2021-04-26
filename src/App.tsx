@@ -12,7 +12,8 @@ import {
 function App() {
   return (
     <div className="App">
-       <Nav></Nav>
+      <h1>Welcome</h1>
+       <Nav />
         <div className="main">
           <Switch>
             <Route exact path="/">

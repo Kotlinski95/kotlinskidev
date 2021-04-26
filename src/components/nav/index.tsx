@@ -57,6 +57,7 @@ const Nav = () => {
             <Link to="/stack"><li className="line-item">Stack</li></Link>
           </ul>
         </div>
+
         <div className="nav-center line-item">
           <Link to="/">
             <img src={logo} alt="Logo" className="nav-logo"></img>
@@ -78,6 +79,7 @@ const Nav = () => {
             <Link to="/login"><li className="line-item">Sign in</li></Link>
           </Menu>
         </div>
+
       </div>
     </div>
   );
