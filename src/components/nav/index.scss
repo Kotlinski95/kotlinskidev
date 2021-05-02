@@ -11,31 +11,55 @@
   background-color: var(--light-background);
   color: var(--dark---light-blue);
   font-size: 25px;
+
   .nav-left,
   .nav-right {
     width: 50%;
+
     ul {
       list-style: none;
       padding: 0;
+
       li {
         color: var(--light-blue);
         display: inline-block;
         padding: 0 10px;
         cursor: pointer;
       }
+
       li:hover {
         color: var(--black);
       }
     }
-    @media (max-width: 768px){
-        display: none;
-    }
   }
+
   .nav-left {
     text-align: left;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
   .nav-right {
     text-align: right;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .layout-icon{
+        height: 30px;
+        width: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @media (max-width: 468px) {
+      width: 100%;
+    }
+
   }
 
   .nav-center {
@@ -43,6 +67,10 @@
     position: absolute;
     top: 10px;
     left: 0;
+    @media (max-width: 468px) {
+      display: none;
+    }
+
     .nav-logo {
       width: 60px;
       height: auto;
@@ -51,20 +79,48 @@
       border-radius: 10px;
     }
   }
+
+  .nav-center-mobile {
+    width: 100%;
+    top: 10px;
+    left: 0;
+
+    .nav-logo {
+      width: 60px;
+      height: auto;
+      position: absolute;
+      top: 20px;
+      left: calc(50% - 25px);
+      border-radius: 10px;
+    }
+  }
 }
-.nav-desktop{
-    @media (max-width: 768px){
-        display: none;
-    }
+
+.nav-desktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
-.nav-mobile{
-    @media (min-width: 769px){
-        display: none;
+
+.nav-mobile {
+  width: 100vw;
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  .line-item {
+    display: block;
+    margin-bottom: 5px;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .layout-icon{
+      height: 30px;
+      width: 30px;
     }
-    .line-item{
-      display: block;
-      margin-bottom: 5px;
-    }
+  }
 }
 
 /* Position and sizing of burger button */
@@ -99,7 +155,8 @@
   position: fixed;
   height: 100%;
   top: 0;
-  @media (max-width: 426px){
+
+  @media (max-width: 426px) {
     width: 100vw !important;
   }
 
@@ -110,6 +167,7 @@
   background: var(--light-background);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  position: relative;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -137,4 +195,46 @@
   height: 100vh !important;
   top: 0;
   left: 0;
+}
+
+.flag-select {
+  color: var(--light-blue);
+
+  .flag-select__option__label {
+    color: var(--light-blue);
+    font-size: 25px;
+    font: 700 25px 'Cormorant Garamond', serif;
+  }
+
+  .flag-select__options {
+    background: var(--light-background);
+  }
+
+  .flag-select__option__label:hover {
+    color: var(--dark-background);
+  }
+
+  .flag-select__option.has-label:hover {
+    background: transparent;
+  }
+
+  .flag-select__option {
+    padding: 0 8px 3px 8px;
+    margin-top: 0px;
+    max-height: 40px;
+  }
+
+  .flag-icon {
+    transition: all 0.5s ease;
+    width: auto;
+    max-height: 40px;
+  }
+
+  .flag-select__btn {
+    max-height: 40px;
+  }
+
+  .flag-select__btn:before {
+    max-height: 40px;
+  }
 }

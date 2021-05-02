@@ -1,5 +1,6 @@
 const initialState = {
-    page: 'Homepage'
+    page: 'Homepage',
+    language: "English"
   };
 
 export default function state(state = initialState, action:any){
