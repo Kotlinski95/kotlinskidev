@@ -4,14 +4,16 @@ import logo from '../../assets/adrian_kotlinski.png';
 import moon from '../../assets/moon.png'
 import sun from '../../assets/sun.png'
 import { slide as Menu } from 'react-burger-menu';
-import { useState, useEffect } from 'react'
-import { language, iconEN, iconPL } from '../../language'
+import { useState } from 'react'
+import { iconEN, iconPL } from '../../language'
 import ReactLanguageSelect from 'react-languages-select';
 import Switch from "react-switch";
 //import css module
 import 'react-languages-select/css/react-languages-select.css';
 //OR import sass module
 import 'react-languages-select/scss/react-languages-select.scss';
+import { useDispatch } from 'react-redux';
+import { setTheme, setLanguage } from '../../reducers/state';
 
 const styles = {
   bmCrossButton: {
@@ -28,6 +30,7 @@ const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const [checked, setChecked] = useState(false);
+  const dispatch = useDispatch();
 
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
@@ -64,7 +67,7 @@ const Nav = () => {
       switch (e) {
         case 'pt':
           if (icons != null) {
-            console.log("POLISH!", languageIcon, "icons: ", icons);
+            dispatch(setLanguage("Polski"));
             languageIcon.innerHTML = '';
             const img = document.createElement('img');
             img.src = iconPL;
@@ -75,6 +78,7 @@ const Nav = () => {
           break;
         case 'en':
           if (icons != null) {
+            dispatch(setLanguage("English"));
             languageIcon.innerHTML = '';
             const img = document.createElement('img');
             img.src = iconEN;
@@ -89,8 +93,17 @@ const Nav = () => {
   }
 
   function handleChange() {
-    setChecked(!checked);
+    setTimeout(() => {
+      setChecked(!checked);
+      if (checked) {
+        dispatch(setTheme("Dark"));
+      }
+      else {
+        dispatch(setTheme("Light"));
+      }
+    }, 0);
   }
+
   window.onload = function () {
     const icons: any = document.getElementsByClassName('flag-select__option__label');
     const languageIcon = icons[0];
@@ -99,6 +112,7 @@ const Nav = () => {
         case 'Polski':
           if (icons != null) {
             languageIcon.innerHTML = '';
+            dispatch(setLanguage("Polski"));
             const img = document.createElement('img');
             img.src = iconPL;
             img.alt = 'Icon not found';
@@ -109,6 +123,7 @@ const Nav = () => {
         case 'English':
           if (icons != null) {
             languageIcon.innerHTML = '';
+            dispatch(setLanguage("English"));
             const img = document.createElement('img');
             img.src = iconEN;
             img.alt = 'Icon not found';
@@ -120,6 +135,7 @@ const Nav = () => {
       //ref.userLanguage.updateSelected("pt")
     }, 0);
   };
+
   return (
     <div>
       <div className="flex-wrapper">

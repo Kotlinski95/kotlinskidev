@@ -1,0 +1,13 @@
+{
+    "general": {
+        "website": "kotlinskidev.pl"
+    },
+    "header": {
+        "about": "O mnie",
+        "projects": "Projekty",
+        "stack": "Technologie",
+        "contact": "Kontakt",
+        "login": "Logowanie",
+        "home" : "Strona główna"
+    }
+}
