@@ -31,11 +31,13 @@ const styles = {
 const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
-
-  const [checked, setChecked] = useState(getCookie("theme") === "Dark"? false: true);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language','theme']);
-
+  const [checked, setChecked] = useState(getCookie("theme") === "Dark"? false: true);
+  if (!getCookie("theme")){
+    setCookie('theme', "Dark", { path: '/'});
+    setChecked(false);
+  }
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
   }
