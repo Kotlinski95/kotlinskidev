@@ -1,0 +1,45 @@
+import {getCookie} from '../services'
+export type ThemeType = typeof lightTheme; // This is the type definition for my theme object.
+
+export const lightTheme = {
+  body: '#E2E2E1',
+  text: '#363537',
+  toggleBorder: '#FFF',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
+  nav: {
+    linkColor: '#878B8C',
+    lightBackground: '#9c98cd',
+    darkBackground: '#f1f1f2',
+    menuItemColor: '#33234d',
+    menuItemColorHover: '#000000',
+  },
+  typedText: {
+    color: '#33234d',
+  }
+}
+
+export const darkTheme = {
+  body: '#363537',
+  text: '#FAFAFA',
+  toggleBorder: '#6B8096',
+  gradient: 'linear-gradient(#091236, #1E215D)',
+  nav: {
+    linkColor: '#878B8C',
+    lightBackground: '#3d3b52',
+    darkBackground: '#23222e',
+    menuItemColor: '#D0E2F2',
+    menuItemColorHover: '#000000',
+  },
+  typedText: {
+    color: '#D0E2F2',
+  }
+}
+//onst [cookies, setCookie] = useCookies(['theme']);
+let theme;
+if (document.cookie){
+  theme = (getCookie("theme") === "Light") ? lightTheme : darkTheme;
+}
+else{
+  theme = darkTheme; // set the light theme as the default.
+}
+export default theme;

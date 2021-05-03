@@ -1,0 +1,18 @@
+{
+    "general": {
+        "website": "kotlinskidev.pl"
+    },
+    "header": {
+        "about": "About me",
+        "projects": "Projects",
+        "stack": "Stack",
+        "contact": "Contact",
+        "login": "Sign In",
+        "home" : "Home"
+    },
+    "typedText": {
+        "text1": "Welcome on my webstie!",
+        "text2": "This page is still in working...",
+        "text3": "Be patient, sonn it will be ready! :)"
+    }
+}
