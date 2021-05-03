@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {getCookie} from '../../services'
 import type { RootState } from '../../store'
 
 // Define a type for the slice state
@@ -11,8 +12,8 @@ interface pageState {
 // Define the initial state using that type
 const initialState: pageState = {
   page: "Home",
-  theme: "Dark",
-  language: "English"
+  theme: getCookie("theme") ? getCookie("theme") : "Dark",
+  language: getCookie("language") ? getCookie("language") : "English"
 } as pageState
 
 export const counterSlice = createSlice({

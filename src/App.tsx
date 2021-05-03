@@ -9,7 +9,6 @@ import {
   Route,
 } from 'react-router-dom';
 import { Language } from './language'
-import theme from './theme';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, ThemeType } from './theme/index';
 import { GlobalStyles } from './theme/global';

@@ -14,6 +14,8 @@ import 'react-languages-select/css/react-languages-select.css';
 import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
 import { setTheme, setLanguage } from '../../reducers/state';
+import { useCookies } from 'react-cookie';
+import {getCookie} from '../../services'
 
 const styles = {
   bmCrossButton: {
@@ -29,8 +31,10 @@ const styles = {
 const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
-  const [checked, setChecked] = useState(false);
+
+  const [checked, setChecked] = useState(getCookie("theme") === "Dark"? false: true);
   const dispatch = useDispatch();
+  const [cookies, setCookie] = useCookies(['language','theme']);
 
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
@@ -60,7 +64,6 @@ const Nav = () => {
   }
 
   function onSelectLanguage(e) {
-    console.log("event: ", e)
     const icons: any = document.getElementsByClassName('flag-select__option__label');
     const languageIcon = icons[0];
     setTimeout(() => {
@@ -68,6 +71,7 @@ const Nav = () => {
         case 'pt':
           if (icons != null) {
             dispatch(setLanguage("Polski"));
+            setCookie('language', "Polski", { path: '/'});
             languageIcon.innerHTML = '';
             const img = document.createElement('img');
             img.src = iconPL;
@@ -79,6 +83,7 @@ const Nav = () => {
         case 'en':
           if (icons != null) {
             dispatch(setLanguage("English"));
+            setCookie('language', "English", { path: '/'});
             languageIcon.innerHTML = '';
             const img = document.createElement('img');
             img.src = iconEN;
@@ -97,9 +102,11 @@ const Nav = () => {
       setChecked(!checked);
       if (checked) {
         dispatch(setTheme("Dark"));
+        setCookie('theme', "Dark", { path: '/'});
       }
       else {
         dispatch(setTheme("Light"));
+        setCookie('theme', "Light", { path: '/'});
       }
     }, 0);
   }
@@ -107,33 +114,63 @@ const Nav = () => {
   window.onload = function () {
     const icons: any = document.getElementsByClassName('flag-select__option__label');
     const languageIcon = icons[0];
-    setTimeout(() => {
-      switch (languageIcon.innerHTML) {
-        case 'Polski':
-          if (icons != null) {
-            languageIcon.innerHTML = '';
-            dispatch(setLanguage("Polski"));
-            const img = document.createElement('img');
-            img.src = iconPL;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-        case 'English':
-          if (icons != null) {
-            languageIcon.innerHTML = '';
-            dispatch(setLanguage("English"));
-            const img = document.createElement('img');
-            img.src = iconEN;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-      }
-      //ref.userLanguage.updateSelected("pt")
-    }, 0);
+    if (cookies.language){
+      dispatch(setLanguage(cookies.language));
+      setTimeout(() => {
+        switch (cookies.language) {
+          case 'Polski':
+            if (icons != null) {
+              languageIcon.innerHTML = '';
+              const img = document.createElement('img');
+              img.src = iconPL;
+              img.alt = 'Icon not found';
+              img.classList.add('flag-icon');
+              languageIcon.appendChild(img);
+            }
+            break;
+          case 'English':
+            if (icons != null) {
+              languageIcon.innerHTML = '';
+              const img = document.createElement('img');
+              img.src = iconEN;
+              img.alt = 'Icon not found';
+              img.classList.add('flag-icon');
+              languageIcon.appendChild(img);
+            }
+            break;
+        }
+      }, 0);
+    }
+    else{
+      setTimeout(() => {
+        switch (languageIcon.innerHTML) {
+          case 'Polski':
+            if (icons != null) {
+              languageIcon.innerHTML = '';
+              dispatch(setLanguage("Polski"));
+              setCookie('language', "Polski", { path: '/'});
+              const img = document.createElement('img');
+              img.src = iconPL;
+              img.alt = 'Icon not found';
+              img.classList.add('flag-icon');
+              languageIcon.appendChild(img);
+            }
+            break;
+          case 'English':
+            if (icons != null) {
+              languageIcon.innerHTML = '';
+              dispatch(setLanguage("English"));
+              setCookie('language', "English", { path: '/'});
+              const img = document.createElement('img');
+              img.src = iconEN;
+              img.alt = 'Icon not found';
+              img.classList.add('flag-icon');
+              languageIcon.appendChild(img);
+            }
+            break;
+        }
+      }, 0);
+    }
   };
 
   return (

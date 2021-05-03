@@ -8,8 +8,6 @@
   box-sizing: border-box;
   position: relative;
   min-height: 90px;
-  background-color: var(--light-background);
-  color: var(--dark---light-blue);
   font-size: 25px;
 
   .nav-left,
@@ -21,14 +19,9 @@
       padding: 0;
 
       li {
-        color: var(--light-blue);
         display: inline-block;
         padding: 0 10px;
         cursor: pointer;
-      }
-
-      li:hover {
-        color: var(--black);
       }
     }
   }
@@ -132,21 +125,6 @@
   top: 25px;
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: var(--dark-background);
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: var(--dark-background);
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: var(--light-blue);
-}
-
 /*
   Sidebar wrapper styles
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
@@ -164,7 +142,6 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: var(--light-background);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   position: relative;
@@ -177,14 +154,12 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: var(--light-blue);
   padding: 0.8em;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: var(--light-blue);
   padding-top: 8px;
 }
 
@@ -198,20 +173,9 @@
 }
 
 .flag-select {
-  color: var(--light-blue);
-
   .flag-select__option__label {
-    color: var(--light-blue);
     font-size: 25px;
     font: 700 25px 'Cormorant Garamond', serif;
-  }
-
-  .flag-select__options {
-    background: var(--light-background);
-  }
-
-  .flag-select__option__label:hover {
-    color: var(--dark-background);
   }
 
   .flag-select__option.has-label:hover {

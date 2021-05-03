@@ -6,9 +6,9 @@ const TypedText = () => {
     <div>
       <Typed
         strings={[
-          'Welcome on my webstie!',
-          'This page is still in working...',
-          'Be patient, sonn it will be ready! :)']}
+          `${language.typedText.text1}`,
+          `${language.typedText.text2}`,
+          `${language.typedText.text3}`]}
         typeSpeed={60}
         backSpeed={50}
         attr="placeholder"

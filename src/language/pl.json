@@ -9,5 +9,10 @@
         "contact": "Kontakt",
         "login": "Logowanie",
         "home" : "Strona główna"
+    },
+    "typedText": {
+        "text1": "Witaj na mojej stronie!",
+        "text2": "Trwaja prace nad ta strona...",
+        "text3": "Badz cierpliwy, w krótce bedzie gotowa! :)"
     }
 }
