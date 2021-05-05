@@ -15,7 +15,8 @@ import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
 import { setTheme, setLanguage } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
-import {getCookie} from '../../services'
+import {getCookie} from '../../services';
+import LazyLoad from 'react-lazyload';
 
 const styles = {
   bmCrossButton: {
@@ -31,11 +32,13 @@ const styles = {
 const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
-
-  const [checked, setChecked] = useState(getCookie("theme") === "Dark"? false: true);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language','theme']);
-
+  const [checked, setChecked] = useState(getCookie("theme") === "Dark"? false: true);
+  if (!getCookie("theme")){
+    setCookie('theme', "Dark", { path: '/'});
+    setChecked(false);
+  }
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
   }
@@ -186,7 +189,9 @@ const Nav = () => {
 
         <div className="nav-center line-item">
           <Link to="/">
-            <img src={logo} alt="Logo" className="nav-logo"></img>
+            <LazyLoad height={70}>
+              <img src={logo} alt="Logo" className="nav-logo"></img>
+            </LazyLoad>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
