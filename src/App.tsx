@@ -1,5 +1,6 @@
 import Home from '../src/pages/home'
 import Nav from '../src/components/nav'
+import Footer from '../src/components/footer'
 import About from '../src/pages//about'
 import Contact from '../src/pages//stack'
 import Stack from '../src/pages/stack'
@@ -58,6 +59,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer/>
       </div>
     </ThemeProvider>
   );

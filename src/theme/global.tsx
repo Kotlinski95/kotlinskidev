@@ -37,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
   .bm-burger-bars {
-  background: ${({ theme }) => theme.nav.darkBackground};
+  background: ${({ theme }) => theme.burgermenu};
 }
 
 .bm-burger-bars-hover {
@@ -87,5 +87,21 @@ export const GlobalStyles = createGlobalStyle`
 
   .flag-select__option__label:hover {
     color: ${({ theme }) => theme.nav.darkBackground};
+  }
+  //==========  Navigation section ==================
+  .footer-wrapper{
+    background-color: ${({ theme }) => theme.footer.lightBackground};
+  }
+  .footer-wrapper ul li {
+    color: ${({ theme }) => theme.footer.menuItemColor};
+  }
+  .footer-wrapper ul .line-item:hover {
+    color: ${({ theme }) => theme.nav.menuItemColorHover};
+  }
+  .footer-body .footer-right li a{
+    color: ${({ theme }) => theme.footer.menuItemColor};
+  }
+  .social-icons:hover{
+    color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
   `
