@@ -6,8 +6,9 @@ export const lightTheme = {
   text: '#363537',
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(#39598A, #79D7ED)',
+  burgermenu: "#23222e",
   nav: {
-    linkColor: '#878B8C',
+    linkColor: '#33234d',
     lightBackground: '#9c98cd',
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
@@ -15,7 +16,14 @@ export const lightTheme = {
   },
   typedText: {
     color: '#33234d',
-  }
+  },
+  footer: {
+    linkColor: '#33234d',
+    lightBackground: '#9c98cd',
+    darkBackground: '#f1f1f2',
+    menuItemColor: '#33234d',
+    menuItemColorHover: '#000000',
+  },
 }
 
 export const darkTheme = {
@@ -23,16 +31,24 @@ export const darkTheme = {
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',
+  burgermenu: "#D0E2F2",
   nav: {
-    linkColor: '#878B8C',
+    linkColor: '#D0E2F2',
+    lightBackground: '#3d3b52',
+    darkBackground: '#23222e',
+    menuItemColor: '#D0E2F2' ,
+    menuItemColorHover: '#000000',
+  },
+  typedText: {
+    color: '#D0E2F2',
+  },
+  footer: {
+    linkColor: '#D0E2F2',
     lightBackground: '#3d3b52',
     darkBackground: '#23222e',
     menuItemColor: '#D0E2F2',
     menuItemColorHover: '#000000',
   },
-  typedText: {
-    color: '#D0E2F2',
-  }
 }
 //onst [cookies, setCookie] = useCookies(['theme']);
 let theme;

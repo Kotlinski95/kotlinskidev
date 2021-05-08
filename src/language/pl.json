@@ -14,5 +14,24 @@
         "text1": "Witaj na mojej stronie!",
         "text2": "Trwaja prace nad ta strona...",
         "text3": "Badz cierpliwy, w krótce bedzie gotowa! :)"
+    },
+    "footer":{
+        "cookie_consent": {
+            "first_text" : "Ta strona korzysta z plików cookie, aby zwiększyć komfort użytkowania.",
+            "second_text": "Zaakceptuj politykę plików cookie, aby uzyskać lepsze wrażenia!",
+            "buttonText": "Akceptuję",
+            "declineButtonText": "Odrzucam"
+        },
+        "privacy":{
+            "rights": "@2021 https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
+            "policy": "Polityka prywatności & przetwarzanie danych osobych"
+        },
+        "pages": {
+            "services": "Usługi",
+            "contact": "Kontakt",
+            "web": "Tworzenie aplikacji web i stron www",
+            "shopify": "Tworzenie sklepów e-commerce w platformie shopify",
+            "plc": "Programowanie sterowników przemysłowych (PLC)"
+        }
     }
 }

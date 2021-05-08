@@ -14,5 +14,24 @@
         "text1": "Welcome on my webstie!",
         "text2": "This page is still in working...",
         "text3": "Be patient, sonn it will be ready! :)"
+    },
+    "footer":{
+        "cookie_consent": {
+            "first_text" : "This website uses cookies to enhance the user experience.",
+            "second_text": "Accept cookies policy to get better experience!",
+            "buttonText": "Accept Cookies",
+            "declineButtonText": "I decline"
+        },
+        "privacy":{
+            "rights": "https://kotlinskidev.pl - All right reserved.",
+            "policy": "Privacy policy & processing personal data"
+        },
+        "pages": {
+            "services": "Services",
+            "contact": "Contact",
+            "web": "Web development",
+            "shopify": "Shopify development",
+            "plc": "PLC programming"
+        }
     }
 }
