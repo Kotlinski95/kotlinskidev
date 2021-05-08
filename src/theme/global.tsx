@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.nav.linkColor};
+    color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
   //==========  Navigation section ==================
 
@@ -104,4 +104,12 @@ export const GlobalStyles = createGlobalStyle`
   .social-icons:hover{
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
+  //============ material ui- menu, menu items =======
+  #simple-menu .MuiPaper-root{
+    background-color: ${({ theme }) => theme.footer.lightBackground};
+    color: ${({ theme }) => theme.footer.menuItemColor};
+  }
+  #simple-menu .MuiPaper-root .menuItem:hover{
+    color: ${({ theme }) => theme.nav.menuItemColorHover};
+} 
   `

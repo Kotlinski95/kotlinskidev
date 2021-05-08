@@ -8,7 +8,7 @@ export const lightTheme = {
   gradient: 'linear-gradient(#39598A, #79D7ED)',
   burgermenu: "#23222e",
   nav: {
-    linkColor: '#878B8C',
+    linkColor: '#33234d',
     lightBackground: '#9c98cd',
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
@@ -18,7 +18,7 @@ export const lightTheme = {
     color: '#33234d',
   },
   footer: {
-    linkColor: '#878B8C',
+    linkColor: '#33234d',
     lightBackground: '#9c98cd',
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
@@ -33,17 +33,17 @@ export const darkTheme = {
   gradient: 'linear-gradient(#091236, #1E215D)',
   burgermenu: "#D0E2F2",
   nav: {
-    linkColor: '#878B8C',
+    linkColor: '#D0E2F2',
     lightBackground: '#3d3b52',
     darkBackground: '#23222e',
-    menuItemColor: '#D0E2F2',
+    menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',
   },
   typedText: {
     color: '#D0E2F2',
   },
   footer: {
-    linkColor: '#878B8C',
+    linkColor: '#D0E2F2',
     lightBackground: '#3d3b52',
     darkBackground: '#23222e',
     menuItemColor: '#D0E2F2',

@@ -23,12 +23,15 @@
             "declineButtonText": "I decline"
         },
         "privacy":{
-            "rights": "@2021 https://kotlinskidev.pl - All right reserved.",
+            "rights": "https://kotlinskidev.pl - All right reserved.",
             "policy": "Privacy policy & processing personal data"
         },
         "pages": {
             "services": "Services",
-            "contact": "Contact"
+            "contact": "Contact",
+            "web": "Web development",
+            "shopify": "Shopify development",
+            "plc": "PLC programming"
         }
     }
 }
