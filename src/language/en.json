@@ -8,7 +8,15 @@
         "stack": "Stack",
         "contact": "Contact",
         "login": "Sign In",
-        "home" : "Home"
+        "home" : "Home",
+        "pages": {
+            "carrier_plc": "PLC programmer career",
+            "carrier_front": "Front-end developer career",
+            "courses": "Training, courses",
+            "education": "Education",
+            "software_enginner": "Front-End Development",
+            "automation_enginner": "Automation Engineer"
+        }
     },
     "typedText": {
         "text1": "Welcome on my webstie!",

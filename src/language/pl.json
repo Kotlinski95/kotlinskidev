@@ -8,7 +8,15 @@
         "stack": "Technologie",
         "contact": "Kontakt",
         "login": "Logowanie",
-        "home" : "Strona główna"
+        "home" : "Strona główna",
+        "pages": {
+            "carrier_plc": "Kariera programisty PLC",
+            "carrier_front": "Kariera Front-End Developera",
+            "courses": "Kursy, szkolenia",
+            "education": "Edukacja",
+            "software_enginner": "Front-End Development",
+            "automation_enginner": "Automatyka"
+        }
     },
     "typedText": {
         "text1": "Witaj na mojej stronie!",
@@ -23,7 +31,7 @@
             "declineButtonText": "Odrzucam"
         },
         "privacy":{
-            "rights": "@2021 https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
+            "rights": "https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
             "policy": "Polityka prywatności & przetwarzanie danych osobych"
         },
         "pages": {
