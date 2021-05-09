@@ -212,10 +212,10 @@ const Nav = () => {
               open={Boolean(anchorElAbout)}
               onClose={handleCloseMenuAbout}
             >
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/about/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/about/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/about/courses">{language.header.pages.courses}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/about/education">{language.header.pages.education}</Link></MenuItem>
+              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
+              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
+              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
+              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
             </Menus>
             <Link to="/projects"><li className="line-item">{language.header.projects}</li></Link>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
