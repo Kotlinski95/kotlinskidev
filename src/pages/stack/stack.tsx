@@ -1,13 +1,16 @@
-import TypedText from '../components/typedText'
-import {setPage} from '../reducers/state'
+import TypedText from '../../components/typedText'
+import {setPage} from '../../reducers/state'
 import {useDispatch } from 'react-redux'
-const Stack = () => {
+import Breadcrumbs from '../../components/breadcrumbs'
+
+const StackPage = () => {
   const dispatch = useDispatch();
   dispatch(setPage("Stack"));
   return(
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%'}}>
+      <Breadcrumbs />
       <TypedText />
     </div>
   );
 };
-export default Stack;
+export default StackPage;

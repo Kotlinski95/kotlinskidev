@@ -2,7 +2,8 @@
 import TypedText from '../components/typedText'
 import {setPage} from '../reducers/state'
 import {useDispatch } from 'react-redux'
-const Home = () => {
+
+const HomePage = () => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
   return(
@@ -11,4 +12,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default HomePage;

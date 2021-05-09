@@ -33,17 +33,21 @@ html {
     text-decoration: none;
     color: var(--dark-beige);
   }
-  
+
   p a {
     font-family: 'Proza Libre', sans-serif;
-    border-bottom: 2px solid var(--dark-grey);
   }
 
   ul li {
     font-family: 'Cormorant Garamond', serif;
   }
-  
+
   p {
     line-height: 2;
     font-size: 1.6rem;
+  }
+
+  p.small {
+    line-height: 1.4;
+    font-size: 1.2rem;
   }
