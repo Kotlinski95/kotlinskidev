@@ -1,0 +1,206 @@
+.flex-wrapper {
+  justify-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 90px;
+  font-size: 25px;
+
+  .nav-left,
+  .nav-right {
+    width: 50%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        cursor: pointer;
+        font-size: 20px;
+        text-transform: none;
+      }
+    }
+  }
+
+  .nav-left {
+    text-align: left;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .nav-right {
+    text-align: right;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .layout-icon{
+        height: 30px;
+        width: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @media (max-width: 468px) {
+      width: 100%;
+    }
+
+  }
+
+  .nav-center {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    @media (max-width: 468px) {
+      display: none;
+    }
+
+    .nav-logo {
+      width: 60px;
+      height: auto;
+      position: absolute;
+      left: calc(50vw - 25px);
+      border-radius: 10px;
+    }
+  }
+
+  .nav-center-mobile {
+    width: 100%;
+    top: 10px;
+    left: 0;
+
+    .nav-logo {
+      width: 60px;
+      height: auto;
+      position: absolute;
+      top: 20px;
+      left: calc(50% - 25px);
+      border-radius: 10px;
+    }
+  }
+}
+
+.nav-desktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-mobile {
+  width: 100vw;
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  .line-item {
+    display: block;
+    margin-bottom: 5px;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .layout-icon{
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 36px;
+  top: 25px;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+
+  @media (max-width: 426px) {
+    width: 100vw !important;
+  }
+
+}
+
+/* General sidebar styles */
+.bm-menu {
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  position: relative;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  padding-top: 8px;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+}
+
+.flag-select {
+  .flag-select__option__label {
+    font-size: 25px;
+    font: 700 25px 'Cormorant Garamond', serif;
+  }
+
+  .flag-select__option.has-label:hover {
+    background: transparent;
+  }
+
+  .flag-select__option {
+    padding: 0 8px 3px 8px;
+    margin-top: 0px;
+    max-height: 40px;
+  }
+
+  .flag-icon {
+    transition: all 0.5s ease;
+    width: auto;
+    max-height: 40px;
+  }
+
+  .flag-select__btn {
+    max-height: 40px;
+  }
+
+  .flag-select__btn:before {
+    max-height: 40px;
+  }
+}

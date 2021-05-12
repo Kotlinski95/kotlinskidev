@@ -1,0 +1,45 @@
+{
+    "general": {
+        "website": "kotlinskidev.pl"
+    },
+    "header": {
+        "about": "O mnie",
+        "projects": "Projekty",
+        "stack": "Technologie",
+        "contact": "Kontakt",
+        "login": "Logowanie",
+        "home" : "Strona główna",
+        "pages": {
+            "carrier_plc": "Kariera programisty PLC",
+            "carrier_front": "Kariera Front-End Developera",
+            "courses": "Kursy, szkolenia",
+            "education": "Edukacja",
+            "software_enginner": "Front-End Development",
+            "automation_enginner": "Automatyka"
+        }
+    },
+    "typedText": {
+        "text1": "Witaj na mojej stronie!",
+        "text2": "Trwaja prace nad ta strona...",
+        "text3": "Badz cierpliwy, w krótce bedzie gotowa! :)"
+    },
+    "footer":{
+        "cookie_consent": {
+            "first_text" : "Ta strona korzysta z plików cookie, aby zwiększyć komfort użytkowania.",
+            "second_text": "Zaakceptuj politykę plików cookie, aby uzyskać lepsze wrażenia!",
+            "buttonText": "Akceptuję",
+            "declineButtonText": "Odrzucam"
+        },
+        "privacy":{
+            "rights": "https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
+            "policy": "Polityka prywatności & przetwarzanie danych osobych"
+        },
+        "pages": {
+            "services": "Usługi",
+            "contact": "Kontakt",
+            "web": "Tworzenie aplikacji web i stron www",
+            "shopify": "Tworzenie sklepów e-commerce w platformie shopify",
+            "plc": "Programowanie sterowników przemysłowych (PLC)"
+        }
+    }
+}
