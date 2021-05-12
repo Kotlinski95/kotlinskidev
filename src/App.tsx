@@ -41,7 +41,7 @@ function App() {
   };
   ReactPixel.init('1133312470518945', advancedMatching, options);
 
-  ReactPixel.pageView(); // For tracking page view
+  ReactPixel.pageView();
   Language();
   const actualTheme = useSelector(selectedTheme);
   switch (actualTheme) {
