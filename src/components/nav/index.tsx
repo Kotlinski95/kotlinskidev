@@ -19,6 +19,7 @@ import Button from '@material-ui/core/Button';
 import Menus from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import React from 'react';
+import ReactGA from 'react-ga';
 
 const styles = {
   bmCrossButton: {
@@ -37,6 +38,7 @@ const Nav = () => {
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language', 'theme']);
   const [checked, setChecked] = useState(getCookie("theme") === "Dark" ? false : true);
+
   if (!getCookie("theme")) {
     setCookie('theme', "Dark", { path: '/' });
     setChecked(false);
@@ -125,10 +127,18 @@ const Nav = () => {
       if (checked) {
         dispatch(setTheme("Dark"));
         setCookie('theme', "Dark", { path: '/' });
+        ReactGA.event({
+          category: 'Theme',
+          action: 'Theme changed to Dark'
+        });
       }
       else {
         dispatch(setTheme("Light"));
         setCookie('theme', "Light", { path: '/' });
+        ReactGA.event({
+          category: 'Theme',
+          action: 'Theme changed to Light'
+        });
       }
     }, 0);
   }
@@ -200,11 +210,11 @@ const Nav = () => {
       <div className="flex-wrapper">
         <div className="nav-left line-item item-half">
           <ul>
-          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
-                    <li className="line-item">
-                        {language.header.about}
-                    </li>
-                    </Button>
+            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
+              <li className="line-item">
+                {language.header.about}
+              </li>
+            </Button>
             <Menus
               id="simple-menu"
               anchorEl={anchorElAbout}
@@ -219,10 +229,10 @@ const Nav = () => {
             </Menus>
             <Link to="/projects"><li className="line-item">{language.header.projects}</li></Link>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
-                    <li className="line-item">
-                        {language.header.stack}
-                    </li>
-                    </Button>
+              <li className="line-item">
+                {language.header.stack}
+              </li>
+            </Button>
             <Menus
               id="simple-menu"
               anchorEl={anchorElStack}

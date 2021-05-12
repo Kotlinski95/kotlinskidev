@@ -1,6 +1,7 @@
 import HomePage from '../src/pages/home'
 import Nav from '../src/components/nav'
 import Footer from '../src/components/footer'
+import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
 import ContactPage from './pages/contact'
 import StackPage from './pages/stack/stack'
@@ -34,7 +35,6 @@ declare global {
 function App() {
   Language();
   const actualTheme = useSelector(selectedTheme);
-  console.log("ACTUAL THEME: ", actualTheme);
   switch (actualTheme) {
     case "Light":
         window._theme = lightTheme;
@@ -45,11 +45,12 @@ function App() {
     default:
         window._theme = darkTheme;
         break;
-}
+  }
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
       <div className="App">
+        <RouteChangeTracker/>
         <Nav />
         <div className="main">
           <Switch>
