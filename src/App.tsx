@@ -27,30 +27,39 @@ import { lightTheme, darkTheme, ThemeType } from './theme/index';
 import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
+import ReactPixel from 'react-facebook-pixel';
 
 declare global {
   var _theme: ThemeType;
 }
 
 function App() {
+  const advancedMatching: any = { em: 'kotlinski95@gmail.com' }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/advanced/advanced-matching
+  const options = {
+    autoConfig: true, // set pixel's autoConfig. More info: https://developers.facebook.com/docs/facebook-pixel/advanced/
+    debug: false, // enable logs
+  };
+  ReactPixel.init('1133312470518945', advancedMatching, options);
+
+  ReactPixel.pageView();
   Language();
   const actualTheme = useSelector(selectedTheme);
   switch (actualTheme) {
     case "Light":
-        window._theme = lightTheme;
-        break;
+      window._theme = lightTheme;
+      break;
     case "Dark":
-        window._theme = darkTheme;
-        break;
+      window._theme = darkTheme;
+      break;
     default:
-        window._theme = darkTheme;
-        break;
+      window._theme = darkTheme;
+      break;
   }
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
       <div className="App">
-        <RouteChangeTracker/>
+        <RouteChangeTracker />
         <Nav />
         <div className="main">
           <Switch>
@@ -101,7 +110,7 @@ function App() {
             </Route>
           </Switch>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </ThemeProvider>
   );
