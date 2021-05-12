@@ -41,5 +41,8 @@
             "shopify": "Tworzenie sklepów e-commerce w platformie shopify",
             "plc": "Programowanie sterowników przemysłowych (PLC)"
         }
+    },
+    "not_found": {
+        "header": "404 Nie znaleziono takiej strony :("
     }
 }

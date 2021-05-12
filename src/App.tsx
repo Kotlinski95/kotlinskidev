@@ -3,6 +3,7 @@ import Nav from '../src/components/nav'
 import Footer from '../src/components/footer'
 import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
+import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from '../src/pages/projects'
@@ -27,6 +28,7 @@ import { lightTheme, darkTheme, ThemeType } from './theme/index';
 import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 declare global {
   var _theme: ThemeType;
@@ -99,6 +101,7 @@ function App() {
             <Route exact path="/services/web-development">
               <WebDevelopmentPage />
             </Route>
+              <Route component={NotFoundPage} />
           </Switch>
         </div>
         <Footer/>
