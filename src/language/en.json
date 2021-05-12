@@ -41,5 +41,8 @@
             "shopify": "Shopify development",
             "plc": "PLC programming"
         }
+    },
+    "not_found": {
+        "header": "404 Page not found :("
     }
 }
