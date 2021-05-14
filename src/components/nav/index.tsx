@@ -1,17 +1,14 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/adrian_kotlinski.png';
+import logo from '../../assets/icons/myprofile.svg';
 import moon from '../../assets/moon.png'
 import sun from '../../assets/sun.png'
-import { slide as Menu } from 'react-burger-menu';
 import { useState } from 'react'
-import { iconEN, iconPL } from '../../language'
-import ReactLanguageSelect from 'react-languages-select';
 import Switch from "react-switch";
 import 'react-languages-select/css/react-languages-select.css';
 import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
-import { setTheme, setLanguage } from '../../reducers/state';
+import { setTheme } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
 import { getCookie } from '../../services';
 import LazyLoad from 'react-lazyload';
@@ -20,6 +17,7 @@ import Menus from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import React from 'react';
 import ReactGA from 'react-ga';
+import DropdownMulti from '../dropdown/index'
 
 const styles = {
   bmCrossButton: {
@@ -87,40 +85,6 @@ const Nav = () => {
     setAreMenusOpen(false);
   }
 
-  function onSelectLanguage(e) {
-    const icons: any = document.getElementsByClassName('flag-select__option__label');
-    const languageIcon = icons[0];
-    setTimeout(() => {
-      switch (e) {
-        case 'pt':
-          if (icons != null) {
-            dispatch(setLanguage("Polski"));
-            setCookie('language', "Polski", { path: '/' });
-            languageIcon.innerHTML = '';
-            const img = document.createElement('img');
-            img.src = iconPL;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-        case 'en':
-          if (icons != null) {
-            dispatch(setLanguage("English"));
-            setCookie('language', "English", { path: '/' });
-            languageIcon.innerHTML = '';
-            const img = document.createElement('img');
-            img.src = iconEN;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-      }
-      //ref.userLanguage.updateSelected("pt")
-    }, 0);
-  }
-
   function handleChange() {
     setTimeout(() => {
       setChecked(!checked);
@@ -142,68 +106,6 @@ const Nav = () => {
       }
     }, 0);
   }
-
-  window.onload = function () {
-    const icons: any = document.getElementsByClassName('flag-select__option__label');
-    const languageIcon = icons[0];
-    if (cookies.language) {
-      dispatch(setLanguage(cookies.language));
-      setTimeout(() => {
-        switch (cookies.language) {
-          case 'Polski':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              const img = document.createElement('img');
-              img.src = iconPL;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-          case 'English':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              const img = document.createElement('img');
-              img.src = iconEN;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-        }
-      }, 0);
-    }
-    else {
-      setTimeout(() => {
-        switch (languageIcon.innerHTML) {
-          case 'Polski':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              dispatch(setLanguage("Polski"));
-              setCookie('language', "Polski", { path: '/' });
-              const img = document.createElement('img');
-              img.src = iconPL;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-          case 'English':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              dispatch(setLanguage("English"));
-              setCookie('language', "English", { path: '/' });
-              const img = document.createElement('img');
-              img.src = iconEN;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-        }
-      }, 0);
-    }
-  };
 
   return (
     <div>
@@ -328,24 +230,9 @@ const Nav = () => {
               className="react-switch"
               id="small-radius-switch"
             />
-            <ReactLanguageSelect
-              defaultLanguage="en" languages={["en", "pt"]} customLabels={{ "en": "English", "pt": "Polski" }} selectedSize={14} onSelect={onSelectLanguage} />
+            <DropdownMulti/>
           </ul>
-        </div>
-        <div className="nav-mobile">
-          <Menu onClose={handleClose} onOpen={handleOpen} customOnKeyDown={closeAllMenusOnEsc} isOpen={areMenusOpen} right styles={styles}>
-            <div className="nav-center-mobile line-item">
-              <Link to="/">
-                <img src={logo} alt="Logo" className="nav-logo"></img>
-              </Link>
-            </div>
-            <Link to="/" className="menu-item" id="home">{language.header.home}</Link>
-            <Link to="/aboutme" className="menu-item" id="buy">{language.header.about}</Link>
-            <Link to="/projects" className="menu-item" id="sell">{language.header.projects}</Link>
-            <Link to="/stack" className="menu-item" id="agent">{language.header.stack}</Link>
-            <Link to="/contact" className="menu-item" id="offices">{language.header.contact}</Link>
-            <Link to="/login"><li className="line-item">{language.header.login}</li></Link>
-          </Menu>
+
         </div>
 
       </div>

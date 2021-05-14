@@ -47,12 +47,11 @@
       }
     }
     @media (max-width: 768px) {
-      justify-content: flex-start;
-      align-items: flex-start;
+      justify-content: flex-end;
+      align-items: flex-end;
       flex-direction: column;
-    }
-    @media (max-width: 468px) {
       width: 100%;
+      padding: 0;
     }
 
   }
@@ -62,9 +61,6 @@
     position: absolute;
     top: 10px;
     left: 0;
-    @media (max-width: 468px) {
-      display: none;
-    }
 
     .nav-logo {
       width: 60px;
@@ -72,6 +68,9 @@
       position: absolute;
       left: calc(50vw - 25px);
       border-radius: 10px;
+      @media (max-width: 468px) {
+        left: 10px;
+      }
     }
   }
 
