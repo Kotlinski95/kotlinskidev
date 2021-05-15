@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -8,138 +8,159 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.nav.darkBackground};
-    color: ${({ theme }) => theme.text};
+    background-color: ${({theme}) => theme.nav.darkBackground};
+    color: ${({theme}) => theme.text};
   }
   a {
-    color: ${({ theme }) => theme.nav.linkColor};
+    color: ${({theme}) => theme.nav.linkColor};
   }
 
   .main {
-    background-color: ${({ theme }) => theme.nav.darkBackground};
+    background-color: ${({theme}) => theme.nav.darkBackground};
   }
 
   a:hover {
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.nav.menuItemColorHover};
   }
   //==========  Navigation section ==================
 
   .flex-wrapper {
-    background-color: ${({ theme }) => theme.nav.lightBackground};
+    background-color: ${({theme}) => theme.nav.lightBackground};
   }
 
   .flex-wrapper .nav-left ul li,
   .flex-wrapper .nav-right ul li {
-    color: ${({ theme }) => theme.nav.menuItemColor};
+    color: ${({theme}) => theme.nav.menuItemColor};
   }
   .flex-wrapper .nav-left ul li:hover,
   .flex-wrapper .nav-right ul li:hover {
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.nav.menuItemColorHover};
   }
   .bm-burger-bars {
-  background: ${({ theme }) => theme.burgermenu};
+  background: ${({theme}) => theme.burgermenu};
 }
 
 .bm-burger-bars-hover {
-  background: ${({ theme }) => theme.nav.darkBackground};
+  background: ${({theme}) => theme.nav.darkBackground};
 }
 
 .bm-cross {
-  background: ${({ theme }) => theme.nav.menuItemColor};
+  background: ${({theme}) => theme.nav.menuItemColor};
 }
 .bm-menu {
-  background: ${({ theme }) => theme.nav.lightBackground};
+  background: ${({theme}) => theme.nav.lightBackground};
 }
 .bm-item-list {
-  color: ${({ theme }) => theme.nav.menuItemColor};
+  color: ${({theme}) => theme.nav.menuItemColor};
 }
 .bm-item {
-  color: ${({ theme }) => theme.nav.menuItemColor};
+  color: ${({theme}) => theme.nav.menuItemColor};
 }
 .flag-select {
-  color: ${({ theme }) => theme.nav.menuItemColor};
+  color: ${({theme}) => theme.nav.menuItemColor};
 }
   .flag-select__option__label {
-    color: ${({ theme }) => theme.nav.menuItemColor};
+    color: ${({theme}) => theme.nav.menuItemColor};
   }
 
   .flag-select__options {
-    background: ${({ theme }) => theme.nav.lightBackground};
+    background: ${({theme}) => theme.nav.lightBackground};
   }
 
   .flag-select__option__label:hover {
-    color: ${({ theme }) => theme.nav.darkBackground};
+    color: ${({theme}) => theme.nav.darkBackground};
   }
   .text-typed::placeholder{
-    color: ${({ theme }) => theme.typedText.color};
+    color: ${({theme}) => theme.typedText.color};
 }
 .flag-select {
-  color: ${({ theme }) => theme.nav.menuItemColor};
+  color: ${({theme}) => theme.nav.menuItemColor};
 }
 
 .flag-select__option__label {
-    color: ${({ theme }) => theme.nav.menuItemColor};
+    color: ${({theme}) => theme.nav.menuItemColor};
   }
 
   .flag-select__options {
-    background: ${({ theme }) => theme.nav.lightBackground};
+    background: ${({theme}) => theme.nav.lightBackground};
   }
 
   .flag-select__option__label:hover {
-    color: ${({ theme }) => theme.nav.darkBackground};
+    color: ${({theme}) => theme.nav.darkBackground};
   }
   //==========  Navigation section ==================
   .footer-wrapper{
-    background-color: ${({ theme }) => theme.footer.lightBackground};
+    background-color: ${({theme}) => theme.footer.lightBackground};
   }
   .footer-wrapper ul li {
-    color: ${({ theme }) => theme.footer.menuItemColor};
+    color: ${({theme}) => theme.footer.menuItemColor};
   }
   .footer-wrapper ul .line-item:hover {
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.nav.menuItemColorHover};
   }
   .footer-body .footer-right li a{
-    color: ${({ theme }) => theme.footer.menuItemColor};
+    color: ${({theme}) => theme.footer.menuItemColor};
   }
   .social-icons:hover{
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.nav.menuItemColorHover};
   }
   //============ material ui- menu, menu items =======
   #simple-menu .MuiPaper-root{
-    background-color: ${({ theme }) => theme.footer.lightBackground};
-    color: ${({ theme }) => theme.footer.menuItemColor};
+    background-color: ${({theme}) => theme.footer.lightBackground};
+    color: ${({theme}) => theme.footer.menuItemColor};
   }
   #simple-menu .MuiPaper-root .menuItem:hover{
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.nav.menuItemColorHover};
 } 
 //============ dropdown menu =======
 .nav-item .icon-button{
-  background-color: ${({ theme }) => theme.nav.darkBackground};
-  color: ${({ theme }) => theme.nav.darkBackground};
+  background-color: ${({theme}) => theme.nav.darkBackground};
+  color: ${({theme}) => theme.nav.darkBackground};
 }
 .nav-item .icon-button:hover {
-  color: ${({ theme }) => theme.nav.darkBackground};
+  color: ${({theme}) => theme.nav.darkBackground};
 }
 .nav-item .icon-button svg{
-  fill: ${({ theme }) => theme.nav.DropdownColorIcon};
+  fill: ${({theme}) => theme.nav.DropdownColorIcon};
 }
 .menu-item .icon-button{
-  background-color: ${({ theme }) => theme.nav.lightBackground};
+  background-color: ${({theme}) => theme.nav.lightBackground};
 }
 .dropdown{
-  background-color: ${({ theme }) => theme.nav.darkBackground};
+  background-color: ${({theme}) => theme.nav.darkBackground};
 }
 .menu-item{
-  color: ${({ theme }) => theme.footer.menuItemColor};
+  color: ${({theme}) => theme.footer.menuItemColor};
 }
 .menu-item:hover {
-    background-color: ${({ theme }) => theme.nav.DropdownColorHover};
+    background-color: ${({theme}) => theme.nav.DropdownColorHover};
   }
 //============ breadcrumbs =======
   .breadcrumbs .line-item{
-    color: ${({ theme }) => theme.typedText.color};
+    color: ${({theme}) => theme.typedText.color};
   }
   .breadcrumbs .line-item:hover{
-    color: ${({ theme }) => theme.typedText.colorHover};
+    color: ${({theme}) => theme.typedText.colorHover};
   }
-  `
+  // =========== 404 page ============
+  #navigation a.navigation:hover {
+	  background-color: ${({theme}) => theme.notFoundPage.itemSelected};
+  }
+  #wordsearch ul li.selected {
+	background-color: ${({theme}) => theme.notFoundPage.itemSelected};
+	color: ${({theme}) => theme.notFoundPage.itemColor};
+}
+#main-content,
+#navigation a.navigation,
+#search form input,
+#search form input::placeholder,
+#wordsearch ul li {
+  color: ${({theme}) => theme.notFoundPage.itemColor};
+}
+#navigation a.navigation,
+#wordsearch ul li,
+#search form input,
+::selection{
+  background-color: ${({theme}) => theme.notFoundPage.itemBackground};
+}
+  `;

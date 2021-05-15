@@ -27,6 +27,11 @@ export const lightTheme = {
     menuItemColor: '#33234d',
     menuItemColorHover: '#000000',
   },
+  notFoundPage:{
+    itemSelected: '#9c98cd',
+    itemColor: '#33234d',
+    itemBackground: 'rgba(0,0,0,0.05)',
+  },
 }
 
 export const darkTheme = {
@@ -54,6 +59,11 @@ export const darkTheme = {
     darkBackground: '#23222e',
     menuItemColor: '#D0E2F2',
     menuItemColorHover: '#000000',
+  },
+  notFoundPage:{
+    itemSelected: '#3d3b52',
+    itemColor: '#D0E2F2' ,
+    itemBackground: 'rgba(0,0,0,0.2)',
   },
 }
 //onst [cookies, setCookie] = useCookies(['theme']);
