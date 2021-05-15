@@ -1,121 +1,131 @@
 import './index.css';
 import $ from 'jquery';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react'
 
-$(function () {
-  const liWidth = $('#notFound li').css('width');
-  $('#notFound li').css('height', liWidth);
-  $('#notFound li').css('lineHeight', liWidth);
-  const totalHeight = $('#wordsearch').css('width');
-  $('#wordsearch').css('height', totalHeight);
-});
-const causeRepaintsOn = $('h1, h2, h3, p');
-$(window).resize(function () {
-  causeRepaintsOn.css('z-index', 1);
-});
-$(window).on('resize', function () {
-  const liWidth = $('#notFound .one').css('width');
-  $('#notFound li').css('height', liWidth);
-  $('#notFound li').css('lineHeight', liWidth);
-  const totalHeight = $('#wordsearch').css('width');
-  $('#wordsearch').css('height', totalHeight);
-});
-
-$(function () {
-  /* 4 */
-  $(this)
-    .delay(1500)
-    .queue(function () {
-      $('.one').addClass('selected');
-      $(this).dequeue();
-    })
-    /* 0 */
-    .delay(500)
-    .queue(function () {
-      $('.two').addClass('selected');
-      $(this).dequeue();
-    })
-    /* 4 */
-    .delay(500)
-    .queue(function () {
-      $('.three').addClass('selected');
-      $(this).dequeue();
-    })
-    /* P */
-    .delay(500)
-    .queue(function () {
-      $('.four').addClass('selected');
-      $(this).dequeue();
-    })
-    /* A */
-    .delay(500)
-    .queue(function () {
-      $('.five').addClass('selected');
-      $(this).dequeue();
-    })
-    /* G */
-    .delay(500)
-    .queue(function () {
-      $('.six').addClass('selected');
-      $(this).dequeue();
-    })
-    /* E */
-    .delay(500)
-    .queue(function () {
-      $('.seven').addClass('selected');
-      $(this).dequeue();
-    })
-    /* N */
-    .delay(500)
-    .queue(function () {
-      $('.eight').addClass('selected');
-      $(this).dequeue();
-    })
-    /* O */
-    .delay(500)
-    .queue(function () {
-      $('.nine').addClass('selected');
-      $(this).dequeue();
-    })
-    /* T */
-    .delay(500)
-    .queue(function () {
-      $('.ten').addClass('selected');
-      $(this).dequeue();
-    })
-    /* F */
-    .delay(500)
-    .queue(function () {
-      $('.eleven').addClass('selected');
-      $(this).dequeue();
-    })
-    /* O */
-    .delay(500)
-    .queue(function () {
-      $('.twelve').addClass('selected');
-      $(this).dequeue();
-    })
-    /* U */
-    .delay(500)
-    .queue(function () {
-      $('.thirteen').addClass('selected');
-      $(this).dequeue();
-    })
-    /* N */
-    .delay(500)
-    .queue(function () {
-      $('.fourteen').addClass('selected');
-      $(this).dequeue();
-    })
-    /* D */
-    .delay(500)
-    .queue(function () {
-      $('.fifteen').addClass('selected');
-      $(this).dequeue();
-    });
-});
 const NotFound = (props) => {
   const language = props.language;
+  $(function () {
+    const liWidth = $('#notFound li').css('width');
+    $('#notFound li').css('height', liWidth);
+    $('#notFound li').css('lineHeight', liWidth);
+    const totalHeight = $('#wordsearch').css('width');
+    $('#wordsearch').css('height', totalHeight);
+  });
+  const causeRepaintsOn = $('h1, h2, h3, p');
+  $(window).resize(function () {
+    causeRepaintsOn.css('z-index', 1);
+  });
+  $(window).on('resize', function () {
+    const liWidth = $('#notFound .one').css('width');
+    $('#notFound li').css('height', liWidth);
+    $('#notFound li').css('lineHeight', liWidth);
+    const totalHeight = $('#wordsearch').css('width');
+    $('#wordsearch').css('height', totalHeight);
+  });
+  useEffect(() => {
+    $(function () {
+      /* 4 */
+      $(this)
+        .delay(1500)
+        .queue(function () {
+          $('#notFound .one').addClass('selected');
+          $(this).dequeue();
+        })
+        /* 0 */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .two').addClass('selected');
+          $(this).dequeue();
+        })
+        /* 4 */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .three').addClass('selected');
+          $(this).dequeue();
+        })
+        /* P */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .four').addClass('selected');
+          $(this).dequeue();
+        })
+        /* A */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .five').addClass('selected');
+          $(this).dequeue();
+        })
+        /* G */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .six').addClass('selected');
+          $(this).dequeue();
+        })
+        /* E */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .seven').addClass('selected');
+          $(this).dequeue();
+        })
+        /* N */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .eight').addClass('selected');
+          $(this).dequeue();
+        })
+        /* O */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .nine').addClass('selected');
+          $(this).dequeue();
+        })
+        /* T */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .ten').addClass('selected');
+          $(this).dequeue();
+        })
+        /* F */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .eleven').addClass('selected');
+          $(this).dequeue();
+        })
+        /* O */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .twelve').addClass('selected');
+          $(this).dequeue();
+        })
+        /* U */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .thirteen').addClass('selected');
+          $(this).dequeue();
+        })
+        /* N */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .fourteen').addClass('selected');
+          $(this).dequeue();
+        })
+        /* D */
+        .delay(500)
+        .queue(function () {
+          $('#notFound .fifteen').addClass('selected');
+          $(this).dequeue();
+        });
+    });
+    return function cleanup() {
+      $(this).delay(8500)
+        .clearQueue()
+        .stop();
+    };
+  });
+
+
+
   return (
     <div id="wrap">
       <div id="wordsearch">
@@ -132,9 +142,9 @@ const NotFound = (props) => {
           <li>a</li>
           <li>x</li>
           <li>l</li>
-          <li class="one">4</li>
-          <li class="two">0</li>
-          <li class="three">4</li>
+          <li className="one">4</li>
+          <li className="two">0</li>
+          <li className="three">4</li>
           <li>y</li>
           <li>y</li>
           <li>w</li>
@@ -146,16 +156,16 @@ const NotFound = (props) => {
           <li>y</li>
           <li>p</li>
           <li>a</li>
-          <li class="four">p</li>
-          <li class="five">a</li>
-          <li class="six">g</li>
-          <li class="seven">e</li>
+          <li className="four">p</li>
+          <li className="five">a</li>
+          <li className="six">g</li>
+          <li className="seven">e</li>
           <li>v</li>
           <li>j</li>
           <li>a</li>
-          <li class="eight">n</li>
-          <li class="nine">o</li>
-          <li class="ten">t</li>
+          <li className="eight">n</li>
+          <li className="nine">o</li>
+          <li className="ten">t</li>
           <li>s</li>
           <li>c</li>
           <li>e</li>
@@ -169,11 +179,11 @@ const NotFound = (props) => {
           <li>h</li>
           <li>q</li>
           <li>e</li>
-          <li class="eleven">f</li>
-          <li class="twelve">o</li>
-          <li class="thirteen">u</li>
-          <li class="fourteen">n</li>
-          <li class="fifteen">d</li>
+          <li className="eleven">f</li>
+          <li className="twelve">o</li>
+          <li className="thirteen">u</li>
+          <li className="fourteen">n</li>
+          <li className="fifteen">d</li>
           <li>s</li>
           <li>w</li>
           <li>q</li>

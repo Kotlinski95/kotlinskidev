@@ -1,9 +1,9 @@
-  /* <li> */
-  .nav-item {
-    width: calc(var(--nav-size) * 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* <li> */
+.nav-item {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   /* Icon Button */
   .icon-button {
@@ -42,7 +42,7 @@
     padding: 1rem;
     overflow: hidden;
     transition: height var(--speed) ease;
-    @media (max-width: 400px){
+    @media (max-width: 400px) {
       width: 100vw;
     }
   }
