@@ -1,9 +1,10 @@
 import React from 'react';
+import NotFound from '../components/notFound/index'
 
 const NotFoundPage = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%'}}>
-      <h1>{language.not_found.header}</h1>
+      <div id="notFound"><NotFound language={language}/></div>
     </div>
   )
 

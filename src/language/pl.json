@@ -47,6 +47,9 @@
         }
     },
     "not_found": {
-        "header": "404 Nie znaleziono takiej strony :("
+        "header": "Nie mogłem znaleźć tego, czego szukałeś.",
+        "paragraph_reason": "Niestety nie można znaleźć szukanej strony. Może być chwilowo niedostępna, przeniesiona lub już nie istnieje.",
+        "paragraph_todo": "Sprawdź, czy podany adres URL nie zawiera błędów i spróbuj ponownie. Ewentualnie poszukaj tego, czego brakuje lub rozejrzyj się po pozostałej części mojej witryny.",
+        "search_placeholder": "Szukaj.."
     }
 }
