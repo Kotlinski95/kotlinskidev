@@ -1,7 +1,7 @@
 import './index.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
@@ -28,7 +28,7 @@ const Footer = () => {
                 buttonText={language.footer.cookie_consent.buttonText}
                 declineButtonText={language.footer.cookie_consent.declineButtonText}
                 cookieName="Accept_cookies"
-                style={{ background: "#2B373B" }}
+                style={{ background: "#2B373B", paddingRight: '120px' }}
                 buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                 expires={1}
             >
