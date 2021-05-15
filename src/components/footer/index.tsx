@@ -2,7 +2,7 @@ import './index.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CookieConsent, { Cookies } from "react-cookie-consent";
-import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt } from 'react-icons/fa';
+import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Button from '@material-ui/core/Button';
@@ -63,10 +63,11 @@ const Footer = () => {
                 </ul>
                 <ul className="line-item footer-right">
                     <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
-                        <li><a href="https://www.instagram.com/adriankotlinski/" target="_blank"><FaInstagram /></a></li>
-                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank"><FaFacebookSquare /></a></li>
-                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" target="_blank"><FaLinkedin /></a></li>
-                        <li><a href="mailto:kotlinski95@gmail.com"><FaAt /></a></li>
+                        <li><a href="https://github.com/Kotlinski95/" target="_blank" title="github"><FaGithub /></a></li>
+                        <li><a href="https://www.instagram.com/adriankotlinski/" target="_blank" title="instagram"><FaInstagram /></a></li>
+                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank" title="facebook"><FaFacebookSquare /></a></li>
+                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" target="_blank" title="linkedin"><FaLinkedin /></a></li>
+                        <li><a href="mailto:kotlinski95@gmail.com" title="mail"><FaAt /></a></li>
                     </IconContext.Provider>
                 </ul>
             </div>
