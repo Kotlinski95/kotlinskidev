@@ -188,8 +188,8 @@ const NotFound = (props) => {
       </div>
       <div id="main-content">
         <h1>{language.not_found.header}</h1>
-        <p>{language.not_found.paragraph_reason}</p>
-        <p>{language.not_found.paragraph_todo}</p>
+        <h3>{language.not_found.paragraph_reason}</h3>
+        <h3>{language.not_found.paragraph_todo}</h3>
         <div id="search">
           <form>
             <input
