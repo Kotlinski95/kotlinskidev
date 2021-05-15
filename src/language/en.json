@@ -4,11 +4,15 @@
     },
     "header": {
         "about": "About me",
+        "myprofile": "My Profile",
         "projects": "Projects",
         "stack": "Stack",
         "contact": "Contact",
         "login": "Sign In",
         "home" : "Home",
+        "cv": "Curriculum Vitae",
+        "settings" : "Settings",
+        "language": "Language",
         "pages": {
             "carrier_plc": "PLC programmer career",
             "carrier_front": "Front-end developer career",

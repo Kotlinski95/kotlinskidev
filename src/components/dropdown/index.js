@@ -7,15 +7,25 @@ import { ReactComponent as ArrowIcon } from '../../assets/icons/arrow.svg';
 import { ReactComponent as ProfileIcon } from '../../assets/icons/myprofile.svg';
 import { ReactComponent as PolandIcon } from '../../assets/icons/PolandIcon.svg';
 import { ReactComponent as UnitedKingdomIcon } from '../../assets/icons/EnglishIcon.svg';
+import { ReactComponent as LanguagesIcon } from '../../assets/icons/languages.svg';
+import { ReactComponent as AboutIcon } from '../../assets/icons/about.svg';
+import { ReactComponent as ProjectsIcon } from '../../assets/icons/projects.svg';
+import { ReactComponent as CvIcon } from '../../assets/icons/cv.svg';
+import { ReactComponent as StackIcon } from '../../assets/icons/stack.svg';
+import { ReactComponent as ServicesIcon } from '../../assets/icons/services.svg';
+import { ReactComponent as ContactIcon } from '../../assets/icons/contact.svg';
+import { ReactComponent as AboutPlcIcon } from '../../assets/icons/about_plc.svg';
+import { ReactComponent as AboutFrontIcon } from '../../assets/icons/about_front.svg';
+import { ReactComponent as AboutEducationIcon } from '../../assets/icons/about_education.svg';
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
 import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from 'react-router-dom';
 
-
-
-function DropdownMulti() {
+function DropdownMulti(props) {
+  const language = props.language;
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
@@ -126,20 +136,56 @@ function DropdownMulti() {
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-            <DropdownItem leftIcon={<ProfileIcon/>}>My Profile</DropdownItem>
+          <Link to="/myprofile"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
+            <DropdownItem
+              leftIcon={<LanguagesIcon />}
+              rightIcon={<ChevronIcon />}
+              goToMenu="language">
+              {language.header.language}
+            </DropdownItem>
+            <DropdownItem
+              leftIcon={<AboutIcon />}
+              rightIcon={<ChevronIcon />}
+              goToMenu="about">
+              {language.header.about}
+            </DropdownItem>
+            <Link to="/projects"><DropdownItem leftIcon={<ProjectsIcon/>}>{language.header.projects}</DropdownItem></Link>
+            <DropdownItem
+              leftIcon={<StackIcon />}
+              rightIcon={<ChevronIcon />}
+              goToMenu="stack">
+              {language.header.stack}
+            </DropdownItem>
+            <DropdownItem
+              leftIcon={<ServicesIcon />}
+              rightIcon={<ChevronIcon />}
+              goToMenu="services">
+              {language.footer.pages.services}
+            </DropdownItem>
+            <Link to="/contact"><DropdownItem leftIcon={<ContactIcon/>}>{language.footer.pages.contact}</DropdownItem></Link>
+            <Link to="/cv"><DropdownItem leftIcon={<CvIcon/>}>{language.header.cv}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<CogIcon />}
               rightIcon={<ChevronIcon />}
               goToMenu="settings">
-              Language
-            </DropdownItem>
-            <DropdownItem
-              leftIcon="🦧"
-              rightIcon={<ChevronIcon />}
-              goToMenu="animals">
-              Animals
+              {language.header.settings}
             </DropdownItem>
 
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
+          in={activeMenu === 'language'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+              <h6>{language.header.language}</h6>
+            </DropdownItem>
+            <LanguageItem language="pl" leftIcon={<PolandIcon />}>Polski</LanguageItem>
+            <LanguageItem language="en" leftIcon={<UnitedKingdomIcon />}>English</LanguageItem>
           </div>
         </CSSTransition>
 
@@ -151,28 +197,56 @@ function DropdownMulti() {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>Language</h6>
+              <h6>{language.header.settings}</h6>
             </DropdownItem>
-            <LanguageItem language="pl" leftIcon={<PolandIcon />}>Polski</LanguageItem>
-            <LanguageItem language="en" leftIcon={<UnitedKingdomIcon />}>English</LanguageItem>
-
           </div>
         </CSSTransition>
 
         <CSSTransition
-          in={activeMenu === 'animals'}
+          in={activeMenu === 'about'}
           timeout={500}
           classNames="menu-secondary"
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>Animals</h6>
+              <h6>{language.header.about}</h6>
             </DropdownItem>
-            <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
-            <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-            <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
-            <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
+            <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon/>}>{language.header.pages.carrier_plc}</DropdownItem></Link>
+            <Link to="/aboutme/front-end-development"><DropdownItem leftIcon={<AboutFrontIcon/>}>{language.header.pages.carrier_front}</DropdownItem></Link>
+            <Link to="/aboutme/courses"><DropdownItem leftIcon="🦋">{language.header.pages.courses}</DropdownItem></Link>
+            <Link to="/aboutme/education"><DropdownItem leftIcon={<AboutEducationIcon/>}>{language.header.pages.education}</DropdownItem></Link>
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
+          in={activeMenu === 'stack'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+              <h6>{language.header.stack}</h6>
+            </DropdownItem>
+            <Link to="/stack/front-end-developer"><DropdownItem leftIcon="🦘">{language.header.pages.software_enginner}</DropdownItem></Link>
+            <Link to="/stack/automation-engineer"><DropdownItem leftIcon="🐸">{language.header.pages.automation_enginner}</DropdownItem></Link>
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
+          in={activeMenu === 'services'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+              <h6>{language.footer.pages.services}</h6>
+            </DropdownItem>
+            <Link to="/services/web-development"><DropdownItem leftIcon="🦘">{language.footer.pages.web}</DropdownItem></Link>
+            <Link to="/services/shopify"><DropdownItem leftIcon="🦋">{language.footer.pages.shopify}</DropdownItem></Link>
+            <Link to="/services/PLC"><DropdownItem leftIcon="🐸">{language.footer.pages.plc}</DropdownItem></Link>
           </div>
         </CSSTransition>
       </div>

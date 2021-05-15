@@ -17,7 +17,7 @@ import Menus from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import React from 'react';
 import ReactGA from 'react-ga';
-import DropdownMulti from '../dropdown/index'
+import DropdownMulti from '../dropdown/index.js'
 
 const styles = {
   bmCrossButton: {
@@ -31,6 +31,7 @@ const styles = {
 }
 
 const Nav = () => {
+  console.log("NAV language: ", language)
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
@@ -230,7 +231,7 @@ const Nav = () => {
               className="react-switch"
               id="small-radius-switch"
             />
-            <DropdownMulti/>
+            <DropdownMulti language={language}/>
           </ul>
 
         </div>

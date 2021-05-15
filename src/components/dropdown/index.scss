@@ -10,7 +10,6 @@
     --button-size: calc(var(--nav-size) * 0.65);
     width: var(--button-size);
     height: var(--button-size);
-    background-color: var(--dark-background);
     border-radius: 50%;
     padding: 5px;
     margin: 2px;
@@ -33,16 +32,19 @@
   /* Dropdown Menu */
 
   .dropdown {
+    overflow-x: hidden;
     position: absolute;
     top: 58px;
-    width: 300px;
-    transform: translateX(-45%);
-    background-color: var(--bg);
+    right: 0;
+    width: 350px;
     border: var(--border);
     border-radius: var(--border-radius);
     padding: 1rem;
     overflow: hidden;
     transition: height var(--speed) ease;
+    @media (max-width: 400px){
+      width: 100vw;
+    }
   }
 
   .menu {
@@ -53,6 +55,7 @@
     height: 50px;
     display: flex;
     align-items: center;
+    text-align: center;
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
@@ -64,10 +67,6 @@
 
   .menu-item .icon-button:hover {
     filter: none;
-  }
-
-  .menu-item:hover {
-    background-color: var(--light-background);
   }
 
   .icon-right {
