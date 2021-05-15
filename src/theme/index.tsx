@@ -18,6 +18,7 @@ export const lightTheme = {
   },
   typedText: {
     color: '#33234d',
+    colorHover: '#9c98cd',
   },
   footer: {
     linkColor: '#33234d',
@@ -45,6 +46,7 @@ export const darkTheme = {
   },
   typedText: {
     color: '#D0E2F2',
+    colorHover: '#9c98cd',
   },
   footer: {
     linkColor: '#D0E2F2',
