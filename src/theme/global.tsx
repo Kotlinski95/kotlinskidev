@@ -135,4 +135,11 @@ export const GlobalStyles = createGlobalStyle`
 .menu-item:hover {
     background-color: ${({ theme }) => theme.nav.DropdownColorHover};
   }
+//============ breadcrumbs =======
+  .breadcrumbs .line-item{
+    color: ${({ theme }) => theme.typedText.color};
+  }
+  .breadcrumbs .line-item:hover{
+    color: ${({ theme }) => theme.typedText.colorHover};
+  }
   `
