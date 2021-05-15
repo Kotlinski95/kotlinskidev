@@ -182,7 +182,7 @@ function DropdownMulti(props) {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>{language.header.language}</h6>
+              <h3>{language.header.language}</h3>
             </DropdownItem>
             <LanguageItem language="pl" leftIcon={<PolandIcon />}>Polski</LanguageItem>
             <LanguageItem language="en" leftIcon={<UnitedKingdomIcon />}>English</LanguageItem>
@@ -197,7 +197,7 @@ function DropdownMulti(props) {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>{language.header.settings}</h6>
+              <h3>{language.header.settings}</h3>
             </DropdownItem>
           </div>
         </CSSTransition>
@@ -210,7 +210,7 @@ function DropdownMulti(props) {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>{language.header.about}</h6>
+              <h3>{language.header.about}</h3>
             </DropdownItem>
             <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon/>}>{language.header.pages.carrier_plc}</DropdownItem></Link>
             <Link to="/aboutme/front-end-development"><DropdownItem leftIcon={<AboutFrontIcon/>}>{language.header.pages.carrier_front}</DropdownItem></Link>
@@ -227,7 +227,7 @@ function DropdownMulti(props) {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>{language.header.stack}</h6>
+              <h3>{language.header.stack}</h3>
             </DropdownItem>
             <Link to="/stack/front-end-developer"><DropdownItem leftIcon="🦘">{language.header.pages.software_enginner}</DropdownItem></Link>
             <Link to="/stack/automation-engineer"><DropdownItem leftIcon="🐸">{language.header.pages.automation_enginner}</DropdownItem></Link>
@@ -242,7 +242,7 @@ function DropdownMulti(props) {
           onEnter={calcHeight}>
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-              <h6>{language.footer.pages.services}</h6>
+              <h3>{language.footer.pages.services}</h3>
             </DropdownItem>
             <Link to="/services/web-development"><DropdownItem leftIcon="🦘">{language.footer.pages.web}</DropdownItem></Link>
             <Link to="/services/shopify"><DropdownItem leftIcon="🦋">{language.footer.pages.shopify}</DropdownItem></Link>
