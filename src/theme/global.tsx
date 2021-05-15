@@ -112,4 +112,27 @@ export const GlobalStyles = createGlobalStyle`
   #simple-menu .MuiPaper-root .menuItem:hover{
     color: ${({ theme }) => theme.nav.menuItemColorHover};
 } 
+//============ dropdown menu =======
+.nav-item .icon-button{
+  background-color: ${({ theme }) => theme.nav.darkBackground};
+  color: ${({ theme }) => theme.nav.darkBackground};
+}
+.nav-item .icon-button:hover {
+  color: ${({ theme }) => theme.nav.darkBackground};
+}
+.nav-item .icon-button svg{
+  fill: ${({ theme }) => theme.nav.DropdownColorIcon};
+}
+.menu-item .icon-button{
+  background-color: ${({ theme }) => theme.nav.lightBackground};
+}
+.dropdown{
+  background-color: ${({ theme }) => theme.nav.darkBackground};
+}
+.menu-item{
+  color: ${({ theme }) => theme.footer.menuItemColor};
+}
+.menu-item:hover {
+    background-color: ${({ theme }) => theme.nav.DropdownColorHover};
+  }
   `

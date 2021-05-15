@@ -13,6 +13,8 @@ export const lightTheme = {
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
     menuItemColorHover: '#000000',
+    DropdownColorHover: '#9c98cd',
+    DropdownColorIcon: '#9c98cd',
   },
   typedText: {
     color: '#33234d',
@@ -38,6 +40,8 @@ export const darkTheme = {
     darkBackground: '#23222e',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',
+    DropdownColorHover: '#9c98cd',
+    DropdownColorIcon: '#D0E2F2',
   },
   typedText: {
     color: '#D0E2F2',
