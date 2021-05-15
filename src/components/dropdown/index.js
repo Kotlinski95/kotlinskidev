@@ -58,9 +58,9 @@ function DropdownMulti(props) {
   function NavItem(props) {  
     return (
       <li className="nav-item">
-        <a href="#" className="icon-button" onClick={() => props.dropdown && setOpen(!open)}>
+        <span className="icon-button" onClick={() => props.dropdown && setOpen(!open)}>
           {props.icon}
-        </a>
+        </span>
   
         {open && props.children}
       </li>
@@ -83,7 +83,7 @@ function DropdownMulti(props) {
 
     function DropdownItem(props) {
       return (
-        <a href="#" className="menu-item" onClick={() => {
+        <span className="menu-item" onClick={() => {
 
           props.goToMenu && setActiveMenu(props.goToMenu);
           !props.goToMenu && setOpen(false);
@@ -91,7 +91,7 @@ function DropdownMulti(props) {
           <span className="icon-button">{props.leftIcon}</span>
           {props.children}
           <span className="icon-right">{props.rightIcon}</span>
-        </a>
+        </span>
       );
     }
 
@@ -114,7 +114,7 @@ function DropdownMulti(props) {
         }, 0);
       }
       return (
-        <a href="#" className="menu-item" onClick={(e) => {
+        <span className="menu-item" onClick={(e) => {
           props.goToMenu && setActiveMenu(props.goToMenu);
           !props.goToMenu && setOpen(false);
           onSelectLanguage(props.language);
@@ -122,7 +122,7 @@ function DropdownMulti(props) {
           <span className="icon-button">{props.leftIcon}</span>
           {props.children}
           <span className="icon-right">{props.rightIcon}</span>
-        </a>
+        </span>
       );
     }
 

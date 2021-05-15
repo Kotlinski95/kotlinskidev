@@ -10,6 +10,7 @@ export const lightTheme = {
   nav: {
     linkColor: '#33234d',
     lightBackground: '#9c98cd',
+    lightBackgroundOpacity: 'rgba(156, 152, 205,0.6)',
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
     menuItemColorHover: '#000000',
@@ -43,6 +44,7 @@ export const darkTheme = {
   nav: {
     linkColor: '#D0E2F2',
     lightBackground: '#3d3b52',
+    lightBackgroundOpacity: 'rgba(61, 59, 82,0.6)',
     darkBackground: '#23222e',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',

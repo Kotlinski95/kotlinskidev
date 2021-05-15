@@ -31,7 +31,6 @@ const styles = {
 }
 
 const Nav = () => {
-  console.log("NAV language: ", language)
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
@@ -110,7 +109,7 @@ const Nav = () => {
 
   return (
     <div>
-      <div className="flex-wrapper">
+      <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
