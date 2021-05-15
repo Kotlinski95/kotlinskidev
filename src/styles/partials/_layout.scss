@@ -24,6 +24,9 @@ main {
 .main {
   min-height: calc(100vh - 187px);
   background-color: var(--dark-background);
+  @media (max-width: 769px) {
+    margin-top: 90px;
+  }
 }
 .centered {
   text-align: center;

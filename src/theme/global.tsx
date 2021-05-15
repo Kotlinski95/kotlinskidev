@@ -26,6 +26,9 @@ export const GlobalStyles = createGlobalStyle`
 
   .flex-wrapper {
     background-color: ${({theme}) => theme.nav.lightBackground};
+    @media (max-width: 769px) {
+      background-color: ${({theme}) => theme.nav.lightBackgroundOpacity};
+    }
   }
 
   .flex-wrapper .nav-left ul li,
