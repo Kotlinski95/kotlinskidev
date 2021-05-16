@@ -1,0 +1,17 @@
+@media (max-width: 769px){
+    .hero-desktop{
+        display: none;
+    }
+}
+@media (min-width: 770px){
+    .hero-mobile{
+        display: none;
+    }
+    .welcome-wrapper{
+        position: absolute;
+        top: 30%;
+        text-align: center;
+    }
+}
+
+
