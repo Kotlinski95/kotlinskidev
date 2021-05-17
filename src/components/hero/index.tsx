@@ -30,6 +30,7 @@ const HeroMobile = () => {
       return (
         <div className="hero-mobile">
             <WelcomeComponent />
+            <AboutComponent/>
             <CategoriesComponent />
         </div>
       );

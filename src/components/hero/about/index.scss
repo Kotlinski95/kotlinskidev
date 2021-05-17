@@ -13,6 +13,13 @@
         width: 50%;
         font-size: 32px;
         font-weight: 400;
+        @media (max-width: 968px){
+            width: 100%;
+        }
     }
 }
-
+.arrow-container{
+    @media (max-width: 968px){
+        bottom: 0 !important;
+    }
+}

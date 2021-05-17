@@ -39,73 +39,25 @@ export const GlobalStyles = createGlobalStyle`
   .flex-wrapper .nav-right ul li:hover {
     color: ${({theme}) => theme.nav.menuItemColorHover};
   }
-  .bm-burger-bars {
-  background: ${({theme}) => theme.burgermenu};
-}
 
-.bm-burger-bars-hover {
-  background: ${({theme}) => theme.nav.darkBackground};
-}
-
-.bm-cross {
-  background: ${({theme}) => theme.nav.menuItemColor};
-}
-.bm-menu {
-  background: ${({theme}) => theme.nav.lightBackground};
-}
-.bm-item-list {
-  color: ${({theme}) => theme.nav.menuItemColor};
-}
-.bm-item {
-  color: ${({theme}) => theme.nav.menuItemColor};
-}
-.flag-select {
-  color: ${({theme}) => theme.nav.menuItemColor};
-}
-  .flag-select__option__label {
-    color: ${({theme}) => theme.nav.menuItemColor};
-  }
-
-  .flag-select__options {
-    background: ${({theme}) => theme.nav.lightBackground};
-  }
-
-  .flag-select__option__label:hover {
-    color: ${({theme}) => theme.nav.darkBackground};
-  }
-  .text-typed::placeholder{
-    color: ${({theme}) => theme.typedText.color};
-}
-.flag-select {
-  color: ${({theme}) => theme.nav.menuItemColor};
-}
-
-.flag-select__option__label {
-    color: ${({theme}) => theme.nav.menuItemColor};
-  }
-
-  .flag-select__options {
-    background: ${({theme}) => theme.nav.lightBackground};
-  }
-
-  .flag-select__option__label:hover {
-    color: ${({theme}) => theme.nav.darkBackground};
-  }
   //==========  Navigation section ==================
   .footer-wrapper{
-    background-color: ${({theme}) => theme.footer.lightBackground};
+    background-color: ${({theme}) => theme.footer.darkBackground};
   }
   .footer-wrapper ul li {
     color: ${({theme}) => theme.footer.menuItemColor};
   }
   .footer-wrapper ul .line-item:hover {
-    color: ${({theme}) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.footer.menuItemColorHover};
   }
   .footer-body .footer-right li a{
     color: ${({theme}) => theme.footer.menuItemColor};
   }
   .social-icons:hover{
-    color: ${({theme}) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.footer.menuItemColorHover};
+  }
+  .MuiButtonBase-root.menuItem a:hover{
+    color: ${({theme}) => theme.footer.menuItemColorHover};
   }
   //============ material ui- menu, menu items =======
   #simple-menu .MuiPaper-root{
@@ -113,7 +65,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({theme}) => theme.footer.menuItemColor};
   }
   #simple-menu .MuiPaper-root .menuItem:hover{
-    color: ${({theme}) => theme.nav.menuItemColorHover};
+    color: ${({theme}) => theme.footer.menuItemColorHover} !important;
 } 
 //============ dropdown menu =======
 .nav-item .icon-button{

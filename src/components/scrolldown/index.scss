@@ -18,6 +18,14 @@
     position: absolute;
 }
 
+@media (max-width: 769px){
+    .icon-scroll,
+    .icon-scroll-text{
+        display: none;
+    }
+
+}
+
 .icon-scroll:before{
     content: '';
     width: 8px;
