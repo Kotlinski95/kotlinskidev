@@ -4,12 +4,9 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    border: 1px solid #D0E2F2;
-    margin: 15px;
+    margin: 10px;
     border-radius: 15px;
-    box-shadow: 0px 0px 15px #D0E2F2;
-    font-family: 'Reggae One', cur
-    sive;
+    font-family: 'Reggae One', cursive;
 }
 
 .tile-wrapper:hover{
@@ -23,8 +20,7 @@
     fill: #D0E2F2;
     max-height: 80%;
     width: auto;
-    max-width: 100%;
-    filter: invert(99%) sepia(98%) saturate(293%) hue-rotate(204deg) brightness(113%) contrast(100%);
+    max-width: 90%;
     border-radius: 10px;
     margin: 5px;
 }

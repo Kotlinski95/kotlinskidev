@@ -51,5 +51,27 @@
         "paragraph_reason": "Unfortunately the page you were looking for could not be found. It may be temporarily unavailable, moved or no longer exist.",
         "paragraph_todo": "Check the URL you entered for any mistakes and try again. Alternatively, search for whatever is missing or take a look around the rest of my site.",
         "search_placeholder": "Search.."
+    },
+    "pages": {
+        "home": {
+            "welcome": {
+                "header": "Adrian Kotliński",
+                "title": "Junior Front-end Developer",
+                "scroll": "Scroll down"
+            },
+            "about": {
+                "header": "Hello",
+                "text": "My name is Adrian Kotlinski, I live in Katowice. I started my adventure with FrontEnd at the end of 2020. Since then, I have devoted every free moment to learning and it gives me great pleasure. I constantly strive to expand my competences by learning about the latest solutions and technologies.",
+                "seemore": "Explore more"
+            },
+            "categories": {
+                "header": "I invite you to visit also the other pages..",
+                "about": "About me",
+                "projects": "Projects",
+                "stack": "Stack",
+                "services": "Services"
+            }
+        }
     }
+
 }

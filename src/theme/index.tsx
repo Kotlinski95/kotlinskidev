@@ -33,6 +33,20 @@ export const lightTheme = {
     itemColor: '#33234d',
     itemBackground: 'rgba(0,0,0,0.05)',
   },
+  scrollDown:{
+    iconShadow: 'inset 0 0 0 1px rgb(144, 116, 181);',
+    iconBackground: '#9d64c6'
+  },
+  tile:{
+    wrapperBorder: '1px solid #9c98cd',
+    wrapperShadow: '0px 0px 15px #9c98cd',
+    logoFilter: 'invert(78%) sepia(88%) saturate(2448%) hue-rotate(191deg) brightness(84%) contrast(89%)',
+    logoFilterHover: 'invert(73%) sepia(43%) saturate(707%) hue-rotate(200deg) brightness(84%) contrast(74%)',
+    logoFill: '#9c98cd'
+  },
+  slick:{
+    arrows: "#9c98cd",
+  }
 }
 
 export const darkTheme = {
@@ -67,6 +81,20 @@ export const darkTheme = {
     itemColor: '#D0E2F2' ,
     itemBackground: 'rgba(0,0,0,0.2)',
   },
+  scrollDown:{
+    iconShadow: 'inset 0 0 0 1px rgb(208, 226, 242);',
+    iconBackground: '#D0E2F2',
+  },
+  tile:{
+    wrapperBorder: '1px solid #D0E2F2',
+    wrapperShadow: '0px 0px 15px #D0E2F2',
+    logoFilter: 'invert(99%) sepia(98%) saturate(293%) hue-rotate(204deg) brightness(113%) contrast(100%)',
+    logoFilterHover: 'invert(93%) sepia(2%) saturate(3896%) hue-rotate(179deg) brightness(95%) contrast(101%)',
+    logoFill: '#D0E2F2'
+  },
+  slick:{
+    arrows: "#D0E2F2",
+  }
 }
 //onst [cookies, setCookie] = useCookies(['theme']);
 let theme;

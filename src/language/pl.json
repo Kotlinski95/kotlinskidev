@@ -51,5 +51,26 @@
         "paragraph_reason": "Niestety nie można znaleźć szukanej strony. Może być chwilowo niedostępna, przeniesiona lub już nie istnieje.",
         "paragraph_todo": "Sprawdź, czy podany adres URL nie zawiera błędów i spróbuj ponownie. Ewentualnie poszukaj tego, czego brakuje lub rozejrzyj się po pozostałej części mojej witryny.",
         "search_placeholder": "Szukaj.."
+    },
+    "pages": {
+        "home": {
+            "welcome": {
+                "header": "Adrian Kotliński",
+                "title": "Junior Front-end Developer",
+                "scroll": "Przewiń niżej"
+            },
+            "about": {
+                "header": "Cześć",
+                "text": "Nazywam się Adrian Kotlinski, mieszkam w Katowicach. Swoją przygodę z FrontEndem rozpocząłem pod koniec 2020 roku. Od tamtej pory na naukę poświęcam każdą wolną chwilę i sprawia mi ona ogromną przyjemność. Ciągle dążę do poszerzania swoich kompetencji poprzez poznawanie najnowszych rozwiązań i technologii.",
+                "seemore": "Zobacz więcej"
+            },
+            "categories": {
+                "header": "Zapraszam Cię do odwiedzenia pozostałych stron",
+                "about": "O mnie",
+                "projects": "Projekty",
+                "stack": "Technologie",
+                "services": "Usługi"
+            }
+        }
     }
 }

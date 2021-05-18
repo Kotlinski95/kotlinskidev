@@ -9,8 +9,8 @@ const HomePage = () => {
   dispatch(setPage("Homepage"));
   return(
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative'}}>
-      <HeroDesktop/>
-      <HeroMobile/>
+      <HeroDesktop language={language}/>
+      <HeroMobile language={language} />
     </div>
   );
 };

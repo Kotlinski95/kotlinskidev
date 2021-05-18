@@ -5,7 +5,9 @@ import WelcomeComponent from './welcome/index';
 import CategoriesComponent from './categories/index';
 import AboutComponent from './about/index'
 
-const HeroDesktop = () => {
+const HeroDesktop = (props) => {
+    const language = props.language;
+    console.log("Hero desktop: ", language)
     const [currentPage, setCurrectPage] = useState(0);
     const handlePageChange = number => {
         setCurrectPage(number);
@@ -18,7 +20,7 @@ const HeroDesktop = () => {
                 animationTimer={2000}
                 pageOnChange={handlePageChange}
                 customPageNumber={currentPage}>
-            <WelcomeComponent />
+            <WelcomeComponent language={language} />
             <AboutComponent/>
             <CategoriesComponent />
             </ReactPageScroller>
@@ -26,10 +28,11 @@ const HeroDesktop = () => {
       );
 };
 
-const HeroMobile = () => {
+const HeroMobile = (props) => {
+      const language = props.language;
       return (
         <div className="hero-mobile">
-            <WelcomeComponent />
+            <WelcomeComponent language={language}/>
             <AboutComponent/>
             <CategoriesComponent />
         </div>

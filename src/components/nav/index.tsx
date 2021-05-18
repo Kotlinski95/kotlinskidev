@@ -69,22 +69,6 @@ const Nav = () => {
     })
   }
 
-  const closeAllMenusOnEsc = (e: any) => {
-    e = e || window.event;
-    if (e.key === 'Escape' || e.keyCode === 27) {
-      if (areMenusOpen) {
-        setAreMenusOpen(false);
-      }
-    }
-  };
-
-  const handleOpen = () => {
-    setAreMenusOpen(true);
-  }
-  const handleClose = () => {
-    setAreMenusOpen(false);
-  }
-
   function handleChange() {
     setTimeout(() => {
       setChecked(!checked);
@@ -161,9 +145,9 @@ const Nav = () => {
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
-              offColor="#23222e"
+              offColor="#171718"
               onColor="#eaedf0"
-              offHandleColor="#3d3b52"
+              offHandleColor="#2d2d30"
               onHandleColor="#D0E2F2"
               height={40}
               width={80}
@@ -177,7 +161,7 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
-                    color: "orange",
+                    color: "#D0E2F2",
                     paddingRight: 2
                   }}
                 >
