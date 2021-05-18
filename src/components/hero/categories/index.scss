@@ -1,0 +1,50 @@
+.categories-wrapper {
+    h1 {
+        margin: 2px;
+        text-align: center;
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track,
+    .slick-track div div {
+        height: 100%;
+        width: 90%;
+    }
+
+    .slick-list {
+        margin: 0 auto;
+    }
+
+    .slick-track div div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+        background: transparent !important;
+        border-radius: 50%;
+        z-index: 10;
+
+        @media (max-width: 600px) {
+            display: none !important;
+        }
+    }
+
+    .slick-prev:before,
+    .slick-next:before{
+        font-size: 50px;
+    }
+
+    .slick-prev {
+        left: 0px;
+    }
+
+    .slick-next {
+        right: 10px;
+    }
+}
