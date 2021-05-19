@@ -60,6 +60,7 @@ const Footer = () => {
                 <ul className="line-item footer-left">
                     <li>@{new Date().getFullYear()} {language.footer.privacy.rights}</li>
                     <Link to="/privacy"><li className="line-item">{language.footer.privacy.policy}</li></Link>
+                    <Link to="/cookies"><li className="line-item">{language.footer.privacy.cookies}</li></Link>
                 </ul>
                 <ul className="line-item footer-right">
                     <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>

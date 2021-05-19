@@ -75,3 +75,11 @@ main {
   justify-content: center;
   min-height: calc(100vh - 187px);
 }
+
+.privacy-wrapper,
+.cookies-wrapper{
+  text-align: center;
+  a:hover{
+    color: inherit;
+  }
+}
