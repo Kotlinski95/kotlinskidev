@@ -58,7 +58,7 @@ export const darkTheme = {
   nav: {
     linkColor: '#D0E2F2',
     lightBackground: '#2d2d30',
-    lightBackgroundOpacity: 'rgba(107, 128, 150,0.2)',
+    lightBackgroundOpacity: 'rgba(63, 63, 63, 0.9)',
     darkBackground: '#171718',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',

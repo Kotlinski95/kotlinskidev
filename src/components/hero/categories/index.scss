@@ -1,4 +1,9 @@
 .categories-wrapper {
+    @media (max-width: 768px){
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
     h1 {
         margin: 2px;
         text-align: center;
@@ -10,6 +15,12 @@
     .slick-track div div {
         height: 100%;
         width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 768px){
+            min-height: 400px;
+        }
     }
 
     .slick-list {
@@ -21,6 +32,9 @@
         align-items: center;
         justify-content: center;
     }
+    .slick-slide div{
+        margin: 25px auto;
+    }
 
     .slick-prev,
     .slick-next {
@@ -29,10 +43,6 @@
         background: transparent !important;
         border-radius: 50%;
         z-index: 10;
-
-        @media (max-width: 600px) {
-            display: none !important;
-        }
     }
 
     .slick-prev:before,
