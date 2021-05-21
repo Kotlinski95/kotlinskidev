@@ -114,8 +114,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 #navigation a.navigation,
 #wordsearch ul li,
-#search form input,
-::selection{
+#search form input{
   background-color: ${({ theme }) => theme.notFoundPage.itemBackground};
 }
 // ============= scroll-down ===========

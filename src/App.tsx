@@ -7,6 +7,8 @@ import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from '../src/pages/projects'
+import PrivacyPage from '../src/pages/privacy'
+import CookiesPage from '../src/pages/cookies'
 import PlcCarrierPage from './pages/about/plc_carrier'
 import FrontEndDevelopmentPage from './pages/about/front_end_development'
 import CoursesPage from './pages/about/courses'
@@ -78,6 +80,12 @@ function App() {
             </Route>
             <Route exact path="/projects">
               <ProjectsPage />
+            </Route>
+            <Route exact path="/privacy">
+              <PrivacyPage />
+            </Route>
+            <Route exact path="/cookies">
+              <CookiesPage />
             </Route>
             <Route exact path="/aboutme/plc-carrier">
               <PlcCarrierPage />

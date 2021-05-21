@@ -36,7 +36,8 @@
         },
         "privacy":{
             "rights": "https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
-            "policy": "Polityka prywatności & przetwarzanie danych osobych"
+            "policy": "Polityka prywatności & przetwarzanie danych osobych",
+            "cookies": "Polityka plików cookie"
         },
         "pages": {
             "services": "Usługi",
@@ -70,6 +71,255 @@
                 "projects": "Projekty",
                 "stack": "Technologie",
                 "services": "Usługi"
+            }
+        },
+        "privacy": {
+            "header": "Polityka prywatności",
+            "update": "Ostatnia aktualizacja: May 19, 2021",
+            "describe": "Niniejsza Polityka prywatności opisuje nasze zasady i procedury dotyczące gromadzenia, wykorzystywania i ujawniania Twoich informacji podczas korzystania z Usługi oraz zawiera informacje o Twoich prawach do prywatności oraz o tym, jak prawo Cię chroni.",
+            "personal_data": "Używamy Twoich danych osobowych w celu świadczenia i ulepszania Usługi. Korzystając z Usługi, zgadzasz się na zbieranie i wykorzystywanie informacji zgodnie z niniejszą Polityką prywatności. Niniejsza Polityka prywatności została stworzona przy pomocy ",
+            "generator": "Generator Polityki Prywatności",
+            "interpretation": "Interpretacja i definicje",
+            "interpretation_header": "Interpretacja",
+            "interpretation_text": "Słowa, których pierwsza litera jest pisana wielką literą, mają znaczenie określone w następujących warunkach. Poniższe definicje mają to samo znaczenie niezależnie od tego, czy występują w liczbie pojedynczej czy mnogiej.",
+            "definitions": {
+                "header": "Definicje",
+                "text": "Do celów niniejszej Polityki prywatności:",
+                "account_title": "Konto",
+                "account_label": " oznacza unikalne konto utworzone dla Ciebie w celu uzyskania dostępu do naszej Usługi lub części naszej Usługi.",
+                "company_title": "Firma",
+                "company_label": " (określane w niniejszej Umowie jako „Firma”, „My”, „Nas” lub „Nasz”) odnosi się do kotlinskidev",
+                "cookies_title": "Ciasteczka",
+                "cookies_label": " to małe pliki, które są umieszczane na Twoim komputerze, urządzeniu mobilnym lub innym urządzeniu przez witrynę internetową, zawierające szczegóły Twojej historii przeglądania tej witryny i jej wielu zastosowań.",
+                "country_title": "Kraj",
+                "country_label": " dotyczy: Polski",
+                "device_title": "Urządzenie",
+                "device_label": " oznacza każde urządzenie, które może uzyskać dostęp do Usługi, takie jak komputer, telefon komórkowy lub tablet cyfrowy.",
+                "personal_title": "Dane osobiste",
+                "personal_label": " to wszelkie informacje dotyczące zidentyfikowanej lub możliwej do zidentyfikowania osoby.",
+                "service_title": "Usługa",
+                "service_label": " odnosi się do Serwisu(strony internetowej).",
+                "service_provider_title": "Dostawca usługi",
+                "service_provider_label": " oznacza każdą osobę fizyczną lub prawną, która przetwarza dane w imieniu Spółki. Odnosi się do firm zewnętrznych lub osób zatrudnionych przez Firmę w celu ułatwienia korzystania z Usługi, świadczenia Usługi w imieniu Spółki, świadczenia usług związanych z Usługą lub pomocy Spółce w analizowaniu sposobu korzystania z Usługi.",
+                "social_title": "Usługa mediów społecznościowych innej firmy",
+                "social_label": " odnosi się do dowolnej witryny internetowej lub dowolnego serwisu społecznościowego, za pośrednictwem którego Użytkownik może się zalogować lub założyć konto w celu korzystania z Usługi.",
+                "usage_title": "Dane dotyczące użytkowania",
+                "usage_label": " odnosi się do danych zbieranych automatycznie, generowanych przez korzystanie z Usługi lub z samej infrastruktury Usługi (na przykład czas trwania wizyty na stronie).",
+                "website_title": "Strona internetowa",
+                "website_label": " odnosi się do kotlinskidev, dostępne pod adresem ",
+                "website_link": "https://www.kotlinskidev.pl",
+                "you_title": "Ty",
+                "you_label": " oznacza osobę uzyskującą dostęp do Usługi lub korzystającą z niej, firmę lub inny podmiot prawny, w imieniu którego taka osoba uzyskuje dostęp do Usługi lub z niej korzysta, stosownie do przypadku."
+            },
+            "collecting_data":{
+                "header": "Gromadzenie i wykorzystywanie danych osobowych",
+                "text": "Rodzaje gromadzonych danych",
+                "personal": {
+                    "header": "Dane osobiste",
+                    "text": "Korzystając z naszej Usługi, możemy poprosić Cię o podanie nam pewnych danych osobowych, które można wykorzystać do skontaktowania się z Tobą lub zidentyfikowania Cię. Informacje umożliwiające identyfikację osoby mogą obejmować między innymi:",
+                    "email": "Adres e-mail",
+                    "name": "Imię i nazwisko",
+                    "phone": "Numer telefonu",
+                    "address": "Adres, województwo, kod pocztowy, miasto",
+                    "usage": "Dane dotyczące użytkowania"
+                },
+                "usage": {
+                    "header": "Dane dotyczące użytkowania",
+                    "collection": "Dane dotyczące użytkowania są zbierane automatycznie podczas korzystania z Usługi.",
+                    "include": "Dane dotyczące użytkowania mogą obejmować takie informacje, jak adres protokołu internetowego Twojego urządzenia (np. Adres IP), typ przeglądarki, wersja przeglądarki, strony naszego Serwisu, które odwiedzasz, czas i data Twojej wizyty, czas spędzony na tych stronach, unikalne urządzenie identyfikatory i inne dane diagnostyczne.",
+                    "access": "Kiedy uzyskujesz dostęp do Usługi za pomocą urządzenia mobilnego lub za pośrednictwem urządzenia mobilnego, możemy automatycznie zbierać określone informacje, w tym między innymi rodzaj używanego urządzenia mobilnego, unikalny identyfikator Twojego urządzenia mobilnego, adres IP Twojego urządzenia mobilnego, Twój telefon komórkowy system operacyjny, rodzaj używanej mobilnej przeglądarki internetowej, unikalne identyfikatory urządzeń i inne dane diagnostyczne.",
+                    "collect": "Możemy również gromadzić informacje, które Twoja przeglądarka wysyła za każdym razem, gdy odwiedzasz naszą Usługę lub gdy uzyskujesz dostęp do Usługi za pomocą urządzenia mobilnego lub przez urządzenie mobilne."
+                },
+                "third": {
+                    "header": "Informacje z zewnętrznych usług mediów społecznościowych",
+                    "text": "Firma umożliwia Użytkownikowi utworzenie konta i zalogowanie się w celu korzystania z Usługi za pośrednictwem następujących zewnętrznych usług mediów społecznościowych:",
+                    "google": "Google",
+                    "facebook": "Facebook",
+                    "twitter": "Twitter",
+                    "register": "Jeśli zdecydujesz się zarejestrować za pośrednictwem usługi mediów społecznościowych strony trzeciej lub w inny sposób przyznać nam dostęp do usługi mediów społecznościowych strony trzeciej, możemy gromadzić dane osobowe, które są już powiązane z kontem usługi mediów społecznościowych strony trzeciej, takie jak imię i nazwisko, adres e-mail, Twoje działania lub Twoja lista kontaktów skojarzona z tym kontem.",
+                    "additional": "Możesz również mieć możliwość udostępnienia Firmie dodatkowych informacji za pośrednictwem swojego konta w usłudze mediów społecznościowych innej firmy. Jeśli zdecydujesz się podać takie informacje i dane osobowe, podczas rejestracji lub w inny sposób, udzielasz Firmie zgody na ich używanie, udostępnianie i przechowywanie w sposób zgodny z niniejszą Polityką prywatności."
+                },
+                "tracking": {
+                    "header": "Technologie śledzenia i pliki cookie",
+                    "cookies": "Używamy plików cookie i podobnych technologii śledzenia, aby śledzić aktywność w naszym serwisie i przechowywać określone informacje. Wykorzystywane technologie śledzenia to sygnały nawigacyjne, znaczniki i skrypty do gromadzenia i śledzenia informacji oraz do ulepszania i analizowania naszej Usługi. Technologie, których używamy, mogą obejmować:",
+                    "cookies_title": "Pliki cookie lub pliki cookie przeglądarki.",
+                    "cookies_text": "Cookie to mały plik umieszczany na Twoim Urządzeniu. Możesz poinstruować swoją przeglądarkę, aby odrzucała wszystkie pliki cookie lub wskazywała, kiedy plik cookie jest wysyłany. Jeśli jednak nie zaakceptujesz plików cookie, możesz nie być w stanie korzystać z niektórych części naszej Usługi. O ile nie dostosowałeś ustawień przeglądarki tak, aby odrzucała pliki cookie, nasz serwis może używać plików cookie.",
+                    "flash_title": "Pliki cookie Flash.",
+                    "flash_text": "Niektóre funkcje naszej Usługi mogą wykorzystywać lokalnie przechowywane obiekty (lub pliki cookie Flash) do zbierania i przechowywania informacji o Twoich preferencjach lub Twojej aktywności w naszym Serwisie. Pliki cookie Flash nie są zarządzane przez te same ustawienia przeglądarki, które są używane w przypadku plików cookie przeglądarki. Więcej informacji na temat usuwania plików cookie Flash można znaleźć w artykule „Gdzie mogę zmienić ustawienia dotyczące wyłączania lub usuwania lokalnych obiektów udostępnionych?” dostępne o",
+                    "flash_link" : "https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_",
+                    "beacons_title": "Sygnały nawigacyjne w sieci Web.",
+                    "beacons_text": "Niektóre sekcje naszej Usługi i nasze wiadomości e-mail mogą zawierać małe pliki elektroniczne zwane sygnalizatorami sieciowymi (nazywane również czystymi gifami, znacznikami pikselowymi i jednopikselowymi gifami), które pozwalają Firmie, na przykład, zliczać użytkowników, którzy odwiedzili te strony. lub otworzył wiadomość e-mail i inne powiązane statystyki witryny (na przykład rejestrowanie popularności określonej sekcji i weryfikacja integralności systemu i serwera).",
+                    "persistent": "Pliki cookie mogą być plikami „trwałymi” lub „sesyjnymi”. Trwałe pliki cookie pozostają na Twoim komputerze osobistym lub urządzeniu mobilnym, gdy przejdziesz do trybu offline, natomiast sesyjne pliki cookie są usuwane, gdy tylko zamkniesz przeglądarkę internetową. Dowiedz się więcej o plikach cookie:",
+                    "what_cookies_are": "Co to są pliki cookie?",
+                    "session": "Używamy zarówno sesyjnych, jak i trwałych plików cookie do celów określonych poniżej:",
+                    "necessary": "Niezbędne pliki cookie",
+                    "type": "Typ: sesyjne pliki cookie",
+                    "administered": "Administrowany przez: Us",
+                    "purpose": "Cel: Te pliki cookie są niezbędne do świadczenia usług dostępnych za pośrednictwem Witryny i umożliwienia korzystania z niektórych jej funkcji. Pomagają w uwierzytelnianiu użytkowników i zapobiegają nieuczciwemu korzystaniu z kont użytkowników. Bez tych plików cookie usługi, o które prosiłeś, nie mogą być świadczone, a my używamy tych plików cookie wyłącznie do świadczenia tych usług.",
+                    "cookies_policy": "Polityka plików cookie / akceptacja powiadomień Pliki cookie",
+                    "cookies_policy_type": "Typ: trwałe pliki cookie",
+                    "cookies_policy_administered": "Administrowany przez: Us",
+                    "cookies_purpose": "Cel: Te pliki cookie identyfikują, czy użytkownicy zaakceptowali użycie plików cookie w Witrynie.",
+                    "cookies_functionality": "Funkcjonalne pliki cookie",
+                    "cookies_functionality_type": "Typ: trwałe pliki cookie",
+                    "cookies_functionality_administered": "Administrowany przez: Us",
+                    "cookies_website": "Cel: Te pliki cookie pozwalają nam zapamiętać wybory dokonywane podczas korzystania z Witryny, takie jak zapamiętanie danych logowania lub preferencji językowych. Celem tych plików cookie jest zapewnienie bardziej osobistego doświadczenia i uniknięcie konieczności ponownego wprowadzania preferencji za każdym razem, gdy korzystasz z Witryny.",
+                    "more": "Aby uzyskać więcej informacji na temat używanych przez nas plików cookie i Twoich wyborów dotyczących plików cookie, odwiedź naszą Politykę plików cookie lub sekcję dotyczącą plików cookie w naszej Polityce prywatności."
+                },
+                "use_personal": {
+                    "header": "Wykorzystywanie danych osobowych",
+                    "text": "Firma może wykorzystywać dane osobowe w następujących celach:",
+                    "service_title": "Aby świadczyć i utrzymywać naszą usługę",
+                    "service_text": ", w tym do monitorowania korzystania z naszej Usługi.",
+                    "manage_account_title": "Aby zarządzać swoim kontem:",
+                    "manage_account_text": "do zarządzania Twoją rejestracją jako użytkownika Usługi. Podane przez Ciebie dane osobowe mogą dać Ci dostęp do różnych funkcjonalności Usługi, które są dostępne dla Ciebie jako zarejestrowanego użytkownika.",
+                    "performance_title": "W celu wykonania umowy:",
+                    "performance_text": "opracowanie, zgodność i zawarcie umowy zakupu produktów, towarów lub usług, które kupiłeś lub jakiejkolwiek innej umowy z nami za pośrednictwem Usługi.",
+                    "contact_title": "Skontaktować się z Tobą: ",
+                    "contact_text": "Aby skontaktować się z Tobą za pośrednictwem poczty e-mail, połączeń telefonicznych, SMS-ów lub innych równoważnych form komunikacji elektronicznej, takich jak powiadomienia push aplikacji mobilnej dotyczące aktualizacji lub komunikacji informacyjnej związanej z funkcjami, produktami lub zakontraktowanymi usługami, w tym aktualizacjami zabezpieczeń, gdy jest to konieczne lub uzasadnione do ich realizacji.",
+                    "provide_title": "Aby Ci zapewnić",
+                    "provide_text": "z aktualnościami, ofertami specjalnymi i ogólnymi informacjami o innych towarach, usługach i wydarzeniach, które oferujemy, które są podobne do tych, które już kupiłeś lub o które pytałeś, chyba że zdecydowałeś się nie otrzymywać takich informacji.",
+                    "manage_request_title": "Aby zarządzać Twoimi prośbami:",
+                    "manage_request_text": "Aby uczestniczyć i zarządzać Twoimi prośbami do nas.",
+                    "business_title": "Do transferów biznesowych: ",
+                    "business_text": "Możemy wykorzystać Twoje dane do oceny lub przeprowadzenia fuzji, zbycia, restrukturyzacji, reorganizacji, rozwiązania lub innej sprzedaży lub przeniesienia niektórych lub wszystkich naszych aktywów, czy to w ramach kontynuacji działalności, czy w ramach upadłości, likwidacji lub podobnego postępowania, w którym posiadane przez nas Dane Osobowe dotyczące użytkowników naszych Usług znajdują się wśród przekazanych aktywów.",
+                    "other_title": "Do innych celów: ",
+                    "other_text": "Możemy wykorzystywać Twoje informacje do innych celów, takich jak analiza danych, identyfikacja trendów użytkowania, określanie skuteczności naszych kampanii promocyjnych oraz ocena i ulepszanie naszej Usługi, produktów, usług, marketingu i Twoich doświadczeń.",
+                    "situations":"Możemy udostępniać Twoje dane osobowe w następujących sytuacjach: ",
+                    "web_provider_title": "Z dostawcami usług: ",
+                    "web_provider_text": "Możemy udostępniać Twoje dane osobowe Usługodawcom w celu monitorowania i analizowania korzystania z naszej Usługi oraz kontaktowania się z Tobą.",
+                    "business_transfer_title": "W przypadku transferów biznesowych:",
+                    "business_transfer_text": "Możemy udostępniać lub przekazywać Twoje dane osobowe w związku z lub w trakcie negocjacji jakiejkolwiek fuzji, sprzedaży aktywów Spółki, finansowania lub nabycia całości lub części naszej działalności innej firmie.",
+                    "affiliates_title": "Z podmiotami stowarzyszonymi:",
+                    "affiliates_text": "Możemy udostępniać Twoje dane naszym podmiotom stowarzyszonym, w którym to przypadku będziemy wymagać od tych podmiotów stowarzyszonych przestrzegania niniejszej Polityki prywatności. Podmioty stowarzyszone obejmują naszą firmę macierzystą i wszelkie inne spółki zależne, partnerów joint venture lub inne firmy, które kontrolujemy lub które są pod wspólną kontrolą z nami.",
+                    "business_partners_title": "Z partnerami biznesowymi: ",
+                    "business_partners_text": "Możemy udostępniać Twoje dane naszym partnerom biznesowym, aby oferować Ci określone produkty, usługi lub promocje.",
+                    "other_users_title": "Z innymi użytkownikami: ",
+                    "other_users_text": "kiedy udostępniasz dane osobowe lub w inny sposób wchodzisz w interakcje w miejscach publicznych z innymi użytkownikami, takie informacje mogą być przeglądane przez wszystkich użytkowników i mogą być publicznie rozpowszechniane na zewnątrz. Jeśli wchodzisz w interakcje z innymi użytkownikami lub rejestrujesz się za pośrednictwem usługi mediów społecznościowych strony trzeciej, Twoje kontakty w usłudze mediów społecznościowych strony trzeciej mogą zobaczyć Twoje imię i nazwisko, profil, zdjęcia i opis Twojej aktywności. Podobnie inni użytkownicy będą mogli przeglądać opisy Twojej aktywności, komunikować się z Tobą i przeglądać Twój profil.",
+                    "content_title": "Za Twoją zgodą: ",
+                    "content_text": "Za Twoją zgodą możemy ujawnić Twoje dane osobowe w jakimkolwiek innym celu."
+                },
+                "retention": {
+                    "header": "Przechowywanie Twoich danych osobowych",
+                    "retent": "Firma będzie przechowywać Twoje dane osobowe tylko tak długo, jak będzie to konieczne do celów określonych w niniejszej Polityce prywatności. Będziemy przechowywać i wykorzystywać Twoje dane osobowe w zakresie niezbędnym do wypełnienia naszych zobowiązań prawnych (na przykład, jeśli jesteśmy zobowiązani do zachowania Twoich danych w celu przestrzegania obowiązujących przepisów), rozwiązywania sporów i egzekwowania naszych umów prawnych i zasad.",
+                    "usage": "Firma zachowa również Dane dotyczące użytkowania do celów analizy wewnętrznej. Dane dotyczące użytkowania są zazwyczaj przechowywane przez krótszy okres czasu, z wyjątkiem sytuacji, gdy dane te są wykorzystywane do wzmocnienia bezpieczeństwa lub poprawy funkcjonalności naszej Usługi lub jesteśmy prawnie zobowiązani do przechowywania tych danych przez dłuższy czas."
+                },
+                "transfer": {
+                    "header": "Przekazywanie Twoich danych osobowych",
+                    "information": "Twoje dane, w tym Dane Osobowe, są przetwarzane w biurach operacyjnych Spółki oraz w każdym innym miejscu, w którym znajdują się strony zaangażowane w przetwarzanie. Oznacza to, że informacje te mogą być przekazywane i przechowywane na komputerach znajdujących się poza Twoim stanem, prowincją, krajem lub inną jurysdykcją rządową, w której przepisy dotyczące ochrony danych mogą różnić się od przepisów obowiązujących w Twojej jurysdykcji.",
+                    "consent": "Twoja zgoda na niniejszą Politykę prywatności, a następnie przesłanie przez Ciebie takich informacji oznacza Twoją zgodę na to przeniesienie.",
+                    "company": "Firma podejmie wszelkie uzasadnione kroki, aby zapewnić, że Twoje dane są traktowane w bezpieczny sposób i zgodnie z niniejszą Polityką prywatności, a żadne przekazywanie Twoich danych osobowych do organizacji lub kraju nie będzie miało miejsca, chyba że istnieją odpowiednie kontrole, w tym bezpieczeństwo Twoje dane i inne dane osobowe."
+                },
+                "disclosure":{
+                    "header": "Ujawnienie Twoich danych osobowych",
+                    "business_title": "Transakcje biznesowe",
+                    "business_text": "Jeśli Firma jest zaangażowana w fuzję, przejęcie lub sprzedaż aktywów, Twoje Dane Osobowe mogą zostać przekazane. Powiadomimy Cię, zanim Twoje dane osobowe zostaną przekazane i będą podlegać innej Polityce prywatności.",
+                    "law_title": "Egzekwowanie prawa",
+                    "law_text": "W pewnych okolicznościach Spółka może być zobowiązana do ujawnienia Twoich Danych Osobowych, jeśli jest to wymagane przez prawo lub w odpowiedzi na ważne żądania władz publicznych (np. Sądu lub agencji rządowej).",
+                    "legal_title": "Inne wymagania prawne",
+                    "legal_text": "Firma może ujawnić Twoje dane osobowe w dobrej wierze, że takie działanie jest konieczne, aby:",
+                    "comply": "Przestrzegaj zobowiązania prawnego",
+                    "protect": "Chronić i bronić praw lub własności Spółki",
+                    "prevent": "Zapobiegaj lub badaj możliwe wykroczenia w związku z Usługą",
+                    "personal_safety": "Chroń bezpieczeństwo osobiste Użytkowników Serwisu lub społeczeństwa",
+                    "liability": "Chronić przed odpowiedzialnością prawną"
+                },
+                "security": {
+                    "header": "Bezpieczeństwo Twoich danych osobowych",
+                    "text": "Bezpieczeństwo Twoich danych osobowych jest dla nas ważne, ale pamiętaj, że żadna metoda transmisji przez Internet ani metoda elektronicznego przechowywania danych nie jest w 100% bezpieczna. Chociaż staramy się wykorzystywać komercyjnie akceptowalne sposoby ochrony Twoich danych osobowych, nie możemy zagwarantować ich całkowitego bezpieczeństwa."
+                },
+                "children": {
+                    "header": "Prywatność dzieci",
+                    "text": "Nasza usługa nie jest skierowana do osób poniżej 13. roku życia. Nie zbieramy świadomie danych osobowych od osób poniżej 13. roku życia. Jeśli jesteś rodzicem lub opiekunem i wiesz, że Twoje dziecko przekazało nam dane osobowe, prosimy Skontaktuj się z nami. Jeśli dowiemy się, że zebraliśmy dane osobowe od kogokolwiek poniżej 13 roku życia bez weryfikacji zgody rodziców, podejmujemy kroki w celu usunięcia tych informacji z naszych serwerów.",
+                    "rely": "Jeśli musimy polegać na zgodzie jako podstawie prawnej przetwarzania Twoich danych, a Twój kraj wymaga zgody rodzica, możemy wymagać zgody Twojego rodzica, zanim zbierzemy i wykorzystamy te informacje."
+                },
+                "links": {
+                    "header": "Linki do innych witryn internetowych",
+                    "text": "Nasz Serwis może zawierać linki do innych stron internetowych, które nie są przez nas obsługiwane. Jeśli klikniesz łącze strony trzeciej, zostaniesz przekierowany do witryny tej osoby trzeciej. Zdecydowanie zalecamy zapoznanie się z Polityką prywatności każdej odwiedzanej witryny.",
+                    "responsibility": "Nie mamy kontroli i nie ponosimy żadnej odpowiedzialności za zawartość, politykę prywatności lub praktyki jakichkolwiek witryn lub usług stron trzecich."
+                },
+                "changes" :{
+                    "header": "Zmiany w niniejszej Polityce prywatności",
+                    "update": "Od czasu do czasu możemy aktualizować naszą Politykę prywatności. Powiadomimy Cię o wszelkich zmianach, publikując nową Politykę prywatności na tej stronie.",
+                    "let_know": "Poinformujemy Cię za pośrednictwem poczty e-mail i / lub wyraźnego powiadomienia w naszej usłudze, zanim zmiana zacznie obowiązywać, i zaktualizujemy datę „ostatniej aktualizacji” u góry niniejszej Polityki prywatności.",
+                    "advised": "Zaleca się okresowe przeglądanie niniejszej Polityki prywatności pod kątem wszelkich zmian. Zmiany w niniejszej Polityce prywatności obowiązują, gdy zostaną opublikowane na tej stronie."
+                },
+                "contact": {
+                    "header": "Skontaktuj się z nami",
+                    "questions": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej Polityki prywatności, możesz skontaktować się z nami:",
+                    "email": "E-mailem: kotlinski95@gmail.com",
+                    "page": "Odwiedzając tę ​​stronę w naszej witrynie:",
+                    "page_url": "https://www.kotlinskidev.pl/contact"
+                }
+            }
+        },
+        "cookies": {
+            "header": "Polityka plików cookies",
+            "update": "Ostatnia aktualizacja: 19 maja 2021 r",
+            "explains": "Niniejsza Polityka plików cookie wyjaśnia, czym są pliki cookie i jak ich używamy. Powinieneś przeczytać tę politykę, abyś mógł zrozumieć, jakiego rodzaju plików cookie używamy lub jakie informacje zbieramy za pomocą plików cookie i jak te informacje są wykorzystywane. Niniejsza Polityka Cookies została stworzona przy pomocy",
+            "generator": "Generator Polityki Cookies.",
+            "cookies": "Pliki cookie zazwyczaj nie zawierają żadnych informacji umożliwiających identyfikację użytkownika, ale dane osobowe, które przechowujemy o Tobie, mogą być powiązane z informacjami przechowywanymi w plikach cookie i uzyskanymi z nich. Więcej informacji o tym, jak wykorzystujemy, przechowujemy i zabezpieczamy Twoje dane osobowe, znajdziesz w naszej Polityce prywatności.",
+            "sensitive": "Nie przechowujemy wrażliwych danych osobowych, takich jak adresy pocztowe, hasła do kont itp. W plikach cookie, których używamy.",
+            "interpretation_definitions": {
+                "header": "Interpretacja i definicje",
+                "interpretation": {
+                    "header": "Interpretacja",
+                    "text": "Słowa, których pierwsza litera jest pisana wielką literą, mają znaczenie określone w następujących warunkach. Poniższe definicje mają to samo znaczenie niezależnie od tego, czy występują w liczbie pojedynczej czy mnogiej."
+                },
+                "definitions":{
+                    "header": "Definicje",
+                    "text": "Na potrzeby niniejszej Polityki plików cookie:",
+                    "company_title": "Firma",
+                    "company_text": "rokreślane jako „Firma”, „My”, „Nas” lub „Nasz” w niniejszej Polityce plików cookie) odnosi się do kotlinskidev.",
+                    "cookies_title": "Ciasteczka",
+                    "cookies_text": "oznacza małe pliki, które są umieszczane na Twoim komputerze, urządzeniu mobilnym lub innym urządzeniu przez witrynę internetową, zawierające szczegóły Twojej historii przeglądania tej witryny i jej wielu zastosowań.",
+                    "website_title": "Strona internetowa",
+                    "website_text": "odnosi się do kotlinskidev, dostępne pod adresem ",
+                    "website_url": "https://www.kotlinskidev.pl/",
+                    "you_title": "Ty",
+                    "you_text": "oznacza osobę fizyczną uzyskującą dostęp do Witryny lub korzystającą z niej, firmę lub jakąkolwiek osobę prawną, w imieniu której taka osoba uzyskuje dostęp lub korzysta z Witryny, stosownie do przypadku."
+                },
+                "cookies": {
+                    "header": "Korzystanie z plików cookie",
+                    "text": "Typ plików cookie, których używamy",
+                    "persistent": "Pliki cookie mogą być plikami „trwałymi” lub „sesyjnymi”. Trwałe pliki cookie pozostają na Twoim komputerze osobistym lub urządzeniu mobilnym, gdy przejdziesz do trybu offline, natomiast sesyjne pliki cookie są usuwane, gdy tylko zamkniesz przeglądarkę internetową.",
+                    "session": "Używamy zarówno sesyjnych, jak i trwałych plików cookie do celów określonych poniżej:",
+                    "essential_cookies_text": "Niezbędne pliki cookie",
+                    "essential_cookies_type": "Typ: sesyjne pliki cookie",
+                    "essential_cookies_administrated": "Administrowany przez: Us",
+                    "essential_cookies_purpose": "Cel: Te pliki cookie są niezbędne do świadczenia usług dostępnych za pośrednictwem Witryny i umożliwienia korzystania z niektórych jej funkcji. Pomagają w uwierzytelnianiu użytkowników i zapobiegają nieuczciwemu korzystaniu z kont użytkowników. Bez tych plików cookie usługi, o które prosiłeś, nie mogą być świadczone, a my używamy tych plików cookie wyłącznie do świadczenia tych usług.",
+                    "functional_cookies_text": "Funkcjonalne pliki cookie",
+                    "functional_cookies_type": "Typ: trwałe pliki cookie",
+                    "functional_cookies_administrated": "Administrowany przez: Us",
+                    "functional_cookies_purpose": "Cel: Te pliki cookie pozwalają nam zapamiętać wybory dokonywane podczas korzystania z Witryny, takie jak zapamiętanie danych logowania lub preferencji językowych. Celem tych plików cookie jest zapewnienie bardziej osobistego doświadczenia i uniknięcie konieczności ponownego wprowadzania preferencji za każdym razem, gdy korzystasz z Witryny."
+                },
+                "choises":{
+                    "header": "Twoje wybory dotyczące plików cookie",
+                    "text": "Jeśli wolisz uniknąć korzystania z plików cookie w Witrynie, najpierw musisz wyłączyć korzystanie z plików cookie w swojej przeglądarce, a następnie usunąć pliki cookie zapisane w przeglądarce, powiązane z tą witryną. W każdej chwili możesz skorzystać z tej opcji, aby uniemożliwić korzystanie z plików cookie.",
+                    "not_accept": "Jeśli nie zaakceptujesz naszych plików cookie, możesz doświadczyć pewnych niedogodności w korzystaniu z Witryny, a niektóre funkcje mogą nie działać poprawnie.",
+                    "delete" : "Jeśli chcesz usunąć pliki cookie lub poinstruować przeglądarkę internetową, aby usunęła lub odrzuciła pliki cookie, odwiedź strony pomocy swojej przeglądarki internetowej.",
+                    "chrome": "W przeglądarce internetowej Chrome odwiedź tę stronę firmy Google: ",
+                    "chrome_link": "https://support.google.com/accounts/answer/32050",
+                    "explorer": "W przypadku przeglądarki internetowej Internet Explorer odwiedź tę stronę firmy Microsoft: ",
+                    "explorer_link": "http://support.microsoft.com/kb/278835",
+                    "firefox":"W przypadku przeglądarki internetowej Firefox odwiedź tę stronę w witrynie Mozilla: ",
+                    "firefox_link": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored ",
+                    "safari" : "W przeglądarce Safari odwiedź tę stronę firmy Apple: ",
+                    "safari_link": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac",
+                    "other": "W przypadku każdej innej przeglądarki internetowej odwiedź oficjalne strony internetowe swojej przeglądarki."
+                },
+                "more": {
+                    "header": "Więcej informacji o plikach cookie",
+                    "text": "Możesz dowiedzieć się więcej o plikach cookie: ",
+                    "cookies_what_are": "Co to są pliki cookie?"
+                },
+                "contact": {
+                    "header": "Skontaktuj się z nami",
+                    "text": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej Polityki plików cookie, możesz skontaktować się z nami:",
+                    "email": "E-mailem: kotlinski95@gmail.com",
+                    "website": "Odwiedzając tę ​​stronę w naszej witrynie:",
+                    "website_url": " https://www.kotlinskidev.pl/contact"
+                }
             }
         }
     }
