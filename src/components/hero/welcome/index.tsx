@@ -27,8 +27,11 @@ const WelcomeComponent = (props) => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
             <div className="welcome-wrapper">
+                <div className="introduce-gif"/>
+                <div className="introduce-text">
                     <BouncyH1>{language.pages.home.welcome.header}</BouncyH1>
                     {show ? <BouncyH2>{language.pages.home.welcome.title}</BouncyH2> : null}
+                </div>
             </div>
             { showScroll ? <ScrollDown bottom="30px" top="auto" bottomText="-15px" topText="auto" text={language.pages.home.welcome.scroll}/> : null}
         </div>

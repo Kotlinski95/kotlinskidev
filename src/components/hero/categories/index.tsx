@@ -7,6 +7,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.scss';
+import LazyLoad from 'react-lazyload';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
@@ -54,8 +55,11 @@ const CategoriesComponent = () => {
     const location = useLocation();
     React.useEffect(() => {
         setWindowDimensions(getWindowDimensions());
-        if (windowDimensions.width > 768) {
+        if (windowDimensions.width > 968) {
             setSlides(3);
+        }
+        else if (windowDimensions.width <= 968 && windowDimensions.width > 668){
+            setSlides(2);
         }
         else{
             setSlides(1);
@@ -64,8 +68,11 @@ const CategoriesComponent = () => {
     useEffect(() => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
-            if (windowDimensions.width > 768) {
+            if (windowDimensions.width > 968) {
                 setSlides(3);
+            }
+            else if (windowDimensions.width <= 968 && windowDimensions.width > 668){
+                setSlides(2);
             }
             else{
                 setSlides(1);
