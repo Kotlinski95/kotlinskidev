@@ -321,6 +321,15 @@
                     "website_url": " https://www.kotlinskidev.pl/contact"
                 }
             }
+        },
+        "contact": {
+            "header": "Do you have a question or want to contact me? Or maybe you have any comments about the website? Feel free to send me email.",
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send",
+            "feedback": "Thank you for your message! I'll send you response as fast as I can."
         }
     }
 

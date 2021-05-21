@@ -4,6 +4,7 @@ import {useState} from 'react';
 import WelcomeComponent from './welcome/index';
 import CategoriesComponent from './categories/index';
 import AboutComponent from './about/index'
+import ContactComponent from './contact/index'
 
 const HeroDesktop = (props) => {
     const language = props.language;
@@ -22,6 +23,7 @@ const HeroDesktop = (props) => {
             <WelcomeComponent language={language} />
             <AboutComponent/>
             <CategoriesComponent />
+            <ContactComponent/>
             </ReactPageScroller>
         </div>
       );
@@ -34,6 +36,7 @@ const HeroMobile = (props) => {
             <WelcomeComponent language={language}/>
             <AboutComponent/>
             <CategoriesComponent />
+            <ContactComponent/>
         </div>
       );
 };

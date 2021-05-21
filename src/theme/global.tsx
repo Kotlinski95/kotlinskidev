@@ -59,6 +59,13 @@ export const GlobalStyles = createGlobalStyle`
   .MuiButtonBase-root.menuItem a:hover{
     color: ${({ theme }) => theme.footer.menuItemColorHover};
   }
+  .navigation .MuiButtonBase-root.MuiButton-root.MuiButton-text:hover{
+    background-color: ${({ theme }) => theme.footer.lightBackground};
+  }
+  .navigation .MuiButtonBase-root.MuiButton-root.MuiButton-text li:hover,
+  .navigation .nav-left ul a li:hover{
+    color: ${({ theme }) => theme.nav.linkHover};
+  }
   //============ material ui- menu, menu items =======
   #simple-menu .MuiPaper-root{
     background-color: ${({ theme }) => theme.footer.lightBackground};
@@ -144,4 +151,20 @@ export const GlobalStyles = createGlobalStyle`
 .slick-next:before{
   color: ${({ theme }) => theme.slick.arrows};
 }
-  `;
+
+// ============ contact form ==============
+.contact_form-wrapper{
+  background-color: ${({ theme }) => theme.contact.formBackground};
+}
+.contact_form-wrapper input,
+.contact_form-wrapper button,
+.contact_form-wrapper textarea{
+  background-color: ${({ theme }) => theme.contact.inputBackground};
+}
+.contact_form-wrapper input,
+.contact_form-wrapper button,
+.contact_form-wrapper textarea,
+.contact_form-wrapper .contact-button{
+  color: ${({ theme }) => theme.contact.inputColor};
+}
+`;
