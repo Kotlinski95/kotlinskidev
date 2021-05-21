@@ -16,6 +16,7 @@ export const lightTheme = {
     menuItemColorHover: '#000000',
     DropdownColorHover: '#9c98cd',
     DropdownColorIcon: '#9c98cd',
+    linkHover: '#ffffff',
   },
   typedText: {
     color: '#33234d',
@@ -46,6 +47,11 @@ export const lightTheme = {
   },
   slick:{
     arrows: "#9c98cd",
+  },
+  contact:{
+    formBackground: '#9c98cd',
+    inputBackground: 'rgba(255,255,255,0.6)',
+    inputColor: '#33234d'
   }
 }
 
@@ -64,6 +70,7 @@ export const darkTheme = {
     menuItemColorHover: '#000000',
     DropdownColorHover: '#2d2d30',
     DropdownColorIcon: '#D0E2F2',
+    linkHover: '#ffffff',
   },
   typedText: {
     color: '#D0E2F2',
@@ -77,7 +84,7 @@ export const darkTheme = {
     menuItemColorHover: '#727272',
   },
   notFoundPage:{
-    itemSelected: '#3d3b52',
+    itemSelected: '#352b9e',
     itemColor: '#D0E2F2' ,
     itemBackground: 'rgba(0,0,0,0.2)',
   },
@@ -94,6 +101,11 @@ export const darkTheme = {
   },
   slick:{
     arrows: "#D0E2F2",
+  },
+  contact:{
+    formBackground: '#2d2d30',
+    inputBackground: 'rgba(0,0,0,0.2)',
+    inputColor: '#D0E2F2'
   }
 }
 //onst [cookies, setCookie] = useCookies(['theme']);
