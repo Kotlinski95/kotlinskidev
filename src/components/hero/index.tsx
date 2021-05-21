@@ -7,7 +7,6 @@ import AboutComponent from './about/index'
 
 const HeroDesktop = (props) => {
     const language = props.language;
-    console.log("Hero desktop: ", language)
     const [currentPage, setCurrectPage] = useState(0);
     const handlePageChange = number => {
         setCurrectPage(number);
