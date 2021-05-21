@@ -16,11 +16,9 @@ const Breadcrumbs = () => {
         <p className="breadcrumbs">
             {
                 locations.map((value, index) => {
-                    console.log("value: ", value, "index: ", index);
                     if (index > 0 && locations.length > 1){
                         const last = index === locations.length - 1;
                         let to = `/${locations.slice(1, index + 1).join('/')}`;
-                        console.log("last: ",last , "to: ", to);
                         return(
                             <>
                             <NavigateNextIcon /><Link to={to}><li className="line-item"> {value}</li></Link>
@@ -29,7 +27,6 @@ const Breadcrumbs = () => {
                     }
                     else{
                         let to = `/`;
-                        console.log("to: ", to);
                         return(
                             <Link to="/"><li className="line-item">{value}</li></Link>
                         )

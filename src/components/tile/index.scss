@@ -11,14 +11,18 @@
 
 .tile-wrapper:hover{
     transform: scale(1.1);
+    @media (max-width: 768px){
+        transform: scale(1.05);
+    }
     transition: all 1s;
     cursor: pointer;
 }
 
 .tile-logo{
     margin-top: 10px;
+    padding-bottom: 40px;
     fill: #D0E2F2;
-    max-height: 80%;
+    max-height: 100%;
     width: auto;
     max-width: 90%;
     border-radius: 10px;
@@ -29,6 +33,12 @@
     width: 100%;
     text-align: center;
     font-size: 32px;
+    @media (max-width: 1024px){
+        font-size: 28px;
+    }
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
     margin: 5px;
     position: absolute;
     bottom: 0;
