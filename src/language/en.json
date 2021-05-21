@@ -333,6 +333,9 @@
         },
         "stack":{
             "front_header": "Front-end developer stack"
+        },
+        "projects":{
+            "header": "Projects"
         }
     }
 

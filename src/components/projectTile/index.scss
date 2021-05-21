@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+.project-tile-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px;
+    border-radius: 15px;
+    font-family: 'Reggae One', cursive;
+    overflow: hidden;
+    transition: all .5s ease;
+    box-sizing: border-box;
+    @media (max-width: 768px){
+        transform: scale(1.05);
+    }
+}
+
+.project-tile-wrapper img{
+    overflow: hidden;
+    max-width:90%;
+    max-height:90%;
+    transition: 0.5s all ease-in-out;
+}
+.project-tile-wrapper:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.project-tile-logo{
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    z-index: 9;
+}
+
+.project-tile-title{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    @media (max-width: 1024px){
+        font-size: 20px;
+    }
+    @media (max-width: 768px){
+        font-size: 16px;
+    }
+    margin: 5px;
+    z-index: 9;
+}
+
+.project-tile-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
