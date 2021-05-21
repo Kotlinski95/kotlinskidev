@@ -330,6 +330,9 @@
             "message": "Wiadomość",
             "send": "Wyślij",
             "feedback": "Dziękuję za Twoją wiadomość! Wyślę odpowiedź tak szybko, jak to możliwe."
+        },
+        "stack":{
+            "front_header": "Umiejętności Front-end developera"
         }
     }
 }
