@@ -335,7 +335,11 @@
             "front_header": "Umiejętności Front-end developera"
         },
         "projects":{
-            "header": "Projekty"
+            "header": "Projekty",
+            "portfolio": "Początkowe portfolio",
+            "quiz": "Quiz o gwiezdnych wojnach",
+            "chess": "Internetowe szachy",
+            "estate": "Strona biura nieruchomości"
         }
     }
 }

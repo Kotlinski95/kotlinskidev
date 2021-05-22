@@ -16,10 +16,10 @@ const ProjectsPage = () => {
       <Breadcrumbs />
       <h2 className="projects-hello">{language.pages.projects.header}</h2>
       <div className="projects-wrapper">
-        <ProjectTile logo={portfolio} width="100%" heigh="100%" title="HTML" imgTitle="HTML 5"/>
-        <ProjectTile logo={startwars} width="100%" heigh="100%" title="HTML" imgTitle="HTML 5"/>
-        <ProjectTile logo={chess} width="100%" heigh="100%" title="HTML" imgTitle="HTML 5"/>
-        <ProjectTile logo={realestate} width="100%" heigh="100%" title="HTML" imgTitle="HTML 5"/>
+        <ProjectTile logo={portfolio} width="100%" heigh="100%" title={language.pages.projects.portfolio} imgTitle={language.pages.projects.portfolio} url="/projects/portfolio"/>
+        <ProjectTile logo={startwars} width="100%" heigh="100%" title={language.pages.projects.quiz} imgTitle={language.pages.projects.quiz} url="/projects/star-wars-quiz"/>
+        <ProjectTile logo={chess} width="100%" heigh="100%" title={language.pages.projects.chess} imgTitle={language.pages.projects.chess} url="/projects/coders-chess"/>
+        <ProjectTile logo={realestate} width="100%" heigh="100%" title={language.pages.projects.estate} imgTitle={language.pages.projects.estate} url="/projects/real-estate"/>
       </div>
     </div>
   );
