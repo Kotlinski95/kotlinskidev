@@ -6,7 +6,11 @@ import AboutPage from './pages/about/about'
 import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
 import StackPage from './pages/stack/stack'
-import ProjectsPage from '../src/pages/projects'
+import ProjectsPage from './pages/projects/projects'
+import PortfolioPage from './pages/projects/portfolio'
+import QuizPage from './pages/projects/quiz'
+import ChessPage from './pages/projects/chess'
+import EstatePage from './pages/projects/estate'
 import PrivacyPage from '../src/pages/privacy'
 import CookiesPage from '../src/pages/cookies'
 import PlcCarrierPage from './pages/about/plc_carrier'
@@ -80,6 +84,18 @@ function App() {
             </Route>
             <Route exact path="/projects">
               <ProjectsPage />
+            </Route>
+            <Route exact path="/projects/portfolio">
+              <PortfolioPage />
+            </Route>
+            <Route exact path="/projects/star-wars-quiz">
+              <QuizPage />
+            </Route>
+            <Route exact path="/projects/coders-chess">
+              <ChessPage />
+            </Route>
+            <Route exact path="/projects/real-estate">
+              <EstatePage />
             </Route>
             <Route exact path="/privacy">
               <PrivacyPage />

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+.project-tile-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px;
+    border-radius: 15px;
+    font-family: 'Reggae One', cursive;
+    overflow: hidden;
+    transition: all .5s ease;
+    box-sizing: border-box;
+    max-width: 90%;
+    max-height: 90%;
+    @media (max-width: 768px){
+        transform: scale(1.05);
+    }
+}
+
+.project-tile-wrapper img{
+    overflow: hidden;
+    transition: all 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(100%);
+    border-radius: 10px;
+    position: relative;
+    z-index: 9;
+    transform: scale(1.2);
+}
+.project-tile-wrapper:hover img{
+    filter: brightness(40%);
+    transform: scale(1);
+    cursor: pointer;
+}
+.project-tile-wrapper .arrow-container{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    z-index: 12;
+    transition: all 2s, filter 1.5s ease-in-out;
+}
+.project-tile-wrapper .arrow-container .arrow-main{
+    color: #fff;
+}
+.project-tile-wrapper:hover .arrow-container{
+    opacity: 1;
+}
+
+.project-tile-title{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @media (max-width: 1024px){
+        font-size: 20px;
+    }
+    @media (max-width: 768px){
+        font-size: 16px;
+    }
+    margin: 5px;
+    z-index: 9;
+}
+
+.project-tile-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}

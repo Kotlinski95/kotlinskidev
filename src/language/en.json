@@ -333,6 +333,13 @@
         },
         "stack":{
             "front_header": "Front-end developer stack"
+        },
+        "projects":{
+            "header": "Projects",
+            "portfolio": "Basic Portfolio",
+            "quiz": "Star Wars Quiz",
+            "chess": "Coders chess",
+            "estate": "Real Estate website"
         }
     }
 
