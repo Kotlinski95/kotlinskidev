@@ -1,0 +1,15 @@
+.profileImage-wrapper{
+    img{
+        transition: all .5s, filter .5s ease-in-out;
+        filter: brightness(90%);
+        border-radius: 50%;
+        border: 4px solid #171718;
+        position: absolute;
+        left: calc(50% - 84px);
+        bottom: 65px;
+    }
+    img:hover{
+        filter: brightness(120%);
+        cursor: pointer;
+    }
+}
