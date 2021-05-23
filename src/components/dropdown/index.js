@@ -23,6 +23,7 @@ import { useCookies } from 'react-cookie';
 import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
+import { Badge } from '@material-ui/core';
 
 function DropdownMulti(props) {
   const language = props.language;
@@ -39,7 +40,6 @@ function DropdownMulti(props) {
   return (
     <>
       <Navbar>
-        <NavItem icon={<BellIcon />} />
         <NavItem id="dropdown-settings" dropdown={true} icon={<CaretIcon />}>
           <DropdownMenu ></DropdownMenu>
         </NavItem>
@@ -55,13 +55,13 @@ function DropdownMulti(props) {
     );
   }
 
-  function NavItem(props) {  
+  function NavItem(props) {
     return (
       <li className="nav-item">
         <span className="icon-button" onClick={() => props.dropdown && setOpen(!open)}>
           {props.icon}
         </span>
-  
+
         {open && props.children}
       </li>
     );
@@ -136,7 +136,7 @@ function DropdownMulti(props) {
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-          <Link to="/myprofile"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
+            <Link to="/myprofile"><DropdownItem leftIcon={<ProfileIcon />}>{language.header.myprofile}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<LanguagesIcon />}
               rightIcon={<ChevronIcon />}
@@ -149,7 +149,7 @@ function DropdownMulti(props) {
               goToMenu="about">
               {language.header.about}
             </DropdownItem>
-            <Link to="/projects"><DropdownItem leftIcon={<ProjectsIcon/>}>{language.header.projects}</DropdownItem></Link>
+            <Link to="/projects"><DropdownItem leftIcon={<ProjectsIcon />}>{language.header.projects}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<StackIcon />}
               rightIcon={<ChevronIcon />}
@@ -162,8 +162,8 @@ function DropdownMulti(props) {
               goToMenu="services">
               {language.footer.pages.services}
             </DropdownItem>
-            <Link to="/contact"><DropdownItem leftIcon={<ContactIcon/>}>{language.footer.pages.contact}</DropdownItem></Link>
-            <Link to="/cv"><DropdownItem leftIcon={<CvIcon/>}>{language.header.cv}</DropdownItem></Link>
+            <Link to="/contact"><DropdownItem leftIcon={<ContactIcon />}>{language.footer.pages.contact}</DropdownItem></Link>
+            <Link to="/cv"><DropdownItem leftIcon={<CvIcon />}>{language.header.cv}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<CogIcon />}
               rightIcon={<ChevronIcon />}
@@ -212,10 +212,10 @@ function DropdownMulti(props) {
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.header.about}</h3>
             </DropdownItem>
-            <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon/>}>{language.header.pages.carrier_plc}</DropdownItem></Link>
-            <Link to="/aboutme/front-end-development"><DropdownItem leftIcon={<AboutFrontIcon/>}>{language.header.pages.carrier_front}</DropdownItem></Link>
+            <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon />}>{language.header.pages.carrier_plc}</DropdownItem></Link>
+            <Link to="/aboutme/front-end-development"><DropdownItem leftIcon={<AboutFrontIcon />}>{language.header.pages.carrier_front}</DropdownItem></Link>
             <Link to="/aboutme/courses"><DropdownItem leftIcon="🦋">{language.header.pages.courses}</DropdownItem></Link>
-            <Link to="/aboutme/education"><DropdownItem leftIcon={<AboutEducationIcon/>}>{language.header.pages.education}</DropdownItem></Link>
+            <Link to="/aboutme/education"><DropdownItem leftIcon={<AboutEducationIcon />}>{language.header.pages.education}</DropdownItem></Link>
           </div>
         </CSSTransition>
 

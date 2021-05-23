@@ -1,0 +1,35 @@
+.aboutme-wrapper{
+    max-width: 70vw;
+    overflow-x: hidden;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a:hover{
+        color: blue;
+    }
+    .aboutme_title{
+        font-size: 102px;
+        @media (max-width: 768px){
+            font-size: 50px;
+        }
+        margin: 15px auto;
+        font-family: 'Times New Roman', serif;
+    }
+    .aboutme_title::after{
+        content: ".";
+        color: rgb(30, 229, 255);
+    }
+    .aboutme_text{
+        text-align: center;
+        font-size: 32px;
+        @media (max-width: 768px){
+            font-size: 22px;
+        }
+        font-weight: 400;
+        @media (max-width: 968px){
+            width: 100%;
+        }
+    }
+}

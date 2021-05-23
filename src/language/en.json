@@ -20,6 +20,10 @@
             "education": "Education",
             "software_enginner": "Front-End Development",
             "automation_enginner": "Automation Engineer"
+        },
+        "notification": {
+            "header": "Message",
+            "text": "The website is under construction, some functionalities may not be available yet. Sorry for the momentary difficulties and lack of all content, I'm working on it :)"
         }
     },
     "typedText": {
@@ -340,6 +344,30 @@
             "quiz": "Star Wars Quiz",
             "chess": "Coders chess",
             "estate": "Real Estate website"
+        },
+        "aboutme": {
+            "main" : {
+                "header": "About me",
+                "text": "My name is Adrian Kotliński, I live in Katowice. I studied Automation and Robotics at the AGH University of Science and Technology in Krakow. I'm a web development adept, constantly looking for new challenges in this area. I love minimalist design and subtle animations. I want to develop in technologies related to TypeScript and React, this page was created for the purposes of self-education in this area.",
+                "see_myprofile": "For more, see my profile",
+                "education_header": "Education process",
+                "education_text": "I started to be interested in programming in general already around 2014. At the end of the technical school, I already knew that I wanted to connect my future with it. During my studies, I learned many interesting programming languages, initially I focused my path on industrial automation and application programming in the automotive industry, which was directly related to my study profile",
+                "education_course": "At the end of 2020, I changed my direction to web development. I joined the ",
+                "education_continue": " ,which is a remote web programming course, thanks to which I learned many basics allowing me to create independent projects. This is where I first came into contact with React. I also learned a lot of good programming practices there. In the meantime, I also participated in the nationwide remote coders camp programming course, where I learned about JavaScript, TypeScirpt, React and NodeJS for a period of 5 months. I finished this course in April 2020, and since then I have been continuing my independent studies every day. I not only consolidate the knowledge I have gained so far, but also learn new solutions and technologies.",
+                "see_education": "More about my education",
+                "see_courses": "More about my courses",
+                "see_easycode": "Easy-Code ",
+                "personality_header": "Personality",
+                "personality_text": "A bit about me - I'm a calm and ambitious person. I love working in a team and learning new things. I'm not afraid of challenges, on the contrary - I'm constantly looking for them. Solving problems on your own is, in my opinion, the best way to learn.",
+                "see_blog": "More about me in my blog",
+                "experience_header": "Experience",
+                "experience_text": "I started my programming career in 2018, where during my studies I worked as a programmer of automotive control systems on many foreign projects. Experience on foreign projects has significantly raised my level of English. I have no problems with understanding the documentation or communication. From December 2020, I started gaining my first experience as a web developer. I am currently working as a junior front-end developer, dealing with the development of online stores on the shopify platform. This work significantly raised my level of knowledge about the IT environment, teamwork, Agile and Scrum methods, Git support and, above all, web programming.",
+                "see_experience_plc": "More about my PLC programming experience",
+                "see_experience_web": "More about my Web-developer carrier",
+                "contact": "Contact",
+                "contact_text": "Feel free to contact me, whether it's about work or a casual conversation. I will be happy to reply to any message I receive. ",
+                "see_contact": "Go to the contact form"
+            }
         }
     }
 
