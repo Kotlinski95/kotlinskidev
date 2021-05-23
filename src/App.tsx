@@ -5,6 +5,7 @@ import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
 import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
+import MyProfilePage from './pages/myprofile'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from './pages/projects/projects'
 import PortfolioPage from './pages/projects/portfolio'
@@ -78,6 +79,9 @@ function App() {
             </Route>
             <Route exact path="/contact">
               <ContactPage />
+            </Route>
+            <Route exact path="/myprofile">
+              <MyProfilePage />
             </Route>
             <Route exact path="/stack">
               <StackPage />
