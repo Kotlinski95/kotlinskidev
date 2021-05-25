@@ -5,7 +5,13 @@ import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
 import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
-import MyProfilePage from './pages/myprofile'
+import MyProfilePage from './pages/myprofile/myprofile'
+import MyProfileContactPage from './pages/myprofile/profileContact'
+import MyProfileEducationPage from './pages/myprofile/profileEducation'
+import MyProfileHobbyPage from './pages/myprofile/profileHobby'
+import MyProfileOverviewPage from './pages/myprofile/profileOverview'
+import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime'
+import MyProfileWorkPage from './pages/myprofile/profileWork'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from './pages/projects/projects'
 import PortfolioPage from './pages/projects/portfolio'
@@ -82,6 +88,24 @@ function App() {
             </Route>
             <Route exact path="/myprofile">
               <MyProfilePage />
+            </Route>
+            <Route exact path="/myprofile/contact">
+              <MyProfileContactPage />
+            </Route>
+            <Route exact path="/myprofile/education">
+              <MyProfileEducationPage />
+            </Route>
+            <Route exact path="/myprofile/hobby">
+              <MyProfileHobbyPage />
+            </Route>
+            <Route exact path="/myprofile/overview">
+              <MyProfileOverviewPage />
+            </Route>
+            <Route exact path="/myprofile/spare-time">
+              <MyProfileSpareTimePage />
+            </Route>
+            <Route exact path="/myprofile/work">
+              <MyProfileWorkPage />
             </Route>
             <Route exact path="/stack">
               <StackPage />

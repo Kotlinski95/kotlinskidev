@@ -340,6 +340,17 @@
             "quiz": "Quiz o gwiezdnych wojnach",
             "chess": "Internetowe szachy",
             "estate": "Strona biura nieruchomości"
+        },
+        "myprofile": {
+            "header": "Adrian Kotliński",
+            "bookmarks": {
+                "overview": "Przegląd",
+                "work": "Praca",
+                "education" : "Edukacja",
+                "contact": "Informacje kontaktowe",
+                "hobby" : "Zainteresowania",
+                "spareTime": "Czas wolny"
+            }
         }
     }
 }
