@@ -350,6 +350,41 @@
                 "contact": "Informacje kontaktowe",
                 "hobby" : "Zainteresowania",
                 "spareTime": "Czas wolny"
+            },
+            "overview": {
+                "header": "Podstawowe informacje",
+                "study_label": "Studia: ",
+                "study_text": "Akademia Górniczo-Hutnicza w Krakowie. Automatyka i Robotyka mgr.",
+                "live_label": "Mieszka w : ",
+                "live_text": "Katowice",
+                "home_label":"Pochodzi z: ",
+                "home_text": "Żory",
+                "birthday_label" : "Urodzony: ",
+                "birthday_text" : "11.02.1995",
+                "phone_label" : "Telefon kontaktowy",
+                "phone_text": " + 48 XXX XXX XXX"
+            },
+            "work" : {
+                "header": "Adrian Kotliński - doświadczenie zawodowe",
+                "sobre_time": "04.2021 - obecnie: ",
+                "sobre_name": "Sobre",
+                "script_studio_time": "12.2020 - 04.2021: ",
+                "script_studio_name": "Script Studio",
+                "blumenbecker_time": "09.2018 - 10.2020: ",
+                "blumenbecker_name": "Blumenbecker Enginneering Polska",
+                "br_time": "08.2018: ",
+                "br_name": "Bernecker&Rainer",
+                "abis_time": "07.2018: ",
+                "abis_name": "Abis sp.z.o.o"
+            },
+            "education": {
+                "header": " Edukacja:",
+                "agh_2_time": " 02.2018 - 04.2021",
+                "agh_2_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Metrologia II stopień",
+                "agh_1_time": " 10.2015 - 02.2018",
+                "agh_1_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Robotyka I stopień",
+                "zs6_time": " 10.2011 - 04.2015",
+                "zs6_name": " Technikum nr 4 w Jastrzebiu-Zdroju - Mechatronika"
             }
         }
     }

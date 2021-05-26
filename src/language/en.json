@@ -340,7 +340,32 @@
             "quiz": "Star Wars Quiz",
             "chess": "Coders chess",
             "estate": "Real Estate website"
+        },
+        "myprofile": {
+            "header": "Adrian Kotliński",
+            "bookmarks": {
+                "overview": "Overview",
+                "work": "Work",
+                "education" : "Education",
+                "contact": "Contact information",
+                "hobby" : "Hobby",
+                "spareTime": "Spare time"
+            },
+            "overview": {
+                "header": "Basic information",
+                "study_label": "Study: ",
+                "study_text": "University of Science and Technology in Cracow - Automation and Robotics.",
+                "live_label": "Live in : ",
+                "live_text": "Katowice",
+                "home_label":"Comes from: ",
+                "home_text": "Żory",
+                "birthday_label" : "Born: ",
+                "birthday_text" : "11.02.1995",
+                "phone_label" : "Phone number: ",
+                "phone_text": " + 48 XXX XXX XXX"
+            }
         }
+        
     }
 
 }
