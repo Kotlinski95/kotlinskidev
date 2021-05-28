@@ -343,6 +343,7 @@
         },
         "myprofile": {
             "header": "Adrian Kotliński",
+            "profession": "Junior Front-end developer",
             "bookmarks": {
                 "overview": "Overview",
                 "work": "Work",
@@ -352,7 +353,7 @@
                 "spareTime": "Spare time"
             },
             "overview": {
-                "header": "Basic information",
+                "header": "Basic information:",
                 "study_label": "Study: ",
                 "study_text": "University of Science and Technology in Cracow - Automation and Robotics.",
                 "live_label": "Live in : ",
@@ -363,9 +364,50 @@
                 "birthday_text" : "11.02.1995",
                 "phone_label" : "Phone number: ",
                 "phone_text": " + 48 XXX XXX XXX"
+            },
+            "work" : {
+                "header": "Experience:",
+                "sobre_time": "04.2021 - now: ",
+                "sobre_name": "Sobre",
+                "sobre_title": "SOBRE Software house",
+                "script_studio_time": "12.2020 - 04.2021: ",
+                "script_studio_name": "Script Studio",
+                "script_studio_title": "Script-Studio (easy-coder)",
+                "blumenbecker_time": "09.2018 - 10.2020: ",
+                "blumenbecker_name": "Blumenbecker Enginneering Polska",
+                "blumenbecker_title": "Blumenbecker Engineering Polska",
+                "br_time": "08.2018: ",
+                "br_name": "Bernecker&Rainer",
+                "br_title": "Bernecker&Rainer",
+                "abis_time": "07.2018: ",
+                "abis_name": "Abis sp.z.o.o"
+            },
+            "education": {
+                "header": " Education:",
+                "agh_2_time": " 02.2018 - 04.2021",
+                "agh_2_name": " University of science and technology in Cracow - Automation and Metrology II degree",
+                "agh_1_time": " 10.2015 - 02.2018",
+                "agh_1_name": " University of science and technology in Cracow - Automation and Metrology I degree",
+                "zs6_time": " 10.2011 - 04.2015",
+                "zs6_name": " Technical Secondary School No. 4 in Jastrzebie-Zdrój - Mechatronics",
+                "agh_title": "University of science and technology in Cracow",
+                "zs6_title": "School Complex No. 6 for them. King Jan III Sobieski"
+            },
+            "contact": {
+                "header": "Contact details:",
+                "mail_label": "Email: ",
+                "mail": "kotlinski95@gmail.com",
+                "phone_label": "Phone number: ",
+                "phone": "+48 608 418 911"
+            },
+            "hobby": {
+                "header": "Hobbies:",
+                "running": "Running",
+                "music": "Music",
+                "coding": "Programming",
+                "films": "Films"
             }
         }
-        
     }
 
 }

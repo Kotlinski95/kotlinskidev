@@ -8,15 +8,15 @@ const ProfileEducation = () => {
         <div className="myprofile-education__wrapper">
         <h2>{language.pages.myprofile.education.header}</h2>
         <div className="myprofile-education__item">
-            <ProfileImage url={agh} width="40px" height="40px" position="relative"/>
+            <ProfileImage url={agh} title={language.pages.myprofile.education.agh_title} width="40px" height="40px" position="relative"/>
             <p>{language.pages.myprofile.education.agh_2_time} <span>{language.pages.myprofile.education.agh_2_name}</span></p>
         </div>
         <div className="myprofile-education__item">
-            <ProfileImage url={agh} width="40px" height="40px" position="relative"/>
+            <ProfileImage url={agh} title={language.pages.myprofile.education.agh_title} width="40px" height="40px" position="relative"/>
             <p>{language.pages.myprofile.education.agh_1_time} <span>{language.pages.myprofile.education.agh_1_name}</span></p>
         </div>
         <div className="myprofile-education__item">
-            <ProfileImage url={zs6} width="40px" height="40px" position="relative"/>
+            <ProfileImage url={zs6} title={language.pages.myprofile.education.zs6_title} width="40px" height="40px" position="relative"/>
             <p>{language.pages.myprofile.education.zs6_time} <span>{language.pages.myprofile.education.zs6_name}</span></p>
         </div>
     </div>

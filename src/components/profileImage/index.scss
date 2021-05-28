@@ -1,5 +1,6 @@
 .profileImage-wrapper{
     img{
+        z-index: 10;
         transition: all .5s, filter .5s ease-in-out;
         filter: brightness(90%);
         border-radius: 50%;

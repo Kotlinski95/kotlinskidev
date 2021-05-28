@@ -3,6 +3,7 @@ import { FcSportsMode ,FcMusic, FcCommandLine, FcVideoProjector } from "react-ic
 const ProfileHobby = () => {
     return(
         <div className="myprofile-sport__wrapper">
+            <h2>{language.pages.myprofile.hobby.header}</h2>
             <div className="myprofile-sport__item">
                 <FcSportsMode />
                 <p> <span>{language.pages.myprofile.hobby.running}</span></p>

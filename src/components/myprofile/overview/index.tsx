@@ -3,6 +3,7 @@ import { FaSearchLocation, FaPhoneAlt, FaHome, FaBirthdayCake, FaUserGraduate} f
 const ProfileOverview = () => {
     return(
         <div className="myprofile-overview__wrapper">
+            <h2>{language.pages.myprofile.overview.header}</h2>
             <div className="myprofile-overview__item">
                 <FaUserGraduate/>
                 <p><strong>{language.pages.myprofile.overview.study_label}</strong> <span>{language.pages.myprofile.overview.study_text}</span></p>

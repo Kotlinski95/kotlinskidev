@@ -343,6 +343,7 @@
         },
         "myprofile": {
             "header": "Adrian Kotliński",
+            "profession": "Junior Front-end developer",
             "bookmarks": {
                 "overview": "Przegląd",
                 "work": "Praca",
@@ -352,7 +353,7 @@
                 "spareTime": "Czas wolny"
             },
             "overview": {
-                "header": "Podstawowe informacje",
+                "header": "Podstawowe informacje:",
                 "study_label": "Studia: ",
                 "study_text": "Akademia Górniczo-Hutnicza w Krakowie. Automatyka i Robotyka mgr.",
                 "live_label": "Mieszka w : ",
@@ -362,18 +363,22 @@
                 "birthday_label" : "Urodzony: ",
                 "birthday_text" : "11.02.1995",
                 "phone_label" : "Telefon kontaktowy",
-                "phone_text": " + 48 XXX XXX XXX"
+                "phone_text": " + 48 608 418 911"
             },
             "work" : {
-                "header": "Adrian Kotliński - doświadczenie zawodowe",
+                "header": "Doświadczenie zawodowe:",
                 "sobre_time": "04.2021 - obecnie: ",
                 "sobre_name": "Sobre",
+                "sobre_title": "SOBRE Software house",
                 "script_studio_time": "12.2020 - 04.2021: ",
                 "script_studio_name": "Script Studio",
+                "script_studio_title": "Script-Studio (easy-coder)",
                 "blumenbecker_time": "09.2018 - 10.2020: ",
                 "blumenbecker_name": "Blumenbecker Enginneering Polska",
+                "blumenbecker_title": "Blumenbecker Engineering Polska",
                 "br_time": "08.2018: ",
                 "br_name": "Bernecker&Rainer",
+                "br_title": "Bernecker&Rainer",
                 "abis_time": "07.2018: ",
                 "abis_name": "Abis sp.z.o.o"
             },
@@ -384,16 +389,19 @@
                 "agh_1_time": " 10.2015 - 02.2018",
                 "agh_1_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Robotyka I stopień",
                 "zs6_time": " 10.2011 - 04.2015",
-                "zs6_name": " Technikum nr 4 w Jastrzebiu-Zdroju - Mechatronika"
+                "zs6_name": " Technikum nr 4 w Jastrzebiu-Zdroju - Mechatronika",
+                "agh_title": "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
+                "zs6_title": "Zespół Szkół nr 6 im. Króla Jana III Sobieskiego"
             },
             "contact": {
+                "header": "Dane kontaktowe:",
                 "mail_label": "Email: ",
                 "mail": "kotlinski95@gmail.com",
                 "phone_label": "Telefon kontaktowy: ",
                 "phone": "+48 608 418 911"
             },
             "hobby": {
-                "header": "",
+                "header": "Zainteresowania:",
                 "running": "Bieganie",
                 "music": "Muzyka",
                 "coding": "Programowanie",

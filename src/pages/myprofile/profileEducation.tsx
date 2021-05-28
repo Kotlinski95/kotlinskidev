@@ -22,7 +22,8 @@ const MyProfileEducationPage = () => {
                     <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px"/>
                 </div>
                 <div className="myprofile-content-wrapper">
-                    <h1>Adrian Kotliński</h1>
+                    <h1>{language.pages.myprofile.header}</h1>
+                    <h2>{language.pages.myprofile.profession}</h2>
                     <hr/>
                     <NavProfile page="education"/>
                 </div>
