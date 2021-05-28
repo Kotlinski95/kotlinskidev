@@ -385,6 +385,19 @@
                 "agh_1_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Robotyka I stopień",
                 "zs6_time": " 10.2011 - 04.2015",
                 "zs6_name": " Technikum nr 4 w Jastrzebiu-Zdroju - Mechatronika"
+            },
+            "contact": {
+                "mail_label": "Email: ",
+                "mail": "kotlinski95@gmail.com",
+                "phone_label": "Telefon kontaktowy: ",
+                "phone": "+48 608 418 911"
+            },
+            "hobby": {
+                "header": "",
+                "running": "Bieganie",
+                "music": "Muzyka",
+                "coding": "Programowanie",
+                "films": "Filmy"
             }
         }
     }

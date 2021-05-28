@@ -24,7 +24,7 @@ const MyProfileSpareTimePage = () => {
                 <div className="myprofile-content-wrapper">
                     <h1>Adrian Kotliński</h1>
                     <hr/>
-                    <NavProfile/>
+                    <NavProfile page="spareTime"/>
                 </div>
             </div>
             <div className="myprofile-category__wrapper">

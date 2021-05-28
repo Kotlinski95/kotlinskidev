@@ -24,7 +24,7 @@ const MyProfileWorkPage = () => {
                 <div className="myprofile-content-wrapper">
                     <h1>Adrian Kotliński</h1>
                     <hr/>
-                    <NavProfile/>
+                    <NavProfile page="work"/>
                 </div>
             </div>
             <div className="myprofile-category__wrapper">

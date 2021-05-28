@@ -1,7 +1,16 @@
 import './index.scss'
+import { FaSearchLocation, FaPhoneAlt, FaHome, FaBirthdayCake, FaAt} from 'react-icons/fa';
 const ProfileContact = () => {
     return(
-        <div className="myprofile-category__wrapper">
+        <div className="myprofile-contact__wrapper">
+            <div className="myprofile-contact__item">
+                <FaPhoneAlt />
+                <p><strong>{language.pages.myprofile.contact.phone_label}</strong> <span>{language.pages.myprofile.contact.phone}</span></p>
+            </div>
+            <div className="myprofile-contact__item">
+                <FaAt />
+                <p><strong>{language.pages.myprofile.contact.mail_label}</strong> <span>{language.pages.myprofile.contact.mail}</span></p>
+            </div>
         </div>
     );
 };

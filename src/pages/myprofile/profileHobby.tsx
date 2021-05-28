@@ -24,7 +24,7 @@ const MyProfileHobbyPage = () => {
                 <div className="myprofile-content-wrapper">
                     <h1>Adrian Kotliński</h1>
                     <hr/>
-                    <NavProfile/>
+                    <NavProfile page="hobby"/>
                 </div>
             </div>
             <div className="myprofile-category__wrapper">
