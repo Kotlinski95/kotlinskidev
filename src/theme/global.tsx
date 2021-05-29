@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.nav.darkBackground};
+    background: ${({ theme }) => theme.gradient};
     color: ${({ theme }) => theme.text};
   }
   a {
@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .main {
-    background-color: ${({ theme }) => theme.nav.darkBackground};
+    background: ${({ theme }) => theme.gradient};
   }
 
   a:hover {
@@ -136,6 +136,7 @@ export const GlobalStyles = createGlobalStyle`
 .tile-wrapper{
   border: ${({ theme }) => theme.tile.wrapperBorder};
   box-shadow: ${({ theme }) => theme.tile.wrapperShadow};
+  background-color: ${({ theme }) => theme.tile.background};
 }
 .tile-wrapper:hover .tile-logo{
   filter: ${({ theme }) => theme.tile.logoFilterHover};
@@ -166,5 +167,41 @@ export const GlobalStyles = createGlobalStyle`
 .contact_form-wrapper textarea,
 .contact_form-wrapper .contact-button{
   color: ${({ theme }) => theme.contact.inputColor};
+}
+
+// ============ stack page ================
+
+.stack-wrapper{
+  border-color: ${({ theme }) => theme.stack.borderColor};
+}
+.stack-hello::after{
+  color: ${({ theme }) => theme.stack.color};
+}
+
+// ============= project page =============
+
+.project-tile-title{
+  color: ${({ theme }) => theme.project.color};
+}
+
+// ============= my profile ===============
+.myprofile-wrapper{
+  background: ${({ theme }) => theme.myProfile.backgroundGradient};
+}
+.myprofile-wrapper .breadcrumbs{
+  background-color: ${({ theme }) => theme.myProfile.backgroundBreadCrumbs};
+}
+.myprofile-wrapper .selected{
+  background-color: ${({ theme }) => theme.myProfile.categorySelected};
+}
+.myprofile-category__wrapper{
+  background-color: ${({ theme }) => theme.myProfile.backgroundCategory};
+}
+.profileImage-wrapper img {
+  border-color: ${({ theme }) => theme.myProfile.imageBorder};
+}
+.myprofile-nav__wrapper ul li:hover {
+  color: ${({ theme }) => theme.myProfile.categoryColor};
+  background-color: ${({ theme }) => theme.myProfile.categoryHover};
 }
 `;

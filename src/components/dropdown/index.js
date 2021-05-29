@@ -136,7 +136,7 @@ function DropdownMulti(props) {
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-          <Link to="/myprofile"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
+          <Link to="/myprofile/overview"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<LanguagesIcon />}
               rightIcon={<ChevronIcon />}

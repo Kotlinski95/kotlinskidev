@@ -5,7 +5,7 @@ export const lightTheme = {
   body: '#E2E2E1',
   text: '#363537',
   toggleBorder: '#FFF',
-  gradient: 'linear-gradient(#39598A, #79D7ED)',
+  gradient: 'linear-gradient(to top, #f1f1f2 20% , #9c98cd)',
   burgermenu: "#23222e",
   nav: {
     linkColor: '#33234d',
@@ -20,7 +20,7 @@ export const lightTheme = {
   },
   typedText: {
     color: '#33234d',
-    colorHover: '#9c98cd',
+    colorHover: '#d0cfde',
   },
   footer: {
     linkColor: '#33234d',
@@ -43,7 +43,8 @@ export const lightTheme = {
     wrapperShadow: '0px 0px 15px #9c98cd',
     logoFilter: 'invert(78%) sepia(88%) saturate(2448%) hue-rotate(191deg) brightness(84%) contrast(89%)',
     logoFilterHover: 'invert(73%) sepia(43%) saturate(707%) hue-rotate(200deg) brightness(84%) contrast(74%)',
-    logoFill: '#9c98cd'
+    logoFill: '#9c98cd',
+    background: '#f1f1f2'
   },
   slick:{
     arrows: "#9c98cd",
@@ -52,6 +53,22 @@ export const lightTheme = {
     formBackground: '#9c98cd',
     inputBackground: 'rgba(255,255,255,0.6)',
     inputColor: '#33234d'
+  },
+  stack: {
+    borderColor: '#9d64c6',
+    color: 'rgb(185, 8, 8)'
+  },
+  project: {
+    color: '#f1f1f2'
+  },
+  myProfile:{
+    backgroundGradient: 'linear-gradient(to top, #f1f1f2 30% , #9c98cd)',
+    backgroundCategory: '#f1f1f2',
+    backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
+    categorySelected: '#e9d5e5',
+    categoryHover: '#d5bed0',
+    categoryColor: '#FFF',
+    imageBorder: '#9d64c6'
   }
 }
 
@@ -59,7 +76,7 @@ export const darkTheme = {
   body: '#363537',
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(#091236, #1E215D)',
+  gradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
   burgermenu: "#D0E2F2",
   nav: {
     linkColor: '#D0E2F2',
@@ -97,15 +114,32 @@ export const darkTheme = {
     wrapperShadow: '0px 0px 15px #D0E2F2',
     logoFilter: 'invert(99%) sepia(98%) saturate(293%) hue-rotate(204deg) brightness(113%) contrast(100%)',
     logoFilterHover: 'invert(93%) sepia(2%) saturate(3896%) hue-rotate(179deg) brightness(95%) contrast(101%)',
-    logoFill: '#D0E2F2'
+    logoFill: '#D0E2F2',
+    background: '#2d2d30'
   },
   slick:{
     arrows: "#D0E2F2",
   },
   contact:{
-    formBackground: '#2d2d30',
+    formBackground: '#474748',
     inputBackground: 'rgba(0,0,0,0.2)',
     inputColor: '#D0E2F2'
+  },
+  stack: {
+    borderColor: '#f1f1f2',
+    color: 'rgb(30, 229, 255)'
+  },
+  project: {
+    color: '#f1f1f2'
+  },
+  myProfile:{
+    backgroundGradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
+    backgroundCategory: '#252526',
+    backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
+    categorySelected: '#2e2d2d',
+    categoryHover: '#2e2d2d',
+    categoryColor: '#FFF',
+    imageBorder: '#171718'
   }
 }
 //onst [cookies, setCookie] = useCookies(['theme']);
