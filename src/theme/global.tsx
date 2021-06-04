@@ -7,10 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    background: ${({ theme }) => theme.gradient};
+  body,
+  html {
+    background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
+
   a {
     color: ${({ theme }) => theme.nav.linkColor};
   }

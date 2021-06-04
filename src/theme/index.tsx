@@ -2,7 +2,7 @@ import {getCookie} from '../services'
 export type ThemeType = typeof lightTheme; // This is the type definition for my theme object.
 
 export const lightTheme = {
-  body: '#E2E2E1',
+  body: '#9c98cd',
   text: '#363537',
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(to top, #f1f1f2 20% , #9c98cd)',
@@ -73,7 +73,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
-  body: '#363537',
+  body: '#2d2d30',
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
