@@ -43,6 +43,9 @@ import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import React, { useEffect } from 'react'
+import locomotiveScroll from "locomotive-scroll";
+
 
 declare global {
   var _theme: ThemeType;
@@ -70,117 +73,122 @@ function App() {
       window._theme = darkTheme;
       break;
   }
+
+  const scrollRef: any = React.createRef();
+  const HandleLocomotiveScroll = () => {
+    useEffect(() => {
+      const scroll = new locomotiveScroll({
+        el: scrollRef.current,
+        smooth: true
+      });
+      return () => {
+        scroll.destroy();
+      }
+    }, []);
+  }
+
+  const routingProps = {
+    HandleLocomotiveScroll
+  }
+
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <Scrollbars
-        className="scrollbar-custom"
-        autoHide
-        hideTracksWhenNotNeeded
-        autoHideTimeout={2000}
-        autoHideDuration={400}
-        renderTrackVertical={({style, ...props}) =>
-          <div {...props} className="TrackVertical" style={{...style, backgroundColor: 'transparent', right: '2px', bottom: '2px', top: '2px', borderRadius: '3px', width: '5px'}}/>
-        }
-        renderThumbVertical={({style, ...props}) =>
-          <div {...props} className="ThumbVertical" style={{...style, width: '8px', borderRadius: '4px'}}/>
-        }
-        style={{ width: '100vw', height: '100vh', backgroundColor: 'red' }}>
-      <div className="App">
+      <div className="App" data-scroll-container ref={scrollRef}>
         <RouteChangeTracker />
         <Nav />
-        <div className="main">
+        <div className="main" >
           <Switch>
             <Route exact path="/">
-              <HomePage />
+              <HomePage {...routingProps} />
             </Route>
             <Route exact path="/aboutme">
-              <AboutPage />
+              <AboutPage {...routingProps} />
             </Route>
             <Route exact path="/contact">
-              <ContactPage />
+              <ContactPage {...routingProps} />
             </Route>
             <Route exact path="/myprofile">
-              <MyProfilePage />
+              <MyProfilePage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/contact">
-              <MyProfileContactPage />
+              <MyProfileContactPage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/education">
-              <MyProfileEducationPage />
+              <MyProfileEducationPage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/hobby">
-              <MyProfileHobbyPage />
+              <MyProfileHobbyPage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/overview">
-              <MyProfileOverviewPage />
+              <MyProfileOverviewPage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/spare-time">
-              <MyProfileSpareTimePage />
+              <MyProfileSpareTimePage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/work">
-              <MyProfileWorkPage />
+              <MyProfileWorkPage {...routingProps} />
             </Route>
             <Route exact path="/stack">
-              <StackPage />
+              <StackPage {...routingProps} />
             </Route>
             <Route exact path="/projects">
-              <ProjectsPage />
+              <ProjectsPage {...routingProps} />
             </Route>
             <Route exact path="/projects/portfolio">
-              <PortfolioPage />
+              <PortfolioPage {...routingProps} />
             </Route>
             <Route exact path="/projects/star-wars-quiz">
-              <QuizPage />
+              <QuizPage {...routingProps} />
             </Route>
             <Route exact path="/projects/coders-chess">
-              <ChessPage />
+              <ChessPage {...routingProps} />
             </Route>
             <Route exact path="/projects/real-estate">
-              <EstatePage />
+              <EstatePage {...routingProps} />
             </Route>
             <Route exact path="/privacy">
-              <PrivacyPage />
+              <PrivacyPage {...routingProps} />
             </Route>
             <Route exact path="/cookies">
-              <CookiesPage />
+              <CookiesPage {...routingProps} />
             </Route>
             <Route exact path="/aboutme/plc-carrier">
-              <PlcCarrierPage />
+              <PlcCarrierPage {...routingProps} />
             </Route>
             <Route exact path="/aboutme/front-end-development">
-              <FrontEndDevelopmentPage />
+              <FrontEndDevelopmentPage {...routingProps} />
             </Route>
             <Route exact path="/aboutme/courses">
-              <CoursesPage />
+              <CoursesPage {...routingProps} />
             </Route>
             <Route exact path="/aboutme/education">
-              <EducationPage />
+              <EducationPage {...routingProps} />
             </Route>
             <Route exact path="/stack/front-end-developer">
-              <FrontEndDeveloperPage />
+              <FrontEndDeveloperPage {...routingProps} />
             </Route>
             <Route exact path="/stack/automation-engineer">
-              <AutomationEngineerPage />
+              <AutomationEngineerPage {...routingProps} />
             </Route>
             <Route exact path="/services">
-              <ServicesPage />
+              <ServicesPage {...routingProps} />
             </Route>
             <Route exact path="/services/PLC">
-              <PlcProgrammingPage />
+              <PlcProgrammingPage {...routingProps} />
             </Route>
             <Route exact path="/services/shopify">
-              <ShopifyDevelopmentPage />
+              <ShopifyDevelopmentPage {...routingProps} />
             </Route>
             <Route exact path="/services/web-development">
-              <WebDevelopmentPage />
+              <WebDevelopmentPage {...routingProps} />
             </Route>
-              <Route component={NotFoundPage} />
+            <Route>
+              <NotFoundPage {...routingProps} />
+            </Route>
           </Switch>
         </div>
-        <Footer />
       </div>
-      </Scrollbars>
     </ThemeProvider>
   );
 }

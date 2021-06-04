@@ -18,7 +18,6 @@ const Footer = () => {
     const handleClose = () => {
       setAnchorEl(null);
     };
-
     return (
         <div className="footer-wrapper">
             <CookieConsent
