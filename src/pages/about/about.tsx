@@ -1,4 +1,3 @@
-import TypedText from '../../components/typedText'
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../../components/breadcrumbs'
