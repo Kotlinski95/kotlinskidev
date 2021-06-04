@@ -1,0 +1,20 @@
+.myprofile-overview__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    h2{
+      margin: 20px;
+    }
+  .myprofile-overview__item {
+    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    svg {
+      min-width: 30px;
+    }
+  }
+}

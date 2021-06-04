@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  height: 100%;
+}
 body {
   padding: 0;
   margin: 0;
   width: 100vw;
   min-height: 100vh;
+  height: 100%;
   overflow-x: hidden;
-  background-color: var(--dark-background);
 }
 
 .hidden{
@@ -21,6 +23,9 @@ main {
   overflow-x: hidden;
 }
 
+.ThumbVertical:hover{
+  cursor: pointer;
+}
 .main {
   min-height: calc(100vh - 187px);
   background-color: var(--dark-background);
@@ -37,6 +42,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .line-item {

@@ -5,7 +5,13 @@ import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
 import NotFoundPage from './pages/not_found'
 import ContactPage from './pages/contact'
-import MyProfilePage from './pages/myprofile'
+import MyProfilePage from './pages/myprofile/myprofile'
+import MyProfileContactPage from './pages/myprofile/profileContact'
+import MyProfileEducationPage from './pages/myprofile/profileEducation'
+import MyProfileHobbyPage from './pages/myprofile/profileHobby'
+import MyProfileOverviewPage from './pages/myprofile/profileOverview'
+import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime'
+import MyProfileWorkPage from './pages/myprofile/profileWork'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from './pages/projects/projects'
 import PortfolioPage from './pages/projects/portfolio'
@@ -36,6 +42,7 @@ import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 declare global {
   var _theme: ThemeType;
@@ -66,6 +73,19 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
+      <Scrollbars
+        className="scrollbar-custom"
+        autoHide
+        hideTracksWhenNotNeeded
+        autoHideTimeout={2000}
+        autoHideDuration={400}
+        renderTrackVertical={({style, ...props}) =>
+          <div {...props} className="TrackVertical" style={{...style, backgroundColor: 'transparent', right: '2px', bottom: '2px', top: '2px', borderRadius: '3px', width: '5px'}}/>
+        }
+        renderThumbVertical={({style, ...props}) =>
+          <div {...props} className="ThumbVertical" style={{...style, width: '8px', borderRadius: '4px'}}/>
+        }
+        style={{ width: '100vw', height: '100vh', backgroundColor: 'red' }}>
       <div className="App">
         <RouteChangeTracker />
         <Nav />
@@ -82,6 +102,24 @@ function App() {
             </Route>
             <Route exact path="/myprofile">
               <MyProfilePage />
+            </Route>
+            <Route exact path="/myprofile/contact">
+              <MyProfileContactPage />
+            </Route>
+            <Route exact path="/myprofile/education">
+              <MyProfileEducationPage />
+            </Route>
+            <Route exact path="/myprofile/hobby">
+              <MyProfileHobbyPage />
+            </Route>
+            <Route exact path="/myprofile/overview">
+              <MyProfileOverviewPage />
+            </Route>
+            <Route exact path="/myprofile/spare-time">
+              <MyProfileSpareTimePage />
+            </Route>
+            <Route exact path="/myprofile/work">
+              <MyProfileWorkPage />
             </Route>
             <Route exact path="/stack">
               <StackPage />
@@ -142,6 +180,7 @@ function App() {
         </div>
         <Footer />
       </div>
+      </Scrollbars>
     </ThemeProvider>
   );
 }

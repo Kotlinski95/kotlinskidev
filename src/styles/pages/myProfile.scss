@@ -1,19 +1,18 @@
 .myprofile-wrapper{
     position: relative;
-    background: linear-gradient(to top, #171718 30% , #D0E2F2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     .breadcrumbs{
         position: absolute;
+        z-index: 10;
         top: 0;
         left: 0;
         width: 100%;
         margin: 0;
         padding: 5px;
         text-align: center;
-        background-color: rgba(0,0,0,0.4);
     }
     .myprofile-introduce-wrapper{
         width: 100vw;
@@ -24,20 +23,48 @@
         .myprofile-introduce-img{
             position: relative;
             img{
+                position: relative;
                 max-width: 100vw;
+                margin-top: -60px;
+                z-index: 0;
             }
+        }
+        .profileImage-wrapper{
+            transform: translateY(180px);
         }
 
     }
     .myprofile-content-wrapper{
-        width: 80vw;
+        width: 70vw;
         @media (max-width: 768px){
             width: 100vw;
         }
         h1{
             text-align: center;
             margin-top: 40px;
+            transform: translateY(20px);
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            opacity: 0.2;
+            margin: 0;
+            @media (max-width: 768px){
+                margin-bottom: 20px;
+            }
         }
     }
-
+}
+.myprofile-category__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    margin-top: 15px;
+    border-radius: 10px;
+    @media (max-width: 768px){
+        width: 100vw;
+    }
 }
