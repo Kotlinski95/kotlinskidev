@@ -7,6 +7,8 @@ export const lightTheme = {
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(to top, #f1f1f2 20% , #9c98cd)',
   burgermenu: "#23222e",
+  scrollbarColor: "#33234d",
+  scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#33234d',
     lightBackground: '#9c98cd',
@@ -69,6 +71,10 @@ export const lightTheme = {
     categoryHover: '#d5bed0',
     categoryColor: '#FFF',
     imageBorder: '#9d64c6'
+  },
+  notification:{
+    background: "#9c98cd",
+    color: "#33234d"
   }
 }
 
@@ -78,6 +84,8 @@ export const darkTheme = {
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
   burgermenu: "#D0E2F2",
+  scrollbarColor: "#ffffff",
+  scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#D0E2F2',
     lightBackground: '#2d2d30',
@@ -140,6 +148,10 @@ export const darkTheme = {
     categoryHover: '#2e2d2d',
     categoryColor: '#FFF',
     imageBorder: '#171718'
+  },
+  notification:{
+    background: "rgb(58, 58, 167)",
+    color: "#FFF"
   }
 }
 //onst [cookies, setCookie] = useCookies(['theme']);

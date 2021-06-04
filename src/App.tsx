@@ -42,6 +42,7 @@ import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 declare global {
   var _theme: ThemeType;
@@ -72,6 +73,19 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
+      <Scrollbars
+        className="scrollbar-custom"
+        autoHide
+        hideTracksWhenNotNeeded
+        autoHideTimeout={2000}
+        autoHideDuration={400}
+        renderTrackVertical={({style, ...props}) =>
+          <div {...props} className="TrackVertical" style={{...style, backgroundColor: 'transparent', right: '2px', bottom: '2px', top: '2px', borderRadius: '3px', width: '5px'}}/>
+        }
+        renderThumbVertical={({style, ...props}) =>
+          <div {...props} className="ThumbVertical" style={{...style, width: '8px', borderRadius: '4px'}}/>
+        }
+        style={{ width: '100vw', height: '100vh', backgroundColor: 'red' }}>
       <div className="App">
         <RouteChangeTracker />
         <Nav />
@@ -166,6 +180,7 @@ function App() {
         </div>
         <Footer />
       </div>
+      </Scrollbars>
     </ThemeProvider>
   );
 }

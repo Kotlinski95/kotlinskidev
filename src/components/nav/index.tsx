@@ -18,6 +18,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import React from 'react';
 import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
+import NotificationDropdown from '../dropdownNotification/index.js'
 
 const styles = {
   bmCrossButton: {
@@ -108,8 +109,10 @@ const Nav = () => {
               open={Boolean(anchorElAbout)}
               onClose={handleCloseMenuAbout}
             >
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
+              <MenuItem className="menuItem header" onClick={handleCloseMenuAbout}><Link to="/aboutme">{language.header.about}</Link></MenuItem>
+              <hr/>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
+              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
             </Menus>
@@ -214,6 +217,7 @@ const Nav = () => {
               className="react-switch"
               id="small-radius-switch"
             />
+            <NotificationDropdown language={language}/>
             <DropdownMulti language={language}/>
           </ul>
 

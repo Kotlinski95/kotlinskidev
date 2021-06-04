@@ -24,6 +24,12 @@ export const GlobalStyles = createGlobalStyle`
   a:hover {
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
+
+  .ThumbVertical{
+    box-shadow: ${({ theme }) => theme.scrollbarShadow};
+    background-color: ${({ theme }) => theme.scrollbarColor};
+  }
+
   //==========  Navigation section ==================
 
   .flex-wrapper {
@@ -42,7 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
 
-  //==========  Navigation section ==================
+  //==========  Footer section ==================
   .footer-wrapper{
     background-color: ${({ theme }) => theme.footer.darkBackground};
   }
@@ -205,5 +211,11 @@ export const GlobalStyles = createGlobalStyle`
 .myprofile-nav__wrapper ul li:hover {
   color: ${({ theme }) => theme.myProfile.categoryColor};
   background-color: ${({ theme }) => theme.myProfile.categoryHover};
+}
+
+// ================ Notification =============
+.notification-wrapper{
+  background: ${({ theme }) => theme.notification.background};
+  color: ${({ theme }) => theme.notification.color};
 }
 `;

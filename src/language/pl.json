@@ -20,6 +20,10 @@
             "education": "Edukacja",
             "software_enginner": "Front-End Development",
             "automation_enginner": "Automatyka"
+        },
+        "notification": {
+            "header": "Komunikat",
+            "text": "Strona jest w trakcie tworzenia, niektóre funkcjonalności mogą być jeszcze niedostępne. Przepraszam, za chwilowe trudności i brak wszystkich treści, pracuję nad tym :)"
         }
     },
     "typedText": {
@@ -406,6 +410,30 @@
                 "music": "Muzyka",
                 "coding": "Programowanie",
                 "films": "Filmy"
+            }
+        },
+        "aboutme": {
+            "main" : {
+                "header": "O mnie",
+                "text": "Nazywam się Adrian Kotliński, mieszkam w Katowicach. Studiowałem Automatykę i Robotykę na Akademii Górniczo Hutniczej w Krakowie. Jestem adeptem sztuki web developmentu ciągle szukającym nowych wyzwań w tym obszarze. Uwielbiam minimalistyczny design oraz subtelne animacje. Chcę rozwijać się w technologiach związanych z TypeScript oraz React, właśnie na potrzeby samokształcenia w tym obszarze powstała niniejsza strona.",
+                "see_myprofile": "Więcej na moim profilu",
+                "education_header": "Proces nauczania",
+                "education_text": "Programowaniem ogólnie zacząłem interesować się już około roku 2014. Pod koniec technikum wiedziałem już, że to z tym chcę wiązać swoją przyszłość. Na studiach poznałem wiele ciekawych języków programowania, początkowo swoją drogę skupiłem na automatyce przemysłowej i programowani aplikacji w przemyśle automotive, co było ściśle związane z moim kierunkiem studiów.",
+                "education_course" :"Dopiero pod koniec 2020 roku, zmienilem kierunek na web development. Przystąpiłem do kursu ",
+                "education_continue": " ,będącym zdalnym kursem programowania webowego, dzięki któremu nauczylem się wielu podstaw pozwalających na tworzenie samodzielnych projektów. To właśnie tam miałem pierwszą styczność z Reactem. Nauczyłem się tam również wielu dobrych praktyk programowania. W między czasie uczestniczylem również w ogólnopolskim zdalnym kursie programowania coders camp, na którym przez okres 5 miesięcy poznawałem zagadnienia związane z JavaScript, TypeScirpt, React oraz NodeJS. Kurs ten ukończylem w kwietniu 2020 roku, od tamtej pory każdego dnia kontynuuję samodzielną naukę. Nie tylko utrwalam zdobytą do tej pory wiedzę, ale również uczę się nowych rozwiązań i technologii.",
+                "see_education": "Więcej o moim wykształceniu",
+                "see_courses": "Więcej o moich kursach",
+                "see_easycode": "Easy-Code ",
+                "personality_header": "Osobowość",
+                "personality_text": "Trochę o mnie - jestem osobą spokojną i ambitną. Uwielbiam pracę w zespole oraz naukę nowych rzeczy. Nie boję się wyzwań, wręcz przeciwnie - sam ciągle ich poszukuję. Samodzielne rozwiązywanie problemów jest, moim zdaniem, najlepszym sposobem nauki.",
+                "see_blog": "Więcej o mnie na moim blogu",
+                "experience_header": "Doświadczenie",
+                "experience_text": "Swoją karierę programistyczną zacząłem w 2018 roku, gdzie w jeszcze w trakcie studiów pracowałem jako programista systemow sterowania automotive na wielu zagranicznych projektach. Doświadczenie na zagranicznych projektach znacząco podniosło mój poziom języka angielskiego. Nie mam najmniejszych problemów z rozumieniem dokumentacji czy komunikacją. Od grudnia 2020 roku zacząłem zdobywać pierwsze doświadczenia jako web-developer. Aktualnie pracuję jako junior front-end developer, zajmując się developmentem sklepów internetowych na platformie shopify. Praca ta znacząco podniosła mój poziom wiedzy na temat środowiska IT, pracy w zespole, metod Agile i Scrum, obsługi Git'a oraz przedewszystkim programowania webowego.",
+                "see_experience_plc": "Więcej o moim doświadczeniu programisty PLC",
+                "see_experience_web": "Więcej o moim wykształceniu web-developera",
+                "contact": "Kontakt",
+                "contact_text": "Serdecznie zapraszam do kontaktu, czy to w sprawie pracy czy luźnej rozmowy. Z chęcią odpiszę na każdą wiadomość jaką dostanę.",
+                "see_contact": "Przejdź do formularza kontaktowego"
             }
         }
     }

@@ -8,10 +8,12 @@
     margin: 10px;
     border-radius: 15px;
     font-family: 'Reggae One', cursive;
+    z-index: 0;
 }
 
 .stack-tile-wrapper:hover{
     transform: scale(1.1);
+    z-index: 0;
     @media (max-width: 768px){
         transform: scale(1.05);
     }
