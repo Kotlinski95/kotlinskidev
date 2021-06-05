@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
 
-  .ThumbVertical{
+  .c-scrollbar_thumb {
     box-shadow: ${({ theme }) => theme.scrollbarShadow};
     background-color: ${({ theme }) => theme.scrollbarColor};
   }

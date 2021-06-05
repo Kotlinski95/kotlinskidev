@@ -367,7 +367,7 @@
                 "birthday_label" : "Born: ",
                 "birthday_text" : "11.02.1995",
                 "phone_label" : "Phone number: ",
-                "phone_text": " + 48 XXX XXX XXX"
+                "phone_text": " + 48 608 418 911"
             },
             "work" : {
                 "header": "Experience:",
@@ -435,6 +435,75 @@
                 "contact": "Contact",
                 "contact_text": "Feel free to contact me, whether it's about work or a casual conversation. I will be happy to reply to any message I receive. ",
                 "see_contact": "Go to the contact form"
+            },
+            "front": {
+                "header": "Web developer career",
+                "text" : "My name is Adrian Kotliński, I started my career with web development in September 2020. I have been programming for many years, but the front end track is relatively new to me. I'm constantly getting to know this world and trying to improve my skills in this area.",
+                "back_to_home": "More about me",
+                "sobre": {
+                    "header": "Sobre Software House",
+                    "text": "In April 2021, I started working for Sobre Software House as a web developer. I work mainly in the e-commerce industry as a junior Shopify Developer, co-creating software for online stores commissioned by Reckitt.",
+                    "link": "http://www.sobre.pl/",
+                    "link_label": "More about Sobre"
+                },
+                "easy_code": {
+                    "header": "Easy Coder",
+                    "text": "In December 2020, I started my first job as a junior Front-End Developer at Easy Coder Piotr Mirosz, it was the first opportunity to learn about working as a web developer. For the next 4 months I worked, among others, on e-commerce projects in Shopify, I also co-created web applications in React and Next JS.",
+                    "text_ace": "Currently, the company is recognized under the name ACE Agency. In April 2021, I was transferred from the ACE Agency to Sobre Software House",
+                    "link": "http://www.aceagency.com/",
+                    "link_label": "More about ACE Agency"
+                }
+            },
+            "plc": {
+                "header": "PLC Programming career",
+                "text": "I spent the first years of my work as a programmer mainly in the position of Automatic Engineer, where I dealt with the programming of industrial controllers. This field is particularly close to me and directly related to my education. Currently, I'm constantly striving to improve my programming skills, but I'm more focused on the field of web development. As an Automation Engineer and PLC programmer, I dealt with programming controllers from Siemens, Allen Bradley, B&R, Mitsubishi in LAD, ST, SCL, C, C ++",
+                "back_to_home": "More about me",
+                "blumenbecker": {
+                    "header": "Blumenbecker Engineering Polska",
+                    "text": "In this company, I worked as a Control Systems Programmer in the automotive industry. I dealt with the implementation of automated industrial lines in car factories. This job was associated with frequent trips abroad, which allowed me to improve my language skills (mainly English). I worked mainly with the VASS standard (for the VW group) as a programmer of Siemens controllers and SEW servo drives.",
+                    "link": "https://www.blumenbecker.com/pl/firma/grupy-blumenbecker/blumenbecker-engineering-polska-sp-z-oo",
+                    "link_label": "More about Blumenbecker Engineering Polska"
+                },
+                "bernecker": {
+                    "header": "Bernecker&Rainer",
+                    "text": "In this company, I completed an internship related to PLC programming from B&R and ACOPOS servo drives in the Automation Studio environment. I have worked with languages ​​such as ST, C, C ++, which allow the use of high-level programming languages ​​to control industrial applications.",
+                    "link": "https://www.br-automation.com/pl/o-nas/",
+                    "link_label": "More about Bernecker&Rainer"
+                }
+            },
+            "courses": {
+                "header": "Courses and training",
+                "text": "The field of programming is about continuous improvement of my skills, so I started my adventure with web development by participating in two programming courses.",
+                "back_to_home": "More about me",
+                "easy_code": {
+                    "header": "Easy Code",
+                    "text": "This course covers a very wide range of topics from the world of the Front-End. Here I learned the basics of web development (HTML, CSS, JavaScript), but also delved into the secrets of TypeScript and ReactJS. These skills allowed me to get my first job offer and the possibility of further development in this field.",
+                    "link": "https://easy-code.io/blog/article/5Jn92JIZDad91IxGqs3m6c",
+                    "link_label": "More about Easy Code"
+                },
+                "coders_camp": {
+                    "header": "Coders Camp",
+                    "text": "I joined the Coders Camp course in its sixth edition, which was its first all-Poland remote edition. The subject of the course included a review of the basics (HTML, CSS), knowledge of which was checked during recruitment tests. Later in the course, theoretical and practical knowledge of the following topics was tested: JavaScript, TypeScript, React JS and Node JS.",
+                    "link": "https://coderscamp.edu.pl/",
+                    "link_label": "More about Coders Camp"
+                }
+            },
+            "education": {
+                "header": "Education",
+                "text": "For many years I have been passionate about programming, electronics and technical innovations. This is why I chose the Mechatronics Technical School as my secondary school, which combined all these areas. I chose a narrower specialization in the area of ​​Industrial Automation for my studies. Now, after many years of experience, gained experience and skills, I want to focus on web programming.",
+                "back_to_home": "More about me",
+                "agh": {
+                    "header": "MSc. Automation and Robotics",
+                    "text": "I studied Automation and Robotics at AGH in Krakow, during 11 semesters I gained many skills that I can successfully use as a programmer. During the classes, I not only developed my programming skills, but also analytical thinking, logic, algorithmics and the theory of control and automation.",
+                    "link": "http://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
+                    "link_label": "More about Automation and Robotics at AGH"
+                },
+                "zs6": {
+                    "header": "Mechatronics technician",
+                    "text": "The field of Mechatronics Technician at the School Complex No. 6 in Jastrzbie-Zdrój turned out to be a very good choice to gain technical skills and go beyond the program offered in the general secondary school. This is the place where I gained my first experience with programming languages ​​such as C, C ++ and industrial controllers programming skills.",
+                    "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-mechatronik/",
+                    "link_label": "More about the Mechatronics technician major in ZS6"
+                }
             }
         }
     }

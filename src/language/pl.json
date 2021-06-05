@@ -434,6 +434,75 @@
                 "contact": "Kontakt",
                 "contact_text": "Serdecznie zapraszam do kontaktu, czy to w sprawie pracy czy luźnej rozmowy. Z chęcią odpiszę na każdą wiadomość jaką dostanę.",
                 "see_contact": "Przejdź do formularza kontaktowego"
+            },
+            "front": {
+                "header": "Kariera web developera",
+                "text" : "Nazywam się Adrian Kotliński, swoją karierę z web developmentem rozpocząłem we wrześniu 2020 roku. Od wielu lat zajmuje się programowaniem, jednak ścieżka Front endu jest dla mnie stosunkowo nowa. Ciągle poznaję ten świat i rozwijam swoje umiejętności w tym obszarze.",
+                "back_to_home": "Więcej o mnie",
+                "sobre": {
+                    "header": "Sobre Software House",
+                    "text": "W kwietniu 2021 roku rozpocząłem pracę dla Sobre Software House na stanowisku web developera. Pracuję głównie w branży e-commerce jako junior Shopify Developer, współtworząc oprogramowanie dla sklepów internetowych na zlecenia firmy Reckitt. ",
+                    "link": "http://www.sobre.pl/",
+                    "link_label": "Więcej na temat Sobre"
+                },
+                "easy_code": {
+                    "header": "Easy Coder",
+                    "text": "W grudniu 2020 roku podjąłem pierwszą pracę jako junior Front-End Developer w Easy Coder Piotr Mirosz, była to pierwsza okazja na zapoznanie się z pracą jako web developer. Przez następne 4 miesiące pracowałem m.in przy projektach e-commerce w Shopify, współtworzyłem aplikacje internetowe w React i Next JS.",
+                    "text_ace": "Aktualnie firma rozpoznawalna jest pod nazwą ACE Agency. W kwietniu 2021 roku zostałem przeniesiony z ACE Agency do Sobre Software House",
+                    "link": "http://www.aceagency.com/",
+                    "link_label": "Więcej na temat ACE Agency"
+                }
+            },
+            "plc": {
+                "header": "Kariera programisty PLC",
+                "text": "Pierwsze lata swojej pracy jako programista spędziłem głównie na stanowisku Automatyka, gdzie zajmowałem się programowaniem sterowników przemysłowych. Dziedzina ta jest mi szczególnie bliska i bezpośrednio związana z moim wykształceniem. Obecnie ciągle dąże do doskonalenia swoich umiejętności programistycznych, jednak jestem bardziej ukierunkowany na dziedzinę web developmentu. Jako programista Automatyk miałem doczynienia z programowaniem sterowników firmy Siemens, Allen Bradley, B&R, Mitsubishi w językach LAD, ST, SCL, C, C++",
+                "back_to_home": "Więcej o mnie",
+                "blumenbecker": {
+                    "header": "Blumenbecker Engineering Polska",
+                    "text": "W tej firmie pracowałem na stanowisku Programisty Systemów Sterowania w branży automotive. Zajmowałem się wdrażaniem zautomatyzowanych linii przemysłowych w fabrykach samochodowych. Praca ta wiązała się z częstymi wyjazdami zagranicznymi, co pozwoliło mi na udoskonalenie zdolności językowych (głównie języka angielskiego). Pracowałem głównie ze standardem VASS (dla grupy VW) jako programista sterowników firmy Siemens oraz serwonapędów SEW.",
+                    "link": "https://www.blumenbecker.com/pl/firma/grupy-blumenbecker/blumenbecker-engineering-polska-sp-z-oo",
+                    "link_label": "Więcej na temat Blumenbecker Engineering Polska"
+                },
+                "bernecker": {
+                    "header": "Bernecker&Rainer",
+                    "text": "W tej firmie odbywałem staż związany z programowaniem PLC firmy B&R oraz serwonapędów ACOPOS w środowisku Automation Studio. Pracowałem z takimi językami jak ST, C , C++, które pozwalają na wykorzystanie wysokopoziomowych języków programowania do sterowania aplikacjami przemysłowymi.",
+                    "link": "https://www.br-automation.com/pl/o-nas/",
+                    "link_label": "Więcej na temat Bernecker&Rainer"
+                }
+            },
+            "courses": {
+                "header": "Kursy i szkolenia",
+                "text": "Dziedzina programowania polega na ciągłym doskonaleniu swoich umiejętności, dlatego swoją przygodę z web developmentem rozpocząłem od uczestnictwa w dwóch kursach programistycznych",
+                "back_to_home": "Więcej o mnie",
+                "easy_code": {
+                    "header": "Easy Code",
+                    "text": "Kurs ten obejmuje bardzo szeroką tematykę ze świata Front-Endu. Nauczyłem się tutaj podstaw web developmentu (HTML,CSS, JavaScript), ale także wgłębiłem się w tajniki TypeScript oraz ReactJS. Te umiejętności pozwoliły mi na dostanie pierwszej propozycji pracy i możliwość dalszego rozwoju w tej dziedzinie.",
+                    "link": "https://easy-code.io/blog/article/5Jn92JIZDad91IxGqs3m6c",
+                    "link_label": "Więcej o Easy Code"
+                },
+                "coders_camp": {
+                    "header": "Coders Camp",
+                    "text": "Do kursu Coders Camp przystąpiłem w jego szóstej edycji, która była jego pierwszą edycją ogólnopolską prowadzoną w sposób zdalny. Tematyka kursu obejmowała przypomnienie podstaw (HTML, CSS), którego znajomość była sprawdzana podczas testów rekrutacyjnych. W dalszej części kursu sprawdzana była wiedza teoretyczna i praktyczna z tematów: JavaScript, TypeScript, React JS oraz Node JS.",
+                    "link": "https://coderscamp.edu.pl/",
+                    "link_label": "Więcej o Coders Camp"
+                }
+            },
+            "education": {
+                "header": "Wykształcenie",
+                "text": "Już od wielu lat jestem pasjonatem programowania,elektroniki i nowinek technicznych. To dlatego jako szkołę średnią wybrałem technikum Mechatroniczne, które łączyło wszystkie te dziedziny. Na studia wybrałem węższą specjalizację dotyczącą obszaru Automatyki przemysłowej. Teraz po wielu latach doświadczeń, zdobytym doświadczeniu i umiejętnościach chcę ukierunkować się w obszarze programowanie webowego.",
+                "back_to_home": "Więcej o mnie",
+                "agh": {
+                    "header": "Mgr inż. Automatyki i Robotyki",
+                    "text": "Studia na kierunku Automatyka i Robotyka podjąłem na AGH w Krakowie, podczas 11 semestrów zdobyłem wiele umiejętności, które z powodzeniem mogę wykorzystać jako programista. Podczas zajęć nie tylko rozwinąłem swoje umiejętności programistyczne, ale również analityczne myślenie, logikę, algorytmikę oraz teorię sterowania i automatyzacji.",
+                    "link": "http://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
+                    "link_label": "Więcej o Automatyce i Robotyce na AGH"
+                },
+                "zs6": {
+                    "header": "Technik Mechatronik",
+                    "text": "Kierunek Technik Mechatronik w Zespole Szkół nr 6 w Jastrzbiu-Zdroju okazał się bardzo dobrym wyborem aby zdobyć umiejętności techniczne i wyjść poza program oferowany w liceum ogólnokształcącym. To właśnie tam zdobyłem pierwsze doświadczenie z językami programowania takimi jak C, C++ oraz umiejętności programowania sterowników przemysłowych.",
+                    "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-mechatronik/",
+                    "link_label": "Więcej o kierunku technik Mechatronik w ZS6"
+                }
             }
         }
     }

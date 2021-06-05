@@ -12,38 +12,43 @@ import ProfileHobby from '../../components/myprofile/hobby'
 import ProfileOverview from '../../components/myprofile/overview'
 import ProfileSpareTime from '../../components/myprofile/spareTime'
 import ProfileWork from '../../components/myprofile/work'
+import Footer from '../../components/footer'
 
 
-const MyProfilePage = () => {
+const MyProfilePage = (props) => {
     const dispatch = useDispatch();
     dispatch(setPage("My profile"));
+    const { HandleLocomotiveScroll } = props;
+    HandleLocomotiveScroll();
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
-            <div className="myprofile-wrapper">
-                <div className="myprofile-introduce-wrapper">
-                    <div className="myprofile-introduce-img">
-                        <Breadcrumbs />
-                        <img src={background}></img>
+        <div data-scroll-section>
+            <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+                <div className="myprofile-wrapper">
+                    <div className="myprofile-introduce-wrapper">
+                        <div className="myprofile-introduce-img">
+                            <Breadcrumbs />
+                            <img src={background}></img>
+                        </div>
+                        <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px" />
                     </div>
-                    <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px"/>
-                </div>
-                <div className="myprofile-content-wrapper">
-                    <h1>{language.pages.myprofile.header}</h1>
-                    <h2>{language.pages.myprofile.profession}</h2>
-                    <hr/>
-                    <NavProfile/>
-                </div>
+                    <div className="myprofile-content-wrapper">
+                        <h1>{language.pages.myprofile.header}</h1>
+                        <h2>{language.pages.myprofile.profession}</h2>
+                        <hr />
+                        <NavProfile />
+                    </div>
 
+                </div>
+                <div className="myprofile-category__wrapper">
+                    <ProfileOverview />
+                    <ProfileWork />
+                    <ProfileEducation />
+                    <ProfileContact />
+                    <ProfileHobby />
+                    <ProfileSpareTime />
+                </div>
             </div>
-            <div className="myprofile-category__wrapper">
-                <ProfileOverview/>
-                <ProfileWork/>
-                <ProfileEducation/>
-                <ProfileContact/>
-                <ProfileHobby/>
-                <ProfileSpareTime/>
-
-            </div>
+            <Footer />
         </div>
     );
 };
