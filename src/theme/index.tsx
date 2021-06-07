@@ -11,6 +11,7 @@ export const lightTheme = {
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#33234d',
+    background: 'transparent',
     lightBackground: '#9c98cd',
     lightBackgroundOpacity: 'rgba(156, 152, 205,0.6)',
     darkBackground: '#f1f1f2',
@@ -88,6 +89,7 @@ export const darkTheme = {
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#D0E2F2',
+    background: 'transparent',
     lightBackground: '#2d2d30',
     lightBackgroundOpacity: 'rgba(63, 63, 63, 0.9)',
     darkBackground: '#171718',

@@ -17,7 +17,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.linkColor};
   }
 
-  .main {
+  .main,
+  .main-inner {
     background: ${({ theme }) => theme.gradient};
   }
 
@@ -31,13 +32,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   //==========  Navigation section ==================
-
-  .flex-wrapper {
-    background-color: ${({ theme }) => theme.nav.lightBackground};
-    @media (max-width: 769px) {
-      background-color: ${({ theme }) => theme.nav.lightBackgroundOpacity};
-    }
-  }
 
   .flex-wrapper .nav-left ul li,
   .flex-wrapper .nav-right ul li {
@@ -184,6 +178,10 @@ export const GlobalStyles = createGlobalStyle`
 }
 .stack-hello::after{
   color: ${({ theme }) => theme.stack.color};
+}
+
+.stack-tile-title{
+  color: ${({ theme }) => theme.stack.borderColor};
 }
 
 // ============= project page =============
