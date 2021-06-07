@@ -6,14 +6,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px){
+        margin-left: 0;
+        max-width: 95vw;
+    }
     a:hover{
         color: blue;
     }
     .aboutme_title{
         font-size: 102px;
         text-align: center;
+        max-width: 100%;
+        word-wrap: break-word;
         @media (max-width: 768px){
-            font-size: 50px;
+            font-size: 45px;
+            max-width: 95vw;
         }
         margin: 15px auto;
         font-family: 'Times New Roman', serif;
@@ -31,6 +38,12 @@
         font-weight: 400;
         @media (max-width: 968px){
             width: 100%;
+        }
+    }
+    .arrow-container{
+        width: 100%;
+        ul{
+            margin: 0 auto;
         }
     }
 }

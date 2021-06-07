@@ -8,6 +8,7 @@ import startwars from '../../assets/projects/starwars.png'
 import chess from '../../assets/projects/chess.png'
 import realestate from '../../assets/projects/realestate.png'
 import Footer from '../../components/footer'
+import {RevealImage, TextRevealVertical, TextRevealHorizontal} from '../../components/contentReveal'
 
 const ProjectsPage = (props) => {
   const dispatch = useDispatch();

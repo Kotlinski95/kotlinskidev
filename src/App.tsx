@@ -79,7 +79,12 @@ function App() {
     useEffect(() => {
       const scroll = new locomotiveScroll({
         el: scrollRef.current,
-        smooth: true
+        smooth: true,
+        reloadOnContextChange: true,
+        scrollFromAnywhere: true,
+        lerp: 0.2,
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
       });
       return () => {
         scroll.destroy();

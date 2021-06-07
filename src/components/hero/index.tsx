@@ -23,7 +23,7 @@ const HeroDesktop = (props) => {
             <WelcomeComponent language={language} />
             <AboutComponent/>
             <CategoriesComponent />
-            <ContactComponent/>
+            <ContactComponent />
             </ReactPageScroller>
         </div>
       );

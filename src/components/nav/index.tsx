@@ -95,7 +95,7 @@ const Nav = () => {
   return (
     <div>
       <div className="flex-wrapper navigation">
-        <div className="nav-left line-item item-half">
+        <div className="nav-left line-item item-half" data-scroll-section>
           <ul>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
               <li className="line-item">
@@ -135,7 +135,7 @@ const Nav = () => {
           </ul>
         </div>
 
-        <div className="nav-center line-item">
+        <div className="nav-center line-item" data-scroll-section>
           <Link to="/">
             <LazyLoad height={70}>
               <img src={logo} alt="Logo" className="nav-logo"></img>
