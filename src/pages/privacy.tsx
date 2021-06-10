@@ -1,19 +1,44 @@
-import TypedText from '../components/typedText'
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/breadcrumbs'
 import Footer from '../components/footer'
+import AccordionText from '../components/accordion'
 
 const PrivacyPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Privacy"));
   const { HandleLocomotiveScroll } = props;
   HandleLocomotiveScroll();
+  const privacyContent = {
+    main: {
+      update: {
+        text: language.pages.privacy.update,
+        link: "",
+        target: ""
+      },
+      describe: {
+        text: language.pages.privacy.describe,
+        link: "",
+        target: ""
+      },
+      personal_data: {
+        text: language.pages.privacy.personal_data,
+        link: "",
+        target: ""
+      },
+      personal_data_link: {
+        text: language.pages.privacy.generator,
+        link: "https://www.privacypolicies.com/privacy-policy-generator/",
+        target: "_blank"
+      },
+    }
+  }
   return (
     <div data-scroll-section>
       <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
         <Breadcrumbs />
         <div className="privacy-wrapper" style={{ width: '80%' }}>
+          <AccordionText title={language.pages.privacy.header} text={privacyContent.main}/>
           <h1>{language.pages.privacy.header}</h1>
           <p>{language.pages.privacy.update}</p>
           <p>{language.pages.privacy.describe}</p>
