@@ -1,7 +1,11 @@
 const Theme = {
     typography: {
         primaryFont: 'Poppins, Roboto, Helvetica, sans-serif',
-        secondaryFont: 'Montserrat, Roboto, Ubuntu, sans-serif'
+        secondaryFont: 'Montserrat, Roboto, Ubuntu, sans-serif',
+        primaryFontSize: '20px',
+        secondaryFontSize: '16px',
+        fontWeightRegular: 500,
+        fontWeightBold: 800,
     },
     breakpoints: {
         xs: `(min-width: 512px)`,

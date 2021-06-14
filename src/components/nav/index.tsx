@@ -19,6 +19,9 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
+import { useRef, useEffect } from 'react'
+import * as Scroll from 'react-scroll';
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const styles = {
   bmCrossButton: {
@@ -32,6 +35,15 @@ const styles = {
 }
 
 const Nav = () => {
+  Events.scrollEvent.register('begin', function(to, element) {
+    console.log('begin', arguments);
+  });
+
+  Events.scrollEvent.register('end', function(to, element) {
+    console.log('end', arguments);
+  });
+
+
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
@@ -95,7 +107,7 @@ const Nav = () => {
   return (
     <div>
       <div className="flex-wrapper navigation">
-        <div className="nav-left line-item item-half" data-scroll-section>
+        <div className="nav-left line-item item-half">
           <ul>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
               <li className="line-item">
@@ -110,7 +122,7 @@ const Nav = () => {
               onClose={handleCloseMenuAbout}
             >
               <MenuItem className="menuItem header" onClick={handleCloseMenuAbout}><Link to="/aboutme">{language.header.about}</Link></MenuItem>
-              <hr/>
+              <hr />
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
@@ -135,7 +147,7 @@ const Nav = () => {
           </ul>
         </div>
 
-        <div className="nav-center line-item" data-scroll-section>
+        <div className="nav-center line-item">
           <Link to="/">
             <LazyLoad height={70}>
               <img src={logo} alt="Logo" className="nav-logo"></img>
@@ -184,7 +196,7 @@ const Nav = () => {
                   }}
                 >
                   Light
-              </div>
+                </div>
 
               }
               uncheckedHandleIcon={
@@ -217,8 +229,8 @@ const Nav = () => {
               className="react-switch"
               id="small-radius-switch"
             />
-            <NotificationDropdown language={language}/>
-            <DropdownMulti language={language}/>
+            <NotificationDropdown language={language} />
+            <DropdownMulti language={language} />
           </ul>
 
         </div>

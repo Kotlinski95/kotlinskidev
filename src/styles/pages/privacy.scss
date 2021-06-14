@@ -5,3 +5,11 @@
     color: inherit;
   }
 }
+
+body::-webkit-scrollbar-track {
+  display: initial;
+}
+
+body::-webkit-scrollbar-thumb {
+  display: initial;
+}
