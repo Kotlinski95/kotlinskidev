@@ -82,7 +82,7 @@ function App() {
         smooth: true,
         reloadOnContextChange: true,
         scrollFromAnywhere: true,
-        lerp: 0.2,
+        lerp: 0.1,
         smartphone: { smooth: true },
         tablet: { smooth: true },
       });
@@ -117,22 +117,22 @@ function App() {
               <MyProfilePage {...routingProps} />
             </Route>
             <Route exact path="/myprofile/contact">
-              <MyProfileContactPage {...routingProps} />
+              <MyProfileContactPage  />
             </Route>
             <Route exact path="/myprofile/education">
-              <MyProfileEducationPage {...routingProps} />
+              <MyProfileEducationPage  />
             </Route>
             <Route exact path="/myprofile/hobby">
-              <MyProfileHobbyPage {...routingProps} />
+              <MyProfileHobbyPage  />
             </Route>
             <Route exact path="/myprofile/overview">
-              <MyProfileOverviewPage {...routingProps} />
+              <MyProfileOverviewPage  />
             </Route>
             <Route exact path="/myprofile/spare-time">
-              <MyProfileSpareTimePage {...routingProps} />
+              <MyProfileSpareTimePage  />
             </Route>
             <Route exact path="/myprofile/work">
-              <MyProfileWorkPage {...routingProps} />
+              <MyProfileWorkPage />
             </Route>
             <Route exact path="/stack">
               <StackPage {...routingProps} />

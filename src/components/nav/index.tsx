@@ -35,11 +35,11 @@ const styles = {
 }
 
 const Nav = () => {
-  Events.scrollEvent.register('begin', function(to, element) {
+  Events.scrollEvent.register('begin', function (to, element) {
     console.log('begin', arguments);
   });
 
-  Events.scrollEvent.register('end', function(to, element) {
+  Events.scrollEvent.register('end', function (to, element) {
     console.log('end', arguments);
   });
 
@@ -146,7 +146,6 @@ const Nav = () => {
             </Menus>
           </ul>
         </div>
-
         <div className="nav-center line-item">
           <Link to="/">
             <LazyLoad height={70}>
@@ -232,9 +231,7 @@ const Nav = () => {
             <NotificationDropdown language={language} />
             <DropdownMulti language={language} />
           </ul>
-
         </div>
-
       </div>
     </div>
   );
