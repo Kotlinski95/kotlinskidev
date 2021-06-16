@@ -9,7 +9,7 @@ import Projects from '../projects';
 const Hero = (props) => {
     const language = props.language;
       return (
-        <div>
+        <div style={{ maxWidth: '100vw'}}>
              <WelcomeComponent language={language} />
             <AboutComponent/>
             <StackFrontEnd/>

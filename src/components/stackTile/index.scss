@@ -9,6 +9,10 @@
     border-radius: 15px;
     font-family: 'Reggae One', cursive;
     z-index: 0;
+    @media (max-width: 468px){
+        max-width: 150px;
+        max-height: 150px;
+    }
 
     svg {
         transform: rotateX(90deg);

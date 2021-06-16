@@ -39,7 +39,7 @@ const skills = [
 
 const StackFrontEnd = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', maxWidth: '100vw' }}>
       <h2 className="stack-hello">{language.pages.stack.front_header}</h2>
       <div className="stack-wrapper" data-scroll>
         {skills.map((link, index) => (

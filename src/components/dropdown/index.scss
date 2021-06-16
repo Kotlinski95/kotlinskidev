@@ -44,7 +44,8 @@
     transition: height var(--speed) ease;
     z-index: 999;
     @media (max-width: 400px) {
-      width: 100vw;
+      width: calc(100vw - 20px);
+      right: -10px;
     }
   }
 
@@ -60,6 +61,9 @@
     border-radius: var(--border-radius);
     transition: background var(--speed);
     padding: 0.5rem;
+    @media (max-width: 400px) {
+      height: 60px;
+    }
   }
 
   .menu-item .icon-button {

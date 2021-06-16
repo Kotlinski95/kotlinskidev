@@ -18,16 +18,31 @@ body {
 
 body::-webkit-scrollbar {
   width: 12px;
+  @media (max-width: 769px) {
+    display: none;
+  }
 }
 
 body::-webkit-scrollbar-track {
   box-shadow: transparent;
   background-color: transparent;
+  @media (max-width: 769px) {
+    display: none;
+  }
 }
 
 body::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 6px;
+  @media (max-width: 769px) {
+    display: none;
+  }
+}
+
+.c-scrollbar{
+  @media (max-width: 769px) {
+    display: none;
+  }
 }
 
 .hidden{

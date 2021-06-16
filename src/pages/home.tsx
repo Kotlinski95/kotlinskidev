@@ -3,12 +3,14 @@ import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
 import { Hero } from '../components/hero'
 import Footer from '../components/footer'
+import {useEffect} from 'react'
 
 const HomePage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
   const { HandleLocomotiveScroll } = props;
   HandleLocomotiveScroll();
+
   const routingProps = {
     language
   }
