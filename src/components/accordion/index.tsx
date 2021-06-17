@@ -39,9 +39,10 @@ const AccordionText = (props) => {
         props.inner ?
           <Accordion>
             <AccordionSummary
-              expandIcon={<><AddCircleOutlineRoundedIcon /> <RemoveCircleOutlineRoundedIcon /></>}
+              expandIcon={<><AddCircleOutlineRoundedIcon/> <RemoveCircleOutlineRoundedIcon/></>}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className="cursor_hover"
             >
               <Typography className={classes.heading}>{props.title}</Typography>
             </AccordionSummary>
@@ -91,6 +92,7 @@ const AccordionText = (props) => {
               expandIcon={<><AddCircleOutlineRoundedIcon /> <RemoveCircleOutlineRoundedIcon /></>}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className="cursor_hover"
             >
               <Typography className={classes.heading}>{props.title}</Typography>
             </AccordionSummary>

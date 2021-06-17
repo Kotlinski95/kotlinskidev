@@ -141,7 +141,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
-          <ul className="cursor_hover">
+          <ul>
             <Switch
               checked={checked}
               onChange={handleChange}
@@ -212,7 +212,7 @@ const Nav = () => {
                   <img src={sun} className="layout-icon" />
                 </div>
               }
-              className="react-switch"
+              className="react-switch cursor_hover"
               id="small-radius-switch"
             />
             <NotificationDropdown language={language} />

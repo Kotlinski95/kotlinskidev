@@ -142,9 +142,9 @@ const NotFound = (props) => {
           <li>a</li>
           <li>x</li>
           <li>l</li>
-          <li className="one">4</li>
-          <li className="two">0</li>
-          <li className="three">4</li>
+          <li className="one cursor_hover">4</li>
+          <li className="two cursor_hover">0</li>
+          <li className="three cursor_hover">4</li>
           <li>y</li>
           <li>y</li>
           <li>w</li>
@@ -156,16 +156,16 @@ const NotFound = (props) => {
           <li>y</li>
           <li>p</li>
           <li>a</li>
-          <li className="four">p</li>
-          <li className="five">a</li>
-          <li className="six">g</li>
-          <li className="seven">e</li>
+          <li className="four cursor_hover">p</li>
+          <li className="five cursor_hover">a</li>
+          <li className="six cursor_hover">g</li>
+          <li className="seven cursor_hover">e</li>
           <li>v</li>
           <li>j</li>
           <li>a</li>
-          <li className="eight">n</li>
-          <li className="nine">o</li>
-          <li className="ten">t</li>
+          <li className="eight cursor_hover">n</li>
+          <li className="nine cursor_hover">o</li>
+          <li className="ten cursor_hover">t</li>
           <li>s</li>
           <li>c</li>
           <li>e</li>
@@ -179,11 +179,11 @@ const NotFound = (props) => {
           <li>h</li>
           <li>q</li>
           <li>e</li>
-          <li className="eleven">f</li>
-          <li className="twelve">o</li>
-          <li className="thirteen">u</li>
-          <li className="fourteen">n</li>
-          <li className="fifteen">d</li>
+          <li className="eleven cursor_hover">f</li>
+          <li className="twelve cursor_hover">o</li>
+          <li className="thirteen cursor_hover">u</li>
+          <li className="fourteen cursor_hover">n</li>
+          <li className="fifteen cursor_hover">d</li>
           <li>s</li>
           <li>w</li>
           <li>q</li>
@@ -203,22 +203,23 @@ const NotFound = (props) => {
         <div id="search">
           <form>
             <input
+              className="cursor_hover"
               type="text"
               placeholder={language.not_found.search_placeholder}
             />
           </form>
         </div>
         <div id="navigation">
-          <Link className="navigation" to="/">
+          <Link className="navigation cursor_hover" to="/">
             {language.header.home}
           </Link>
-          <Link className="navigation" to="/aboutme">
+          <Link className="navigation cursor_hover" to="/aboutme">
             {language.header.about}
           </Link>
-          <Link className="navigation" to="/contact">
+          <Link className="navigation cursor_hover" to="/contact">
             {language.footer.pages.contact}
           </Link>
-          <Link className="navigation" to="/myprofile">
+          <Link className="navigation cursor_hover" to="/myprofile">
             {language.header.myprofile}
           </Link>
         </div>

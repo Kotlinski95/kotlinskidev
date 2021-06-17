@@ -145,17 +145,19 @@ function App() {
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
       <div className="App smooth-scroll" data-scroll-container>
-        {
-          isReady ? (
-            <>
-              {
-                isMobile ? (
-                  <Cursor isMobile={isMobile} />
-                ) : (
-                  <Cursor isHovered={isHovered} />
-                )
-              }
-              <RouteChangeTracker />
+        <AnimatePresence exitBeforeEnter initial={false} >
+          {
+            isReady ? (
+              <>
+                {
+                  isMobile ? (
+                    <Cursor isMobile={isMobile} />
+                  ) : (
+                    <Cursor isHovered={isHovered} />
+                  )
+                }
+
+                <RouteChangeTracker />
                 <Nav />
                 <div className="main">
                   <Switch location={location} key={location.pathname}>
@@ -172,22 +174,22 @@ function App() {
                       <MyProfilePage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/contact">
-                      <MyProfileContactPage />
+                      <MyProfileContactPage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/education">
-                      <MyProfileEducationPage />
+                      <MyProfileEducationPage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/hobby">
-                      <MyProfileHobbyPage />
+                      <MyProfileHobbyPage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/overview">
-                      <MyProfileOverviewPage />
+                      <MyProfileOverviewPage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/spare-time">
-                      <MyProfileSpareTimePage />
+                      <MyProfileSpareTimePage {...routingProps} />
                     </Route>
                     <Route exact path="/myprofile/work">
-                      <MyProfileWorkPage />
+                      <MyProfileWorkPage {...routingProps} />
                     </Route>
                     <Route exact path="/stack">
                       <StackPage {...routingProps} />
@@ -248,14 +250,14 @@ function App() {
                     </Route>
                   </Switch>
                 </div>
-            </>
-          )
-            : (
-              <LoadingScreen />
+              </>
             )
+              : (
+                <LoadingScreen />
+              )
 
-        }
-
+          }
+        </AnimatePresence>
       </div>
       <Cookies />
     </ThemeProvider>

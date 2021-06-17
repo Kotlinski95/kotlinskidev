@@ -3,10 +3,14 @@ import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/breadcrumbs'
 import Footer from '../components/footer'
 import AccordionText from '../components/accordion'
+import PageTransitioning from '../components/pageTransitioning/index'
 
 const PrivacyPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Privacy"));
+  const { HandleMouseoverEffects } = props;
+  HandleMouseoverEffects();
+
   const privacyContent = {
     main: {
       update: {
@@ -30,8 +34,8 @@ const PrivacyPage = (props) => {
         target: "_blank"
       },
     },
-    interpretation_definitions:{
-      interpretation:{
+    interpretation_definitions: {
+      interpretation: {
         header: language.pages.privacy.interpretation_header,
         content: {
           interpretation: {
@@ -117,8 +121,8 @@ const PrivacyPage = (props) => {
         }
       }
     },
-    collecting_data:{
-      personal:{
+    collecting_data: {
+      personal: {
         header: language.pages.privacy.collecting_data.text,
         content: {
           personal_header: {
@@ -585,21 +589,24 @@ const PrivacyPage = (props) => {
     }
   }
   return (
-    <div data-scroll-section>
-      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
-        <Breadcrumbs />
-        <div className="privacy-wrapper" style={{ width: '80%' }}>
-          <AccordionText data-scroll inner={false} title={language.pages.privacy.header} text={privacyContent.main}/>
-          <AccordionText data-scroll inner={true} title={language.pages.privacy.interpretation} text={privacyContent.interpretation_definitions}/>
-          <AccordionText data-scroll inner={true} title={language.pages.privacy.collecting_data.header} text={privacyContent.collecting_data}/>
-          <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.children.header} text={privacyContent.children}/>
-          <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.links.header} text={privacyContent.links}/>
-          <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.changes.header} text={privacyContent.changes}/>
-          <AccordionText data-scroll  inner={false} title={language.pages.privacy.collecting_data.contact.header} text={privacyContent.contact}/>
+    <>
+      <PageTransitioning />
+      <div data-scroll-section>
+        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <Breadcrumbs />
+          <div className="privacy-wrapper" style={{ width: '80%' }}>
+            <AccordionText data-scroll inner={false} title={language.pages.privacy.header} text={privacyContent.main} />
+            <AccordionText data-scroll inner={true} title={language.pages.privacy.interpretation} text={privacyContent.interpretation_definitions} />
+            <AccordionText data-scroll inner={true} title={language.pages.privacy.collecting_data.header} text={privacyContent.collecting_data} />
+            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.children.header} text={privacyContent.children} />
+            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.links.header} text={privacyContent.links} />
+            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.changes.header} text={privacyContent.changes} />
+            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.contact.header} text={privacyContent.contact} />
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 export default PrivacyPage;

@@ -1,13 +1,15 @@
-import TypedText from '../components/typedText'
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/breadcrumbs'
 import Footer from '../components/footer'
 import AccordionText from '../components/accordion'
+import PageTransitioning from '../components/pageTransitioning/index'
 
 const CookiesPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Cookies"));
+  const { HandleMouseoverEffects } = props;
+  HandleMouseoverEffects();
 
   const cookieContent = {
     main: {
@@ -37,8 +39,8 @@ const CookiesPage = (props) => {
         target: ""
       }
     },
-    interpretation_definitions:{
-      interpretation:{
+    interpretation_definitions: {
+      interpretation: {
         header: language.pages.cookies.interpretation_definitions.interpretation.header,
         content: {
           interpretation: {
@@ -56,17 +58,17 @@ const CookiesPage = (props) => {
             link: "",
             target: ""
           },
-          company:{
+          company: {
             text: `${language.pages.cookies.interpretation_definitions.definitions.company_title}${language.pages.cookies.interpretation_definitions.definitions.company_text}`,
             link: "",
             target: ""
           },
-          cookies:{
+          cookies: {
             text: `${language.pages.cookies.interpretation_definitions.definitions.cookies_title}${language.pages.cookies.interpretation_definitions.definitions.cookies_text}`,
             link: "",
             target: ""
           },
-          website:{
+          website: {
             text: `${language.pages.cookies.interpretation_definitions.definitions.website_title}${language.pages.cookies.interpretation_definitions.definitions.website_text}`,
             link: "",
             target: ""
@@ -76,7 +78,7 @@ const CookiesPage = (props) => {
             link: "https://www.kotlinskidev.pl",
             target: "_blank"
           },
-          you:{
+          you: {
             text: `${language.pages.cookies.interpretation_definitions.definitions.you_title}${language.pages.cookies.interpretation_definitions.definitions.you_text}`,
             link: "",
             target: ""
@@ -84,8 +86,8 @@ const CookiesPage = (props) => {
         }
       }
     },
-    cookies:{
-      types:{
+    cookies: {
+      types: {
         header: language.pages.cookies.interpretation_definitions.cookies.text,
         content: {
           persistent: {
@@ -213,7 +215,7 @@ const CookiesPage = (props) => {
         link: "",
         target: ""
       },
-      cookies_what_are:{
+      cookies_what_are: {
         text: language.pages.cookies.interpretation_definitions.more.cookies_what_are,
         link: "https://www.privacypolicies.com/blog/cookies/",
         target: "_blank"
@@ -225,17 +227,17 @@ const CookiesPage = (props) => {
         link: "",
         target: ""
       },
-      email:{
+      email: {
         text: language.pages.cookies.interpretation_definitions.contact.email,
         link: "",
         target: ""
       },
-      website:{
+      website: {
         text: language.pages.cookies.interpretation_definitions.contact.website,
         link: "",
         target: ""
       },
-      website_url:{
+      website_url: {
         text: language.pages.cookies.interpretation_definitions.contact.website_url,
         link: "https://www.kotlinskidev.pl/contact",
         target: "_self"
@@ -243,19 +245,22 @@ const CookiesPage = (props) => {
     }
   }
   return (
-    <div data-scroll-section>
-      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
-        <Breadcrumbs />
-        <div className="cookies-wrapper" style={{ width: '80%' }}>
-        <AccordionText data-scroll inner={false} title={language.pages.cookies.header} text={cookieContent.main}/>
-        <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.header} text={cookieContent.interpretation_definitions}/>
-        <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.cookies.header} text={cookieContent.cookies}/>
-        <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.more.header} text={cookieContent.more}/>
-        <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.contact.header} text={cookieContent.contact}/>
+    <>
+      <PageTransitioning />
+      <div data-scroll-section>
+        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <Breadcrumbs />
+          <div className="cookies-wrapper" style={{ width: '80%' }}>
+            <AccordionText data-scroll inner={false} title={language.pages.cookies.header} text={cookieContent.main} />
+            <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.header} text={cookieContent.interpretation_definitions} />
+            <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.cookies.header} text={cookieContent.cookies} />
+            <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.more.header} text={cookieContent.more} />
+            <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.contact.header} text={cookieContent.contact} />
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 export default CookiesPage;

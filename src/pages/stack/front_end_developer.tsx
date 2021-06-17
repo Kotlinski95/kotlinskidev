@@ -3,22 +3,27 @@ import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../../components/breadcrumbs'
 import StackFrontEnd from '../../components/stackFrontEnd'
 import Footer from '../../components/footer'
+import PageTransitioning from '../../components/pageTransitioning/index'
 
 
 const FrontEndDeveloperPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("aboutme/front-end-developer"));
-  const { HandleLocomotiveScroll } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
   HandleLocomotiveScroll();
+  HandleMouseoverEffects();
 
   return (
-    <div data-scroll-section>
-      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
-        <Breadcrumbs />
-        <StackFrontEnd/>
+    <>
+      <PageTransitioning />
+      <div data-scroll-section>
+        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <Breadcrumbs />
+          <StackFrontEnd />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 export default FrontEndDeveloperPage;

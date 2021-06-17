@@ -1,43 +1,55 @@
 import styled from 'styled-components';
 import { motion } from "framer-motion";
 
+const transition = { duration: 0.7, ease: "easeInOut" };
 const variants = {
     initial: {
-        bottom: 0,
+        y: 0,
+        opacity: 1,
+        transition: transition
+    },
+    initialFirst: {
+        y: 0,
+        opacity: 1,
+        delay: 1,
+        transition: transition
     },
     animate: {
-        bottom: "100vh",
-        transition: {
-            duration: .7,
-            ease: [0.12, 1, 0.2, 1]
-        }
+        y: "-100%",
+        opacity: 0,
+        transition: transition
+    },
+    animateFirst: {
+        y: "100%",
+        opacity: 0,
+        transition: transition
     },
     exit: {
+        y: 0,
         opacity: 0,
-        transition: {
-            duration: .1
-        }
+        transition: transition
     },
-    exitStop: {
-        bottom: 0,
-        transition: {
-            duration: .6,
-            delay: .5,
-            ease: [0.12, 1, 0.2, 1]
-        }
-    }
 };
 
 const TransitionHelper = styled(motion.div)`
     position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 9999;
     background-color: #dcccb5;
 `
 
 const InitialTransition = styled(TransitionHelper).attrs(() => ({
+    initial: "initialFirst",
+    variants,
+    animate: "animateFirst",
+    exit: "exit"
+}))`
+`;
+
+const ExitTransition = styled(TransitionHelper).attrs(() => ({
     initial: "initial",
     variants,
     animate: "animate",
@@ -45,17 +57,10 @@ const InitialTransition = styled(TransitionHelper).attrs(() => ({
 }))`
 `;
 
-const ExitTransition = styled(TransitionHelper).attrs(() => ({
-    variants,
-    exit: "exitStop"
-}))`
-    bottom: -101vh;
-`;
-
 const PageTransitioning = () => {
     return (
         <>
-            <InitialTransition />
+            <InitialTransition/>
             <ExitTransition />
         </>
     )
