@@ -5,8 +5,6 @@ import moon from '../../assets/moon.png'
 import sun from '../../assets/sun.png'
 import { useState } from 'react'
 import Switch from "react-switch";
-import 'react-languages-select/css/react-languages-select.css';
-import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
 import { setTheme } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
@@ -20,8 +18,6 @@ import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
 import { useRef, useEffect } from 'react'
-import * as Scroll from 'react-scroll';
-import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const styles = {
   bmCrossButton: {
@@ -35,15 +31,6 @@ const styles = {
 }
 
 const Nav = () => {
-  Events.scrollEvent.register('begin', function (to, element) {
-    console.log('begin', arguments);
-  });
-
-  Events.scrollEvent.register('end', function (to, element) {
-    console.log('end', arguments);
-  });
-
-
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();

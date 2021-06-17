@@ -104,7 +104,7 @@ const CategoriesComponent = () => {
                     <TextRevealVertical data-scroll><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
                     <Slider {...settings}>
                         {items.map((item, i) => (
-                            <CategoryCollection key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
+                            <CategoryCollection data-scroll key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
                             </CategoryCollection>
                         ))}
                     </Slider>

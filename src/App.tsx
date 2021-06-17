@@ -30,10 +30,14 @@ import ServicesPage from './pages/services/services'
 import PlcProgrammingPage from './pages/services/plc_programming'
 import WebDevelopmentPage from './pages/services/web_development'
 import ShopifyDevelopmentPage from './pages/services/shopify_development'
+import Cookies from './components/cookiesConsent'
+import LoadingScreen from './components/loadingScreen/index.jsx'
+import { TextRevealVertical} from './components/contentReveal'
 
 import {
   Switch,
   Route,
+  useLocation
 } from 'react-router-dom';
 import { Language } from './language'
 import { ThemeProvider } from 'styled-components';
@@ -42,9 +46,9 @@ import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
-import { Scrollbars } from 'react-custom-scrollbars-2';
 import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
+import { AnimatePresence } from 'framer-motion';
 
 
 declare global {
@@ -65,6 +69,7 @@ function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [isReady, setIsReady] = useState(false);
+  const location = useLocation();
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -112,13 +117,12 @@ function App() {
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
       const scroll = new locomotiveScroll({
-        el: scrollRef.current,
+        el: document.querySelector(".smooth-scroll"),
         smooth: !firefoxAgent,
         reloadOnContextChange: true,
-        scrollFromAnywhere: true,
-        lerp: isMobile ? 1 : 0.09,
         smartphone: { smooth: true },
         tablet: { smooth: true },
+        lerp: 0.09,
       });
       return () => {
         scroll.destroy();
@@ -140,14 +144,15 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <div className="App" data-scroll-container ref={scrollRef}>
+      <div className="App smooth-scroll" data-scroll-container>
         {
           isReady ? (
             <>
               <RouteChangeTracker />
+              <AnimatePresence exitBeforeEnter >
               <Nav />
-              <div className="main" >
-                <Switch>
+              <div className="main">
+                <Switch location={location} key={location.pathname}>
                   <Route exact path="/">
                     <HomePage {...routingProps} />
                   </Route>
@@ -237,15 +242,17 @@ function App() {
                   </Route>
                 </Switch>
               </div>
+              </AnimatePresence>
             </>
           )
             : (
-              <div>Loading</div>
+              <LoadingScreen />
             )
 
         }
 
       </div>
+      <Cookies/>
     </ThemeProvider>
   );
 }

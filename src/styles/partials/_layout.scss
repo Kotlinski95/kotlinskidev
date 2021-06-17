@@ -3,7 +3,6 @@
 }
 html {
   height: 100%;
-  scroll-behavior: smooth;
   overflow: hidden;
 }
 body {
@@ -13,7 +12,6 @@ body {
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -65,7 +63,6 @@ main {
   @media (max-width: 769px) {
     margin-top: 90px;
   }
-  scroll-behavior: smooth;
   position: relative;
   z-index: 0;
   .main-inner{
