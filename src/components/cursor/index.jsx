@@ -15,12 +15,11 @@ const CursorStyled = styled.div`
     height: 60px;
     z-index: 1000;
     border-radius: 50%;
-    border: 1px solid #dcccb5;
     position: fixed;
     opacity: 0;
     pointer-events: none;
     transition: border 1s;
-    will-change: transform; 
+    will-change: transform;
     mix-blend-mode: difference;
 
     &::before {
@@ -28,7 +27,6 @@ const CursorStyled = styled.div`
         position: absolute;
         top: 50%;
         left: 50%;
-        background-color: #ede5d9;
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -136,7 +134,7 @@ const Cursor = ({ isHovered = false, isMobile = false }) => {
     }, []);
 
     return (
-        <CursorStyled ref={cursor} ready={isReady} hovered={isHovered} mobile={isMobile} />
+        <CursorStyled className={`cursor-object`} ref={cursor} ready={isReady} hovered={isHovered} mobile={isMobile} />
     )
 }
 

@@ -38,10 +38,10 @@ const TransitionHelper = styled(motion.div)`
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background-color: #dcccb5;
 `
 
 const InitialTransition = styled(TransitionHelper).attrs(() => ({
+    className: 'transition-helper',
     initial: "initialFirst",
     variants,
     animate: "animateFirst",
@@ -50,6 +50,7 @@ const InitialTransition = styled(TransitionHelper).attrs(() => ({
 `;
 
 const ExitTransition = styled(TransitionHelper).attrs(() => ({
+    className: 'transition-helper',
     initial: "initial",
     variants,
     animate: "animate",

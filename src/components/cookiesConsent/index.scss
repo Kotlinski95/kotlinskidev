@@ -1,5 +1,28 @@
 .CookieConsent{
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
-  }
+    z-index: 999;
+    height: 105px !important;
+    @media (max-width: 768px){
+      height: 180px !important;
+      padding: 10px !important;
+    }
+    button{
+      padding: 15px !important;
+      border-radius: 5px ;
+    }
+    &::before{
+      content: "Read this: ";
+      position: fixed;
+      bottom: 105px;
+      @media (max-width: 768px){
+        bottom: 180px;
+      }
+      left: 0;
+      background-color: rgba($color: #131a16, $alpha: 0.7);
+      width: 100vw;
+      height: 100vh;
+      z-index: 998;
+    }
+}

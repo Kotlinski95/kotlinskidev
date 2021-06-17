@@ -55,7 +55,8 @@ export const lightTheme = {
   contact:{
     formBackground: '#9c98cd',
     inputBackground: 'rgba(255,255,255,0.6)',
-    inputColor: '#33234d'
+    inputColor: '#33234d',
+    buttonHover: '#007bff'
   },
   stack: {
     borderColor: '#9d64c6',
@@ -76,14 +77,20 @@ export const lightTheme = {
   notification:{
     background: "#9c98cd",
     color: "#33234d"
+  },
+  animation: {
+    cursorBorder: "#33234d",
+    cursorBorderBackground: "#9d64c6",
+    loadingBackground: "#9c98cd",
+    transitioningBackground: "#d5bed0"
   }
 }
 
 export const darkTheme = {
-  body: '#2d2d30',
+  body: '#1a4137',
   text: '#FAFAFA',
   toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
+  gradient: 'linear-gradient(180deg,#010a08 18.97%,#1c5344)',
   burgermenu: "#D0E2F2",
   scrollbarColor: "#ffffff",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
@@ -95,7 +102,7 @@ export const darkTheme = {
     darkBackground: '#171718',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',
-    DropdownColorHover: '#2d2d30',
+    DropdownColorHover: '#1a4137',
     DropdownColorIcon: '#D0E2F2',
     linkHover: '#ffffff',
   },
@@ -111,7 +118,7 @@ export const darkTheme = {
     menuItemColorHover: '#727272',
   },
   notFoundPage:{
-    itemSelected: '#352b9e',
+    itemSelected: '#0e604b',
     itemColor: '#D0E2F2' ,
     itemBackground: 'rgba(0,0,0,0.2)',
   },
@@ -133,7 +140,8 @@ export const darkTheme = {
   contact:{
     formBackground: '#474748',
     inputBackground: 'rgba(0,0,0,0.2)',
-    inputColor: '#D0E2F2'
+    inputColor: '#D0E2F2',
+    buttonHover: '#1a4137'
   },
   stack: {
     borderColor: '#f1f1f2',
@@ -152,11 +160,17 @@ export const darkTheme = {
     imageBorder: '#171718'
   },
   notification:{
-    background: "rgb(58, 58, 167)",
+    background: "#1a4137",
     color: "#FFF"
+  },
+  animation: {
+    cursorBorder: "1px solid #bcd8c8",
+    cursorBorderBackground: "#ddeee5",
+    loadingBackground: "#1a4137",
+    transitioningBackground: "#1a4137"
   }
+
 }
-//onst [cookies, setCookie] = useCookies(['theme']);
 let theme;
 if (document.cookie){
   theme = (getCookie("theme") === "Light") ? lightTheme : darkTheme;

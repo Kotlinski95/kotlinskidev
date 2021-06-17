@@ -61,9 +61,7 @@ export const GlobalStyles = createGlobalStyle`
   .MuiButtonBase-root.menuItem a:hover{
     color: ${({ theme }) => theme.footer.menuItemColorHover};
   }
-  .navigation .MuiButtonBase-root.MuiButton-root.MuiButton-text:hover{
-    background-color: ${({ theme }) => theme.footer.lightBackground};
-  }
+
   .navigation .MuiButtonBase-root.MuiButton-root.MuiButton-text li:hover,
   .navigation .nav-left ul a li:hover{
     color: ${({ theme }) => theme.nav.linkHover};
@@ -171,6 +169,10 @@ export const GlobalStyles = createGlobalStyle`
   color: ${({ theme }) => theme.contact.inputColor};
 }
 
+.contact-button:hover{
+  background-color: ${({ theme }) => theme.contact.buttonHover};
+}
+
 // ============ stack page ================
 
 .stack-wrapper{
@@ -215,5 +217,18 @@ export const GlobalStyles = createGlobalStyle`
 .notification-wrapper{
   background: ${({ theme }) => theme.notification.background};
   color: ${({ theme }) => theme.notification.color};
+}
+// ================ Animation =============
+.cursor-object{
+  border: ${({ theme }) => theme.animation.cursorBorder} !important;
+}
+.cursor-object::before{
+  background-color: ${({ theme }) => theme.animation.cursorBorderBackground} !important;
+}
+.loading-screen-styled{
+  background-color: ${({ theme }) => theme.animation.loadingBackground} !important;
+}
+.transition-helper{
+  background-color: ${({ theme }) => theme.animation.transitioningBackground} !important;
 }
 `;

@@ -49,8 +49,6 @@ import ReactPixel from 'react-facebook-pixel';
 import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
-
-
 declare global {
   var _theme: ThemeType;
 }

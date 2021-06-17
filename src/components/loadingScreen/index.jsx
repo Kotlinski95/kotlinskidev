@@ -21,7 +21,6 @@ const LoadingScreenStyled = styled.div`
     width: 100%;
     display: grid;
     place-content: center;
-    background-color: #dcccb5;
     transition: 0.5s all;
 `
 
@@ -82,7 +81,7 @@ const dots = [
 
 const LoadingScreen = () => {
     return (
-        <LoadingScreenStyled>
+        <LoadingScreenStyled className={`loading-screen-styled`}>
             <AnimatedDotsContainer>
                 {dots.map((dot, index) => (
                     <AnimatedDot key={index} color={dot.color} delay={dot.delay}>
