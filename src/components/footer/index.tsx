@@ -46,17 +46,17 @@ const Footer = () => {
                     <Link data-scroll to="/privacy"><li className="line-item">{language.footer.privacy.policy}</li></Link>
                     <Link data-scroll to="/cookies"><li className="line-item">{language.footer.privacy.cookies}</li></Link>
                 </ul>
-                <ul className="line-item footer-right">
+                <ul className="line-item footer-right cursor_hover">
                     <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
-                        <li><a href="https://github.com/Kotlinski95/" data-scroll target="_blank" title="github"><FaGithub /></a></li>
-                        <li><a href="https://www.instagram.com/adriankotlinski/" data-scroll target="_blank" title="instagram"><FaInstagram /></a></li>
-                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" data-scroll target="_blank" title="facebook"><FaFacebookSquare /></a></li>
-                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" data-scroll target="_blank" title="linkedin"><FaLinkedin /></a></li>
-                        <li><a href="mailto:kotlinski95@gmail.com" data-scroll title="mail"><FaAt /></a></li>
+                        <li><a href="https://github.com/Kotlinski95/" data-scroll target="_blank" title="github" className="cursor_hover"><FaGithub /></a></li>
+                        <li><a href="https://www.instagram.com/adriankotlinski/" data-scroll target="_blank" title="instagram" className="cursor_hover"><FaInstagram /></a></li>
+                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" data-scroll target="_blank" title="facebook" className="cursor_hover"><FaFacebookSquare /></a></li>
+                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" data-scroll target="_blank" title="linkedin" className="cursor_hover"><FaLinkedin /></a></li>
+                        <li><a href="mailto:kotlinski95@gmail.com" data-scroll title="mail" className="cursor_hover"><FaAt /></a></li>
                     </IconContext.Provider>
                 </ul>
             </div>
-            <div className="messenger-wrapper" data-scroll>
+            <div className="messenger-wrapper cursor_hover" data-scroll>
                 <MessengerCustomerChat
                     pageId="103180541943288"
                     appId="490872805660284"

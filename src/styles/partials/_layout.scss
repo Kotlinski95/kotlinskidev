@@ -57,7 +57,7 @@ main {
   cursor: pointer;
 }
 .main {
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 100px);
   max-height: 100%;
   background-color: var(--dark-background);
   @media (max-width: 769px) {
@@ -67,7 +67,7 @@ main {
   z-index: 0;
   .main-inner{
       max-height: 100%;
-      min-height: calc(100vh - 187px);
+      min-height: calc(100vh - 218px);
       height: 100%;
       box-sizing: border-box;
   }

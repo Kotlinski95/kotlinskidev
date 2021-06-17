@@ -8,8 +8,9 @@ import PageTransitioning from '../components/pageTransitioning/index'
 const HomePage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
-  const { HandleLocomotiveScroll } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
   HandleLocomotiveScroll();
+  HandleMouseoverEffects();
 
   const routingProps = {
     language

@@ -96,7 +96,7 @@ const Nav = () => {
       <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
               <li className="line-item">
                 {language.header.about}
               </li>
@@ -115,8 +115,8 @@ const Nav = () => {
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
             </Menus>
-            <Link to="/projects"><li className="line-item">{language.header.projects}</li></Link>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
+            <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
               <li className="line-item">
                 {language.header.stack}
               </li>
@@ -133,15 +133,15 @@ const Nav = () => {
             </Menus>
           </ul>
         </div>
-        <div className="nav-center line-item">
+        <div className="nav-center line-item cursor_hover">
           <Link to="/">
             <LazyLoad height={70}>
-              <img src={logo} alt="Logo" className="nav-logo"></img>
+              <img src={logo} alt="Logo" className="nav-logo" ></img>
             </LazyLoad>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
-          <ul>
+          <ul className="cursor_hover">
             <Switch
               checked={checked}
               onChange={handleChange}
@@ -216,7 +216,7 @@ const Nav = () => {
               id="small-radius-switch"
             />
             <NotificationDropdown language={language} />
-            <DropdownMulti language={language} />
+            <DropdownMulti language={language}/>
           </ul>
         </div>
       </div>

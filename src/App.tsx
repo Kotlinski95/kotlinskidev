@@ -32,7 +32,7 @@ import WebDevelopmentPage from './pages/services/web_development'
 import ShopifyDevelopmentPage from './pages/services/shopify_development'
 import Cookies from './components/cookiesConsent'
 import LoadingScreen from './components/loadingScreen/index.jsx'
-import { TextRevealVertical} from './components/contentReveal'
+import Cursor from './components/cursor/index.jsx'
 
 import {
   Switch,
@@ -148,101 +148,106 @@ function App() {
         {
           isReady ? (
             <>
+              {
+                isMobile ? (
+                  <Cursor isMobile={isMobile} />
+                ) : (
+                  <Cursor isHovered={isHovered} />
+                )
+              }
               <RouteChangeTracker />
-              <AnimatePresence exitBeforeEnter >
-              <Nav />
-              <div className="main">
-                <Switch location={location} key={location.pathname}>
-                  <Route exact path="/">
-                    <HomePage {...routingProps} />
-                  </Route>
-                  <Route exact path="/aboutme">
-                    <AboutPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/contact">
-                    <ContactPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/myprofile">
-                    <MyProfilePage {...routingProps} />
-                  </Route>
-                  <Route exact path="/myprofile/contact">
-                    <MyProfileContactPage />
-                  </Route>
-                  <Route exact path="/myprofile/education">
-                    <MyProfileEducationPage />
-                  </Route>
-                  <Route exact path="/myprofile/hobby">
-                    <MyProfileHobbyPage />
-                  </Route>
-                  <Route exact path="/myprofile/overview">
-                    <MyProfileOverviewPage />
-                  </Route>
-                  <Route exact path="/myprofile/spare-time">
-                    <MyProfileSpareTimePage />
-                  </Route>
-                  <Route exact path="/myprofile/work">
-                    <MyProfileWorkPage />
-                  </Route>
-                  <Route exact path="/stack">
-                    <StackPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/projects">
-                    <ProjectsPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/projects/portfolio">
-                    <PortfolioPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/projects/star-wars-quiz">
-                    <QuizPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/projects/coders-chess">
-                    <ChessPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/projects/real-estate">
-                    <EstatePage {...routingProps} />
-                  </Route>
-                  <Route exact path="/privacy">
-                    <PrivacyPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/cookies">
-                    <CookiesPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/aboutme/plc-carrier">
-                    <PlcCarrierPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/aboutme/front-end-development">
-                    <FrontEndDevelopmentPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/aboutme/courses">
-                    <CoursesPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/aboutme/education">
-                    <EducationPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/stack/front-end-developer">
-                    <FrontEndDeveloperPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/stack/automation-engineer">
-                    <AutomationEngineerPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/services">
-                    <ServicesPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/services/PLC">
-                    <PlcProgrammingPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/services/shopify">
-                    <ShopifyDevelopmentPage {...routingProps} />
-                  </Route>
-                  <Route exact path="/services/web-development">
-                    <WebDevelopmentPage {...routingProps} />
-                  </Route>
-                  <Route>
-                    <NotFoundPage {...routingProps} />
-                  </Route>
-                </Switch>
-              </div>
-              </AnimatePresence>
+                <Nav />
+                <div className="main">
+                  <Switch location={location} key={location.pathname}>
+                    <Route exact path="/">
+                      <HomePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme">
+                      <AboutPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/contact">
+                      <ContactPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile">
+                      <MyProfilePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/contact">
+                      <MyProfileContactPage />
+                    </Route>
+                    <Route exact path="/myprofile/education">
+                      <MyProfileEducationPage />
+                    </Route>
+                    <Route exact path="/myprofile/hobby">
+                      <MyProfileHobbyPage />
+                    </Route>
+                    <Route exact path="/myprofile/overview">
+                      <MyProfileOverviewPage />
+                    </Route>
+                    <Route exact path="/myprofile/spare-time">
+                      <MyProfileSpareTimePage />
+                    </Route>
+                    <Route exact path="/myprofile/work">
+                      <MyProfileWorkPage />
+                    </Route>
+                    <Route exact path="/stack">
+                      <StackPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects">
+                      <ProjectsPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/portfolio">
+                      <PortfolioPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/star-wars-quiz">
+                      <QuizPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/coders-chess">
+                      <ChessPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/real-estate">
+                      <EstatePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/privacy">
+                      <PrivacyPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/cookies">
+                      <CookiesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/plc-carrier">
+                      <PlcCarrierPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/front-end-development">
+                      <FrontEndDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/courses">
+                      <CoursesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/education">
+                      <EducationPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/stack/front-end-developer">
+                      <FrontEndDeveloperPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/stack/automation-engineer">
+                      <AutomationEngineerPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services">
+                      <ServicesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/PLC">
+                      <PlcProgrammingPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/shopify">
+                      <ShopifyDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/web-development">
+                      <WebDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route>
+                      <NotFoundPage {...routingProps} />
+                    </Route>
+                  </Switch>
+                </div>
             </>
           )
             : (
@@ -252,7 +257,7 @@ function App() {
         }
 
       </div>
-      <Cookies/>
+      <Cookies />
     </ThemeProvider>
   );
 }

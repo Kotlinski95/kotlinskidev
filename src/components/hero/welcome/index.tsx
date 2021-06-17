@@ -24,7 +24,7 @@ const WelcomeComponent = (props) => {
                     <TextRevealVertical delay={1.2} data-scroll><h2>{language.pages.home.welcome.title}</h2></TextRevealVertical>
                     </div>
                 </div>
-                {showScroll ? <ScrollDown bottom="30px" top="auto" bottomText="-15px" topText="auto" text={language.pages.home.welcome.scroll} /> : null}
+                {showScroll ? <ScrollDown bottom="35px" top="auto" bottomText="-10px" topText="auto" text={language.pages.home.welcome.scroll} /> : null}
             </div>
         </div>
     );
