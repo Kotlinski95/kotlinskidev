@@ -43,13 +43,14 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 999;
+    z-index: 9999;
     height: 40px;
     width: 200px;
     ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      mix-blend-mode: normal;
       .layout-icon{
         height: 30px;
         width: 30px;

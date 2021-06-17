@@ -99,7 +99,7 @@ export const darkTheme = {
     background: 'transparent',
     lightBackground: '#2d2d30',
     lightBackgroundOpacity: 'rgba(63, 63, 63, 0.9)',
-    darkBackground: '#171718',
+    darkBackground: '#53665e',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',
     DropdownColorHover: '#1a4137',

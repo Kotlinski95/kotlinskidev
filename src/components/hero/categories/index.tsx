@@ -90,7 +90,7 @@ const CategoriesComponent = () => {
         autoplay: false,
         slickPlay: true,
         autoplaySpeed: 2000,
-        infinite: true,
+        infinite: false,
         speed: 500,
         pauseOnFocus: true,
         slidesToShow: slides,

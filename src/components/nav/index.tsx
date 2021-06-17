@@ -146,7 +146,7 @@ const Nav = () => {
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
-              offColor="#171718"
+              offColor="#53665e"
               onColor="#eaedf0"
               offHandleColor="#2d2d30"
               onHandleColor="#D0E2F2"
@@ -162,6 +162,7 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
+                    zIndex: 999,
                     color: "#D0E2F2",
                     paddingRight: 2
                   }}
@@ -177,6 +178,7 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
+                    zIndex: 999,
                     color: "#3d3b52",
                     paddingRight: 2
                   }}
@@ -192,7 +194,8 @@ const Nav = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
                   <img src={moon} />
@@ -206,7 +209,8 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     color: "#3d3b52",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
                   <img src={sun} className="layout-icon" />
