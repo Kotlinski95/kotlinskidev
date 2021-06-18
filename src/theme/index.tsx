@@ -2,64 +2,66 @@ import {getCookie} from '../services'
 export type ThemeType = typeof lightTheme; // This is the type definition for my theme object.
 
 export const lightTheme = {
-  body: '#9c98cd',
+  body: '#a6eddb',
   text: '#363537',
   toggleBorder: '#FFF',
-  gradient: 'linear-gradient(to top, #f1f1f2 20% , #9c98cd)',
+  gradient: 'linear-gradient(180deg,#edfaf7 18.97%,#8fe6cf)',
   burgermenu: "#23222e",
   scrollbarColor: "#33234d",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#33234d',
     background: 'transparent',
-    lightBackground: '#9c98cd',
+    lightBackground: '#308871',
     lightBackgroundOpacity: 'rgba(156, 152, 205,0.6)',
     darkBackground: '#f1f1f2',
     menuItemColor: '#33234d',
     menuItemColorHover: '#000000',
-    DropdownColorHover: '#9c98cd',
-    DropdownColorIcon: '#9c98cd',
+    DropdownColorHover: '#5ce1bd',
+    DropdownColorIcon: '#308871',
     linkHover: '#ffffff',
   },
   typedText: {
-    color: '#33234d',
+    color: '#1c5344',
     colorHover: '#d0cfde',
   },
   footer: {
     linkColor: '#33234d',
     lightBackground: '#9c98cd',
-    darkBackground: '#f1f1f2',
+    darkBackground: '#8fe6cf',
     menuItemColor: '#33234d',
     menuItemColorHover: '#000000',
   },
   notFoundPage:{
-    itemSelected: '#9c98cd',
+    itemSelected: '#227660',
     itemColor: '#33234d',
     itemBackground: 'rgba(0,0,0,0.05)',
   },
   scrollDown:{
-    iconShadow: 'inset 0 0 0 1px rgb(144, 116, 181);',
-    iconBackground: '#9d64c6'
+    iconShadow: 'inset 0 0 0 1px rgb(39, 109, 87);',
+    iconBackground: '#1c5344'
   },
   tile:{
-    wrapperBorder: '1px solid #9c98cd',
-    wrapperShadow: '0px 0px 15px #9c98cd',
-    logoFilter: 'invert(78%) sepia(88%) saturate(2448%) hue-rotate(191deg) brightness(84%) contrast(89%)',
-    logoFilterHover: 'invert(73%) sepia(43%) saturate(707%) hue-rotate(200deg) brightness(84%) contrast(74%)',
-    logoFill: '#9c98cd',
+    wrapperBorder: '1px solid #1c5344',
+    wrapperShadow: '0px 0px 15px #1c5344',
+    logoFilter: 'invert(23%) sepia(51%) saturate(520%) hue-rotate(113deg) brightness(99%) contrast(90%)',
+    logoFilterHover: 'invert(23%) sepia(51%) saturate(520%) hue-rotate(113deg) brightness(99%) contrast(90%)',
+    logoFill: '#1c5344',
     background: '#f1f1f2'
   },
   slick:{
-    arrows: "#9c98cd",
+    arrows: "#1c5344",
   },
   contact:{
-    formBackground: '#9c98cd',
+    formBackground: 'transparent',
     inputBackground: 'rgba(255,255,255,0.6)',
-    inputColor: '#33234d',
-    buttonHover: '#007bff'
+    inputColor: '#08100e',
+    buttonHover: '#060505',
+    buttonHoverColor: '#ededed',
+    placeholderColor: '#6d6d6d'
   },
   stack: {
-    borderColor: '#9d64c6',
+    borderColor: '#1c5344',
     color: 'rgb(185, 8, 8)'
   },
   project: {
@@ -138,10 +140,12 @@ export const darkTheme = {
     arrows: "#D0E2F2",
   },
   contact:{
-    formBackground: '#474748',
+    formBackground: 'transparent',
     inputBackground: 'rgba(0,0,0,0.2)',
     inputColor: '#D0E2F2',
-    buttonHover: '#1a4137'
+    buttonHover: '#e1f7f1',
+    buttonHoverColor: '#060505',
+    placeholderColor: '#e1f7f1'
   },
   stack: {
     borderColor: '#f1f1f2',

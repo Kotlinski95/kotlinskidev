@@ -17,7 +17,6 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
-import { useRef, useEffect } from 'react'
 
 const styles = {
   bmCrossButton: {
@@ -135,7 +134,7 @@ const Nav = () => {
         </div>
         <div className="nav-center line-item cursor_hover">
           <Link to="/">
-            <LazyLoad height={70}>
+            <LazyLoad height={60}>
               <img src={logo} alt="Logo" className="nav-logo" ></img>
             </LazyLoad>
           </Link>

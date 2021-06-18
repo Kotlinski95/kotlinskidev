@@ -157,10 +157,15 @@ export const GlobalStyles = createGlobalStyle`
 .contact_form-wrapper{
   background-color: ${({ theme }) => theme.contact.formBackground};
 }
+.contact_form-wrapper h2,
+.contact_form-wrapper label{
+  color: ${({ theme }) => theme.contact.buttonHover};
+}
 .contact_form-wrapper input,
 .contact_form-wrapper button,
 .contact_form-wrapper textarea{
   background-color: ${({ theme }) => theme.contact.inputBackground};
+  border: 1px solid  ${({ theme }) => theme.contact.inputColor};
 }
 .contact_form-wrapper input,
 .contact_form-wrapper button,
@@ -171,6 +176,21 @@ export const GlobalStyles = createGlobalStyle`
 
 .contact-button:hover{
   background-color: ${({ theme }) => theme.contact.buttonHover};
+  color: ${({ theme }) => theme.contact.buttonHoverColor};
+}
+input::placeholder,
+textarea::placeholder{
+  color: ${({ theme }) => theme.contact.placeholderColor};
+}
+
+.CryptoPhoneLink,
+.CryptoMailLink{
+  color: ${({ theme }) => theme.contact.buttonHover};
+}
+
+.CryptoPhoneLink:hover,
+.CryptoMailLink:hover{
+  color: ${({ theme }) => theme.contact.buttonHoverColor};
 }
 
 // ============ stack page ================

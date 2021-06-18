@@ -1,4 +1,12 @@
 const Theme = {
+    colors: {
+        primaryColor: '#181818',
+        primaryColorLight: '#252525',
+        secondaryColor: '#f2f5ea',
+        tertiaryColor: '#1ee5ff',
+        tertiaryColorDark: '#1ee5ff1a',
+        quaternaryColor: '#e75a7c'
+    },
     typography: {
         primaryFont: 'Poppins, Roboto, Helvetica, sans-serif',
         secondaryFont: 'Montserrat, Roboto, Ubuntu, sans-serif',

@@ -327,13 +327,21 @@
             }
         },
         "contact": {
+            "title": "Contact",
+            "write": "Write to me!",
             "header": "Do you have a question or want to contact me? Or maybe you have any comments about the website? Feel free to send me email.",
             "name": "Name",
+            "name_placeholder": "What do I call you?",
             "email": "Email",
+            "email_placeholder": "Where can I send a reply?",
             "subject": "Subject",
+            "subject_placeholder": "What do you want to talk about?",
             "message": "Message",
+            "message_placeholder": "You can write about anything you want!",
             "send": "Send",
-            "feedback": "Thank you for your message! I'll send you response as fast as I can."
+            "feedback": "Thank you for your message! I'll send you response as fast as I can.",
+            "mail": "kotlinski95@gmail.com",
+            "phone": "+48 608 418 911"
         },
         "stack":{
             "front_header": "Front-end developer stack"

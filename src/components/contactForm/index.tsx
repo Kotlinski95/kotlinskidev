@@ -1,5 +1,13 @@
 import './index.scss'
 import emailjs from 'emailjs-com';
+import styled from 'styled-components';
+import Theme from '../../settings';
+import { Phone, Mail } from '@styled-icons/fluentui-system-regular';
+
+import {
+  CryptoMailLink,
+  CryptoPhoneLink,
+} from '../links/index.jsx';
 
 const ContactForm = () => {
   function sendEmail(e: any) {
@@ -12,23 +20,132 @@ const ContactForm = () => {
         console.log(error.text);
       });
   }
+  const updateMail = (e) => {
+    e.target.href = 'mailto:' + e.target.dataset.name + '@' + e.target.dataset.domain + '.' + e.target.dataset.tld;
+  };
+
+  const updatePhone = (e) => {
+    e.target.href = 'tel: +48' + e.target.dataset.first + e.target.dataset.second + e.target.dataset.third;
+  };
+
+  const {
+    breakpoints
+  } = Theme;
+
+  const ContactContainer = styled.div`
+    margin: 30px 0 20px;
+
+    @media ${breakpoints.md} {
+        margin: 60px 0 60px;
+    }
+`
+
+  const MenuContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+`
+
+  const SocialsList = styled.ul`
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 10px;
+`
+
+  const SocialsItem = styled.li`
+    flex-grow: 1;   
+    a {
+        display: block;
+    }
+`
+
+  const ContactItem = styled.div`
+    font-size: clamp(16px, 5vw, 30px);
+    padding: 8px 0;
+    font-weight: 600;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+    @media ${breakpoints.xs} {
+        font-size: clamp(20px, 3vw, 50px);
+    }
+
+    &:first-of-type {
+        border-bottom: none;
+    }
+`
+
+  const SvgWrapper = styled.span`
+    height:  clamp(16px, 5vw, 30px);
+    margin-right: 4px;
+
+    @media ${breakpoints.xs} {
+        height: clamp(20px, 3vw, 50px);
+        margin-right: 10px;
+    }
+
+    svg {
+        height: 100%;
+    }
+`
 
   return (
-    <div className="contact_form-wrapper">
-      <h2>{language.pages.contact.header}</h2>
-      <form className="contact-form" onSubmit={sendEmail}>
-        <input className="cursor_hover" type="hidden" name="contact_number" />
-        <label>{language.pages.contact.name}</label>
-        <input className="cursor_hover" type="text" name="from_name" />
-        <label>{language.pages.contact.email}</label>
-        <input className="cursor_hover" type="email" name="from_email" />
-        <label>{language.pages.contact.subject}</label>
-        <input className="cursor_hover" type="text" name="subject" />
-        <label>{language.pages.contact.message}</label>
-        <textarea className="cursor_hover" name="html_message" />
-        <input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover"/>
-      </form>
-    </div>
+    <>
+      <div className="contact_form-wrapper">
+        <h2 className="projects-hello">{language.pages.contact.title}</h2>
+        <h2>{language.pages.contact.header}</h2>
+        <form className="contact-form" onSubmit={sendEmail}>
+          <input className="cursor_hover" type="hidden" name="contact_number" />
+          <label>{language.pages.contact.name}</label>
+          <input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} />
+          <label>{language.pages.contact.email}</label>
+          <input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} />
+          <label>{language.pages.contact.subject}</label>
+          <input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} />
+          <label>{language.pages.contact.message}</label>
+          <textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} />
+          <input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" />
+        </form>
+        <div className="cursor_hover">
+        <ContactContainer >
+          <ContactItem >
+            <SvgWrapper>
+              <Mail />
+            </SvgWrapper>
+            <CryptoMailLink
+              className= "CryptoMailLink"
+              href="mailto:someWeirdEmail@onet.xyz"
+              data-name="kotlinski95"
+              data-domain="gmail"
+              data-tld="com"
+              onClick={updateMail}
+            />
+          </ContactItem>
+          <ContactItem>
+            <SvgWrapper>
+              <Phone />
+            </SvgWrapper>
+            <CryptoPhoneLink
+              className="CryptoPhoneLink"
+              href="tel:608418911"
+              data-first="608"
+              data-second="418"
+              data-third="911"
+              onClick={updatePhone}
+            />
+          </ContactItem>
+        </ContactContainer>
+        </div>
+
+      </div>
+    </>
   );
 }
 export default ContactForm;

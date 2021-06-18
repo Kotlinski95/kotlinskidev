@@ -56,7 +56,7 @@ const Footer = () => {
                     </IconContext.Provider>
                 </ul>
             </div>
-            <div className="messenger-wrapper cursor_hover">
+            <div className="messenger-wrapper">
                 <MessengerCustomerChat
                     pageId="103180541943288"
                     appId="490872805660284"
