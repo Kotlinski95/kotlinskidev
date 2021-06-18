@@ -33,6 +33,27 @@ export const TextRevealVertical = (props) => {
     )
 }
 
+export const ComponentRevealShow = (props) => {
+    return (
+        <div className="component-reveal__wrapper" style={{ width: props.width }}>
+            <ComponentRevealOpacity {...props} />
+        </div>
+    )
+}
+
+export const ComponentRevealOpacity = styled.div`
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s 0.75s, transform 0.3s 0.2s;
+    transition-delay: ${(props: any) => props.delay};
+    &.is-inview {
+        opacity: 1;
+    }
+`
+
 export const TextRevealHorizontal = styled.div`
     width: 100%;
     max-width: 100%;
@@ -44,21 +65,6 @@ export const TextRevealHorizontal = styled.div`
         transform: translateX(0%);
     }
 `
-
-// export const RevealImage = styled.div`
-//     background-color: transparent;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 0;
-//     height: 100%;
-//     overflow: hidden;
-//     transition: all 2s .2s cubic-bezier(.1,.1,.9,.9);
-//     &.is-inview{
-//         width: 100%;
-//         height: 100%;
-//     }
-// `;
 
 export const RevealImage = styled.div`
     background-color: transparent;

@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import Theme from '../../settings';
 import { Phone, Mail } from '@styled-icons/fluentui-system-regular';
+import {ComponentRevealShow, TextRevealVertical, TextRevealHorizontal} from '../contentReveal';
 
 import {
   CryptoMailLink,
@@ -99,20 +100,21 @@ const ContactForm = () => {
   return (
     <>
       <div className="contact_form-wrapper">
-        <h2 className="projects-hello">{language.pages.contact.title}</h2>
-        <h2>{language.pages.contact.header}</h2>
+        <TextRevealVertical data-scroll><h2 className="projects-hello">{language.pages.contact.title}</h2></TextRevealVertical>
+        <TextRevealHorizontal data-scroll><h2>{language.pages.contact.header}</h2></TextRevealHorizontal>
         <form className="contact-form" onSubmit={sendEmail}>
           <input className="cursor_hover" type="hidden" name="contact_number" />
-          <label>{language.pages.contact.name}</label>
-          <input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} />
-          <label>{language.pages.contact.email}</label>
-          <input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} />
-          <label>{language.pages.contact.subject}</label>
-          <input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} />
-          <label>{language.pages.contact.message}</label>
-          <textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} />
-          <input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" />
+          <ComponentRevealShow data-scroll width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.3s"><input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.8s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.8s"><input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.3s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.3s"><input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.8s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.8s"><textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="2.3s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
         </form>
+        <ComponentRevealShow data-scroll width="80%">
         <div className="cursor_hover">
         <ContactContainer >
           <ContactItem >
@@ -143,7 +145,7 @@ const ContactForm = () => {
           </ContactItem>
         </ContactContainer>
         </div>
-
+        </ComponentRevealShow>
       </div>
     </>
   );
