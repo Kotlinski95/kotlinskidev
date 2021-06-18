@@ -1,23 +1,30 @@
 
-import TypedText from '../components/typedText'
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
-import { HeroDesktop, HeroMobile } from '../components/hero'
+import { Hero } from '../components/hero'
 import Footer from '../components/footer'
+import PageTransitioning from '../components/pageTransitioning/index'
 
 const HomePage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
-  const { HandleLocomotiveScroll } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
   HandleLocomotiveScroll();
+  HandleMouseoverEffects();
+
+  const routingProps = {
+    language
+  }
   return (
+    <>
+    <PageTransitioning/>
     <div data-scroll-section>
-      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
-        <HeroDesktop language={language} />
-        <HeroMobile language={language} />
+     <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+        <Hero {...routingProps}/>
+        <Footer />
       </div>
-      <Footer />
     </div>
+    </>
   );
 };
 export default HomePage;

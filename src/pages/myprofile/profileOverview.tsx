@@ -12,27 +12,25 @@ import Footer from '../../components/footer'
 const MyProfileOverviewPage = (props) => {
     const dispatch = useDispatch();
     dispatch(setPage("My profile"));
-    const { HandleLocomotiveScroll } = props;
-    HandleLocomotiveScroll();
     return (
         <div data-scroll-section>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                 <div className="myprofile-wrapper">
                     <div className="myprofile-introduce-wrapper">
-                        <div className="myprofile-introduce-img">
+                        <div className="myprofile-introduce-img" data-scroll>
                             <Breadcrumbs />
                             <img src={background}></img>
                         </div>
                         <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px" />
                     </div>
-                    <div className="myprofile-content-wrapper">
+                    <div className="myprofile-content-wrapper" data-scroll>
                         <h1>{language.pages.myprofile.header}</h1>
                         <h2>{language.pages.myprofile.profession}</h2>
                         <hr />
                         <NavProfile page="overview" />
                     </div>
                 </div>
-                <div className="myprofile-category__wrapper">
+                <div className="myprofile-category__wrapper" data-scroll>
                     <ProfileOverview />
                 </div>
             </div>

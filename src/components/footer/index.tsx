@@ -1,7 +1,6 @@
 import './index.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CookieConsent from "react-cookie-consent";
 import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
@@ -20,21 +19,7 @@ const Footer = () => {
     };
     return (
         <div className="footer-wrapper">
-            <CookieConsent
-                enableDeclineButton
-                flipButtons
-                location="bottom"
-                buttonText={language.footer.cookie_consent.buttonText}
-                declineButtonText={language.footer.cookie_consent.declineButtonText}
-                cookieName="Accept_cookies"
-                style={{ background: "#2B373B", paddingRight: '120px' }}
-                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-                expires={1}
-            >
-                {language.footer.cookie_consent.first_text}{" "}
-                <span style={{ fontSize: "15px" }}>{language.footer.cookie_consent.second_text}</span>
-            </CookieConsent>
-            <div className="footer-head">
+            <div className="footer-head" data-scroll>
                 <ul>
                     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                     <li className="line-item">
@@ -55,19 +40,19 @@ const Footer = () => {
                     <Link to="/contact"><li className="line-item">{language.footer.pages.contact}</li></Link>
                 </ul>
             </div>
-            <div className="footer-body">
+            <div className="footer-body" data-scroll>
                 <ul className="line-item footer-left">
                     <li>@{new Date().getFullYear()} {language.footer.privacy.rights}</li>
                     <Link to="/privacy"><li className="line-item">{language.footer.privacy.policy}</li></Link>
                     <Link to="/cookies"><li className="line-item">{language.footer.privacy.cookies}</li></Link>
                 </ul>
-                <ul className="line-item footer-right">
+                <ul className="line-item footer-right cursor_hover">
                     <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
-                        <li><a href="https://github.com/Kotlinski95/" target="_blank" title="github"><FaGithub /></a></li>
-                        <li><a href="https://www.instagram.com/adriankotlinski/" target="_blank" title="instagram"><FaInstagram /></a></li>
-                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank" title="facebook"><FaFacebookSquare /></a></li>
-                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" target="_blank" title="linkedin"><FaLinkedin /></a></li>
-                        <li><a href="mailto:kotlinski95@gmail.com" title="mail"><FaAt /></a></li>
+                        <li><a href="https://github.com/Kotlinski95/" target="_blank" title="github" className="cursor_hover"><FaGithub /></a></li>
+                        <li><a href="https://www.instagram.com/adriankotlinski/" target="_blank" title="instagram" className="cursor_hover"><FaInstagram /></a></li>
+                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank" title="facebook" className="cursor_hover"><FaFacebookSquare /></a></li>
+                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" target="_blank" title="linkedin" className="cursor_hover"><FaLinkedin /></a></li>
+                        <li><a href="mailto:kotlinski95@gmail.com" title="mail" className="cursor_hover"><FaAt /></a></li>
                     </IconContext.Provider>
                 </ul>
             </div>

@@ -5,7 +5,7 @@ import { isPropertySignature } from 'typescript';
 const AnimatedArrow = (props) => {
     return (
         <>
-            <div className="arrow-container" style={{ justifyContent: `${props.justify}`, bottom: `${props.bottom}`, top: `${props.top}` }}>
+            <div className="arrow-container cursor_hover" style={{ justifyContent: `${props.justify}`, bottom: `${props.bottom}`, top: `${props.top}` }}>
                 <ul>
                     <li>
                         {props.link ?

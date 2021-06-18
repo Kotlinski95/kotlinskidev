@@ -1,17 +1,21 @@
-import React from 'react';
 import Footer from '../components/footer';
 import NotFound from '../components/notFound/index'
+import PageTransitioning from '../components/pageTransitioning/index'
 
 const NotFoundPage = (props) => {
-  const { HandleLocomotiveScroll } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
   HandleLocomotiveScroll();
+  HandleMouseoverEffects();
   return (
-    <div data-scroll-section>
-      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
-        <div id="notFound"><NotFound language={language} /></div>
+    <>
+      <PageTransitioning />
+      <div data-scroll-section>
+        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <div id="notFound"><NotFound language={language} /></div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   )
 
 

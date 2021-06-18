@@ -327,13 +327,21 @@
             }
         },
         "contact": {
+            "title": "Kontakt",
+            "write": "Napisz do mnie!",
             "header": "Masz pytanie lub chcesz się ze mną skontaktować? A może masz jakieś uwagi dotyczące strony? Napisz do mnie maila.",
             "name": "Imię",
+            "name_placeholder": "Jak się mogę do Ciebie zwracać?",
             "email": "Email",
+            "email_placeholder": "Gdzie mogę wysłać odpowiedź?",
             "subject": "Temat",
+            "subject_placeholder": "O czym chcesz porozmawiać?",
             "message": "Wiadomość",
+            "message_placeholder": "Treść wiadomości może być dowolna!",
             "send": "Wyślij",
-            "feedback": "Dziękuję za Twoją wiadomość! Wyślę odpowiedź tak szybko, jak to możliwe."
+            "feedback": "Dziękuję za Twoją wiadomość! Wyślę odpowiedź tak szybko, jak to możliwe.",
+            "mail": "kotlinski95@gmail.com",
+            "phone": "+48 608 418 911"
         },
         "stack":{
             "front_header": "Umiejętności Front-end developera"

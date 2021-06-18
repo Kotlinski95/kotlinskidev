@@ -1,39 +1,31 @@
-import { zoomIn } from 'react-animations'
-import styled, { keyframes } from 'styled-components';
 import { useState, useEffect } from 'react';
 import ScrollDown from '../../scrolldown';
 import './index.scss';
-
-const bounceAnimation = keyframes`${zoomIn}`;
-const BouncyH1 = styled.h1`
-  animation: 2s ${bounceAnimation};
-`;
-const BouncyH2 = styled.h1`
-  animation: 2s ${bounceAnimation};
-`;
+import { TextRevealVertical} from '../../contentReveal'
 
 const WelcomeComponent = (props) => {
-    const language = props.language;
     const [show, setShow] = useState(false);
-    const [showScroll, setShowScroll] = useState(false);
+    const [showScroll, setShowScroll] = useState("none");
+    const { language } = props;
     useEffect(() => {
         setTimeout(() => {
             setShow(true)
         }, 2000)
         setTimeout(() => {
-            setShowScroll(true)
-        }, 4000)
+            setShowScroll("initial")
+        }, 3000)
     }, [show])
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
-            <div className="welcome-wrapper">
-                <div className="introduce-gif"/>
-                <div className="introduce-text">
-                    <BouncyH1>{language.pages.home.welcome.header}</BouncyH1>
-                    {show ? <BouncyH2>{language.pages.home.welcome.title}</BouncyH2> : null}
+        <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
+                <div className="welcome-wrapper" data-scroll>
+                    <div className="introduce-text cursor_hover">
+                    <TextRevealVertical delay={.2} data-scroll><h1>{language.pages.home.welcome.header}</h1></TextRevealVertical>
+                    <TextRevealVertical delay={1.2} data-scroll><h2>{language.pages.home.welcome.title}</h2></TextRevealVertical>
+                    </div>
                 </div>
+                <ScrollDown data-scroll bottom="35px" top="auto" bottomText="-10px" topText="auto" display={showScroll} text={language.pages.home.welcome.scroll} />
             </div>
-            { showScroll ? <ScrollDown bottom="30px" top="auto" bottomText="-15px" topText="auto" text={language.pages.home.welcome.scroll}/> : null}
         </div>
     );
 };

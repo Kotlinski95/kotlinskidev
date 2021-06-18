@@ -7,10 +7,10 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './index.scss';
-import LazyLoad from 'react-lazyload';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { TextRevealVertical, TextRevealHorizontal } from '../../contentReveal'
 
 const CategoriesComponent = () => {
     function getWindowDimensions() {
@@ -50,7 +50,7 @@ const CategoriesComponent = () => {
             height: "70%"
         }
     ];
-    let [slides, setSlides] = useState(1);
+    let [slides, setSlides] = useState(3);
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
     const location = useLocation();
     React.useEffect(() => {
@@ -58,23 +58,23 @@ const CategoriesComponent = () => {
         if (windowDimensions.width > 968) {
             setSlides(3);
         }
-        else if (windowDimensions.width <= 968 && windowDimensions.width > 668){
+        else if (windowDimensions.width <= 968 && windowDimensions.width > 668) {
             setSlides(2);
         }
-        else{
+        else {
             setSlides(1);
         }
-      }, [location]);
+    }, [location]);
     useEffect(() => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
             if (windowDimensions.width > 968) {
                 setSlides(3);
             }
-            else if (windowDimensions.width <= 968 && windowDimensions.width > 668){
+            else if (windowDimensions.width <= 968 && windowDimensions.width > 668) {
                 setSlides(2);
             }
-            else{
+            else {
                 setSlides(1);
             }
         }
@@ -90,7 +90,7 @@ const CategoriesComponent = () => {
         autoplay: false,
         slickPlay: true,
         autoplaySpeed: 2000,
-        infinite: true,
+        infinite: false,
         speed: 500,
         pauseOnFocus: true,
         slidesToShow: slides,
@@ -98,17 +98,18 @@ const CategoriesComponent = () => {
         cssEase: "linear"
     }
     return (
-        <div className="categories-wrapper" style={{ height: '100%', position: 'relative' }}>
-            <h1>{language.pages.home.categories.header}</h1>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', position: 'relative' }}>
-                <Slider {...settings}>
-                    {items.map((item, i) => (
-                        <CategoryCollection key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
-                        </CategoryCollection>
-                    ))}
-                </Slider>
+        <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
+                <div className="categories-wrapper" data-scroll>
+                    <TextRevealVertical data-scroll><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
+                    <Slider {...settings}>
+                        {items.map((item, i) => (
+                            <CategoryCollection data-scroll key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
+                            </CategoryCollection>
+                        ))}
+                    </Slider>
+                </div>
             </div>
-
         </div>
     );
 };

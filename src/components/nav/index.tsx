@@ -5,8 +5,6 @@ import moon from '../../assets/moon.png'
 import sun from '../../assets/sun.png'
 import { useState } from 'react'
 import Switch from "react-switch";
-import 'react-languages-select/css/react-languages-select.css';
-import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
 import { setTheme } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
@@ -95,9 +93,9 @@ const Nav = () => {
   return (
     <div>
       <div className="flex-wrapper navigation">
-        <div className="nav-left line-item item-half" data-scroll-section>
+        <div className="nav-left line-item item-half">
           <ul>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
               <li className="line-item">
                 {language.header.about}
               </li>
@@ -110,14 +108,14 @@ const Nav = () => {
               onClose={handleCloseMenuAbout}
             >
               <MenuItem className="menuItem header" onClick={handleCloseMenuAbout}><Link to="/aboutme">{language.header.about}</Link></MenuItem>
-              <hr/>
+              <hr />
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
               <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
             </Menus>
-            <Link to="/projects"><li className="line-item">{language.header.projects}</li></Link>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
+            <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
               <li className="line-item">
                 {language.header.stack}
               </li>
@@ -134,11 +132,10 @@ const Nav = () => {
             </Menus>
           </ul>
         </div>
-
-        <div className="nav-center line-item" data-scroll-section>
+        <div className="nav-center line-item cursor_hover">
           <Link to="/">
-            <LazyLoad height={70}>
-              <img src={logo} alt="Logo" className="nav-logo"></img>
+            <LazyLoad height={60}>
+              <img src={logo} alt="Logo" className="nav-logo" ></img>
             </LazyLoad>
           </Link>
         </div>
@@ -148,7 +145,7 @@ const Nav = () => {
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
-              offColor="#171718"
+              offColor="#53665e"
               onColor="#eaedf0"
               offHandleColor="#2d2d30"
               onHandleColor="#D0E2F2"
@@ -164,6 +161,7 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
+                    zIndex: 999,
                     color: "#D0E2F2",
                     paddingRight: 2
                   }}
@@ -179,12 +177,13 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
+                    zIndex: 999,
                     color: "#3d3b52",
                     paddingRight: 2
                   }}
                 >
                   Light
-              </div>
+                </div>
 
               }
               uncheckedHandleIcon={
@@ -194,7 +193,8 @@ const Nav = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
                   <img src={moon} />
@@ -208,21 +208,20 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     color: "#3d3b52",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
                   <img src={sun} className="layout-icon" />
                 </div>
               }
-              className="react-switch"
+              className="react-switch cursor_hover"
               id="small-radius-switch"
             />
-            <NotificationDropdown language={language}/>
+            <NotificationDropdown language={language} />
             <DropdownMulti language={language}/>
           </ul>
-
         </div>
-
       </div>
     </div>
   );

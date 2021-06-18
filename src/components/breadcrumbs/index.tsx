@@ -13,7 +13,7 @@ const Breadcrumbs = () => {
     }
   return (
     <div>
-        <p className="breadcrumbs">
+        <p className="breadcrumbs cursor_hover" >
             {
                 locations.map((value, index) => {
                     if (index > 0 && locations.length > 1){

@@ -40,7 +40,7 @@ function DropdownMulti(props) {
   return (
     <>
       <Navbar>
-        <NavItem id="dropdown-settings" dropdown={true} icon={<CaretIcon />}>
+        <NavItem id="dropdown-settings" className="cursor_hover" dropdown={true} icon={<CaretIcon />}>
           <DropdownMenu ></DropdownMenu>
         </NavItem>
       </Navbar>
@@ -127,7 +127,7 @@ function DropdownMulti(props) {
     }
 
     return (
-      <div className="dropdown" style={{ height: (menuHeight + 30) }} ref={dropdownRef}>
+      <div className="dropdown cursor_hover" style={{ height: (menuHeight + 30) }} ref={dropdownRef}>
 
         <CSSTransition
           in={activeMenu === 'main'}

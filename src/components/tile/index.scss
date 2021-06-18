@@ -4,16 +4,13 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
+    z-index: 999;
     margin: 10px;
     border-radius: 15px;
     font-family: 'Reggae One', cursive;
 }
 
 .tile-wrapper:hover{
-    transform: scale(1.1);
-    @media (max-width: 768px){
-        transform: scale(1.05);
-    }
     transition: all 1s;
     cursor: pointer;
 }

@@ -30,10 +30,14 @@ import ServicesPage from './pages/services/services'
 import PlcProgrammingPage from './pages/services/plc_programming'
 import WebDevelopmentPage from './pages/services/web_development'
 import ShopifyDevelopmentPage from './pages/services/shopify_development'
+import Cookies from './components/cookiesConsent'
+import LoadingScreen from './components/loadingScreen/index.jsx'
+import Cursor from './components/cursor/index.jsx'
 
 import {
   Switch,
   Route,
+  useLocation
 } from 'react-router-dom';
 import { Language } from './language'
 import { ThemeProvider } from 'styled-components';
@@ -42,11 +46,9 @@ import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
-import { Scrollbars } from 'react-custom-scrollbars-2';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
-
-
+import { AnimatePresence } from 'framer-motion';
 declare global {
   var _theme: ThemeType;
 }
@@ -62,6 +64,10 @@ function App() {
   ReactPixel.pageView();
   Language();
   const actualTheme = useSelector(selectedTheme);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+  const [isReady, setIsReady] = useState(false);
+  const location = useLocation();
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -74,17 +80,47 @@ function App() {
       break;
   }
 
+  useEffect(() => {
+    setIsReady(true);
+    return () => {
+      setIsReady(false);
+    }
+  }, [])
+
+  const HandleMouseoverEffects = () => {
+    useEffect(() => {
+      window.addEventListener('resize', isMobileTest);
+      console.log("IS MOBILE: ", isMobile);
+
+      document.querySelectorAll(".cursor_hover").forEach(el => {
+        el.addEventListener("mouseover", () => setIsHovered(true));
+        el.addEventListener("mouseout", () => setIsHovered(false));
+      });
+      isMobileTest();
+      return () => {
+        window.removeEventListener('resize', isMobileTest);
+
+        document.querySelectorAll(".cursor_hover").forEach(el => {
+          el.removeEventListener("mouseover", () => setIsHovered(true));
+          el.removeEventListener("mouseout", () => setIsHovered(false));
+        });
+      };
+    }, []);
+  };
+
+  HandleMouseoverEffects();
   const scrollRef: any = React.createRef();
+  let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
+
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
       const scroll = new locomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
+        el: document.querySelector(".smooth-scroll"),
+        smooth: !firefoxAgent,
         reloadOnContextChange: true,
-        scrollFromAnywhere: true,
-        lerp: 0.2,
         smartphone: { smooth: true },
         tablet: { smooth: true },
+        lerp: 0.09,
       });
       return () => {
         scroll.destroy();
@@ -93,107 +129,135 @@ function App() {
   }
 
   const routingProps = {
+    HandleMouseoverEffects,
     HandleLocomotiveScroll
   }
+
+  const isMobileTest = () => {
+    const ua = navigator.userAgent;
+    const test = /Android|Mobi/i.test(ua)
+    setIsMobile(test);
+  };
 
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <div className="App" data-scroll-container ref={scrollRef}>
-        <RouteChangeTracker />
-        <Nav />
-        <div className="main" >
-          <Switch>
-            <Route exact path="/">
-              <HomePage {...routingProps} />
-            </Route>
-            <Route exact path="/aboutme">
-              <AboutPage {...routingProps} />
-            </Route>
-            <Route exact path="/contact">
-              <ContactPage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile">
-              <MyProfilePage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/contact">
-              <MyProfileContactPage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/education">
-              <MyProfileEducationPage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/hobby">
-              <MyProfileHobbyPage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/overview">
-              <MyProfileOverviewPage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/spare-time">
-              <MyProfileSpareTimePage {...routingProps} />
-            </Route>
-            <Route exact path="/myprofile/work">
-              <MyProfileWorkPage {...routingProps} />
-            </Route>
-            <Route exact path="/stack">
-              <StackPage {...routingProps} />
-            </Route>
-            <Route exact path="/projects">
-              <ProjectsPage {...routingProps} />
-            </Route>
-            <Route exact path="/projects/portfolio">
-              <PortfolioPage {...routingProps} />
-            </Route>
-            <Route exact path="/projects/star-wars-quiz">
-              <QuizPage {...routingProps} />
-            </Route>
-            <Route exact path="/projects/coders-chess">
-              <ChessPage {...routingProps} />
-            </Route>
-            <Route exact path="/projects/real-estate">
-              <EstatePage {...routingProps} />
-            </Route>
-            <Route exact path="/privacy">
-              <PrivacyPage {...routingProps} />
-            </Route>
-            <Route exact path="/cookies">
-              <CookiesPage {...routingProps} />
-            </Route>
-            <Route exact path="/aboutme/plc-carrier">
-              <PlcCarrierPage {...routingProps} />
-            </Route>
-            <Route exact path="/aboutme/front-end-development">
-              <FrontEndDevelopmentPage {...routingProps} />
-            </Route>
-            <Route exact path="/aboutme/courses">
-              <CoursesPage {...routingProps} />
-            </Route>
-            <Route exact path="/aboutme/education">
-              <EducationPage {...routingProps} />
-            </Route>
-            <Route exact path="/stack/front-end-developer">
-              <FrontEndDeveloperPage {...routingProps} />
-            </Route>
-            <Route exact path="/stack/automation-engineer">
-              <AutomationEngineerPage {...routingProps} />
-            </Route>
-            <Route exact path="/services">
-              <ServicesPage {...routingProps} />
-            </Route>
-            <Route exact path="/services/PLC">
-              <PlcProgrammingPage {...routingProps} />
-            </Route>
-            <Route exact path="/services/shopify">
-              <ShopifyDevelopmentPage {...routingProps} />
-            </Route>
-            <Route exact path="/services/web-development">
-              <WebDevelopmentPage {...routingProps} />
-            </Route>
-            <Route>
-              <NotFoundPage {...routingProps} />
-            </Route>
-          </Switch>
-        </div>
+      <div className="App smooth-scroll" data-scroll-container>
+        <AnimatePresence exitBeforeEnter initial={false} >
+          {
+            isReady ? (
+              <>
+                {
+                  isMobile ? (
+                    <Cursor isMobile={isMobile} />
+                  ) : (
+                    <Cursor isHovered={isHovered} />
+                  )
+                }
+
+                <RouteChangeTracker />
+                <Nav />
+                <div className="main">
+                  <Switch location={location} key={location.pathname}>
+                    <Route exact path="/">
+                      <HomePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme">
+                      <AboutPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/contact">
+                      <ContactPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile">
+                      <MyProfilePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/contact">
+                      <MyProfileContactPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/education">
+                      <MyProfileEducationPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/hobby">
+                      <MyProfileHobbyPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/overview">
+                      <MyProfileOverviewPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/spare-time">
+                      <MyProfileSpareTimePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/myprofile/work">
+                      <MyProfileWorkPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/stack">
+                      <StackPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects">
+                      <ProjectsPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/portfolio">
+                      <PortfolioPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/star-wars-quiz">
+                      <QuizPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/coders-chess">
+                      <ChessPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/real-estate">
+                      <EstatePage {...routingProps} />
+                    </Route>
+                    <Route exact path="/privacy">
+                      <PrivacyPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/cookies">
+                      <CookiesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/plc-carrier">
+                      <PlcCarrierPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/front-end-development">
+                      <FrontEndDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/courses">
+                      <CoursesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/aboutme/education">
+                      <EducationPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/stack/front-end-developer">
+                      <FrontEndDeveloperPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/stack/automation-engineer">
+                      <AutomationEngineerPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services">
+                      <ServicesPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/PLC">
+                      <PlcProgrammingPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/shopify">
+                      <ShopifyDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/services/web-development">
+                      <WebDevelopmentPage {...routingProps} />
+                    </Route>
+                    <Route>
+                      <NotFoundPage {...routingProps} />
+                    </Route>
+                  </Switch>
+                </div>
+              </>
+            )
+              : (
+                <LoadingScreen />
+              )
+
+          }
+        </AnimatePresence>
       </div>
+      <Cookies />
     </ThemeProvider>
   );
 }
