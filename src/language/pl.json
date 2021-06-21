@@ -348,10 +348,20 @@
         },
         "projects":{
             "header": "Projekty",
-            "portfolio": "Początkowe portfolio",
+            "portfolio": "Portfolio",
             "quiz": "Quiz o gwiezdnych wojnach",
             "chess": "Internetowe szachy",
-            "estate": "Strona biura nieruchomości"
+            "estate": "Strona biura nieruchomości",
+            "p1_portfolio" : {
+                "header": "Portfolio",
+                "description": "Strona typu Single Page Application (SPA)",
+                "date": "01/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS"
+                },
+                "details": "Jest to mój pierwszy projekt Front-Endowy zrealizowany w oparciu o HTML, CSS."
+            }
         },
         "myprofile": {
             "header": "Adrian Kotliński",

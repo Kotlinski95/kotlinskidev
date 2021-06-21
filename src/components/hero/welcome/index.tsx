@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import ScrollDown from '../../scrolldown';
 import './index.scss';
 import { TextRevealVertical} from '../../contentReveal'
+import SvgHeroBackgroundLeft from '../../svgHeroBackgroundLeft'
+import SvgHeroBackgroundRight from '../../svgHeroBackgroundRight'
+import SvgHeroBackground from '../../svgHero'
 
 const WelcomeComponent = (props) => {
     const [show, setShow] = useState(false);
@@ -17,6 +20,9 @@ const WelcomeComponent = (props) => {
     }, [show])
     return (
         <div>
+            <SvgHeroBackground/>
+            <SvgHeroBackgroundLeft/>
+            <SvgHeroBackgroundRight/>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
                 <div className="welcome-wrapper" data-scroll>
                     <div className="introduce-text cursor_hover">

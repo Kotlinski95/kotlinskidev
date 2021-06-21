@@ -1,0 +1,19 @@
+.hero-background{
+  svg{
+    fill: #fff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    width: 300px;
+    height: 300px;
+  }
+  fill: #fff;
+  color: #fff;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  z-index: 9999;
+  height: 300px;
+  width: 300px;
+}
+
