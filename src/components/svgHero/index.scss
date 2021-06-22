@@ -4,16 +4,217 @@
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
   }
   fill: #fff;
   color: #fff;
   position: absolute;
-  top: 100px;
-  left: 50%;
+  top: 50px;
+  left: calc(50% - 300px);
   z-index: 9999;
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 600px;
+}
+.glyph{
+  fill: #fff;
+  filter: drop-shadow( 0px 0px 6px rgba(255, 255, 255, 1));
 }
 
+.glyph-border{
+  animation: animationShow linear 7s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.glyph0-1{
+  animation: animationShow linear 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+.glyph0-2{
+  animation: animationShow linear 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-3{
+  animation: animationShow linear 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+.glyph0-4{
+  animation: animationShow linear 2s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-5{
+  animation: animationShow linear 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+.glyph0-6{
+  animation: animationShow linear 2s;
+  animation-delay: 2.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-7{
+  animation: animationShow linear 2s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+.glyph0-8{
+  animation: animationShow linear 2s;
+  animation-delay: 3.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-9{
+  animation: animationShow linear 2s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+}
+.glyph0-10{
+  animation: animationShow linear 2s;
+  animation-delay: 4.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-11{
+  animation: animationShow linear 2s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-12{
+  animation: animationShow linear 2s;
+  animation-delay: 5.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-13{
+  animation: animationShow linear 2s;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+}
+.glyph0-14{
+  animation: animationShow linear 2s;
+  animation-delay: 6.5s;
+  animation-iteration-count: infinite;
+}
+.glyph0-15{
+  animation: animationShow linear 2s;
+  animation-delay: 7s;
+  animation-iteration-count: infinite;
+}
+
+.glyph1-1{
+  animation: animationFrames linear 4s;
+}
+.glyph1-2{
+  animation: animationFrames linear 4s;
+}
+.glyph1-3{
+  animation: animationFrames linear 3s;
+}
+.glyph1-4{
+  animation: animationFrames linear 3.5s;
+}
+.glyph1-5{
+  animation: animationFrames linear 4s;
+}
+.glyph1-6{
+  animation: animationFrames linear 4.5s;
+}
+.glyph1-7{
+  animation: animationFrames linear 5s;
+}
+.glyph1-8{
+  animation: animationFrames linear 5.5s;
+}
+.glyph1-9{
+  animation: animationFrames linear 6s;
+}
+.glyph1-10{
+  animation: animationFrames linear 6.5s;
+}
+.glyph1-11{
+  animation: animationFrames linear 7s;
+}
+.glyph1-12{
+  animation: animationFrames linear 7.5s;
+}
+.glyph1-13{
+  animation: animationFrames linear 8s;
+}
+.glyph1-14{
+  animation: animationFrames linear 8.5s;
+}
+.glyph1-15{
+  animation: animationFrames linear 9s;
+}
+.glyph1-16{
+  animation: animationFrames linear 9.5s;
+}
+.glyph1-17{
+  animation: animationFrames linear 10s;
+}
+.glyph1-18{
+  animation: animationFrames linear 10.5s;
+}
+.glyph1-19{
+  animation: animationFrames linear 11s;
+}
+.glyph1-20{
+  animation: animationFrames linear 11.5s;
+}
+.glyph1-21{
+  animation: animationFrames linear 12s;
+}
+.glyph1-22{
+  animation: animationFrames linear 12.5s;
+}
+.glyph1-23{
+  animation: animationFrames linear 13s;
+}
+.glyph1-24{
+  animation: animationFrames linear 13.5s;
+}
+.glyph1-25{
+  animation: animationFrames linear 14s;
+}
+.glyph1-26{
+  animation: animationFrames linear 14.5s;
+}
+.glyph1-27{
+  animation: animationFrames linear 15s;
+}
+.glyph1-28{
+  animation: animationFrames linear 15.5s;
+}
+.glyph1-29{
+  animation: animationFrames linear 16s;
+}
+
+
+
+
+
+@keyframes animationShow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationFrames {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
