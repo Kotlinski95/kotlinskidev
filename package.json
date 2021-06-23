@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.11.2",
     "@prototyp/react-language-switcher": "^0.3.0",
     "@reduxjs/toolkit": "^1.5.1",
+    "@styled-icons/bootstrap": "^10.34.0",
     "@styled-icons/boxicons-logos": "^10.34.0",
     "@styled-icons/fluentui-system-regular": "^10.34.0",
     "@styled-icons/remix-line": "^10.18.0",

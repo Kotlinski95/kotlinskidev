@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Theme from '../settings';
+import {Theme} from '../settings';
 
 const {
     typography: {
@@ -17,8 +17,11 @@ const typographyBase = css`
     z-index: 1;
     overflow: hidden;
 `;
+interface Heading1Props {
+    notfound: boolean | never;
+}
 
-export const Heading1 = styled.h1`
+export const Heading1 = styled.h1<Heading1Props>`
     ${typographyBase}
     font-weight: 800;
     font-size: 39px;
@@ -46,7 +49,13 @@ export const Heading1 = styled.h1`
     `}
 `;
 
-export const Heading2 = styled.h2`
+interface Heading2Props {
+    smaller: any;
+    project: any;
+    notfound: any;
+    footer: any;
+}
+export const Heading2: any = styled.h2<Heading2Props>`
     ${typographyBase}
     font-size: 40px;
     font-size: clamp(40px, 8vw, 120px);
@@ -85,7 +94,14 @@ export const Heading2 = styled.h2`
     }
 `;
 
-export const Heading3 = styled.h3`
+interface Heading3Props {
+    projectscontent: any;
+    project: any;
+    about: any;
+    footer: any;
+}
+
+export const Heading3 = styled.h3<Heading3Props>`
     ${typographyBase}
     font-size: 20px;
     font-size: clamp(20px, 3vw, 30px);
@@ -158,8 +174,10 @@ export const Heading4 = styled.h4`
         transition: color .5s;
     }
 `;
-
-export const HeadingDesc = styled.p`
+interface HeadingDescProps {
+    small: boolean | never;
+}
+export const HeadingDesc: any = styled.p<HeadingDescProps>`
     ${typographyBase}
     font-weight: 300;
     font-family: ${secondaryFont};
@@ -187,15 +205,20 @@ export const HeadingDesc = styled.p`
         }
     `}
 `;
-
-export const Paragraph = styled.p`
+interface ParagraphProps {
+    about: any;
+    aboutme: any;
+    nice: any;
+    project: any;
+}
+export const Paragraph = styled.p<ParagraphProps>`
     ${typographyBase}
     font-weight: 400;
     font-family: ${secondaryFont};
     font-size: 16px;
     line-height: 1.7em;
     margin-bottom: .5em;
-
+    margin: "1.5em 0 .5em";
     @media ${breakpoints.md} {
         font-size: clamp(16px, 1.5vw, 24px);
     }
@@ -209,13 +232,16 @@ export const Paragraph = styled.p`
     `}
 
     ${props =>
+        props.aboutme &&
+        css`
+        margin: ".5em 0";
+    `}
+
+    ${props =>
         props.nice &&
         css`
         color: ${tertiaryColor};
         font-weight: 600;
-        margin: ;
-        margin: ${(props) => (props.aboutme ? ".5em 0" : "1.5em 0 .5em")};
-
         @media ${breakpoints.md} {
             font-size: 30px;
         }

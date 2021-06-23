@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-import Theme from '../settings';
+import {Theme} from '../settings';
 
 let {
     colors: {
@@ -41,8 +41,10 @@ const linksBase = css`
         height: 100%;
     }
 `;
-
-const showLineOnHover = css`
+interface showLineOnHoverProps {
+    main: any;
+}
+const showLineOnHover:any = css<showLineOnHoverProps>`
     &::before {
         content: "";
         position: absolute;
@@ -59,8 +61,12 @@ const showLineOnHover = css`
         width: ${(props) => (props.main ? "100%" : "calc(100% - 35px)")};
     }
 `
-
-export const BaseLink = styled.a`
+interface BaseLinkProps {
+    iconLink: any;
+    project: any;
+    intro: any;
+}
+export const BaseLink: any = styled.a<BaseLinkProps>`
     ${linksBase}
 
     ${props =>
@@ -114,8 +120,10 @@ export const BaseLink = styled.a`
         }
     `}
 `
-
-export const StyledNavLink = styled(NavLink)`
+interface StyledNavLinkProps {
+    clicked: any;
+}
+export const StyledNavLink = styled(NavLink)<StyledNavLinkProps>`
     ${linksBase};
     ${showLineOnHover};
     text-transform: uppercase;
@@ -134,8 +142,15 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: line-through;
   }
 `;
-
-export const MainLink = styled(Link)`
+interface MainLinkProps {
+    hide: any;
+    arrow: any;
+    projectscontent: any;
+    aboutshort: any;
+    project: any;
+    notfound: any;
+}
+export const MainLink = styled(Link)<MainLinkProps>`
     ${linksBase}
     ${showLineOnHover};
     font-size: 1.2rem;
@@ -166,7 +181,6 @@ export const MainLink = styled(Link)`
             position: relative;
             left: 50%;
             transform: translateX(-50%);
-            display: ${(props) => (props.hide ? "none" : "inline-block")};
             text-align: center;
             font-size: 25px;
             font-size: clamp(22px, 3vw, 32px);
@@ -235,8 +249,10 @@ export const CryptoPhoneLink = styled(BaseLink)`
         content: "+48 " attr(data-first) " " attr(data-second) " " attr(data-third); 
     }
 `
-
-export const FooterLink = styled.a`
+interface FooterLinkProps {
+    arrow: any;
+}
+export const FooterLink = styled.a<FooterLinkProps>`
     ${linksBase};
     ${showLineOnHover};
 

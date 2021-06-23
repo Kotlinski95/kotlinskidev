@@ -1,10 +1,17 @@
+import { AnyARecord } from 'dns';
 import styled, { css } from 'styled-components';
-import Theme from '../settings';
+import {Theme} from '../settings';
 const {
     breakpoints
 } = Theme;
 
-export const ImageWrapper = styled.div`
+interface ImageWrapperProps {
+    projectoverview: any;
+    projectrwd: any;
+    projectscontent: any;
+    projectmain: any;
+}
+export const ImageWrapper: any = styled.div<ImageWrapperProps>`
     background-color: transparent;
     overflow: hidden;
     margin: 7px 0;
@@ -66,7 +73,7 @@ export const ImageWrapper = styled.div`
     }
 `;
 
-export const RevealImage = styled.div`
+export const RevealImage: any = styled.div`
     background-color: transparent;
     transform: translateX(-100%);
     overflow: hidden;
@@ -79,8 +86,10 @@ export const RevealImage = styled.div`
         }
     }
 `;
-
-export const Image = styled.img`
+interface ImageProps {
+    projectscontent: any;
+}
+export const Image: any = styled.img<ImageProps>`
     width: 100%;
     transform: translateX(100%) scale(1.4);
     transform-origin: left;

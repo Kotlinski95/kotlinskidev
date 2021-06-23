@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 import { Heading3, Heading4, ImageWrapper } from './index';
-import Theme from '../settings';
+import {Theme} from '../settings';
 
 const {
     colors: {
@@ -40,8 +40,11 @@ export const ProjectsItem = styled.li`
         flex-basis: 48%;
     }
 `
-
-export const ProjectsInfoContainer = styled.div`
+interface ProjectsInfoContainerProps {
+    arrow: any;
+    projectIcons: any;
+}
+export const ProjectsInfoContainer: any = styled.div<ProjectsInfoContainerProps>`
     width: 100%;
     display: flex; 
     justify-content: space-between;

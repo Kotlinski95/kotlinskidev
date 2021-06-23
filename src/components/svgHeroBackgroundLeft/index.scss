@@ -6,6 +6,9 @@
   left: 0;
   top: 30px;
   filter: blur(10);
+  @media (max-width: 968px){
+    display: none;
+  }
   .injected-svg:last-of-type {
     margin-top: -25px;
   }

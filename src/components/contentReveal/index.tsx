@@ -1,6 +1,6 @@
 import styled, { } from 'styled-components';
 import './index.scss'
-import Theme from '../../settings'
+import {Theme} from '../../settings'
 
 const {
     breakpoints

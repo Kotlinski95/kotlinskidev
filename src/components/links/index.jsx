@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-import Theme from '../../settings';
+import {Theme} from '../../settings';
 
 let {
     colors: {
