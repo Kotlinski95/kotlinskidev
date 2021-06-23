@@ -1,6 +1,6 @@
 import './index.scss';
 import ProjectTile from '../../components/projectTile'
-import portfolio from '../../assets/projects/portfolio.png'
+import portfolio from '../../assets/projects/portfolioBasic.png'
 import startwars from '../../assets/projects/starwars.png'
 import chess from '../../assets/projects/chess.png'
 import realestate from '../../assets/projects/realestate.png'

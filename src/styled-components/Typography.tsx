@@ -101,7 +101,7 @@ interface Heading3Props {
     footer: any;
 }
 
-export const Heading3 = styled.h3<Heading3Props>`
+export const Heading3: any = styled.h3<Heading3Props>`
     ${typographyBase}
     font-size: 20px;
     font-size: clamp(20px, 3vw, 30px);
@@ -211,7 +211,7 @@ interface ParagraphProps {
     nice: any;
     project: any;
 }
-export const Paragraph = styled.p<ParagraphProps>`
+export const Paragraph: any = styled.p<ParagraphProps>`
     ${typographyBase}
     font-weight: 400;
     font-family: ${secondaryFont};

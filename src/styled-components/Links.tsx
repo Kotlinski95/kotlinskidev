@@ -149,8 +149,9 @@ interface MainLinkProps {
     aboutshort: any;
     project: any;
     notfound: any;
+    main: any;
 }
-export const MainLink = styled(Link)<MainLinkProps>`
+export const MainLink: any = styled(Link)<MainLinkProps>`
     ${linksBase}
     ${showLineOnHover};
     font-size: 1.2rem;

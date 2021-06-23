@@ -129,7 +129,7 @@ export const ProjectList = styled.ul`
     margin-top: 25px;
 `
 
-export const ProjectItem = styled.li`
+export const ProjectItem: any = styled.li`
     padding-right: 15px;
     color: ${tertiaryColor};
     font-size: 12px;

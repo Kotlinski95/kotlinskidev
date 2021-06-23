@@ -26,7 +26,7 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
         ${props =>
         props.projectrwd &&
         css`
-            max-height: 1050px;
+            max-height: 100%;
             margin: 30px auto 25px;
         `}
 
@@ -56,8 +56,9 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
         ${props =>
         props.projectrwd &&
         css`
-            height: 52vw;
-            max-height: 1050px;
+            min-height: 52vw;
+            height: 100%;
+            max-height: 100%;
             width: 80%;
             margin: 50px auto 0;
         `}

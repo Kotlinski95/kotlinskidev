@@ -1,24 +1,48 @@
-import chess from '../assets/projects/chess.png';
+import {
+    portfolioBasicMain,
+    portfolioBasicLandingPage,
+    portfolioBasicRwd
+} from '../assets/projects';
+import language_EN from '../language/en.json'
+import language_PL from '../language/pl.json'
 
-const projects: any = [
+import { selectedLanguage } from '../reducers/state';
+import { useSelector } from 'react-redux';
+let projects: any = [];
+export default function ProjectsComponent() {
+    const actualLanguage = useSelector(selectedLanguage);
+    switch (actualLanguage) {
+        case "Polski":
+            window.language = language_PL;
+            break;
+        case "English":
+            window.language = language_EN;
+            break;
+        default:
+            window.language = language_EN;
+            break;
+    }
+    console.log("actualLanguage : ", actualLanguage);
+
+return projects = [
     {
-        id: "portfolio",
-        name: "Portfolio",
+        id: language.pages.projects.p1_portfolio.header,
+        name: language.pages.projects.p1_portfolio.header,
         shortDescription: "Portfolio które właśnie oglądasz",
         path: "/projects/portfolio",
         photos: {
             alt: "personal portfolio website",
             thumb: {
-                desktop: chess,
-                mobile: ''
+                desktop: portfolioBasicMain,
+                mobile: portfolioBasicMain
             },
             overview: {
-                desktop: '',
-                mobile: ''
+                desktop: portfolioBasicLandingPage,
+                mobile: portfolioBasicLandingPage
             },
             rwd: {
-                desktop: '',
-                mobile: ''
+                desktop: portfolioBasicRwd,
+                mobile: portfolioBasicRwd
             }
         },
         links: {
@@ -38,4 +62,4 @@ const projects: any = [
     },
 ];
 
-export default projects;
+};
