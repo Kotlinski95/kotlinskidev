@@ -76,7 +76,7 @@ export const BaseLink: any = styled.a<BaseLinkProps>`
         height: 3em;
         width: clamp(3em, 4vw, 7em);
         height: clamp(3em, 4vw, 7em);
-        animation: ${showIcon} 2s 1s cubic-bezier(.645,.045,.355,1) infinite;
+        animation: ${showIcon} 2s 1s cubic-bezier(.645,.045,.355,1) infinite;ś
     `}
 
     ${props =>

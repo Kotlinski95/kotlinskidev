@@ -60,7 +60,8 @@ const Project: any = () => {
         },
         date,
         text,
-        stack
+        stack,
+        next,
     } = project;
 
     return (
@@ -126,7 +127,7 @@ const Project: any = () => {
             <SectionContainerFluid nextProject="true">
                 <Heading3 project>
                     <TextRevealHorizontal data-scroll>
-                        Następny projekt
+                        {next}
                     </TextRevealHorizontal>
                 </Heading3>
                 <MainLink className="cursor_hover" to={projects[nextSite].path} project="true" main="true">

@@ -349,9 +349,113 @@
         "projects":{
             "header": "Projects",
             "portfolio": "Basic Portfolio",
-            "quiz": "Star Wars Quiz",
-            "chess": "Coders chess",
-            "estate": "Real Estate website"
+            "quiz": "Start Wars Quiz",
+            "chess": "Coders Chess",
+            "estate": "Real Estate App",
+            "website": "Business website",
+            "next": "Next project",
+            "p1_portfolio" : {
+                "header": "Portfolio",
+                "description": "Portfolio single Page Application (SPA)",
+                "date": "01/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/myPortfolio",
+                    "live": "https://kotlinski95.github.io/myPortfolio/"
+                },
+                "details": {
+                   "intro": "This is my first Front-End project based on HTML, CSS.",
+                   "text": "The implementation of this project was part of the Coders-Camp course after the first chapters on HTML and CSS beds.",
+                   "finish": "This project is not an up-to-date portfolio, it is only an exemplary project based on the mentioned technologies, the current portfolio is the page you are on :)"
+                }
+            },
+            "p2_starWarsQuiz" : {
+                "header": "Star Wars Quiz",
+                "description": "Knowledge quiz about star wars",
+                "date": "02/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/StarWarsQuiz",
+                    "live": "https://coderscamp2020-joaosebastiao-team.github.io/StarWarsQuiz/"
+                },
+                "details": {
+                   "intro": "The Star Wars Quiz is the second project made as part of the Coders-Camp course.",
+                   "text": "This project was carried out in a team of 5, where the knowledge of JavaScript was used.",
+                   "finish": "The game is about guessing as many characters or vehicles as possible from the popular Star Wars saga. During the game, the player competes with the computer for the best result. The results of the game are recorded in the form of a table so that players can compete with each other."
+                }
+            },
+            "p3_codersChess" : {
+                "header": "Coders Chess",
+                "description": "Internet chess",
+                "date": "03/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/coders-chess",
+                    "live": "https://coders-chess.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "Internet chess Coders-chess is another project made as part of the Coders-Camp course, this time as participants we had to create a browser game based on TypeScript.",
+                   "text": "This project was carried out in a team of 5, where knowledge of HTML, CSS, JavaScript and TypeScript was used.",
+                   "finish": "After entering their names and selecting the game time, the players join the game. the game contains hints of possible moves after pressing a given figure. On the right side of the plans, players' movements are recorded. The opponent's compact pieces appear on the board. The game ends with checkmate."
+                }
+            },
+            "p4_estate" : {
+                "header": "Real Estate App",
+                "description": "Real estate office website",
+                "date": "04/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/real-estate",
+                    "live": "https://real-estate-coders-camp.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "The real estate application is the last project in the Coders-Camp course.",
+                   "text": "This project was carried out in a team of 5, where knowledge of HTML, CSS, JavaScript, TypeScript, React and Node JS was used.",
+                   "finish": "The website contains its own database written in Node JS using Mongo DB. The website itself is based on React and TypeScript. On the website, the user can view the advertisements of flats for sale and rent. Can log in to make a reservation or purchase."
+                }
+            },
+            "p5_website" : {
+                "header": "Business card page",
+                "description": "The page you are currently on",
+                "date": "06/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "redux": "Redux",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/kotlinskidev",
+                    "live": "https://www.kotlinskidev.pl/"
+                },
+                "details": {
+                   "intro": "This is my biggest project so far. Private showcase page with my achievements so far!",
+                   "text": "This project is based mainly on React and Redux, and was mostly written with the use of TypeScript.",
+                   "finish": "The website contains a lot of information about me, my skills, experiences and education. It is a convenient form of contact with me via a specially prepared form, shared e-mail and telephone number or via messenger."
+                }
+            }
         },
         "myprofile": {
             "header": "Adrian Kotliński",
