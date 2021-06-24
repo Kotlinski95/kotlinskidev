@@ -1,7 +1,7 @@
 import './index.scss'
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
-import Theme from '../../settings';
+import {Theme} from '../../settings';
 import { Phone, Mail } from '@styled-icons/fluentui-system-regular';
 import {ComponentRevealShow, TextRevealVertical, TextRevealHorizontal} from '../contentReveal';
 

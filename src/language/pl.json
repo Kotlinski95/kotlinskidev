@@ -348,10 +348,114 @@
         },
         "projects":{
             "header": "Projekty",
-            "portfolio": "Początkowe portfolio",
+            "portfolio": "Podstawowe portfolio",
             "quiz": "Quiz o gwiezdnych wojnach",
             "chess": "Internetowe szachy",
-            "estate": "Strona biura nieruchomości"
+            "estate": "Strona biura nieruchomości",
+            "website": "Strona wizytówka",
+            "next": "Następny projekt",
+            "p1_portfolio" : {
+                "header": "Portfolio",
+                "description": "Portfolio single Page Application (SPA)",
+                "date": "01/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/myPortfolio",
+                    "live": "https://kotlinski95.github.io/myPortfolio/"
+                },
+                "details": {
+                   "intro": "Jest to mój pierwszy projekt Front-Endowy zrealizowany w oparciu o HTML, CSS.",
+                   "text": "Realizacja tego projektu była częścią kursu Coders-Camp po pierwszych rozdziałach dotyczących zaganień z HTML i CSS.",
+                   "finish": "Projekt ten nie jest aktualnym portfolio, jest to jedynie przykładowy projekt wykonany w oparciu o wspomniane technologie, aktualne portfolio to strona, na której się znajdujesz :) "
+                }
+            },
+            "p2_starWarsQuiz" : {
+                "header": "Star Wars Quiz",
+                "description": "Quiz wiedzy o gwiezdnych wojnach",
+                "date": "02/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/StarWarsQuiz",
+                    "live": "https://coderscamp2020-joaosebastiao-team.github.io/StarWarsQuiz/"
+                },
+                "details": {
+                   "intro": "Quiz o gwiezdnych wojnach jest drugim projektem wykonanym w ramach kursu Coders-Camp.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu JavaScript.",
+                   "finish": "Gra polega na odgadniciu jaknajwięj ilości postaci lub pojazdów z popularnej sagi Gwiezdne wojny. Gracz podczas rozgrywki rywalizuje z komputerem o jak najlepszy rezultat. Wyniki gry są zapisywane w formie tabeli, tak aby gracze mogli ze sobą konkurować."
+                }
+            },
+            "p3_codersChess" : {
+                "header": "Coders Chess",
+                "description": "Internetowe szachy",
+                "date": "03/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/coders-chess",
+                    "live": "https://coders-chess.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "Internetowe szachy Coders-chess to kolejny projekt wykonany w ramach kursu Coders-Camp, tym razem jako uczestnicy za zadanie mieliśmy stworzyć gre przeglądarkową opartą na TypeScript",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript oraz TypeScript.",
+                   "finish": "Gracze po wpisaniu swoich imion i wybraniu czasu gry stają ze sobą do rozgrywki. gra zawiera podpowiedzi możliwych ruchów po naciśniciu na daną figurę. Po prawej stronie plansy zapisywane są ruchy graczy. Na planszy pojawiają się zbite figury przeciwnika. Gra kończy się przez szach-mat."
+                }
+            },
+            "p4_estate" : {
+                "header": "Real Estate App",
+                "description": "Strona biura nieruchomości",
+                "date": "04/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/real-estate",
+                    "live": "https://real-estate-coders-camp.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "Aplikacja biura nieruchomości to ostatni projekt w ramach kursu Coders-Camp.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript, TypeScript, React oraz Node JS.",
+                   "finish": "Strona zawiera własną bazę danych napisaną w Node JS z wykorzystaniem Mongo DB. Sama strona oparta jest na Reactcie i TypeScripcie. Użytkownik może na stronie przeglądać zamieszczone ogłoszenia mieszkań na sprzedaż i wynajem. Może się zalogować aby dokonać rezerwacji bądź zakupu."
+                }
+            },
+            "p5_website" : {
+                "header": "Strona wizytówka",
+                "description": "Strona na której się właśnie znajdujesz",
+                "date": "06/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "redux": "Redux",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/kotlinskidev",
+                    "live": "https://www.kotlinskidev.pl/"
+                },
+                "details": {
+                   "intro": "Jest to jak dotąd mój największy projekt. Prywatna strona wizytówka z moimi dotychczasowymi osiągnięciami!",
+                   "text": "Projekt ten realizowany głównie w oparciu o React i Redux, w większości napisany został z wykorzystaniem języka TypeScript",
+                   "finish": "Strona zawiera sporo informacji o mnie, moich umiejętnościach, doświadczeniach oraz edukacji. Jest wygodną formą kontaktu ze mną poprzez specjalnie przygotowany formularz, udostępniony mail oraz numer telefonu lub poprzez messengera."
+                }
+            }
         },
         "myprofile": {
             "header": "Adrian Kotliński",

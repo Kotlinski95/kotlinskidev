@@ -1,6 +1,6 @@
 import styled, { } from 'styled-components';
 import './index.scss'
-import Theme from '../../settings'
+import {Theme} from '../../settings'
 
 const {
     breakpoints
@@ -49,6 +49,7 @@ export const ComponentRevealOpacity = styled.div`
     opacity: 0;
     transition: opacity 0.5s 0.75s, transform 0.3s 0.2s;
     transition-delay: ${(props: any) => props.delay};
+    filter:  ${(props: any) => props.filter};
     &.is-inview {
         opacity: 1;
     }

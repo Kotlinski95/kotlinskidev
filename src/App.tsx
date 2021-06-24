@@ -1,6 +1,5 @@
 import HomePage from '../src/pages/home'
 import Nav from '../src/components/nav'
-import Footer from '../src/components/footer'
 import RouteChangeTracker from '../src/components/routeChangeTracker'
 import AboutPage from './pages/about/about'
 import NotFoundPage from './pages/not_found'
@@ -15,6 +14,7 @@ import MyProfileWorkPage from './pages/myprofile/profileWork'
 import StackPage from './pages/stack/stack'
 import ProjectsPage from './pages/projects/projects'
 import PortfolioPage from './pages/projects/portfolio'
+import WebsitePage from './pages/projects/website'
 import QuizPage from './pages/projects/quiz'
 import ChessPage from './pages/projects/chess'
 import EstatePage from './pages/projects/estate'
@@ -197,6 +197,9 @@ function App() {
                     </Route>
                     <Route exact path="/projects/portfolio">
                       <PortfolioPage {...routingProps} />
+                    </Route>
+                    <Route exact path="/projects/website">
+                      <WebsitePage {...routingProps} />
                     </Route>
                     <Route exact path="/projects/star-wars-quiz">
                       <QuizPage {...routingProps} />

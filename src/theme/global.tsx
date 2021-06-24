@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a:hover {
-    color: ${({ theme }) => theme.nav.menuItemColorHover};
+    //color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
 
   .c-scrollbar_thumb {
