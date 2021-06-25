@@ -11,7 +11,7 @@ const SvgHeroBackgroundLeft = (props) => {
                 width="412"
                 height="408"
                 fill="none"
-                className="injected-svg cursor_hover"
+                className="injected-svg"
                 data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >
@@ -630,7 +630,7 @@ const SvgHeroBackgroundLeft = (props) => {
                 width="412"
                 height="408"
                 fill="none"
-                className="injected-svg cursor_hover"
+                className="injected-svg"
                 data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >

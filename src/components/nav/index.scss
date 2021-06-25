@@ -32,7 +32,6 @@
   .nav-left {
     text-align: left;
     width: calc(50% - 30px);
-    z-index: 0;
     @media (max-width: 768px) {
       display: none;
     }

@@ -5,38 +5,17 @@ import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react
 import { IconContext } from "react-icons";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import ServicesNavigation from '../navigation/servicesNav';
+import { useState } from 'react'
 
 const Footer = () => {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      setAnchorEl(event.currentTarget);
-    };
 
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
+
     return (
         <div className="footer-wrapper">
             <div className="footer-head" data-scroll>
                 <ul>
-                    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                    <li className="line-item">
-                        {language.footer.pages.services}
-                    </li>
-                    </Button>
-                    <Menu
-                        id="simple-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/web-development">{language.footer.pages.web}</Link></MenuItem>
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/shopify">{language.footer.pages.shopify}</Link></MenuItem>
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/PLC">{language.footer.pages.plc}</Link></MenuItem>
-                    </Menu>
+                    <Link to="/services"><li className="line-item">{language.footer.pages.services}</li></Link>
                     <Link to="/contact"><li className="line-item">{language.footer.pages.contact}</li></Link>
                 </ul>
             </div>

@@ -114,14 +114,17 @@ function App() {
 
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
-      const scroll = new locomotiveScroll({
-        el: document.querySelector(".smooth-scroll"),
-        smooth: !firefoxAgent,
-        reloadOnContextChange: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true },
-        lerp: 0.09,
-      });
+      let scroll: any;
+      setTimeout(() => {
+        scroll = new locomotiveScroll({
+          el: document.querySelector(".smooth-scroll"),
+          smooth: !firefoxAgent,
+          reloadOnContextChange: true,
+          smartphone: { smooth: true },
+          tablet: { smooth: true },
+          lerp: 0.09,
+        });
+      }, 500)
       return () => {
         scroll.destroy();
       }

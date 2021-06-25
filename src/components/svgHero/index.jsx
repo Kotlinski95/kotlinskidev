@@ -11,7 +11,7 @@ const SvgHeroBackground = (props) => {
                 height="500"
                 version="1.2"
                 viewBox="0 0 375 375"
-                className="logo-svg cursor_hover"
+                className="logo-svg"
             >
                 <defs>
                     <symbol overflow="visible">
