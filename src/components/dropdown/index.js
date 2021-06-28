@@ -24,6 +24,7 @@ import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { Badge } from '@material-ui/core';
+import {setMenu } from '../../reducers/menu'
 
 function DropdownMulti(props) {
   const language = props.language;
@@ -58,7 +59,10 @@ function DropdownMulti(props) {
   function NavItem(props) {
     return (
       <li className="nav-item">
-        <span className="icon-button" onClick={() => props.dropdown && setOpen(!open)}>
+        <span className="icon-button" onClick={() => {
+          props.dropdown && setOpen(!open);
+          props.dropdown && dispatch(setMenu(open ? "false" : "true"));
+          }}>
           {props.icon}
         </span>
 
@@ -138,12 +142,6 @@ function DropdownMulti(props) {
           <div className="menu">
           <Link to="/myprofile/overview"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
             <DropdownItem
-              leftIcon={<LanguagesIcon />}
-              rightIcon={<ChevronIcon />}
-              goToMenu="language">
-              {language.header.language}
-            </DropdownItem>
-            <DropdownItem
               leftIcon={<AboutIcon />}
               rightIcon={<ChevronIcon />}
               goToMenu="about">
@@ -181,7 +179,7 @@ function DropdownMulti(props) {
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-            <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
+            <DropdownItem goToMenu="settings" leftIcon={<ArrowIcon />}>
               <h3>{language.header.language}</h3>
             </DropdownItem>
             <LanguageItem language="pl" leftIcon={<PolandIcon />}>Polski</LanguageItem>
@@ -198,6 +196,12 @@ function DropdownMulti(props) {
           <div className="menu">
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.header.settings}</h3>
+            </DropdownItem>
+            <DropdownItem
+              leftIcon={<LanguagesIcon />}
+              rightIcon={<ChevronIcon />}
+              goToMenu="language">
+              {language.header.language}
             </DropdownItem>
           </div>
         </CSSTransition>

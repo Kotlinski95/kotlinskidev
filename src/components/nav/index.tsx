@@ -11,9 +11,6 @@ import { useCookies } from 'react-cookie';
 import { getCookie } from '../../services';
 import LazyLoad from 'react-lazyload';
 import Button from '@material-ui/core/Button';
-import Menus from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import React from 'react';
 import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
@@ -35,6 +32,7 @@ const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
+
   const [cookies, setCookie] = useCookies(['language', 'theme']);
   const [checked, setChecked] = useState(getCookie("theme") === "Dark" ? false : true);
 
@@ -51,17 +49,6 @@ const Nav = () => {
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
   }
-
-  const [anchorElStack, setAnchorElStack] = React.useState<null | HTMLElement>(null);
-
-  const handleClickMenuStack = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorElStack(event.currentTarget);
-  };
-
-  const handleCloseMenuStack = () => {
-    setAnchorElStack(null);
-  };
-
 
   if (bmItem) {
     bmItem.forEach(element => {
