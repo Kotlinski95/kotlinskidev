@@ -20,6 +20,7 @@ export const lightTheme = {
     DropdownColorHover: '#5ce1bd',
     DropdownColorIcon: '#308871',
     linkHover: '#ffffff',
+    navListBackground: '#82c1b0',
   },
   typedText: {
     color: '#1c5344',
@@ -112,6 +113,7 @@ export const darkTheme = {
     DropdownColorHover: '#1a4137',
     DropdownColorIcon: '#D0E2F2',
     linkHover: '#ffffff',
+    navListBackground: '#1a4137',
   },
   typedText: {
     color: '#D0E2F2',

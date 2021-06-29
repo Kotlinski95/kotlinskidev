@@ -19,14 +19,14 @@ function StackNavigation(props) {
     return (
         <>
             <MainNavigationContainer onClick={handleClick} clicked={click}>
-                <MainNavigationList clicked={click}>
+                <MainNavigationList clicked={click} className="main-navigation-list">
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                         <img src={logo} alt="Logo" style={{width: '80px', heigth: '80px'}}></img>
                     </div>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
                             <StyledNavLink className="styled-nav cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
-                            <span className="styled-nav--itext">{link.name}</span>
+                            <span className="styled-nav--text">{link.name}</span>
                             </StyledNavLink>
                         </MainNavigationItem>
                     ))}

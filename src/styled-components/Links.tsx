@@ -130,7 +130,6 @@ export const StyledNavLink = styled(NavLink)<StyledNavLinkProps>`
     font-size: clamp(1.6rem, 3vw, 2.5rem);
     font-weight: 500;
     font-family: ${secondaryFont};
-    color: #D0E2F2;
     letter-spacing: 3px;
     display: inline-block;
     padding: clamp(12px, 1vw, 40px);

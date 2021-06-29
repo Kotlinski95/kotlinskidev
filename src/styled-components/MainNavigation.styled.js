@@ -52,7 +52,6 @@ export const MainNavigationList = styled.ul`
   height: 100vh;
   text-align: center;
   width: 100%;
-  background-color: #1a4137;
   list-style: none;
   clip-path: ${(props) => (props.clicked ? "circle(100% at 100% 0%)" : "circle(0% at 100% 0%)")};
   pointer-events: ${(props) => (props.clicked ? "all" : "none")};

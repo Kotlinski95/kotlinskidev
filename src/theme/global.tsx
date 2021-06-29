@@ -50,6 +50,10 @@ export const GlobalStyles = createGlobalStyle`
   background-color: ${({ theme }) => theme.text};
 }
 
+.main-navigation-list{
+  background-color: ${({ theme }) => theme.nav.navListBackground};
+}
+
   //==========  Footer section ==================
   .footer-wrapper{
     background-color: ${({ theme }) => theme.footer.darkBackground};
