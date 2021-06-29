@@ -49,7 +49,6 @@ import ReactPixel from 'react-facebook-pixel';
 import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
-import { setMenu } from './reducers/menu';
 import { useDispatch } from 'react-redux';
 declare global {
   var _theme: ThemeType;
@@ -85,7 +84,8 @@ function App() {
 
   const IsHovered = (set) => {
     const menuState = _store.getState().menuState.menuOpen;
-    menuState === "false" ? setIsHovered(set) : setIsHovered(false);
+    const notificationState = _store.getState().notificationState.notificationOpen;
+    (menuState === "false" && notificationState === "false") ? setIsHovered(set) : setIsHovered(false);
   }
 
   useEffect(() => {

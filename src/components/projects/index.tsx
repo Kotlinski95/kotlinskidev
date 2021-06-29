@@ -11,11 +11,11 @@ const Projects = () => {
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
             <h2 className="projects-hello">{language.pages.projects.header}</h2>
             <div className="projects-wrapper" data-scroll>
-                <ProjectTile data-scroll logo={website} width="100%" heigh="100%" title={language.pages.projects.website} imgTitle={language.pages.projects.website} url="/projects/website" />
-                <ProjectTile data-scroll logo={startwars} width="100%" heigh="100%" title={language.pages.projects.quiz} imgTitle={language.pages.projects.quiz} url="/projects/star-wars-quiz" />
-                <ProjectTile data-scroll logo={chess} width="100%" heigh="100%" title={language.pages.projects.chess} imgTitle={language.pages.projects.chess} url="/projects/coders-chess" />
-                <ProjectTile data-scroll logo={realestate} width="100%" heigh="100%" title={language.pages.projects.estate} imgTitle={language.pages.projects.estate} url="/projects/real-estate" />
-                <ProjectTile data-scroll logo={portfolio} width="100%" heigh="100%" title={language.pages.projects.portfolio} imgTitle={language.pages.projects.portfolio} url="/projects/portfolio" />
+            <ProjectTile logo={website} width="100%" heigh="100%" title={language.pages.projects.website} imgTitle={language.pages.projects.website} url="/projects/website" />
+            <ProjectTile logo={startwars} width="100%" heigh="100%" title={language.pages.projects.quiz} imgTitle={language.pages.projects.quiz} url="/projects/star-wars-quiz" />
+            <ProjectTile logo={chess} width="100%" heigh="100%" title={language.pages.projects.chess} imgTitle={language.pages.projects.chess} url="/projects/coders-chess" />
+            <ProjectTile logo={realestate} width="100%" heigh="100%" title={language.pages.projects.estate} imgTitle={language.pages.projects.estate} url="/projects/real-estate" />
+             <ProjectTile logo={portfolio} width="100%" heigh="100%" title={language.pages.projects.portfolio} imgTitle={language.pages.projects.portfolio} url="/projects/portfolio" />
             </div>
         </div>
     )

@@ -38,12 +38,36 @@ function DropdownMulti(props) {
     setCookie('language', "Polski", { path: '/' });
     dispatch(setLanguage(cookies.language));
   }
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+              setOpen(false);
+              dispatch(setMenu("false"));
+            }
+        }
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref]);
+}
+
+const wrapperRef = useRef(null);
+useOutsideAlerter(wrapperRef);
+
+
   return (
     <>
       <Navbar>
+        <div className="dropdown-menu cursor_hover" ref={wrapperRef}>
         <NavItem id="dropdown-settings" className="cursor_hover" dropdown={true} icon={<CaretIcon />}>
           <DropdownMenu ></DropdownMenu>
         </NavItem>
+        </div>
       </Navbar>
     </>
   );
@@ -63,7 +87,7 @@ function DropdownMulti(props) {
           props.dropdown && setOpen(!open);
           props.dropdown && dispatch(setMenu(open ? "false" : "true"));
           }}>
-          {props.icon}
+          <span className="navItem-icon">{props.icon}</span>
         </span>
 
         {open && props.children}

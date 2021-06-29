@@ -25,5 +25,5 @@ export const menuSlice = createSlice({
 export const { setMenu} = menuSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectedTheme = (state: RootState) => state.menuState.menuOpen;
+export const selectedMenu = (state: RootState) => state.menuState.menuOpen;
 export const menuReducer = menuSlice.reducer;

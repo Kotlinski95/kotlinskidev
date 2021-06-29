@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 10px;
+    margin: 0 auto;
     border-radius: 15px;
     font-family: 'Reggae One', cursive;
     overflow: hidden;
@@ -32,7 +32,7 @@
     transform: scale(1.2);
 }
 .project-tile-wrapper:hover img{
-    filter: brightness(60%);
+    filter: brightness(40%);
     transform: scale(1);
     cursor: pointer;
 }

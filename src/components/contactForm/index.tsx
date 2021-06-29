@@ -73,7 +73,6 @@ const ContactForm = () => {
     text-align: center;
     display: flex;
     justify-content: center;
-    
     @media ${breakpoints.xs} {
         font-size: clamp(20px, 3vw, 50px);
     }
@@ -106,13 +105,13 @@ const ContactForm = () => {
           <input className="cursor_hover" type="hidden" name="contact_number" />
           <ComponentRevealShow data-scroll width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
           <ComponentRevealShow data-scroll width="80%" delay="0.3s"><input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.8s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.8s"><input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.3s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.3s"><input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.8s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.8s"><textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="2.3s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.6s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.6s"><input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.9s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="0.9s"><input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.2s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.2s"><textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow data-scroll width="80%" delay="1.5s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
         </form>
         <ComponentRevealShow data-scroll width="80%">
         <div className="cursor_hover">
