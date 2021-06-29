@@ -54,6 +54,12 @@
                 margin-bottom: 20px;
             }
         }
+        .myprofile-nav__wrapper ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
 }
 .myprofile-category__wrapper{
@@ -62,9 +68,11 @@
     align-items: center;
     justify-content: center;
     width: 70vw;
-    margin-top: 15px;
+    margin: 25px auto;
     border-radius: 10px;
     @media (max-width: 768px){
+        margin: 0;
+        border-radius: 0;
         width: 100vw;
     }
 }

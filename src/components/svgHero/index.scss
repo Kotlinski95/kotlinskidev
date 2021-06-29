@@ -6,6 +6,15 @@
     font-weight: bold;
     width: 600px;
     height: 600px;
+    @media (max-width: 750px){
+      height: 500px;
+      width: 500px;
+    }
+    @media (max-width: 500px){
+      height: 400px;
+      width: 100%;
+    }
+
   }
   fill: #fff;
   color: #fff;
@@ -15,6 +24,18 @@
   z-index: 9999;
   height: 600px;
   width: 600px;
+  @media (max-width: 750px){
+    top: 5px;
+    height: 500px;
+    width: 100%;
+    left: 0;
+  }
+  @media (max-width: 500px){
+    top: 5px;
+    height: 400px;
+    width: 100%;
+    left: 0;
+  }
 }
 .glyph{
   fill: #fff;

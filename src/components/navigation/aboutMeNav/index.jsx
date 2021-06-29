@@ -5,6 +5,7 @@ import {
     MainNavigationItem
 } from '../../../styled-components/MainNavigation.styled';
 import { StyledNavLink } from '../../../styled-components/Links';
+import logo from '../../../assets/icons/myprofile.svg';
 
 function AboutMeNavigation(props) {
 
@@ -21,6 +22,9 @@ function AboutMeNavigation(props) {
         <>
             <MainNavigationContainer onClick={handleClick} clicked={click}>
                 <MainNavigationList clicked={click}>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={logo} alt="Logo" style={{width: '80px', heigth: '80px'}}></img>
+                    </div>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
                             <StyledNavLink className="cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
