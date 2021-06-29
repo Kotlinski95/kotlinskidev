@@ -27,8 +27,8 @@ function AboutMeNavigation(props) {
                     </div>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
-                            <StyledNavLink className="cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
-                                {link.name}
+                            <StyledNavLink className="styled-nav cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
+                                <span className="styled-nav--itext">{link.name}</span>
                             </StyledNavLink>
                         </MainNavigationItem>
                     ))}

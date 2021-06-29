@@ -38,7 +38,7 @@ export const lightTheme = {
     itemBackground: 'rgba(0,0,0,0.05)',
   },
   scrollDown:{
-    iconShadow: 'inset 0 0 0 1px rgb(39, 109, 87);',
+    iconShadow: 'inset 0 0 0 2px rgb(39, 109, 87);',
     iconBackground: '#1c5344'
   },
   tile:{
@@ -85,12 +85,17 @@ export const lightTheme = {
     cursorBorderBackground: "#9d64c6",
     loadingBackground: "#9c98cd",
     transitioningBackground: "#d5bed0"
+  },
+  hero: {
+    rect: "#5fa596",
+    g: "#a0f8eb",
+    g_circle: "#a0f8eb",
   }
 }
 
 export const darkTheme = {
   body: '#1a4137',
-  text: '#FAFAFA',
+  text: '#e1f7f1',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(180deg,#010a08 18.97%,#1c5344)',
   burgermenu: "#D0E2F2",
@@ -125,7 +130,7 @@ export const darkTheme = {
     itemBackground: 'rgba(0,0,0,0.2)',
   },
   scrollDown:{
-    iconShadow: 'inset 0 0 0 1px rgb(208, 226, 242);',
+    iconShadow: 'inset 0 0 0 2px rgb(208, 226, 242);',
     iconBackground: '#D0E2F2',
   },
   tile:{
@@ -172,6 +177,11 @@ export const darkTheme = {
     cursorBorderBackground: "#ddeee5",
     loadingBackground: "#1a4137",
     transitioningBackground: "#1a4137"
+  },
+  hero: {
+    rect: "#3E514D",
+    g: "#fff",
+    g_circle: "#F3FFFD",
   }
 
 }

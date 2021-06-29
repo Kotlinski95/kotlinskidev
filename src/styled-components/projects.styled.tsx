@@ -76,11 +76,11 @@ export const ProjectsInfoContainer: any = styled.div<ProjectsInfoContainerProps>
     `} 
 `
 
-export const ProjectsImageHoverContainer = styled.div`
+export const ProjectsImageHoverContainer: any = styled.div`
     transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
 `;
 
-export const ProjectsItemContainer = styled(Link)`
+export const ProjectsItemContainer: any = styled(Link)`
     color: ${secondaryColor};
     text-decoration: none;
     position: relative;

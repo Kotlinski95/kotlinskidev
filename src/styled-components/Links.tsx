@@ -52,7 +52,6 @@ const showLineOnHover:any = css<showLineOnHoverProps>`
         left: 0;
         width: 0;
         height: 1px;
-        background-color: ${secondaryColor};
         transition: width .8s cubic-bezier(0.77, 0, 0.175, 1);
         mix-blend-mode: difference;
     }

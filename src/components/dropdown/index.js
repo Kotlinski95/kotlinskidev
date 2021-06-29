@@ -25,6 +25,7 @@ import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { Badge } from '@material-ui/core';
 import {setMenu } from '../../reducers/menu'
+import { CvPdf } from '../../docs';
 
 function DropdownMulti(props) {
   const language = props.language;
@@ -185,7 +186,7 @@ useOutsideAlerter(wrapperRef);
               {language.footer.pages.services}
             </DropdownItem>
             <Link to="/contact"><DropdownItem leftIcon={<ContactIcon />}>{language.footer.pages.contact}</DropdownItem></Link>
-            <Link to="/cv"><DropdownItem leftIcon={<CvIcon />}>{language.header.cv}</DropdownItem></Link>
+            <a href={CvPdf} target='_blank'><DropdownItem leftIcon={<CvIcon />}>{language.header.cv}</DropdownItem></a>
             <DropdownItem
               leftIcon={<CogIcon />}
               rightIcon={<ChevronIcon />}
@@ -240,8 +241,8 @@ useOutsideAlerter(wrapperRef);
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.header.about}</h3>
             </DropdownItem>
-            <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon />}>{language.header.pages.carrier_plc}</DropdownItem></Link>
             <Link to="/aboutme/front-end-development"><DropdownItem leftIcon={<AboutFrontIcon />}>{language.header.pages.carrier_front}</DropdownItem></Link>
+            <Link to="/aboutme/plc-carrier"><DropdownItem leftIcon={<AboutPlcIcon />}>{language.header.pages.carrier_plc}</DropdownItem></Link>
             <Link to="/aboutme/courses"><DropdownItem leftIcon="🦋">{language.header.pages.courses}</DropdownItem></Link>
             <Link to="/aboutme/education"><DropdownItem leftIcon={<AboutEducationIcon />}>{language.header.pages.education}</DropdownItem></Link>
           </div>

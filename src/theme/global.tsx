@@ -42,6 +42,14 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
 
+  .styled-nav--text{
+  color: ${({ theme }) => theme.text};
+}
+.styled-nav::before,
+.styled-nav:hover::before{
+  background-color: ${({ theme }) => theme.text};
+}
+
   //==========  Footer section ==================
   .footer-wrapper{
     background-color: ${({ theme }) => theme.footer.darkBackground};
@@ -251,4 +259,32 @@ textarea::placeholder{
 .transition-helper{
   background-color: ${({ theme }) => theme.animation.transitioningBackground} !important;
 }
+
+// ================= HERO section =========
+.hero-background,
+.hero-background svg,
+.glyph{
+  fill: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.text};
+}
+
+.hero-background-rect{
+  fill: ${({ theme }) => theme.hero.rect};
+}
+.hero-background-g{
+  fill: ${({ theme }) => theme.hero.g};
+}
+.hero-background-g-circle{
+  fill: ${({ theme }) => theme.hero.g_circle};
+}
+
+// ================= CV ===================
+.cv-link--text{
+  color: ${({ theme }) => theme.text};
+}
+.cv-link::before,
+.cv-link:hover::before{
+  background-color: ${({ theme }) => theme.text};
+}
+
 `;

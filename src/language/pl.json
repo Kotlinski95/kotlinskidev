@@ -616,6 +616,9 @@
                     "link_label": "Więcej o kierunku technik Mechatronik w ZS6"
                 }
             }
+        },
+        "cv": {
+            "link": "CV / Podgląd"
         }
     }
 }

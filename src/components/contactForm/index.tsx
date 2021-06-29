@@ -10,6 +10,8 @@ import {
   CryptoPhoneLink,
 } from '../links/index.jsx';
 
+import CvLink from '../cvLink';
+
 const ContactForm = () => {
   function sendEmail(e: any) {
     e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
@@ -145,6 +147,7 @@ const ContactForm = () => {
         </ContactContainer>
         </div>
         </ComponentRevealShow>
+        <CvLink/>
       </div>
     </>
   );
