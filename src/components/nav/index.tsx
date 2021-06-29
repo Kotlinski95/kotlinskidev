@@ -11,12 +11,11 @@ import { useCookies } from 'react-cookie';
 import { getCookie } from '../../services';
 import LazyLoad from 'react-lazyload';
 import Button from '@material-ui/core/Button';
-import Menus from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import React from 'react';
 import ReactGA from 'react-ga';
 import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
+import AboutMeNavigation from '../navigation/aboutMeNav';
+import StackNavigation from '../navigation/stackNav';
 
 const styles = {
   bmCrossButton: {
@@ -33,8 +32,15 @@ const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
+
   const [cookies, setCookie] = useCookies(['language', 'theme']);
   const [checked, setChecked] = useState(getCookie("theme") === "Dark" ? false : true);
+
+  const [clickAboutMe, setClickAboutMe] = useState(false);
+  const handleClickAboutMe = () => setClickAboutMe(!clickAboutMe);
+
+  const [clickStack, setClickStack] = useState(false);
+  const handleClickStack = () => setClickStack(!clickStack);
 
   if (!getCookie("theme")) {
     setCookie('theme', "Dark", { path: '/' });
@@ -43,23 +49,6 @@ const Nav = () => {
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
   }
-  const [anchorElAbout, setAnchorElAbout] = React.useState<null | HTMLElement>(null);
-  const [anchorElStack, setAnchorElStack] = React.useState<null | HTMLElement>(null);
-  const handleClickMenuAbout = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorElAbout(event.currentTarget);
-  };
-
-  const handleCloseMenuAbout = () => {
-    setAnchorElAbout(null);
-  };
-  const handleClickMenuStack = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorElStack(event.currentTarget);
-  };
-
-  const handleCloseMenuStack = () => {
-    setAnchorElStack(null);
-  };
-
 
   if (bmItem) {
     bmItem.forEach(element => {
@@ -95,41 +84,19 @@ const Nav = () => {
       <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
+          <AboutMeNavigation language={language} click={clickAboutMe} handleClick={handleClickAboutMe} />
+          <StackNavigation language={language} click={clickStack} handleClick={handleClickStack} />
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
               <li className="line-item">
                 {language.header.about}
               </li>
             </Button>
-            <Menus
-              id="simple-menu"
-              anchorEl={anchorElAbout}
-              keepMounted
-              open={Boolean(anchorElAbout)}
-              onClose={handleCloseMenuAbout}
-            >
-              <MenuItem className="menuItem header" onClick={handleCloseMenuAbout}><Link to="/aboutme">{language.header.about}</Link></MenuItem>
-              <hr />
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
-            </Menus>
             <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
+            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
               <li className="line-item">
                 {language.header.stack}
               </li>
             </Button>
-            <Menus
-              id="simple-menu"
-              anchorEl={anchorElStack}
-              keepMounted
-              open={Boolean(anchorElStack)}
-              onClose={handleCloseMenuStack}
-            >
-              <MenuItem className="menuItem" onClick={handleCloseMenuStack}><Link to="/stack/front-end-developer">{language.header.pages.software_enginner}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuStack}><Link to="/stack/automation-engineer">{language.header.pages.automation_enginner}</Link></MenuItem>
-            </Menus>
           </ul>
         </div>
         <div className="nav-center line-item cursor_hover">

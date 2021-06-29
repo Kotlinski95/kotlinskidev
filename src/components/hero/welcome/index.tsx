@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ScrollDown from '../../scrolldown';
 import './index.scss';
-import { TextRevealVertical} from '../../contentReveal'
 import SvgHeroBackgroundLeft from '../../svgHeroBackgroundLeft'
 import SvgHeroBackgroundRight from '../../svgHeroBackgroundRight'
 import SvgHeroBackground from '../../svgHero'
@@ -30,7 +29,7 @@ const WelcomeComponent = (props) => {
                     <TextRevealVertical delay={1.2} data-scroll><h2>{language.pages.home.welcome.title}</h2></TextRevealVertical> */}
                     </div>
                 </div>
-                <ScrollDown data-scroll bottom="35px" top="auto" bottomText="-10px" topText="auto" display={showScroll} text={language.pages.home.welcome.scroll} />
+                <ScrollDown data-scroll bottom="80px" top="auto" bottomText="30px" topText="auto" display={showScroll} text={language.pages.home.welcome.scroll} />
             </div>
         </div>
     );

@@ -49,6 +49,7 @@ import ReactPixel from 'react-facebook-pixel';
 import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
+import { useDispatch } from 'react-redux';
 declare global {
   var _theme: ThemeType;
 }
@@ -63,6 +64,7 @@ function App() {
 
   ReactPixel.pageView();
   Language();
+  const dispatch = useDispatch();
   const actualTheme = useSelector(selectedTheme);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
@@ -80,6 +82,12 @@ function App() {
       break;
   }
 
+  const IsHovered = (set) => {
+    const menuState = _store.getState().menuState.menuOpen;
+    const notificationState = _store.getState().notificationState.notificationOpen;
+    (menuState === "false" && notificationState === "false") ? setIsHovered(set) : setIsHovered(false);
+  }
+
   useEffect(() => {
     setIsReady(true);
     return () => {
@@ -93,8 +101,8 @@ function App() {
       console.log("IS MOBILE: ", isMobile);
 
       document.querySelectorAll(".cursor_hover").forEach(el => {
-        el.addEventListener("mouseover", () => setIsHovered(true));
-        el.addEventListener("mouseout", () => setIsHovered(false));
+        el.addEventListener("mouseover", () => IsHovered(true));
+        el.addEventListener("mouseout", () => IsHovered(false));
       });
       isMobileTest();
       return () => {
@@ -114,14 +122,17 @@ function App() {
 
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
-      const scroll = new locomotiveScroll({
-        el: document.querySelector(".smooth-scroll"),
-        smooth: !firefoxAgent,
-        reloadOnContextChange: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true },
-        lerp: 0.09,
-      });
+      let scroll: any;
+      setTimeout(() => {
+        scroll = new locomotiveScroll({
+          el: document.querySelector(".smooth-scroll"),
+          smooth: !firefoxAgent,
+          reloadOnContextChange: true,
+          smartphone: { smooth: true },
+          tablet: { smooth: true },
+          lerp: 0.09,
+        });
+      }, 500)
       return () => {
         scroll.destroy();
       }

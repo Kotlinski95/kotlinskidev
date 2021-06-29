@@ -11,7 +11,7 @@ const SvgHeroBackgroundRight = (props) => {
                 width="412"
                 height="408"
                 fill="none"
-                className="injected-svg cursor_hover"
+                className="injected-svg"
                 data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >
@@ -19,7 +19,7 @@ const SvgHeroBackgroundRight = (props) => {
                     width="81"
                     height="23"
                     x="-45"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 0"
                     opacity="0.4"
                     rx="11.5"
@@ -34,7 +34,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-45"
                     y="385"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 385"
                     opacity="0.4"
                     rx="11.5"
@@ -60,7 +60,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="89.02769470214844 74"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -70,7 +70,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.68471s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="104.378" cy="89.35" r="11.675"></circle>
                         <circle cx="104.378" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
@@ -78,7 +78,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="104.378"
                         cy="89.349"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.705"
                     ></circle>
                 </g>
@@ -93,7 +93,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.08871s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="139.517" cy="89.35" r="11.675"></circle>
                         <circle cx="139.518" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
@@ -101,7 +101,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="139.518"
                         cy="89.349"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.807"
                     ></circle>
                 </g>
@@ -135,7 +135,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="158.93569946289062 163.40170288085938"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -145,7 +145,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.91439s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="174.285" cy="178.752" r="11.675"></circle>
                         <circle
                             cx="174.286"
@@ -158,7 +158,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="174.286"
                         cy="178.751"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.591"
                     ></circle>
                 </g>
@@ -167,7 +167,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="-48.201"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48.20069885253906 167.468994140625"
                     opacity="0.4"
                     rx="11.282"
@@ -182,7 +182,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="298.015"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="298.0150146484375 167.468994140625"
                     opacity="0.4"
                     rx="11.282"
@@ -197,7 +197,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="74.603"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="74.60250091552734 167.468994140625"
                     rx="11.282"
                     style={{
@@ -222,7 +222,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="158.93569946289062 297.50469970703125"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -232,7 +232,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "3.22074s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="174.285" cy="312.855" r="11.675"></circle>
                         <circle
                             cx="174.286"
@@ -245,7 +245,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="174.286"
                         cy="312.856"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.842"
                     ></circle>
                 </g>
@@ -254,7 +254,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="-48.201"
                     y="301.574"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48.20069885253906 301.5740051269531"
                     rx="11.282"
                     style={{
@@ -268,7 +268,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="74.603"
                     y="301.574"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="74.60250091552734 301.5740051269531"
                     opacity="0.4"
                     rx="11.282"
@@ -283,7 +283,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-48"
                     y="346"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48 346"
                     opacity="0.4"
                     rx="11.5"
@@ -294,7 +294,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="298.75469970703125 118.70069885253906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -304,7 +304,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "0.602129s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="314.104" cy="134.051" r="11.675"></circle>
                         <circle
                             cx="314.105"
@@ -317,12 +317,12 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="314.105"
                         cy="134.052"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.796"
                     ></circle>
                 </g>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="331.3046875 118.70069885253906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -332,7 +332,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.6422s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="346.654" cy="134.051" r="11.675"></circle>
                         <circle
                             cx="346.655"
@@ -345,7 +345,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="346.654"
                         cy="134.052"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.597"
                     ></circle>
                 </g>
@@ -368,7 +368,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="126.017"
                     y="122.769"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="126.01699829101562 122.76899719238281"
                     rx="11.282"
                     style={{
@@ -382,7 +382,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="207.762"
                     y="122.769"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="207.76199340820312 122.76899719238281"
                     rx="11.282"
                     style={{
@@ -392,7 +392,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="298.752685546875 252.80470275878906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -402,7 +402,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "3.1737s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-36)">
+                    <g className="hero-background-g" filter="url(#filter0_f-36)">
                         <circle cx="314.103" cy="268.154" r="11.675"></circle>
                         <circle
                             cx="314.103"
@@ -415,7 +415,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="314.103"
                         cy="268.155"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.852"
                     ></circle>
                 </g>
@@ -439,7 +439,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="126.017"
                     y="256.873"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="126.01699829101562 256.87298583984375"
                     rx="11.282"
                     style={{
@@ -453,7 +453,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="207.762"
                     y="256.873"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="207.76199340820312 256.87298583984375"
                     rx="11.282"
                     style={{
@@ -482,7 +482,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="64.615"
                     y="212.171"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="64.61470031738281 212.17100524902344"
                     opacity="0.4"
                     rx="11.282"
@@ -497,7 +497,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="146.361"
                     y="212.171"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="146.36099243164062 212.17100524902344"
                     rx="11.282"
                     style={{
@@ -511,7 +511,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-45"
                     y="37"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 37"
                     opacity="0.4"
                     rx="11.5"
@@ -525,7 +525,7 @@ const SvgHeroBackgroundRight = (props) => {
                     width="81"
                     height="23"
                     x="-45"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 0"
                     opacity="0.4"
                     rx="11.5"
@@ -630,7 +630,7 @@ const SvgHeroBackgroundRight = (props) => {
                 width="412"
                 height="408"
                 fill="none"
-                className="injected-svg cursor_hover"
+                className="injected-svg"
                 data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >
@@ -639,7 +639,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-45"
                     y="385"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 385"
                     opacity="0.4"
                     rx="11.5"
@@ -665,7 +665,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="89.02769470214844 74"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -675,7 +675,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.14492s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="104.378" cy="89.35" r="11.675"></circle>
                         <circle cx="104.378" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
@@ -683,12 +683,12 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="104.378"
                         cy="89.349"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.762"
                     ></circle>
                 </g>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="124.16770935058594 74"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -698,7 +698,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "0.61185s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="139.517" cy="89.35" r="11.675"></circle>
                         <circle cx="139.518" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
@@ -706,7 +706,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="139.518"
                         cy="89.349"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.749"
                     ></circle>
                 </g>
@@ -740,7 +740,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="158.93569946289062 163.40170288085938"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -750,7 +750,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "3.47701s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="174.285" cy="178.752" r="11.675"></circle>
                         <circle
                             cx="174.286"
@@ -763,7 +763,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="174.286"
                         cy="178.751"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.581"
                     ></circle>
                 </g>
@@ -772,7 +772,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="-48.201"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48.20069885253906 167.468994140625"
                     opacity="0.4"
                     rx="11.282"
@@ -787,7 +787,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="298.015"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="298.0150146484375 167.468994140625"
                     opacity="0.4"
                     rx="11.282"
@@ -802,7 +802,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="74.603"
                     y="167.469"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="74.60250091552734 167.468994140625"
                     rx="11.282"
                     style={{
@@ -827,7 +827,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="158.93569946289062 297.50469970703125"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -837,7 +837,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.16572s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="174.285" cy="312.855" r="11.675"></circle>
                         <circle
                             cx="174.286"
@@ -850,7 +850,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="174.286"
                         cy="312.856"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.583"
                     ></circle>
                 </g>
@@ -859,7 +859,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="-48.201"
                     y="301.574"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48.20069885253906 301.5740051269531"
                     rx="11.282"
                     style={{
@@ -873,7 +873,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="74.603"
                     y="301.574"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="74.60250091552734 301.5740051269531"
                     opacity="0.4"
                     rx="11.282"
@@ -888,7 +888,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-48"
                     y="346"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-48 346"
                     opacity="0.4"
                     rx="11.5"
@@ -899,7 +899,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="298.75469970703125 118.70069885253906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -909,7 +909,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.21431s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="314.104" cy="134.051" r="11.675"></circle>
                         <circle
                             cx="314.105"
@@ -922,12 +922,12 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="314.105"
                         cy="134.052"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.737"
                     ></circle>
                 </g>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="331.3046875 118.70069885253906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -937,7 +937,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "1.59543s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="346.654" cy="134.051" r="11.675"></circle>
                         <circle
                             cx="346.655"
@@ -950,7 +950,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="346.654"
                         cy="134.052"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.621"
                     ></circle>
                 </g>
@@ -973,7 +973,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="126.017"
                     y="122.769"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="126.01699829101562 122.76899719238281"
                     rx="11.282"
                     style={{
@@ -987,7 +987,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="207.762"
                     y="122.769"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="207.76199340820312 122.76899719238281"
                     rx="11.282"
                     style={{
@@ -997,7 +997,7 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <g
-                    className="circle cursor_hover"
+                    className="circle"
                     data-svg-origin="298.752685546875 252.80470275878906"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -1007,7 +1007,7 @@ const SvgHeroBackgroundRight = (props) => {
                         AnimationDelay: "3.07511s",
                     }}
                 >
-                    <g fill="#fff" filter="url(#filter0_f-28)">
+                    <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="314.103" cy="268.154" r="11.675"></circle>
                         <circle
                             cx="314.103"
@@ -1020,7 +1020,7 @@ const SvgHeroBackgroundRight = (props) => {
                         cx="314.103"
                         cy="268.155"
                         r="11.675"
-                        fill="#F3FFFD"
+                        className="hero-background-g-circle"
                         opacity="0.682"
                     ></circle>
                 </g>
@@ -1044,7 +1044,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="126.017"
                     y="256.873"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="126.01699829101562 256.87298583984375"
                     rx="11.282"
                     style={{
@@ -1058,7 +1058,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="207.762"
                     y="256.873"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="207.76199340820312 256.87298583984375"
                     rx="11.282"
                     style={{
@@ -1087,7 +1087,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="64.615"
                     y="212.171"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="64.61470031738281 212.17100524902344"
                     opacity="0.4"
                     rx="11.282"
@@ -1102,7 +1102,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="22.563"
                     x="146.361"
                     y="212.171"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="146.36099243164062 212.17100524902344"
                     rx="11.282"
                     style={{
@@ -1116,7 +1116,7 @@ const SvgHeroBackgroundRight = (props) => {
                     height="23"
                     x="-45"
                     y="37"
-                    fill="#3E514D"
+                    className="hero-background-rect"
                     data-svg-origin="-45 37"
                     opacity="0.4"
                     rx="11.5"

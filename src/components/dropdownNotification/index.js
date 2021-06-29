@@ -4,13 +4,36 @@ import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Badge } from '@material-ui/core';
 import NotificationComponent from '../notification';
+import {setMenuNotification } from '../../reducers/notification'
+import { useDispatch } from 'react-redux';
 
 function NotificationDropdown(props) {
     const [open, setOpen] = useState(false);
+    const dispatch = useDispatch();
+
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                  setOpen(false);
+                  dispatch(setMenuNotification("false"));
+                }
+            }
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+              // Unbind the event listener on clean up
+              document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);
+
     return (
         <>
             <Navbar >
-                <div className="dropdown-notification cursor_hover" >
+                <div className="dropdown-notification cursor_hover" ref={wrapperRef} >
                 <NavItem  dropdown={true} icon={
                     <Badge badgeContent={1} color="secondary">
                         <BellIcon />
@@ -34,7 +57,10 @@ function NotificationDropdown(props) {
     function NavItem(props) {
         return (
             <li className="nav-item">
-                <span className="icon-button" onClick={() => props.dropdown && setOpen(!open)}>
+                <span className="icon-button" onClick={() => {
+                    props.dropdown && setOpen(!open);
+                    props.dropdown && dispatch(setMenuNotification(open ? "false" : "true"));
+                }}>
                     {props.icon}
                 </span>
 

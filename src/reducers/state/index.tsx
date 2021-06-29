@@ -34,11 +34,10 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { setTheme, setLanguage, setPage } = counterSlice.actions
+export const { setTheme, setLanguage, setPage } = counterSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectedPage = (state: RootState) => state.pageState.page
-export const selectedTheme = (state: RootState) => state.pageState.theme
-export const selectedLanguage = (state: RootState) => state.pageState.language
-
-export default counterSlice.reducer
+export const selectedPage = (state: RootState) => state.pageState.page;
+export const selectedTheme = (state: RootState) => state.pageState.theme;
+export const selectedLanguage = (state: RootState) => state.pageState.language;
+export const counterReducer = counterSlice.reducer;

@@ -87,6 +87,20 @@ export const RevealImage: any = styled.div`
         }
     }
 `;
+
+export const RevealDiv: any = styled.div`
+    background-color: transparent;
+    transform: translateX(-100%);
+    overflow: hidden;
+    transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    &.is-inview {
+        transform: translateX(0);
+
+        div {
+            transform: translateX(0) scale(1);
+        }
+    }
+`;
 interface ImageProps {
     projectscontent: any;
 }

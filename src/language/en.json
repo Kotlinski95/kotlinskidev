@@ -617,6 +617,9 @@
                     "link_label": "More about the Mechatronics technician major in ZS6"
                 }
             }
+        },
+        "cv": {
+            "link": "CV / Overview"
         }
     }
 }

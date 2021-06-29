@@ -1,9 +1,12 @@
 
+
 import './index.scss';
+import {ComponentRevealShow} from '../contentReveal';
 
 const SvgHeroBackground = (props) => {
     return (
-        <div className="hero-background">
+        <ComponentRevealShow data-scroll delay="1s">
+        <div className="hero-background" data-scroll>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -220,6 +223,7 @@ const SvgHeroBackground = (props) => {
                 </g>
             </svg>
         </div>
+        </ComponentRevealShow>
     );
 };
 

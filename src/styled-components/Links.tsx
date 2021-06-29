@@ -52,7 +52,6 @@ const showLineOnHover:any = css<showLineOnHoverProps>`
         left: 0;
         width: 0;
         height: 1px;
-        background-color: ${secondaryColor};
         transition: width .8s cubic-bezier(0.77, 0, 0.175, 1);
         mix-blend-mode: difference;
     }
@@ -129,9 +128,8 @@ export const StyledNavLink = styled(NavLink)<StyledNavLinkProps>`
     text-transform: uppercase;
     font-size: 1.6rem;
     font-size: clamp(1.6rem, 3vw, 2.5rem);
-    font-weight: 300;
+    font-weight: 500;
     font-family: ${secondaryFont};
-    color: ${primaryColor};
     letter-spacing: 3px;
     display: inline-block;
     padding: clamp(12px, 1vw, 40px);
