@@ -74,7 +74,8 @@
                 "about": "O mnie",
                 "projects": "Projekty",
                 "stack": "Technologie",
-                "services": "Usługi"
+                "services": "Usługi",
+                "profile": "Profile"
             }
         },
         "privacy": {
@@ -344,7 +345,12 @@
             "phone": "+48 608 418 911"
         },
         "stack":{
-            "front_header": "Umiejętności Front-end developera"
+            "front_header": "Umiejętności Front-end developera",
+            "automation": "Automatyka",
+            "web": "Web development",
+            "stack": "Zobacz moje umiejętności",
+            "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
+            "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów."
         },
         "projects":{
             "header": "Projekty",

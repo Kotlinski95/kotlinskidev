@@ -74,7 +74,8 @@
                 "about": "About me",
                 "projects": "Projects",
                 "stack": "Stack",
-                "services": "Services"
+                "services": "Services",
+                "profile": "Profile"
             }
         },
         "privacy": {
@@ -344,7 +345,12 @@
             "phone": "+48 608 418 911"
         },
         "stack":{
-            "front_header": "Front-end developer stack"
+            "front_header": "Front-end developer stack",
+            "automation": "Automation",
+            "web": "Web development",
+            "stack": "See my technology stack",
+            "automation_text": "I have always been fascinated by modern technology, artificial intelligence, electronics and programming. I try to combine my interests and develop in these technologies.",
+            "web_text": "I'm currently developing in the field of web technologies and I'm trying to improve my skills in this area by implementing my own projects"
         },
         "projects":{
             "header": "Projects",
