@@ -69,7 +69,7 @@ export const lightTheme = {
     color: '#f1f1f2'
   },
   myProfile:{
-    backgroundGradient: 'linear-gradient(to top, #f1f1f2 30% , #9c98cd)',
+    backgroundGradient: 'transparent',
     backgroundCategory: '#f1f1f2',
     backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
     categorySelected: '#e9d5e5',
@@ -162,7 +162,7 @@ export const darkTheme = {
     color: '#f1f1f2'
   },
   myProfile:{
-    backgroundGradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
+    backgroundGradient: 'transparent',
     backgroundCategory: '#252526',
     backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
     categorySelected: '#2e2d2d',

@@ -1,0 +1,30 @@
+.carousel{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel__back-button,
+.carousel__next-button{
+    position: absolute;
+    bottom: 0;
+}
+
+.carousel__back-button{
+    left: 0;
+}
+
+.carousel__next-button{
+    right: 0;
+}
+
+.carousel__dot-group {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}

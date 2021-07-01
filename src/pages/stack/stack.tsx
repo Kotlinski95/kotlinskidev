@@ -22,12 +22,12 @@ const StackPage = (props) => {
           <div className="stack-main__text-left">
             <h2>{language.pages.stack.automation}</h2>
             <p>{language.pages.stack.automation_text}</p>
-            <button className="btn cursor_hover"><Link to="/stack/automation-engineer">{language.pages.stack.stack}</Link></button>
+            <Link to="/stack/automation-engineer"><button className="btn cursor_hover">{language.pages.stack.stack}</button></Link>
           </div>
           <div className="stack-main__text-right">
             <h2><span>&lt;</span> {language.pages.stack.web} <span>&gt;</span></h2>
             <p>{language.pages.stack.web_text}</p>
-            <button className="btn cursor_hover"><Link to="/stack/front-end-developer">{language.pages.stack.stack}</Link></button>
+            <Link to="/stack/front-end-developer"><button className="btn cursor_hover">{language.pages.stack.stack}</button></Link>
           </div>
           <div className="stack-main__wrapper">
             <div className="stack-main__left">

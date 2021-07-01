@@ -75,7 +75,7 @@
                 "projects": "Projekty",
                 "stack": "Technologie",
                 "services": "Usługi",
-                "profile": "Profile"
+                "profile": "Profil"
             }
         },
         "privacy": {
@@ -346,6 +346,7 @@
         },
         "stack":{
             "front_header": "Umiejętności Front-end developera",
+            "automation_header": "Umiejętności Automatyka",
             "automation": "Automatyka",
             "web": "Web development",
             "stack": "Zobacz moje umiejętności",

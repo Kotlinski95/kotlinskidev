@@ -1,9 +1,9 @@
-import TypedText from '../../components/typedText'
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
+import ServiceCarousel from '../../components/serviceCarousel'
 
 const ServicesPage = (props) => {
   const dispatch = useDispatch();
@@ -15,9 +15,9 @@ const ServicesPage = (props) => {
     <>
       <PageTransitioning />
       <div data-scroll-section>
-        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+        <div className="main-inner" style={{position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
-          <TypedText />
+          <ServiceCarousel />
         </div>
         <Footer />
       </div>

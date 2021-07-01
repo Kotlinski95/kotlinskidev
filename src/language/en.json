@@ -346,6 +346,7 @@
         },
         "stack":{
             "front_header": "Front-end developer stack",
+            "automation_header": "Automation Engineer stack",
             "automation": "Automation",
             "web": "Web development",
             "stack": "See my technology stack",

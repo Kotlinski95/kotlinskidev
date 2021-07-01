@@ -1,9 +1,9 @@
-import TypedText from '../../components/typedText'
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
+import StackAutomation from '../../components/stackAutomation'
 
 const AutomationEngineerPage = (props) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const AutomationEngineerPage = (props) => {
       <div data-scroll-section>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
-          <TypedText />
+          <StackAutomation />
         </div>
         <Footer />
       </div>

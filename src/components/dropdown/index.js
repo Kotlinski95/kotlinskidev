@@ -32,6 +32,7 @@ function DropdownMulti(props) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
+  const iconArrow = document.querySelectorAll('.dropdown-menu .navItem-icon')[0];
   if (cookies.language) {
     dispatch(setLanguage(cookies.language));
   }
@@ -88,7 +89,7 @@ useOutsideAlerter(wrapperRef);
           props.dropdown && setOpen(!open);
           props.dropdown && dispatch(setMenu(open ? "false" : "true"));
           }}>
-          <span className="navItem-icon">{props.icon}</span>
+          <span className={`navItem-icon ${open ? 'rotate' : '' }`}>{props.icon}</span>
         </span>
 
         {open && props.children}
