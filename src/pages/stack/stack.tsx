@@ -6,6 +6,7 @@ import PageTransitioning from '../../components/pageTransitioning/index'
 import FaceLeft from '../../assets/stack/faceLeft.png'
 import FaceRight from '../../assets/stack/faceRight.png'
 import { Link } from 'react-router-dom';
+import Button from '../../components/button'
 
 const StackPage = (props) => {
   const dispatch = useDispatch();
@@ -22,12 +23,12 @@ const StackPage = (props) => {
           <div className="stack-main__text-left">
             <h2>{language.pages.stack.automation}</h2>
             <p>{language.pages.stack.automation_text}</p>
-            <Link to="/stack/automation-engineer"><button className="btn cursor_hover">{language.pages.stack.stack}</button></Link>
+            <Button text={language.pages.stack.stack} link="/stack/automation-engineer" />
           </div>
           <div className="stack-main__text-right">
             <h2><span>&lt;</span> {language.pages.stack.web} <span>&gt;</span></h2>
             <p>{language.pages.stack.web_text}</p>
-            <Link to="/stack/front-end-developer"><button className="btn cursor_hover">{language.pages.stack.stack}</button></Link>
+            <Button text={language.pages.stack.stack} link="/stack/front-end-developer" />
           </div>
           <div className="stack-main__wrapper">
             <div className="stack-main__left">
