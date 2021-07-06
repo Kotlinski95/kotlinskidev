@@ -7,17 +7,21 @@ import ServiceSlide from '../serviceSlide';
 
 
 const ServiceCarousel = (props) => {
+  const isMobile = _store.getState().pageState.mobile;
     return (
         <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={125}
-        totalSlides={6}
+        totalSlides={props.slides}
+        visibleSlides={ isMobile ? 1: props.visibleSlides }
       >
         <Slider>
         {
+
           props.data.map((element,index) => {
+            const image = isMobile ? element.imageMobile : element.image;
             return(
-              <ServiceSlide key={index} index={index} src={element.image} header={element.header} text={element.text}></ServiceSlide>
+              <ServiceSlide key={index} index={index} buttonText={element.buttonText} link={element.link} src={image} header={element.header} text={element.text}></ServiceSlide>
             );
           })
         }

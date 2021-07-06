@@ -33,13 +33,10 @@ function DropdownMulti(props) {
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
   const iconArrow = document.querySelectorAll('.dropdown-menu .navItem-icon')[0];
-  if (cookies.language) {
-    dispatch(setLanguage(cookies.language));
-  }
-  else {
+  if (!cookies.language) {
     setCookie('language', "Polski", { path: '/' });
-    dispatch(setLanguage(cookies.language));
   }
+  dispatch(setLanguage(cookies.language));
 
   function useOutsideAlerter(ref) {
     useEffect(() => {

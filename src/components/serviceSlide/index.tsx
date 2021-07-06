@@ -10,7 +10,7 @@ const ServiceSlide = (props) => {
                 <div className="service-slide-content">
                     <h2>{props.header}</h2>
                     <p>{props.text}</p>
-                    <Button text="wiecej" />
+                    <Button link={props.link} text={props.buttonText} />
                 </div>
             </div>
           </Slide>

@@ -50,6 +50,7 @@ import React, { useEffect, useState } from 'react'
 import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
+import { setMobile } from './reducers/state'
 declare global {
   var _theme: ThemeType;
 }
@@ -64,12 +65,13 @@ function App() {
 
   ReactPixel.pageView();
   Language();
-  const dispatch = useDispatch();
   const actualTheme = useSelector(selectedTheme);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [isReady, setIsReady] = useState(false);
   const location = useLocation();
+  const dispatch = useDispatch();
+  isMobile ? dispatch(setMobile(true)) : dispatch(setMobile(false));
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -98,8 +100,6 @@ function App() {
   const HandleMouseoverEffects = () => {
     useEffect(() => {
       window.addEventListener('resize', isMobileTest);
-      console.log("IS MOBILE: ", isMobile);
-
       document.querySelectorAll(".cursor_hover").forEach(el => {
         el.addEventListener("mouseover", () => IsHovered(true));
         el.addEventListener("mouseout", () => IsHovered(false));
