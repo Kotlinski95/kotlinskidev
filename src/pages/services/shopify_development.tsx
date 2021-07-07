@@ -24,26 +24,26 @@ const ShopifyDevelopmentPage = (props) => {
     {
       image: shopify,
       imageMobile: shopify_mobile,
-      header: "SPA / Apliakcje i sklepy internetowe",
-      text: "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript",
-      link: "/services/shopify",
-      buttonText: "Więcej"
+      header: language.pages.services.shopify.inner.header1,
+      text: language.pages.services.shopify.inner.text1,
+      link: language.pages.services.shopify.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: shopify_tablet,
       imageMobile: shopify_tablet_mobile,
-      header: "Dostosowanie do różnych przeglądarek i urządzeń",
-      text: "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-      link: "/services/shopify",
-      buttonText: "Więcej"
+      header: language.pages.services.shopify.inner.header2,
+      text: language.pages.services.shopify.inner.text2,
+      link: language.pages.services.shopify.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: shopify_rwd,
       imageMobile: shopify_rwd_mobile,
-      header: "Kodowanie PSD do HTML/CSS/JS",
-      text: "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
-      link: "/services/shopify",
-      buttonText: "Więcej"
+      header: language.pages.services.shopify.inner.header3,
+      text: language.pages.services.shopify.inner.text3,
+      link: language.pages.services.shopify.link,
+      buttonText: language.pages.services.buttonText
     }
   ]
   return (

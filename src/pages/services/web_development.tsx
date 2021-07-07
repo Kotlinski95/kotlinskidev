@@ -31,38 +31,50 @@ const WebDevelopmentPage = (props) => {
     {
       image: programming,
       imageMobile: programming_mobile,
-      header: "SPA / Apliakcje i sklepy internetowe",
-      text: "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript"
+      header: language.pages.services.web.inner.header1,
+      text: language.pages.services.web.inner.text1,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: rwd,
       imageMobile: rwd_mobile,
-      header: "Dostosowanie do różnych przeglądarek i urządzeń",
-      text: "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design)."
+      header: language.pages.services.web.inner.header2,
+      text: language.pages.services.web.inner.text2,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: spa,
       imageMobile: spa_mobile,
-      header: "Kodowanie PSD do HTML/CSS/JS",
-      text: "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych."
+      header: language.pages.services.web.inner.header3,
+      text: language.pages.services.web.inner.text3,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: cleancode,
       imageMobile: cleancode_mobile,
-      header: "Czysty kod",
-      text: "Czytelność kodu nadal traktowana jest jako coś mało istotnego, jednak nieczytelny kod znacznie wydłua czas potrzebny do napisania czegokolwiek i może prowadzić do nieprzewidywanych błędów w aplikacjach."
+      header: language.pages.services.web.inner.header4,
+      text: language.pages.services.web.inner.text4,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: administration,
       imageMobile: administration_mobile,
-      header: "Administracja stron internetowych",
-      text: "Wdrożenie i utrzymanie strony/aplikacji internetowej w tym okresowe raporty z testów automatycznych i manualnych wybranych funkcjonalności."
+      header: language.pages.services.web.inner.header5,
+      text: language.pages.services.web.inner.text5,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: javascript,
       imageMobile: javascript_mobile,
-      header: "JavaScript / TypeScript",
-      text: "Jako web developer pracuję z językiem JavaScript/TypeScript, aby rozszerzyć zakres oferowanych usług mogę podjąć się dowonlego projektu korzystającego z tych technologii. "
+      header: language.pages.services.web.inner.header6,
+      text: language.pages.services.web.inner.text6,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
   ]
   return (

@@ -19,26 +19,26 @@ const ServicesPage = (props) => {
     {
       image: programming_mobile,
       imageMobile: programming_mobile,
-      header: "E-commerce Shopify",
-      text: "Tworzenie sklepów internetowych z użyciem Shopify",
-      link: "/services/shopify",
-      buttonText: "Więcej"
+      header: language.pages.services.web.header,
+      text: language.pages.services.web.text,
+      link: language.pages.services.web.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: rwd_mobile,
       imageMobile: rwd_mobile,
-      header: "Web development",
-      text: "Tworzenie aplikacji web i stron www",
-      link: "/services/web-development",
-      buttonText: "Więcej"
+      header: language.pages.services.shopify.header,
+      text: language.pages.services.shopify.text,
+      link: language.pages.services.shopify.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: administration_mobile,
       imageMobile: administration_mobile,
-      header: "PLC",
-      text: "Programowanie sterowników przemysłowych",
-      link: "/services/PLC",
-      buttonText: "Więcej"
+      header: language.pages.services.plc.header,
+      text: language.pages.services.plc.text,
+      link: language.pages.services.plc.link,
+      buttonText: language.pages.services.buttonText
     }
   ]
   return (

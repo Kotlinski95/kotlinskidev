@@ -25,26 +25,26 @@ const PlcProgrammingPage = (props) => {
     {
       image: plc,
       imageMobile: plc_mobile,
-      header: "SPA / Apliakcje i sklepy internetowe",
-      text: "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript",
-      link: "/services/PLC",
-      buttonText: "Więcej"
+      header: language.pages.services.plc.inner.header1,
+      text: language.pages.services.plc.inner.text1,
+      link: language.pages.services.plc.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: industry,
       imageMobile: industry_mobile,
-      header: "Dostosowanie do różnych przeglądarek i urządzeń",
-      text: "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-      link: "/services/PLC",
-      buttonText: "Więcej"
+      header: language.pages.services.plc.inner.header2,
+      text: language.pages.services.plc.inner.text2,
+      link: language.pages.services.plc.link,
+      buttonText: language.pages.services.buttonText
     },
     {
       image: smart_home,
       imageMobile: smart_home_mobile,
-      header: "Kodowanie PSD do HTML/CSS/JS",
-      text: "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
-      link: "/services/PLC",
-      buttonText: "Więcej"
+      header: language.pages.services.plc.inner.header3,
+      text: language.pages.services.plc.inner.text3,
+      link: language.pages.services.plc.link,
+      buttonText: language.pages.services.buttonText
     }
   ]
   return (
