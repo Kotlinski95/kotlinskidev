@@ -117,7 +117,7 @@ export const darkTheme = {
   },
   typedText: {
     color: '#D0E2F2',
-    colorHover: '#444446',
+    colorHover: '#fff',
   },
   footer: {
     linkColor: '#D0E2F2',

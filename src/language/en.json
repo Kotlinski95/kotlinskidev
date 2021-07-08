@@ -635,31 +635,31 @@
                 "text": "Creating web applications",
                 "link": "/services/web-development",
                 "inner": {
-                    "header1": "SPA / Apliakcje i sklepy internetowe",
-                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript",
-                    "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
-                    "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-                    "header3": "Kodowanie PSD do HTML/CSS/JS",
-                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
-                    "header4": "Czysty kod",
-                    "text4": "Czytelność kodu nadal traktowana jest jako coś mało istotnego, jednak nieczytelny kod znacznie wydłua czas potrzebny do napisania czegokolwiek i może prowadzić do nieprzewidywanych błędów w aplikacjach.",
-                    "header5": "Administracja stron internetowych",
-                    "text5": "Wdrożenie i utrzymanie strony/aplikacji internetowej w tym okresowe raporty z testów automatycznych i manualnych wybranych funkcjonalności.",
+                    "header1": "SPA / Apps and online stores",
+                    "text1": "Creating the entire client layer of a web application or selected components based on the ReactJS library, HTML5, CSS3, ES6 / TypeScript.",
+                    "header2": "Adaptation to different browsers and devices",
+                    "text2": "Adapting the website to selected browsers and mobile devices, taking into account different resolutions (the so-called Responsive Web Design).",
+                    "header3": "Coding PSD to HTML / CSS / JS",
+                    "text3": "Cutting and coding to HTML5, CSS3 and JavaScript provided graphic design of a website, web applications and others.",
+                    "header4": "Clean code",
+                    "text4": "The readability of the code is still considered a trivial matter, but unreadable code significantly increases the time it takes to write anything and can lead to unforeseen errors in your applications.",
+                    "header5": "Website administration",
+                    "text5": "Implementation and maintenance of the website / web application, including periodic reports on automatic and manual tests of selected functionalities.",
                     "header6": "JavaScript / TypeScript",
-                    "text6": "Jako web developer pracuję z językiem JavaScript/TypeScript, aby rozszerzyć zakres oferowanych usług mogę podjąć się dowonlego projektu korzystającego z tych technologii. "
+                    "text6": "As a web developer, I work with JavaScript / TypeScript, in order to extend the range of services offered, I can undertake any project using these technologies."
                 }
             },
             "shopify": {
                 "header": "E-commerce Shopify",
-                "text": "Tworzenie sklepów internetowych z użyciem Shopify",
+                "text": "Create online stores using Shopify",
                 "link": "/services/shopify",
                 "inner": {
-                    "header1": "SPA / Apliakcje i sklepy internetowe",
-                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript",
-                    "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
-                    "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-                    "header3": "Kodowanie PSD do HTML/CSS/JS",
-                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych."
+                    "header1": "Create unique store templates",
+                    "text1": "Each store should stand out from the rest. I will make personalized templates tailored to the client so that the user-experience effect is at the highest level.",
+                    "header2": "Store optimization",
+                    "text2": "I make sure that the template meets all SEO requirements and that the store runs smoothly and quickly.",
+                    "header3": "Shopping on any device",
+                    "text3": "Currently, more and more users use mobile devices when shopping. I take care of the proper functioning of the store also on all mobile devices."
                 }
             },
             "plc": {
@@ -667,12 +667,14 @@
                 "text": "Programowanie sterowników przemysłowych",
                 "link": "/services/PLC",
                 "inner": {
-                    "header1": "SPA / Apliakcje i sklepy internetowe",
-                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o framework ReactJS, HTML5,CSS3, ES6/TypeScript",
-                    "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
-                    "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-                    "header3": "Kodowanie PSD do HTML/CSS/JS",
-                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych."
+                    "inner": {
+                        "header1": "PLC programming",
+                        "text1": "I have several years of experience in programming industrial controllers from Siemens, Bernecker & Rainer and Mitsubishi.",
+                        "header2": "Commissioning of automation objects",
+                        "text2": "I have worked on commissioning in several automotive factories in Poland and in Niemczec. I am familiar with process technology, drive control and visualization.",
+                        "header3": "Smart Home Applications",
+                        "text3": "I'm a fan of DIY and electrics, I will be happy to take on the challenges of creating Smart Home Applications (due to the possibility of creating smart applications in JavaScript, I will be happy to develop my skills in this area)."
+                    }
                 }
             }
         }

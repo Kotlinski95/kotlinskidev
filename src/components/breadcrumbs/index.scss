@@ -4,7 +4,11 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    background-color: transparent;
     li:hover{
         text-decoration: underline;
+    }
+    .line-item{
+        mix-blend-mode: difference;
     }
 }

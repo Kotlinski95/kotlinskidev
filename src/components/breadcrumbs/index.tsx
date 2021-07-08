@@ -17,18 +17,16 @@ const Breadcrumbs = () => {
             {
                 locations.map((value, index) => {
                     if (index > 0 && locations.length > 1){
-                        const last = index === locations.length - 1;
                         let to = `/${locations.slice(1, index + 1).join('/')}`;
                         return(
                             <>
-                            <NavigateNextIcon /><Link to={to}><li className="line-item"> {value}</li></Link>
+                            <NavigateNextIcon /><Link to={to}><li className="line-item cursor_hover"> {value}</li></Link>
                             </>
                         )
                     }
                     else{
-                        let to = `/`;
                         return(
-                            <Link to="/"><li className="line-item">{value}</li></Link>
+                            <Link to="/"><li className="line-item cursor_hover">{value}</li></Link>
                         )
                     }
                 })

@@ -68,6 +68,7 @@
 }
 
 .carousel__back-button{
+    animation: arrowAnimationBack 1.5s 1s infinite;
     &:after {
         margin-left: -9px;
         margin-top: -15px;
@@ -83,6 +84,7 @@
       }
 }
 .carousel__next-button{
+    animation: arrowAnimationNext 1.5s 1s infinite;
     &:after {
         margin-left: -19px;
         margin-top: -14px;
@@ -116,4 +118,16 @@
         background-color: rgba(130, 127, 127,0.6);
         border-color: rgba(130, 127, 127,0.6);
     }
+}
+
+@keyframes arrowAnimationNext {
+    0%   {transform:  translateX(0px);}
+    50%  {transform:  translateX(5px);}
+    100% {transform:  translateX(0px);}
+}
+
+@keyframes arrowAnimationBack {
+    0%   {transform:  translateX(0px);}
+    50%  {transform:  translateX(-5px);}
+    100% {transform:  translateX(0px);}
 }
