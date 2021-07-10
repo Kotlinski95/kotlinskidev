@@ -22,7 +22,12 @@ const ServicesPage = (props) => {
       header: language.pages.services.web.header,
       text: language.pages.services.web.text,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: rwd_mobile,
@@ -30,7 +35,12 @@ const ServicesPage = (props) => {
       header: language.pages.services.shopify.header,
       text: language.pages.services.shopify.text,
       link: language.pages.services.shopify.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: administration_mobile,
@@ -38,14 +48,19 @@ const ServicesPage = (props) => {
       header: language.pages.services.plc.header,
       text: language.pages.services.plc.text,
       link: language.pages.services.plc.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     }
   ]
   return (
     <>
       <PageTransitioning />
       <div data-scroll-section>
-        <div className="main-inner" style={{position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+        <div className="main-inner main-services" style={{position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <ServiceCarousel slides={Object.keys(data).length} visibleSlides={3} data={data}/>
         </div>

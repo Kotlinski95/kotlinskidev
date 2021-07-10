@@ -28,7 +28,12 @@ const PlcProgrammingPage = (props) => {
       header: language.pages.services.plc.inner.header1,
       text: language.pages.services.plc.inner.text1,
       link: language.pages.services.plc.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: industry,
@@ -36,7 +41,12 @@ const PlcProgrammingPage = (props) => {
       header: language.pages.services.plc.inner.header2,
       text: language.pages.services.plc.inner.text2,
       link: language.pages.services.plc.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: smart_home,
@@ -44,7 +54,12 @@ const PlcProgrammingPage = (props) => {
       header: language.pages.services.plc.inner.header3,
       text: language.pages.services.plc.inner.text3,
       link: language.pages.services.plc.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     }
   ]
   return (

@@ -12,6 +12,10 @@ body {
   font-family: 'Proza Libre', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  *:focus-visible{
+    outline-style: none;
+  }
 }
 
 code {
@@ -23,7 +27,7 @@ h2,
 h3,
 h4,
 h5,
-h6  {
+h6 {
   font-family: 'Proza Libre', sans-serif;
 }
 
@@ -39,7 +43,8 @@ a {
 
 p a {
   font-family: 'Proza Libre', sans-serif;
-  text-decoration: none;;
+  text-decoration: none;
+  ;
 }
 
 ul {
@@ -61,5 +66,3 @@ p.small {
   line-height: 1.4;
   font-size: 1.2rem;
 }
-
-

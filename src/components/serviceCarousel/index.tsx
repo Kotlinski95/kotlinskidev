@@ -21,7 +21,7 @@ const ServiceCarousel = (props) => {
           props.data.map((element,index) => {
             const image = isMobile ? element.imageMobile : element.image;
             return(
-              <ServiceSlide key={index} index={index} buttonText={element.buttonText} link={element.link} src={image} header={element.header} text={element.text}></ServiceSlide>
+              <ServiceSlide key={index} index={index} buttonText={element.buttonText} link={element.link} src={image} header={element.header} text={element.text} popup={element.popup}></ServiceSlide>
             );
           })
         }

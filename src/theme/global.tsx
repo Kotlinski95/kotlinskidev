@@ -13,6 +13,19 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
   }
 
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active
+  {
+   -webkit-box-shadow: ${({ theme }) => theme.contact.webkit};
+  }
+
+  input:-webkit-autofill
+  {
+  -webkit-text-fill-color: ${({ theme }) => theme.contact.inputColor};
+  }
+
   a {
     color: ${({ theme }) => theme.nav.linkColor};
   }
@@ -289,6 +302,10 @@ textarea::placeholder{
 .cv-link::before,
 .cv-link:hover::before{
   background-color: ${({ theme }) => theme.text};
+}
+// ================= Services ===================
+.main-services{
+  background: ${({ theme }) => theme.services.background};
 }
 
 `;

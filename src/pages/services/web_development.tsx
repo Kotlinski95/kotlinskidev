@@ -1,4 +1,3 @@
-import TypedText from '../../components/typedText'
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../../components/breadcrumbs'
@@ -34,7 +33,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header1,
       text: language.pages.services.web.inner.text1,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: rwd,
@@ -42,7 +46,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header2,
       text: language.pages.services.web.inner.text2,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: spa,
@@ -50,7 +59,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header3,
       text: language.pages.services.web.inner.text3,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: cleancode,
@@ -58,7 +72,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header4,
       text: language.pages.services.web.inner.text4,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: administration,
@@ -66,7 +85,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header5,
       text: language.pages.services.web.inner.text5,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: javascript,
@@ -74,7 +98,12 @@ const WebDevelopmentPage = (props) => {
       header: language.pages.services.web.inner.header6,
       text: language.pages.services.web.inner.text6,
       link: language.pages.services.web.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
   ]
   return (

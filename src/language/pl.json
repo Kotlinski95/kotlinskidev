@@ -629,6 +629,11 @@
         },
         "services": {
             "buttonText" : "Więcej",
+            "popup": {
+                "title": "Informacja!",
+                "text": "Obecnie pracuję nad opisem pakietów usług. Jeśli jeszcze nie skończyłem śmiało napisz do mnie lub zadzwoń aby dowiedzieć się więcej.",
+                "buttonText": "Rozumiem"
+            },
             "web": {
                 "header": "Web development",
                 "text": "Tworzenie aplikacji web i stron www",

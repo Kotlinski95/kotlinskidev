@@ -59,7 +59,8 @@ export const lightTheme = {
     inputColor: '#08100e',
     buttonHover: '#060505',
     buttonHoverColor: '#ededed',
-    placeholderColor: '#6d6d6d'
+    placeholderColor: '#6d6d6d',
+    webkit: '0 0 0 30px rgba(255,255,255,0.6) inset !important;'
   },
   stack: {
     borderColor: '#1c5344',
@@ -91,6 +92,9 @@ export const lightTheme = {
     rect: "#5fa596",
     g: "#a0f8eb",
     g_circle: "#a0f8eb",
+  },
+  services: {
+    background : 'linear-gradient(180deg,#edfaf7 18.97%,#8fe6cf)'
   }
 }
 
@@ -98,7 +102,7 @@ export const darkTheme = {
   body: '#1a4137',
   text: '#e1f7f1',
   toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(180deg,#010a08 18.97%,#1c5344)',
+  gradient: 'linear-gradient(180deg,#171718 18.97%,#1c5344)',
   burgermenu: "#D0E2F2",
   scrollbarColor: "#ffffff",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
@@ -152,7 +156,8 @@ export const darkTheme = {
     inputColor: '#D0E2F2',
     buttonHover: '#e1f7f1',
     buttonHoverColor: '#060505',
-    placeholderColor: '#e1f7f1'
+    placeholderColor: '#e1f7f1',
+    webkit: '0 0 0 30px #1a4137 inset !important;'
   },
   stack: {
     borderColor: '#f1f1f2',
@@ -184,8 +189,10 @@ export const darkTheme = {
     rect: "#3E514D",
     g: "#fff",
     g_circle: "#F3FFFD",
+  },
+  services: {
+    background : 'linear-gradient(180deg,#1c5344 18.97%,#171718)'
   }
-
 }
 let theme;
 if (document.cookie){

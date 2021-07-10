@@ -120,6 +120,11 @@
     }
 }
 
+.carousel__slide-focus-ring{
+    outline-style: none !important;
+    display: none;
+}
+
 @keyframes arrowAnimationNext {
     0%   {transform:  translateX(0px);}
     50%  {transform:  translateX(5px);}

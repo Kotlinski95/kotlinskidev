@@ -630,6 +630,11 @@
         },
         "services": {
             "buttonText" : "More",
+            "popup": {
+                "title": "Information!",
+                "text": "I'm currently working on a description of service packages. If I haven't finished yet, feel free to write to me or call me to find out more.",
+                "buttonText": "I understand"
+            },
             "web": {
                 "header": "Web development",
                 "text": "Creating web applications",

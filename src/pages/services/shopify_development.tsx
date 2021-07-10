@@ -27,7 +27,12 @@ const ShopifyDevelopmentPage = (props) => {
       header: language.pages.services.shopify.inner.header1,
       text: language.pages.services.shopify.inner.text1,
       link: language.pages.services.shopify.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: shopify_tablet,
@@ -35,7 +40,12 @@ const ShopifyDevelopmentPage = (props) => {
       header: language.pages.services.shopify.inner.header2,
       text: language.pages.services.shopify.inner.text2,
       link: language.pages.services.shopify.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     },
     {
       image: shopify_rwd,
@@ -43,7 +53,12 @@ const ShopifyDevelopmentPage = (props) => {
       header: language.pages.services.shopify.inner.header3,
       text: language.pages.services.shopify.inner.text3,
       link: language.pages.services.shopify.link,
-      buttonText: language.pages.services.buttonText
+      buttonText: language.pages.services.buttonText,
+      popup: {
+        title: language.pages.services.popup.title,
+        text: language.pages.services.popup.text,
+        buttonText: language.pages.services.popup.buttonText
+      }
     }
   ]
   return (
