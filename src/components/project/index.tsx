@@ -1,5 +1,6 @@
 import './index.scss'
 import { useLocation } from "react-router";
+import { handleTrackingEvent } from '../../analytics';
 
 import {
     SectionContainer,
@@ -86,10 +87,14 @@ const Project: any = () => {
                     </ImageWrapper>
                     <ProjectsInfoContainer projectIcons>
                         <BaseLink target="_BLANK" href={github} rel="noreferrer" className="cursor_hover" project="true">
-                            <Github />
+                            <Github onClick={() => {
+                                handleTrackingEvent("Project", "Open project github", { page: _store.getState().pageState.page, name: name });
+                            }} />
                         </BaseLink>
                         <BaseLink target="_BLANK" href={live} rel="noreferrer" className="cursor_hover" project="true">
-                            <Eye />
+                            <Eye onClick={() => {
+                                handleTrackingEvent("Project", "Open project live", { page: _store.getState().pageState.page, name: name });
+                            }}/>
                         </BaseLink>
                     </ProjectsInfoContainer>
                 </ProjectImageContainer>

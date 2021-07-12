@@ -1,14 +1,16 @@
-import './index.scss'
+import './index.scss';
 import { Slide} from 'pure-react-carousel';
-import Button from '../button'
+import Button from '../button';
 import {useState} from 'react';
-import TransitionModal from '../../components/transitionModal'
+import TransitionModal from '../../components/transitionModal';
+import { handleTrackingEvent } from '../../analytics';
 
 const ServiceSlide = (props) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
       setOpen(true);
+      handleTrackingEvent("Service", "Opened service details", { page: _store.getState().pageState.page, name: props.header });
   };
 
   const handleClose = () => {
