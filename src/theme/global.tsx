@@ -9,8 +9,12 @@ export const GlobalStyles = createGlobalStyle`
 
   body,
   html {
-    background: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.gradientrevert};
     color: ${({ theme }) => theme.text};
+  }
+
+  .App{
+    background: ${({ theme }) => theme.gradientrevert};
   }
 
   input:-webkit-autofill,
@@ -66,6 +70,8 @@ export const GlobalStyles = createGlobalStyle`
 .main-navigation-list{
   background-color: ${({ theme }) => theme.nav.navListBackground};
 }
+@media (max-width: 768px) {
+  }
 
   //==========  Footer section ==================
   .footer-wrapper{

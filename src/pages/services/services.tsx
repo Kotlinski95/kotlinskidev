@@ -57,7 +57,7 @@ const ServicesPage = (props) => {
     }
   ]
   return (
-    <>
+    <div className="scroll-section">
       <PageTransitioning />
       <div data-scroll-section>
         <div className="main-inner main-services" style={{position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
@@ -66,7 +66,7 @@ const ServicesPage = (props) => {
         </div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 export default ServicesPage;

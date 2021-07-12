@@ -6,6 +6,7 @@ export const lightTheme = {
   text: '#363537',
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(180deg,#edfaf7 18.97%,#8fe6cf)',
+  gradientrevert: 'linear-gradient(180deg,#8fe6cf 18.97%,#edfaf7)',
   burgermenu: "#23222e",
   scrollbarColor: "#33234d",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
@@ -103,6 +104,7 @@ export const darkTheme = {
   text: '#e1f7f1',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(180deg,#171718 18.97%,#1c5344)',
+  gradientrevert: 'linear-gradient(180deg,#1c5344 18.97%,#171718)',
   burgermenu: "#D0E2F2",
   scrollbarColor: "#ffffff",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
@@ -145,7 +147,7 @@ export const darkTheme = {
     logoFilter: 'invert(99%) sepia(98%) saturate(293%) hue-rotate(204deg) brightness(113%) contrast(100%)',
     logoFilterHover: 'invert(93%) sepia(2%) saturate(3896%) hue-rotate(179deg) brightness(95%) contrast(101%)',
     logoFill: '#D0E2F2',
-    background: '#2d2d30'
+    background: '#0d2c24'
   },
   slick:{
     arrows: "#D0E2F2",
@@ -191,7 +193,7 @@ export const darkTheme = {
     g_circle: "#F3FFFD",
   },
   services: {
-    background : 'linear-gradient(180deg,#1c5344 18.97%,#171718)'
+    background : 'linear-gradient(180deg,#1c5344 0%,#171718)'
   }
 }
 let theme;

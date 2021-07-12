@@ -19,3 +19,10 @@
     --border-radius: 8px;
     --speed: 500ms;
   }
+
+$NavHeight: 60px;
+$FooterHeight: 114px;
+$BeadcrumbsHeight: 44px;
+$MainHeight: calc(100vh - 60px);
+$MainInnerHeight: calc(100vh - 60px - 114px);
+$MainServiceHeight: calc(100vh - 60px - 114px - 44px);

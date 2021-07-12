@@ -110,7 +110,7 @@ const WebDevelopmentPage = (props) => {
     <>
       <PageTransitioning />
       <div data-scroll-section>
-        <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+        <div className="main-inner main-services" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <ServiceCarousel slides={Object.keys(data).length} visibleSlides={1} data={data}/>
         </div>

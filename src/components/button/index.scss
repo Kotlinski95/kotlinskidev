@@ -14,6 +14,9 @@
     font: 700 16px/1 "Shopify Sans",Arial,sans-serif;
     position: relative;
     z-index: 9;
+    @media (max-width: 868px) {
+      height: 46px;
+    }
   }
 
   .btn::before{
