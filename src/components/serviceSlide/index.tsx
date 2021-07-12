@@ -10,7 +10,7 @@ const ServiceSlide = (props) => {
 
   const handleOpen = () => {
       setOpen(true);
-      handleTrackingEvent("Service", "Opened service details", { page: _store.getState().pageState.page, name: props.header });
+      handleTrackingEvent("Service", "Opened service details", { page: `${_store.getState().pageState.page}`, name: props.header });
   };
 
   const handleClose = () => {

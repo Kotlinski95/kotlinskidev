@@ -24,8 +24,9 @@ import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { Badge } from '@material-ui/core';
-import {setMenu } from '../../reducers/menu'
+import { setMenu } from '../../reducers/menu'
 import { CvPdf } from '../../docs';
+import { handleTrackingEvent } from '../../analytics';
 
 function DropdownMulti(props) {
   const language = props.language;
@@ -40,32 +41,32 @@ function DropdownMulti(props) {
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-              setOpen(false);
-              dispatch(setMenu("false"));
-            }
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setOpen(false);
+          dispatch(setMenu("false"));
         }
-        // Bind the event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-          // Unbind the event listener on clean up
-          document.removeEventListener("mousedown", handleClickOutside);
-        };
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
     }, [ref]);
-}
+  }
 
-const wrapperRef = useRef(null);
-useOutsideAlerter(wrapperRef);
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
 
 
   return (
     <>
       <Navbar>
         <div className="dropdown-menu cursor_hover" ref={wrapperRef}>
-        <NavItem id="dropdown-settings" className="cursor_hover" dropdown={true} icon={<CaretIcon />}>
-          <DropdownMenu ></DropdownMenu>
-        </NavItem>
+          <NavItem id="dropdown-settings" className="cursor_hover" dropdown={true} icon={<CaretIcon />}>
+            <DropdownMenu ></DropdownMenu>
+          </NavItem>
         </div>
       </Navbar>
     </>
@@ -85,8 +86,8 @@ useOutsideAlerter(wrapperRef);
         <span className="icon-button" onClick={() => {
           props.dropdown && setOpen(!open);
           props.dropdown && dispatch(setMenu(open ? "false" : "true"));
-          }}>
-          <span className={`navItem-icon ${open ? 'rotate' : '' }`}>{props.icon}</span>
+        }}>
+          <span className={`navItem-icon ${open ? 'rotate' : ''}`}>{props.icon}</span>
         </span>
 
         {open && props.children}
@@ -132,10 +133,12 @@ useOutsideAlerter(wrapperRef);
             case 'pl':
               dispatch(setLanguage("Polski"));
               setCookie('language', "Polski", { path: '/' });
+              handleTrackingEvent("Language", "Language changed to polish", { page: `${window._store.getState().pageState.page}`, value: 'polish' });
               break;
             case 'en':
               dispatch(setLanguage("English"));
               setCookie('language', "English", { path: '/' });
+              handleTrackingEvent("Language", "Language changed to english", { page: `${window._store.getState().pageState.page}`, value: 'english' });
               break;
           }
         }, 0);
@@ -163,7 +166,7 @@ useOutsideAlerter(wrapperRef);
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-          <Link to="/myprofile/overview"><DropdownItem leftIcon={<ProfileIcon/>}>{language.header.myprofile}</DropdownItem></Link>
+            <Link to="/myprofile/overview"><DropdownItem leftIcon={<ProfileIcon />}>{language.header.myprofile}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<AboutIcon />}
               rightIcon={<ChevronIcon />}
@@ -184,7 +187,9 @@ useOutsideAlerter(wrapperRef);
               {language.footer.pages.services}
             </DropdownItem>
             <Link to="/contact"><DropdownItem leftIcon={<ContactIcon />}>{language.footer.pages.contact}</DropdownItem></Link>
-            <a href={CvPdf} target='_blank'><DropdownItem leftIcon={<CvIcon />}>{language.header.cv}</DropdownItem></a>
+            <a href={CvPdf} target='_blank' onClick={() => {
+              handleTrackingEvent("CV", "CV clicked", { page: `${window._store.getState().pageState.page}`, source: 'menu' });
+            }}><DropdownItem leftIcon={<CvIcon />} >{language.header.cv}</DropdownItem></a>
             <DropdownItem
               leftIcon={<CogIcon />}
               rightIcon={<ChevronIcon />}

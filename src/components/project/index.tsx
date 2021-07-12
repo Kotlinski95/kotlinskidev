@@ -88,12 +88,12 @@ const Project: any = () => {
                     <ProjectsInfoContainer projectIcons>
                         <BaseLink target="_BLANK" href={github} rel="noreferrer" className="cursor_hover" project="true">
                             <Github onClick={() => {
-                                handleTrackingEvent("Project", "Open project github", { page: _store.getState().pageState.page, name: name });
+                                handleTrackingEvent("Project", "Open project github", { page: `${_store.getState().pageState.page}`, name: name });
                             }} />
                         </BaseLink>
                         <BaseLink target="_BLANK" href={live} rel="noreferrer" className="cursor_hover" project="true">
                             <Eye onClick={() => {
-                                handleTrackingEvent("Project", "Open project live", { page: _store.getState().pageState.page, name: name });
+                                handleTrackingEvent("Project", "Open project live", { page: `${_store.getState().pageState.page}`, name: name });
                             }}/>
                         </BaseLink>
                     </ProjectsInfoContainer>

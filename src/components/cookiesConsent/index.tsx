@@ -16,10 +16,10 @@ const Cookies = () => {
                 buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                 expires={1}
                 onAccept={() => {
-                    handleTrackingEvent("Cookies", "Cookies accepted", { page: _store.getState().pageState.page, value: true });
+                    handleTrackingEvent("Cookies", "Cookies accepted", { page: `${_store.getState().pageState.page}`, value: true });
                 }}
                 onDecline={() => {
-                    handleTrackingEvent("Cookies", "Cookies declined", { page: _store.getState().pageState.page, value: false });
+                    handleTrackingEvent("Cookies", "Cookies declined", { page: `${_store.getState().pageState.page}`, value: false });
                 }}
             >
                 {language.footer.cookie_consent.first_text}{" "}

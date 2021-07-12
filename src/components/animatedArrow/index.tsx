@@ -1,6 +1,6 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
-import { isPropertySignature } from 'typescript';
+import { handleTrackingEvent } from '../../analytics';
 
 const AnimatedArrow = (props) => {
     return (
@@ -9,7 +9,9 @@ const AnimatedArrow = (props) => {
                 <ul>
                     <li>
                         {props.link ?
-                        <Link className="animated-arrow" to={props.link}>
+                        <Link className="animated-arrow" to={props.link} onClick={()=>{
+                            handleTrackingEvent("Arrow", "Animated arrow link clicked", { page: `${_store.getState().pageState.page}`, href : props.link });
+                        }}>
                             <span className="the-arrow -left">
                                 <span className="shaft"></span>
                             </span>
@@ -25,7 +27,9 @@ const AnimatedArrow = (props) => {
                         }
                         {
                             props.href ?
-                            <a className="animated-arrow" href={props.href} target="_blank">
+                            <a className="animated-arrow" href={props.href} target="_blank" onClick={()=>{
+                                handleTrackingEvent("Arrow", "Animated arrow link clicked", { page: `${_store.getState().pageState.page}`, href : props.href });
+                            }}>
                                 <span className="the-arrow -left">
                                     <span className="shaft"></span>
                                 </span>

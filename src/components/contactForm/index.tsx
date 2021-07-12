@@ -20,19 +20,19 @@ const ContactForm = () => {
     emailjs.sendForm('service_sq6uips', 'template_knzgey8', e.target, 'user_m3DpFoPmnhavjj56KHKAl')
       .then((result) => {
         window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-        handleTrackingEvent("Email", "Email Sent", {page: _store.getState().pageState.page});
+        handleTrackingEvent("Email", "Email Sent", {page: `${_store.getState().pageState.page}`});
       }, (error) => {
         console.log(error.text);
       });
   }
   const updateMail = (e) => {
     e.target.href = 'mailto:' + e.target.dataset.name + '@' + e.target.dataset.domain + '.' + e.target.dataset.tld;
-    handleTrackingEvent("Email", "Email clicked", {page: _store.getState().pageState.page});
+    handleTrackingEvent("Email", "Email clicked", {page: `${_store.getState().pageState.page}`});
   };
 
   const updatePhone = (e) => {
     e.target.href = 'tel: +48' + e.target.dataset.first + e.target.dataset.second + e.target.dataset.third;
-    handleTrackingEvent("Phone", "Phone clicked", {page: _store.getState().pageState.page});
+    handleTrackingEvent("Phone", "Phone clicked", {page: `${_store.getState().pageState.page}`});
   };
 
   const {

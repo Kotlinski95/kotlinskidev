@@ -10,5 +10,4 @@ export const handleTrackingEvent = (eventName, eventAction, eventParameter) => {
   });
   //Facebook pixel event
   ReactPixel.trackCustom(eventName, eventParameter);
-  console.error("CV CLICKED: ", eventName, eventAction, eventParameter);
 }
