@@ -1,56 +1,56 @@
-import HomePage from '../src/pages/home'
-import Nav from '../src/components/nav'
-import RouteChangeTracker from '../src/components/routeChangeTracker'
-import AboutPage from './pages/about/about'
-import NotFoundPage from './pages/not_found'
-import ContactPage from './pages/contact'
-import MyProfilePage from './pages/myprofile/myprofile'
-import MyProfileContactPage from './pages/myprofile/profileContact'
-import MyProfileEducationPage from './pages/myprofile/profileEducation'
-import MyProfileHobbyPage from './pages/myprofile/profileHobby'
-import MyProfileOverviewPage from './pages/myprofile/profileOverview'
-import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime'
-import MyProfileWorkPage from './pages/myprofile/profileWork'
-import StackPage from './pages/stack/stack'
-import ProjectsPage from './pages/projects/projects'
-import PortfolioPage from './pages/projects/portfolio'
-import WebsitePage from './pages/projects/website'
-import QuizPage from './pages/projects/quiz'
-import ChessPage from './pages/projects/chess'
-import EstatePage from './pages/projects/estate'
-import PrivacyPage from '../src/pages/privacy'
-import CookiesPage from '../src/pages/cookies'
-import PlcCarrierPage from './pages/about/plc_carrier'
-import FrontEndDevelopmentPage from './pages/about/front_end_development'
-import CoursesPage from './pages/about/courses'
-import EducationPage from './pages/about/education'
-import FrontEndDeveloperPage from './pages/stack/front_end_developer'
-import AutomationEngineerPage from './pages/stack/automation_engineer'
-import ServicesPage from './pages/services/services'
-import PlcProgrammingPage from './pages/services/plc_programming'
-import WebDevelopmentPage from './pages/services/web_development'
-import ShopifyDevelopmentPage from './pages/services/shopify_development'
-import Cookies from './components/cookiesConsent'
-import LoadingScreen from './components/loadingScreen/index.jsx'
-import Cursor from './components/cursor/index.jsx'
+import HomePage from '../src/pages/home';
+import Nav from '../src/components/nav';
+import RouteChangeTracker from '../src/components/routeChangeTracker';
+import AboutPage from './pages/about/about';
+import NotFoundPage from './pages/not_found';
+import ContactPage from './pages/contact';
+import MyProfilePage from './pages/myprofile/myprofile';
+import MyProfileContactPage from './pages/myprofile/profileContact';
+import MyProfileEducationPage from './pages/myprofile/profileEducation';
+import MyProfileHobbyPage from './pages/myprofile/profileHobby';
+import MyProfileOverviewPage from './pages/myprofile/profileOverview';
+import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime';
+import MyProfileWorkPage from './pages/myprofile/profileWork';
+import StackPage from './pages/stack/stack';
+import ProjectsPage from './pages/projects/projects';
+import PortfolioPage from './pages/projects/portfolio';
+import WebsitePage from './pages/projects/website';
+import QuizPage from './pages/projects/quiz';
+import ChessPage from './pages/projects/chess';
+import EstatePage from './pages/projects/estate';
+import PrivacyPage from '../src/pages/privacy';
+import CookiesPage from '../src/pages/cookies';
+import PlcCarrierPage from './pages/about/plc_carrier';
+import FrontEndDevelopmentPage from './pages/about/front_end_development';
+import CoursesPage from './pages/about/courses';
+import EducationPage from './pages/about/education';
+import FrontEndDeveloperPage from './pages/stack/front_end_developer';
+import AutomationEngineerPage from './pages/stack/automation_engineer';
+import ServicesPage from './pages/services/services';
+import PlcProgrammingPage from './pages/services/plc_programming';
+import WebDevelopmentPage from './pages/services/web_development';
+import ShopifyDevelopmentPage from './pages/services/shopify_development';
+import Cookies from './components/cookiesConsent';
+import LoadingScreen from './components/loadingScreen/index.jsx';
+import Cursor from './components/cursor/index.jsx';
 
 import {
   Switch,
   Route,
   useLocation
 } from 'react-router-dom';
-import { Language } from './language'
+import { Language } from './language';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, ThemeType } from './theme/index';
 import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
-import { setMobile } from './reducers/state'
+import { setMobile } from './reducers/state';
 declare global {
   var _theme: ThemeType;
 }
@@ -62,7 +62,6 @@ function App() {
     debug: false, // enable logs
   };
   ReactPixel.init('1133312470518945', advancedMatching, options);
-
   ReactPixel.pageView();
   Language();
   const actualTheme = useSelector(selectedTheme);

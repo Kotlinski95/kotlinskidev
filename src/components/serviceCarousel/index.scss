@@ -5,6 +5,7 @@
     max-height: v.$MainServiceHeight;
     max-width: 100%;
     overflow: hidden;
+    position: relative;
     z-index: 0;
     @media (max-width: 768px){
         max-height: v.$MainInnerHeight;

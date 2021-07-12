@@ -21,7 +21,7 @@ import javascript_mobile from '../../assets/landing_page/javascript_mobile.jpg'
 
 const WebDevelopmentPage = (props) => {
   const dispatch = useDispatch();
-  dispatch(setPage("Contact"));
+  dispatch(setPage("/services/web-development"));
   const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
