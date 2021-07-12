@@ -34,9 +34,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.nav.linkColor};
   }
 
-  .main,
   .main-inner {
     background: ${({ theme }) => theme.gradient};
+  }
+  .main{
+    background: ${({ theme }) => theme.gradientrevert};
   }
 
   a:hover {
