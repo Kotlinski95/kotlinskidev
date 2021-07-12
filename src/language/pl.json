@@ -74,7 +74,8 @@
                 "about": "O mnie",
                 "projects": "Projekty",
                 "stack": "Technologie",
-                "services": "Usługi"
+                "services": "Usługi",
+                "profile": "Profil"
             }
         },
         "privacy": {
@@ -344,7 +345,13 @@
             "phone": "+48 608 418 911"
         },
         "stack":{
-            "front_header": "Umiejętności Front-end developera"
+            "front_header": "Umiejętności Front-end developera",
+            "automation_header": "Umiejętności Automatyka",
+            "automation": "Automatyka",
+            "web": "Web development",
+            "stack": "Zobacz moje umiejętności",
+            "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
+            "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów."
         },
         "projects":{
             "header": "Projekty",
@@ -619,6 +626,59 @@
         },
         "cv": {
             "link": "CV / Podgląd"
+        },
+        "services": {
+            "buttonText" : "Więcej",
+            "popup": {
+                "title": "Informacja!",
+                "text": "Obecnie pracuję nad opisem pakietów usług. Jeśli jeszcze nie skończyłem śmiało napisz do mnie lub zadzwoń aby dowiedzieć się więcej.",
+                "buttonText": "Rozumiem"
+            },
+            "web": {
+                "header": "Web development",
+                "text": "Tworzenie aplikacji web i stron www",
+                "link": "/services/web-development",
+                "inner": {
+                    "header1": "SPA / Apliakcje i sklepy internetowe",
+                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o bibliotekę ReactJS, HTML5,CSS3, ES6/TypeScript.",
+                    "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
+                    "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
+                    "header3": "Kodowanie PSD do HTML/CSS/JS",
+                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
+                    "header4": "Czysty kod",
+                    "text4": "Czytelność kodu nadal traktowana jest jako coś mało istotnego, jednak nieczytelny kod znacznie wydłua czas potrzebny do napisania czegokolwiek i może prowadzić do nieprzewidywanych błędów w aplikacjach.",
+                    "header5": "Administracja stron internetowych",
+                    "text5": "Wdrożenie i utrzymanie strony/aplikacji internetowej w tym okresowe raporty z testów automatycznych i manualnych wybranych funkcjonalności.",
+                    "header6": "JavaScript / TypeScript",
+                    "text6": "Jako web developer pracuję z językiem JavaScript/TypeScript, aby rozszerzyć zakres oferowanych usług mogę podjąć się dowonlego projektu korzystającego z tych technologii. "
+                }
+            },
+            "shopify": {
+                "header": "E-commerce Shopify",
+                "text": "Tworzenie sklepów internetowych z użyciem Shopify",
+                "link": "/services/shopify",
+                "inner": {
+                    "header1": "Tworzenie unikalnych szablonów sklepów",
+                    "text1": "Każdy sklep powinien się wyróżniać spośród innych. Wykonam personalizowane szablony dostosowane pod klienta, aby efekt user-experience był na jak najwyższym poziomie.",
+                    "header2": "Optymalizacja sklepu",
+                    "text2": "Dbam aby szablon spełniał wszelkie wymogi SEO oraz aby sklep działał płynnie i szybko.",
+                    "header3": "Zakupy na każdym urządzeniu",
+                    "text3": "Obecnie coraz więcej użytkowników korzysta z urządzeń mobilnych podczas zakupów. Dbam o prawidłowe funkcjonowanie sklepu również na wszystkich urządzeniach mobilnych."
+                }
+            },
+            "plc": {
+                "header": "PLC",
+                "text": "Programowanie sterowników przemysłowych",
+                "link": "/services/PLC",
+                "inner": {
+                    "header1": "Programowanie PLC",
+                    "text1": "Posiadam kilkuletnie doświadczenie w programowaniu sterowników przemysłowych firmy Siemens, Bernecker&Rainer oraz Mitsubishi.",
+                    "header2": "Uruchomienia obiektów automatyki",
+                    "text2": "Pracowałem na uruchomieniach w kilku fabrykach automotive na terenie Polski oraz Niemczec. Jestem zaznajomiony z technologią procesową, sterowaniem napędów oraz tworzeniem wizualizacji.",
+                    "header3": "Aplikacje Smart Home",
+                    "text3": "Jestem fanem majsterkowania i elektrniki, chętnie podejmę się wyzwań związanych z tworzeniem aplikacji Smart Home (ze względu na możliwość tworzenia aplikacji smart w Java Script chętnie rozwinę swoje umiejętności w tym obszarze)."
+                }
+            }
         }
     }
 }

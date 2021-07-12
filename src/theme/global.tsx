@@ -9,17 +9,36 @@ export const GlobalStyles = createGlobalStyle`
 
   body,
   html {
-    background: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.gradientrevert};
     color: ${({ theme }) => theme.text};
+  }
+
+  .App{
+    background: ${({ theme }) => theme.gradientrevert};
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active
+  {
+   -webkit-box-shadow: ${({ theme }) => theme.contact.webkit};
+  }
+
+  input:-webkit-autofill
+  {
+  -webkit-text-fill-color: ${({ theme }) => theme.contact.inputColor};
   }
 
   a {
     color: ${({ theme }) => theme.nav.linkColor};
   }
 
-  .main,
   .main-inner {
     background: ${({ theme }) => theme.gradient};
+  }
+  .main{
+    background: ${({ theme }) => theme.gradientrevert};
   }
 
   a:hover {
@@ -53,6 +72,8 @@ export const GlobalStyles = createGlobalStyle`
 .main-navigation-list{
   background-color: ${({ theme }) => theme.nav.navListBackground};
 }
+@media (max-width: 768px) {
+  }
 
   //==========  Footer section ==================
   .footer-wrapper{
@@ -289,6 +310,10 @@ textarea::placeholder{
 .cv-link::before,
 .cv-link:hover::before{
   background-color: ${({ theme }) => theme.text};
+}
+// ================= Services ===================
+.main-services{
+  background: ${({ theme }) => theme.services.background};
 }
 
 `;

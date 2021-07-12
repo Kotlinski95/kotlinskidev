@@ -6,6 +6,7 @@ export const lightTheme = {
   text: '#363537',
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(180deg,#edfaf7 18.97%,#8fe6cf)',
+  gradientrevert: 'linear-gradient(180deg,#8fe6cf 10%,#edfaf7 90%)',
   burgermenu: "#23222e",
   scrollbarColor: "#33234d",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
@@ -59,7 +60,8 @@ export const lightTheme = {
     inputColor: '#08100e',
     buttonHover: '#060505',
     buttonHoverColor: '#ededed',
-    placeholderColor: '#6d6d6d'
+    placeholderColor: '#6d6d6d',
+    webkit: '0 0 0 30px rgba(255,255,255,0.6) inset !important;'
   },
   stack: {
     borderColor: '#1c5344',
@@ -69,7 +71,7 @@ export const lightTheme = {
     color: '#f1f1f2'
   },
   myProfile:{
-    backgroundGradient: 'linear-gradient(to top, #f1f1f2 30% , #9c98cd)',
+    backgroundGradient: 'transparent',
     backgroundCategory: '#f1f1f2',
     backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
     categorySelected: '#e9d5e5',
@@ -91,6 +93,9 @@ export const lightTheme = {
     rect: "#5fa596",
     g: "#a0f8eb",
     g_circle: "#a0f8eb",
+  },
+  services: {
+    background : 'linear-gradient(180deg,#edfaf7 18.97%,#8fe6cf)'
   }
 }
 
@@ -98,14 +103,15 @@ export const darkTheme = {
   body: '#1a4137',
   text: '#e1f7f1',
   toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(180deg,#010a08 18.97%,#1c5344)',
+  gradient: 'linear-gradient(180deg,#171718 18.97%,#1c5344)',
+  gradientrevert: 'linear-gradient(180deg,#1c5344 0%,#171718 100%)',
   burgermenu: "#D0E2F2",
   scrollbarColor: "#ffffff",
   scrollbarShadow: "0 2px 4px 0 rgba(0, 0, 0, 0.16)",
   nav: {
     linkColor: '#D0E2F2',
     background: 'transparent',
-    lightBackground: '#2d2d30',
+    lightBackground: '#70a188',
     lightBackgroundOpacity: 'rgba(63, 63, 63, 0.9)',
     darkBackground: '#53665e',
     menuItemColor: '#D0E2F2' ,
@@ -117,7 +123,7 @@ export const darkTheme = {
   },
   typedText: {
     color: '#D0E2F2',
-    colorHover: '#444446',
+    colorHover: '#fff',
   },
   footer: {
     linkColor: '#D0E2F2',
@@ -141,7 +147,7 @@ export const darkTheme = {
     logoFilter: 'invert(99%) sepia(98%) saturate(293%) hue-rotate(204deg) brightness(113%) contrast(100%)',
     logoFilterHover: 'invert(93%) sepia(2%) saturate(3896%) hue-rotate(179deg) brightness(95%) contrast(101%)',
     logoFill: '#D0E2F2',
-    background: '#2d2d30'
+    background: '#0d2c24'
   },
   slick:{
     arrows: "#D0E2F2",
@@ -152,7 +158,8 @@ export const darkTheme = {
     inputColor: '#D0E2F2',
     buttonHover: '#e1f7f1',
     buttonHoverColor: '#060505',
-    placeholderColor: '#e1f7f1'
+    placeholderColor: '#e1f7f1',
+    webkit: '0 0 0 30px #1a4137 inset !important;'
   },
   stack: {
     borderColor: '#f1f1f2',
@@ -162,7 +169,7 @@ export const darkTheme = {
     color: '#f1f1f2'
   },
   myProfile:{
-    backgroundGradient: 'linear-gradient(to top, #171718 30% , #2d2d30)',
+    backgroundGradient: 'transparent',
     backgroundCategory: '#252526',
     backgroundBreadCrumbs: 'rgba(0,0,0,0.4)',
     categorySelected: '#2e2d2d',
@@ -184,8 +191,10 @@ export const darkTheme = {
     rect: "#3E514D",
     g: "#fff",
     g_circle: "#F3FFFD",
+  },
+  services: {
+    background : 'linear-gradient(180deg,#1c5344 0%,#171718)'
   }
-
 }
 let theme;
 if (document.cookie){

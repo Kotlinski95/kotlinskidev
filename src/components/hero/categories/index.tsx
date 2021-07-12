@@ -3,6 +3,7 @@ import aboutme from '../../../assets/aboutme.svg';
 import projects from '../../../assets/projects.svg';
 import stack from '../../../assets/stack.svg';
 import services from '../../../assets/services.svg';
+import information from '../../../assets/information.svg';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,6 +22,13 @@ const CategoriesComponent = () => {
         };
     }
     const items = [
+        {
+            url: "/myprofile/overview",
+            title: `${language.pages.home.categories.profile}`,
+            logo: information,
+            width: "90%",
+            height: "70%"
+        },
         {
             url: "/aboutme",
             title: `${language.pages.home.categories.about}`,

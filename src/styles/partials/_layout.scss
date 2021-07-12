@@ -1,3 +1,5 @@
+@use './variables' as v;
+
 * {
   box-sizing: border-box;
 }
@@ -57,21 +59,34 @@ main {
   cursor: pointer;
 }
 .main {
-  min-height: calc(100vh - 88.95px);
+  min-height: v.$MainHeight;
   max-height: 100%;
   background-color: var(--dark-background);
-  @media (max-width: 769px) {
-    margin-top: 90px;
-  }
   position: relative;
   z-index: 0;
+  @media (max-width: 769px) {
+   min-height: 100%;
+   margin-top: 60px;
+  }
   .main-inner{
       max-height: 100%;
-      min-height: calc(100vh - 202.95px);
+      min-height:  v.$MainInnerHeight;
       height: 100%;
       box-sizing: border-box;
+      @media (max-width: 868px) {
+        min-height: 400px;
+        overflow: hidden;
+      }
   }
 }
+
+.scroll-section{
+  height: 100%;
+  @media (max-width: 768px) {
+    margin-top: -60px;
+}
+}
+
 .centered {
   text-align: center;
 }

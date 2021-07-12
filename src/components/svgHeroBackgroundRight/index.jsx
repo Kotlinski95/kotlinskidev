@@ -8,16 +8,16 @@ const SvgHeroBackgroundRight = (props) => {
              <ComponentRevealShow data-scroll width="100%" delay="0.6s">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="412"
-                height="408"
+                width="413"
+                height="409"
                 fill="none"
                 className="injected-svg"
                 data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >
                 <rect
-                    width="81"
-                    height="23"
+                    width="82"
+                    height="24"
                     x="-45"
                     className="hero-background-rect"
                     data-svg-origin="-45 0"
@@ -30,8 +30,8 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <rect
-                    width="81"
-                    height="23"
+                    width="82"
+                    height="24"
                     x="-45"
                     y="385"
                     className="hero-background-rect"
@@ -45,8 +45,8 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <rect
-                    width="164.97"
-                    height="22.563"
+                    width="164.99"
+                    height="22.569"
                     x="-81.121"
                     y="78.068"
                     fill="url(#paint0_linear-37)"
@@ -75,8 +75,8 @@ const SvgHeroBackgroundRight = (props) => {
                         <circle cx="104.378" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
                     <circle
-                        cx="104.378"
-                        cy="89.349"
+                        cx="104.379"
+                        cy="89.345"
                         r="11.675"
                         className="hero-background-g-circle"
                         opacity="0.705"
@@ -98,16 +98,16 @@ const SvgHeroBackgroundRight = (props) => {
                         <circle cx="139.518" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
                     </g>
                     <circle
-                        cx="139.518"
-                        cy="89.349"
+                        cx="139.519"
+                        cy="89.352"
                         r="11.675"
                         className="hero-background-g-circle"
                         opacity="0.807"
                     ></circle>
                 </g>
                 <rect
-                    width="128.351"
-                    height="22.563"
+                    width="128.356"
+                    height="22.560"
                     x="158.936"
                     y="78.068"
                     fill="url(#paint5_linear-38)"
@@ -121,8 +121,8 @@ const SvgHeroBackgroundRight = (props) => {
                     }}
                 ></rect>
                 <rect
-                    width="91.362"
-                    height="22.563"
+                    width="91.369"
+                    height="22.569"
                     x="195.925"
                     y="167.1"
                     fill="url(#paint6_linear-39)"
@@ -163,8 +163,8 @@ const SvgHeroBackgroundRight = (props) => {
                     ></circle>
                 </g>
                 <rect
-                    width="113.925"
-                    height="22.563"
+                    width="113.921"
+                    height="22.567"
                     x="-48.201"
                     y="167.469"
                     className="hero-background-rect"

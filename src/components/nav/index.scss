@@ -1,3 +1,6 @@
+.react-switch{
+  display: none !important; //temporary
+}
 .flex-wrapper {
   justify-self: flex-start;
   display: flex;
@@ -5,7 +8,7 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 100vw;
-  padding: 5px 20px;
+  padding: 0px 20px;
   box-sizing: border-box;
   min-height: 60px;
   @media (max-width: 768px){
@@ -40,7 +43,7 @@
   .nav-right {
     text-align: right;
     position: fixed;
-    top: 20px;
+    top: 9px;
     right: 20px;
     z-index: 999;
     height: 40px;
@@ -73,9 +76,11 @@
     }
 
     .nav-logo {
-      width: 60px;
+      width: 50px;
       z-index: 1000;
+      position: absolute;
       left: calc(50vw - 25px);
+      top: 2px;
       border-radius: 10px;
       @media (max-width: 768px) {
         display: none;

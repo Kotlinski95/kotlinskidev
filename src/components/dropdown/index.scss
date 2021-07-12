@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: center;
     transition: filter 300ms;
+    .navItem-icon{
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .icon-button:hover {
@@ -27,6 +31,9 @@
     fill: var(--text-color);
     width: 20px;
     height: 20px;
+  }
+  .icon-button .navItem-icon.rotate{
+    transform: rotate(180deg);
   }
 
   /* Dropdown Menu */

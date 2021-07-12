@@ -8,21 +8,20 @@ const SvgHeroBackgroundLeft = (props) => {
             <ComponentRevealShow data-scroll width="100%" delay="0.6s">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="412"
-                height="408"
+                width="411"
+                height="407"
                 fill="none"
                 className="injected-svg"
-                data-src="/static/media/hero-code.79a700c0.svg"
                 viewBox="0 0 412 408"
             >
                 <rect
-                    width="81"
-                    height="23"
+                    width="80"
+                    height="24"
                     x="-45"
                     className="hero-background-rect"
                     data-svg-origin="-45 0"
-                    opacity="0.4"
-                    rx="11.5"
+                    opacity="0.39"
+                    rx="11.4"
                     style={{
                         WebkitTransformOrigin: 0,
                         MsTransformOrigin: 0,
@@ -30,13 +29,13 @@ const SvgHeroBackgroundLeft = (props) => {
                     }}
                 ></rect>
                 <rect
-                    width="81"
-                    height="23"
+                    width="80"
+                    height="22"
                     x="-45"
-                    y="385"
+                    y="386"
                     className="hero-background-rect"
                     data-svg-origin="-45 385"
-                    opacity="0.4"
+                    opacity="0.41"
                     rx="11.5"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -45,13 +44,13 @@ const SvgHeroBackgroundLeft = (props) => {
                     }}
                 ></rect>
                 <rect
-                    width="164.97"
-                    height="22.563"
-                    x="-81.121"
-                    y="78.068"
+                    width="164.92"
+                    height="22.569"
+                    x="-81.120"
+                    y="78.062"
                     fill="url(#paint0_linear-29)"
                     data-svg-origin="-81.12059783935547 78.06839752197266"
-                    opacity="0.4"
+                    opacity="0.42"
                     rx="11.282"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -66,20 +65,20 @@ const SvgHeroBackgroundLeft = (props) => {
                         WebkitTransformOrigin: 0,
                         MsTransformOrigin: 0,
                         transformOrigin: 0,
-                        AnimationTime: "3.44837s",
-                        AnimationDelay: "1.14492s",
+                        AnimationTime: "3.4483s",
+                        AnimationDelay: "1.1449s",
                     }}
                 >
                     <g className="hero-background-g" filter="url(#filter0_f-28)">
                         <circle cx="104.378" cy="89.35" r="11.675"></circle>
-                        <circle cx="104.378" cy="89.35" r="15.35" fillOpacity="0.6"></circle>
+                        <circle cx="104.378" cy="89.35" r="15.35" fillOpacity="0.61"></circle>
                     </g>
                     <circle
                         cx="104.378"
                         cy="89.349"
                         r="11.675"
                         className="hero-background-g-circle"
-                        opacity="0.762"
+                        opacity="0.7622"
                     ></circle>
                 </g>
                 <g
@@ -106,13 +105,13 @@ const SvgHeroBackgroundLeft = (props) => {
                     ></circle>
                 </g>
                 <rect
-                    width="128.351"
-                    height="22.563"
+                    width="128.357"
+                    height="22.569"
                     x="158.936"
                     y="78.068"
                     fill="url(#paint5_linear-30)"
                     data-svg-origin="158.93600463867188 78.06839752197266"
-                    opacity="0.4"
+                    opacity="0.41"
                     rx="11.282"
                     style={{
                         WebkitTransformOrigin: 0,
@@ -122,7 +121,7 @@ const SvgHeroBackgroundLeft = (props) => {
                 ></rect>
                 <rect
                     width="91.362"
-                    height="22.563"
+                    height="22.57"
                     x="195.925"
                     y="167.1"
                     fill="url(#paint6_linear-31)"
@@ -163,13 +162,13 @@ const SvgHeroBackgroundLeft = (props) => {
                     ></circle>
                 </g>
                 <rect
-                    width="113.925"
-                    height="22.563"
+                    width="113.929"
+                    height="22.562"
                     x="-48.201"
                     y="167.469"
                     className="hero-background-rect"
                     data-svg-origin="-48.20069885253906 167.468994140625"
-                    opacity="0.4"
+                    opacity="0.39"
                     rx="11.282"
                     style={{
                         WebkitTransformOrigin: 0,
