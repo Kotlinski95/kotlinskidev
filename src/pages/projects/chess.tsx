@@ -5,13 +5,17 @@ import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
 import Project from '../../components/project'
 import ContactForm from '../../components/contactForm'
+import {useEffect} from 'react';
 
 const ChessPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("projects/coders-chess"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
   return (
     <>
       <PageTransitioning />

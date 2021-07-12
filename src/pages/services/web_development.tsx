@@ -1,5 +1,6 @@
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
+import {useEffect} from 'react'
 import Breadcrumbs from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
@@ -22,9 +23,12 @@ import javascript_mobile from '../../assets/landing_page/javascript_mobile.jpg'
 const WebDevelopmentPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("/services/web-development"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
 
   const data = [
     {

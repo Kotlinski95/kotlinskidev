@@ -1,6 +1,38 @@
 {
     "general": {
-        "website": "kotlinskidev.pl"
+        "website": "kotlinskidev.pl",
+        "titles": {
+            "home": "Adrian Kotliński | FrontEnd Developer",
+            "about": "O mnie | Adrian K. | FrontEnd Developer",
+            "courses": "Kursy | Adrian K. | FrontEnd Developer",
+            "education": "Edukacja | Adrian K. | FrontEnd Developer",
+            "frontEndDevelopment": "Programista Web | Adrian K. | FrontEnd Developer",
+            "plcCarrier": "Kariera PLC | Adrian K. | FrontEnd Developer",
+            "myprofile": "Mój profil | Adrian K. | FrontEnd Developer",
+            "myprofileContact": "Profil - Kontakt | Adrian K. | FrontEnd Developer",
+            "myprofileEducation": "Profil - Edukacja | Adrian K. | FrontEnd Developer",
+            "myprofileHobby": "Profil - Hobby | Adrian K. | FrontEnd Developer",
+            "myprofileOverview": "Profil | Adrian K. | FrontEnd Developer",
+            "myprofileSpareTime": "Profil - czas wolny | Adrian K. | FrontEnd Developer",
+            "myprofileWork": "Profil - praca | Adrian K. | FrontEnd Developer",
+            "projects": "Projekty | Adrian K. | FrontEnd Developer",
+            "projectsChess": "Szachy | Adrian K. | FrontEnd Developer",
+            "projectsEstate": "Strona agencji | Adrian K. | FrontEnd Developer",
+            "projectsPortfolio": "Portfolio | Adrian K. | FrontEnd Developer",
+            "projectsQuiz": "Quiz | Adrian K. | FrontEnd Developer",
+            "projectsWebsite": "Portfolio | Adrian K. | FrontEnd Developer",
+            "services": "Usługi | Adrian K. | FrontEnd Developer",
+            "servicesPlc":"Usługi - PLC | Adrian K. | FrontEnd Developer",
+            "servicesShopify": "Usługi - Shopify | Adrian K. | FrontEnd Developer",
+            "servicesWeb": "Usługi - Web | Adrian K. | FrontEnd Developer",
+            "stack": "Technologie | Adrian K. | FrontEnd Developer",
+            "stackAutomation": "Technologie Automatyka | Adrian K. | FrontEnd Developer",
+            "stackFront": "Technologie FrontEnd | Adrian K. | FrontEnd Developer",
+            "contact": "Kontakt | Adrian K. | FrontEnd Developer",
+            "cookies": "Ciasteczka | Adrian K. | FrontEnd Developer",
+            "notFound" :"Strony nie znaleziono | Adrian K. | FrontEnd Developer",
+            "privacy" : "Polityka prywatności | Adrian K. | FrontEnd Developer"
+        }
     },
     "header": {
         "about": "O mnie",

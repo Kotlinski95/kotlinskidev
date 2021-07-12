@@ -170,94 +170,94 @@ function App() {
                 <div className="main">
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">
-                      <HomePage {...routingProps} />
+                      <HomePage {...routingProps} title={language.general.home}/>
                     </Route>
                     <Route exact path="/aboutme">
-                      <AboutPage {...routingProps} />
+                      <AboutPage {...routingProps} title={language.general.about}/>
                     </Route>
                     <Route exact path="/contact">
-                      <ContactPage {...routingProps} />
+                      <ContactPage {...routingProps} title={language.general.contact}/>
                     </Route>
                     <Route exact path="/myprofile">
-                      <MyProfilePage {...routingProps} />
+                      <MyProfilePage {...routingProps} title={language.general.myprofile}/>
                     </Route>
                     <Route exact path="/myprofile/contact">
-                      <MyProfileContactPage {...routingProps} />
+                      <MyProfileContactPage {...routingProps} title={language.general.myprofileContact}/>
                     </Route>
                     <Route exact path="/myprofile/education">
-                      <MyProfileEducationPage {...routingProps} />
+                      <MyProfileEducationPage {...routingProps} title={language.general.myprofileEducation}/>
                     </Route>
                     <Route exact path="/myprofile/hobby">
-                      <MyProfileHobbyPage {...routingProps} />
+                      <MyProfileHobbyPage {...routingProps} title={language.general.myprofileHobby}/>
                     </Route>
                     <Route exact path="/myprofile/overview">
-                      <MyProfileOverviewPage {...routingProps} />
+                      <MyProfileOverviewPage {...routingProps} title={language.general.myprofileOverview}/>
                     </Route>
                     <Route exact path="/myprofile/spare-time">
-                      <MyProfileSpareTimePage {...routingProps} />
+                      <MyProfileSpareTimePage {...routingProps} title={language.general.myprofileSpareTime}/>
                     </Route>
                     <Route exact path="/myprofile/work">
-                      <MyProfileWorkPage {...routingProps} />
+                      <MyProfileWorkPage {...routingProps} title={language.general.myprofileWork}/>
                     </Route>
                     <Route exact path="/stack">
-                      <StackPage {...routingProps} />
+                      <StackPage {...routingProps} title={language.general.stack}/>
                     </Route>
                     <Route exact path="/projects">
-                      <ProjectsPage {...routingProps} />
+                      <ProjectsPage {...routingProps} title={language.general.projects}/>
                     </Route>
                     <Route exact path="/projects/portfolio">
-                      <PortfolioPage {...routingProps} />
+                      <PortfolioPage {...routingProps} title={language.general.projectsPortfolio}/>
                     </Route>
                     <Route exact path="/projects/website">
-                      <WebsitePage {...routingProps} />
+                      <WebsitePage {...routingProps} title={language.general.projectsWebsite}/>
                     </Route>
-                    <Route exact path="/projects/star-wars-quiz">
-                      <QuizPage {...routingProps} />
+                    <Route exact path="/projects/star-wars-quiz" >
+                      <QuizPage {...routingProps} title={language.general.projectsQuiz}/>
                     </Route>
                     <Route exact path="/projects/coders-chess">
-                      <ChessPage {...routingProps} />
+                      <ChessPage {...routingProps} title={language.general.projectsChess}/>
                     </Route>
                     <Route exact path="/projects/real-estate">
-                      <EstatePage {...routingProps} />
+                      <EstatePage {...routingProps} title={language.general.projectsEstate}/>
                     </Route>
                     <Route exact path="/privacy">
-                      <PrivacyPage {...routingProps} />
+                      <PrivacyPage {...routingProps} title={language.general.privacy}/>
                     </Route>
                     <Route exact path="/cookies">
-                      <CookiesPage {...routingProps} />
+                      <CookiesPage {...routingProps} title={language.general.cookies}/>
                     </Route>
                     <Route exact path="/aboutme/plc-carrier">
-                      <PlcCarrierPage {...routingProps} />
+                      <PlcCarrierPage {...routingProps} title={language.general.plcCarries}/>
                     </Route>
                     <Route exact path="/aboutme/front-end-development">
-                      <FrontEndDevelopmentPage {...routingProps} />
+                      <FrontEndDevelopmentPage {...routingProps} title={language.general.frontEndDevelopment}/>
                     </Route>
                     <Route exact path="/aboutme/courses">
-                      <CoursesPage {...routingProps} />
+                      <CoursesPage {...routingProps} title={language.general.courses}/>
                     </Route>
                     <Route exact path="/aboutme/education">
-                      <EducationPage {...routingProps} />
+                      <EducationPage {...routingProps} title={language.general.education}/>
                     </Route>
                     <Route exact path="/stack/front-end-developer">
-                      <FrontEndDeveloperPage {...routingProps} />
+                      <FrontEndDeveloperPage {...routingProps} title={language.general.stackFront}/>
                     </Route>
                     <Route exact path="/stack/automation-engineer">
-                      <AutomationEngineerPage {...routingProps} />
+                      <AutomationEngineerPage {...routingProps} title={language.general.stackAutomation}/>
                     </Route>
                     <Route exact path="/services">
-                      <ServicesPage {...routingProps} />
+                      <ServicesPage {...routingProps} title={language.general.services}/>
                     </Route>
                     <Route exact path="/services/PLC">
-                      <PlcProgrammingPage {...routingProps} />
+                      <PlcProgrammingPage {...routingProps} title={language.general.servicesPlc}/>
                     </Route>
                     <Route exact path="/services/shopify">
-                      <ShopifyDevelopmentPage {...routingProps} />
+                      <ShopifyDevelopmentPage {...routingProps} title={language.general.servicesShopify}/>
                     </Route>
                     <Route exact path="/services/web-development">
-                      <WebDevelopmentPage {...routingProps} />
+                      <WebDevelopmentPage {...routingProps} title={language.general.servicesWeb}/>
                     </Route>
                     <Route>
-                      <NotFoundPage {...routingProps} />
+                      <NotFoundPage {...routingProps} title={language.general.notFound}/>
                     </Route>
                   </Switch>
                 </div>

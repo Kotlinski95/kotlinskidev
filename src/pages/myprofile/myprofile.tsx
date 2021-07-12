@@ -12,13 +12,18 @@ import ProfileOverview from '../../components/myprofile/overview'
 import ProfileSpareTime from '../../components/myprofile/spareTime'
 import ProfileWork from '../../components/myprofile/work'
 import Footer from '../../components/footer'
+import {useEffect} from 'react';
 
 
 const MyProfilePage = (props) => {
     const dispatch = useDispatch();
     dispatch(setPage("My profile"));
-    const { HandleLocomotiveScroll } = props;
+    const { HandleLocomotiveScroll, title } = props;
     HandleLocomotiveScroll();
+
+    useEffect(() => {
+        document.title = title || "";
+    }, [title]);
     return (
         <div data-scroll-section>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>

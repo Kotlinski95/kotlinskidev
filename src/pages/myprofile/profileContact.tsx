@@ -8,10 +8,14 @@ import ProfileImage from '../../components/profileImage'
 import NavProfile from '../../components/navProfile'
 import ProfileContact from '../../components/myprofile/contact'
 import Footer from '../../components/footer'
+import {useEffect } from 'react';
 
 const MyProfileContactPage = (props) => {
     const dispatch = useDispatch();
     dispatch(setPage("My profile"));
+    useEffect(() => {
+        document.title = props.title || "";
+    }, [props.title]);
     return (
         <div data-scroll-section>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
