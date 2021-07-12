@@ -1,5 +1,6 @@
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
+import {useEffect} from 'react'
 import Breadcrumbs from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
@@ -8,9 +9,12 @@ import StackAutomation from '../../components/stackAutomation'
 const AutomationEngineerPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("stack/automation-engineer"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
   return (
     <>
       <PageTransitioning />

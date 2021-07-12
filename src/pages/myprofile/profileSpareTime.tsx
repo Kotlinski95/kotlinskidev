@@ -8,9 +8,13 @@ import ProfileImage from '../../components/profileImage'
 import NavProfile from '../../components/navProfile'
 import ProfileSpareTime from '../../components/myprofile/spareTime'
 import Footer from '../../components/footer'
+import {useEffect} from 'react';
 
 const MyProfileSpareTimePage = (props) => {
     const dispatch = useDispatch();
+    useEffect(() => {
+        document.title = props.title || "";
+    }, [props.title]);
     dispatch(setPage("My profile"));
     return (
         <div data-scroll-section>

@@ -1,11 +1,15 @@
 import Footer from '../components/footer';
 import NotFound from '../components/notFound/index'
 import PageTransitioning from '../components/pageTransitioning/index'
+import {useEffect} from 'react'
 
 const NotFoundPage = (props) => {
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
   return (
     <>
       <PageTransitioning />

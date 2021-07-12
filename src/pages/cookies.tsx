@@ -1,5 +1,6 @@
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
+import {useEffect } from 'react'
 import Breadcrumbs from '../components/breadcrumbs'
 import Footer from '../components/footer'
 import AccordionText from '../components/accordion'
@@ -8,8 +9,11 @@ import PageTransitioning from '../components/pageTransitioning/index'
 const CookiesPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Cookies"));
-  const { HandleMouseoverEffects } = props;
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
 
   const cookieContent = {
     main: {

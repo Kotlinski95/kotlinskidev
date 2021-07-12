@@ -1,6 +1,38 @@
 {
     "general": {
-        "website": "kotlinskidev.pl"
+        "website": "kotlinskidev.pl",
+        "titles": {
+            "home": "Adrian Kotliński | FrontEnd Developer",
+            "about": "About me | Adrian K. | FrontEnd Developer",
+            "courses": "Courses | Adrian K. | FrontEnd Developer",
+            "education": "Education | Adrian K. | FrontEnd Developer",
+            "frontEndDevelopment": "Web development | Adrian K. | FrontEnd Developer",
+            "plcCarrier": "PLC carrier | Adrian K. | FrontEnd Developer",
+            "myprofile": "My Profile | Adrian K. | FrontEnd Developer",
+            "myprofileContact": "Profile - Contact | Adrian K. | FrontEnd Developer",
+            "myprofileEducation": "Profile - Education | Adrian K. | FrontEnd Developer",
+            "myprofileHobby": "Profile - Hobby | Adrian K. | FrontEnd Developer",
+            "myprofileOverview": "Profile | Adrian K. | FrontEnd Developer",
+            "myprofileSpareTime": "Profile - spare time | Adrian K. | FrontEnd Developer",
+            "myprofileWork": "Profile - Work | Adrian K. | FrontEnd Developer",
+            "projects": "Projects | Adrian K. | FrontEnd Developer",
+            "projectsChess": "Chess | Adrian K. | FrontEnd Developer",
+            "projectsEstate": "Estate agent | Adrian K. | FrontEnd Developer",
+            "projectsPortfolio": "Portfolio | Adrian K. | FrontEnd Developer",
+            "projectsQuiz": "Quiz | Adrian K. | FrontEnd Developer",
+            "projectsWebsite": "Portfolio | Adrian K. | FrontEnd Developer",
+            "services": "Services | Adrian K. | FrontEnd Developer",
+            "servicesPlc":"Services - PLC | Adrian K. | FrontEnd Developer",
+            "servicesShopify": "Services - Shopify | Adrian K. | FrontEnd Developer",
+            "servicesWeb": "Services - Web | Adrian K. | FrontEnd Developer",
+            "stack": "Stack | Adrian K. | FrontEnd Developer",
+            "stackFutomation": "Stack Automation | Adrian K. | FrontEnd Developer",
+            "stackFront": "Stack FrontEnd | Adrian K. | FrontEnd Developer",
+            "contact": "Contact | Adrian K. | FrontEnd Developer",
+            "cookies": "Cookies | Adrian K. | FrontEnd Developer",
+            "notFound" :"Page Not Found | Adrian K. | FrontEnd Developer",
+            "privacy" : "Privacy Policy | Adrian K. | FrontEnd Developer"
+        }
     },
     "header": {
         "about": "About me",

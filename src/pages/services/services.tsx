@@ -1,5 +1,6 @@
 import { setPage } from '../../reducers/state'
 import { useDispatch } from 'react-redux'
+import {useEffect} from 'react'
 import Breadcrumbs from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
@@ -12,9 +13,12 @@ import administration_mobile from '../../assets/landing_page/administration_mobi
 const ServicesPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Contact"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
   const data = [
     {
       image: programming_mobile,

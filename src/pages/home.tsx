@@ -2,15 +2,19 @@
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
 import { Hero } from '../components/hero'
+import {useEffect} from 'react'
 import Footer from '../components/footer'
 import PageTransitioning from '../components/pageTransitioning/index'
 
 const HomePage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+      useEffect(() => {
+        document.title = title || "";
+    }, [title]);
 
   const routingProps = {
     language

@@ -4,12 +4,16 @@ import Breadcrumbs from '../components/breadcrumbs'
 import Footer from '../components/footer'
 import AccordionText from '../components/accordion'
 import PageTransitioning from '../components/pageTransitioning/index'
+import {useEffect} from 'react'
 
 const PrivacyPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Privacy"));
-  const { HandleMouseoverEffects } = props;
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
 
   const privacyContent = {
     main: {

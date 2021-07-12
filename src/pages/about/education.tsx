@@ -6,14 +6,19 @@ import AnimatedArrow from '../../components/animatedArrow'
 import Footer from '../../components/footer'
 import { TextRevealVertical, TextRevealHorizontal } from '../../components/contentReveal'
 import PageTransitioning from '../../components/pageTransitioning/index'
+import {useEffect } from 'react';
 
 
 const EducationPage = (props) => {
   const dispatch = useDispatch();
-  dispatch(setPage("aboutme/front-end-development"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects } = props;
+  dispatch(setPage("aboutme/education"));
+  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
+
+  useEffect(() => {
+    document.title = title || "";
+}, [title]);
 
   return (
     <>
