@@ -11,7 +11,7 @@ import './index.scss';
 import { useState, useEffect } from 'react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { TextRevealVertical, TextRevealHorizontal } from '../../contentReveal'
+import { TextRevealVertical } from '../../contentReveal'
 
 const CategoriesComponent = () => {
     function getWindowDimensions() {

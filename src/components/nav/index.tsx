@@ -84,15 +84,15 @@ const Nav = () => {
       <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-          <AboutMeNavigation language={language} click={clickAboutMe} handleClick={handleClickAboutMe} />
-          <StackNavigation language={language} click={clickStack} handleClick={handleClickStack} />
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
+          <AboutMeNavigation language={language} click={clickAboutMe} role="navigation" aria-label="navigation about" handleClick={handleClickAboutMe} />
+          <StackNavigation language={language} click={clickStack} role="navigation" aria-label="navigation stack" handleClick={handleClickStack} />
+            <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
               <li className="line-item">
                 {language.header.about}
               </li>
             </Button>
             <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
+            <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
               <li className="line-item">
                 {language.header.stack}
               </li>
@@ -101,14 +101,14 @@ const Nav = () => {
         </div>
         <div className="nav-center line-item cursor_hover">
           <Link to="/">
-            <LazyLoad height={60}>
-              <img src={logo} alt="Logo" className="nav-logo" ></img>
+            <LazyLoad height={50} width={50}>
+              <img src={logo} alt="Logo" style={{width: '50', height: '50'}} className="nav-logo" ></img>
             </LazyLoad>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
           <ul>
-            <Switch
+            <li style={{padding: '0'}}><Switch
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
@@ -184,9 +184,9 @@ const Nav = () => {
               }
               className="react-switch cursor_hover"
               id="small-radius-switch"
-            />
-            <NotificationDropdown language={language} />
-            <DropdownMulti language={language}/>
+            /></li>
+            <li style={{padding: '0'}}><NotificationDropdown language={language} /></li>
+            <li style={{padding: '0'}}><DropdownMulti language={language}/></li>
           </ul>
         </div>
       </div>

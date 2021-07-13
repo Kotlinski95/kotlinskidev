@@ -182,7 +182,7 @@ const CookiesPage = (props) => {
           },
           explorer_link: {
             text: language.pages.cookies.interpretation_definitions.choises.explorer_link,
-            link: "http://support.microsoft.com/kb/278835",
+            link: "https://support.microsoft.com/kb/278835",
             target: "_blank"
           },
           firefox: {

@@ -27,7 +27,7 @@ const AnimatedArrow = (props) => {
                         }
                         {
                             props.href ?
-                            <a className="animated-arrow" href={props.href} target="_blank" onClick={()=>{
+                            <a className="animated-arrow" href={props.href} target="_blank" rel="nofollow noopener noreferrer" onClick={()=>{
                                 handleTrackingEvent("Arrow", "Animated arrow link clicked", { page: `${_store.getState().pageState.page}`, href : props.href });
                             }}>
                                 <span className="the-arrow -left">
