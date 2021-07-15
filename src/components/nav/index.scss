@@ -29,6 +29,8 @@
         cursor: pointer;
         font-size: 20px;
         text-transform: none;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        height: 100%;
       }
     }
   }
@@ -38,6 +40,9 @@
     width: calc(50% - 30px);
     @media (max-width: 768px) {
       display: none;
+    }
+    .MuiButton-text{
+      padding: 0;
     }
   }
 
@@ -56,6 +61,9 @@
       .layout-icon{
         height: 30px;
         width: 30px;
+      }
+      li{
+        padding: 0;
       }
     }
     @media (max-width: 768px) {

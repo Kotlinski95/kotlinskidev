@@ -64,11 +64,13 @@ function DropdownMulti(props) {
   return (
     <>
       <Navbar>
+        <li>
         <div className="dropdown-menu cursor_hover" ref={wrapperRef}>
           <NavItem id="dropdown-settings" className="cursor_hover" dropdown={true} icon={<CaretIcon />}>
             <DropdownMenu ></DropdownMenu>
           </NavItem>
         </div>
+        </li>
       </Navbar>
     </>
   );

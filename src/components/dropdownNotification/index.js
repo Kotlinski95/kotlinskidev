@@ -33,6 +33,7 @@ function NotificationDropdown(props) {
     return (
         <>
             <Navbar >
+                <li>
                 <div className="dropdown-notification cursor_hover" ref={wrapperRef} >
                 <NavItem  dropdown={true} icon={
                     <Badge badgeContent={1} color="secondary">
@@ -42,6 +43,7 @@ function NotificationDropdown(props) {
                     <DropdownMenu ></DropdownMenu>
                 </NavItem>
                 </div>
+                </li>
             </Navbar>
         </>
     );

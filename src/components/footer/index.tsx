@@ -18,18 +18,19 @@ const Footer = () => {
         <div className="footer-wrapper">
             <div className="footer-head" data-scroll>
                 <ul>
-                    <Link to="/services" title={`Link to services`} aria-label={`Link to services`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.services}</span></Link>
-                    <Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.contact}</span></Link>
+                    <li><Link to="/services" title={`Link to services`} aria-label={`Link to services`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.services}</span></Link></li>
+                    <li><Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.contact}</span></Link></li>
                 </ul>
             </div>
             <div className="footer-body" data-scroll>
                 <ul className="line-item footer-left">
-                    <span>@{new Date().getFullYear()} {language.footer.privacy.rights}</span>
-                    <Link to="/privacy" title={`Link to privacy policy`} aria-label={`Link to privacy policy`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.policy}</span></Link>
-                    <Link to="/cookies" title={`Link to cookies`} aria-label={`Link to cookies`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.cookies}</span></Link>
+                    <li><span>@{new Date().getFullYear()} {language.footer.privacy.rights}</span></li>
+                    <li><Link to="/privacy" title={`Link to privacy policy`} aria-label={`Link to privacy policy`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.policy}</span></Link></li>
+                    <li><Link to="/cookies" title={`Link to cookies`} aria-label={`Link to cookies`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.cookies}</span></Link></li>
                 </ul>
                 <ul className="line-item footer-right cursor_hover">
-                    <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
+                    <li>
+                        <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
                         <span className='list-item'><CustomLink href="https://github.com/Kotlinski95/" target="_blank" rel="nofollow noopener noreferrer" title="github" className="cursor_hover" onClick={() => {
                             handleTrackingEvent("Github", "Github clicked", { page: `${_store.getState().pageState.page}` });
                         }}><FaGithub /></CustomLink></span>
@@ -45,7 +46,8 @@ const Footer = () => {
                         <span className='list-item'><CustomLink href="mailto:kotlinski95@gmail.com" title="mail"  className="cursor_hover" onClick={() => {
                             handleTrackingEvent("Email", "Mail clicked", { page: `${_store.getState().pageState.page}` });
                         }}><FaAt /></CustomLink></span>
-                    </IconContext.Provider>
+                        </IconContext.Provider>
+                    </li>
                 </ul>
             </div>
             <div className="messenger-wrapper">

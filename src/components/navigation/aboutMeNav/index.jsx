@@ -23,9 +23,11 @@ function AboutMeNavigation(props) {
         <>
             <MainNavigationContainer onClick={handleClick} clicked={click}>
                 <MainNavigationList clicked={click} className="main-navigation-list">
+                    <li>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
                         <CustomImage src={logo} alt="Logo" width='80px' height='80px' title="Logo"></CustomImage>
                     </div>
+                    </li>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
                             <StyledNavLink className="styled-nav cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
