@@ -32,5 +32,5 @@ const ServiceCarousel = (props) => {
       </CarouselProvider>
     )
   }
-  
+
   export default ServiceCarousel;

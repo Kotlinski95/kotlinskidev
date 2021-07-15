@@ -44,7 +44,6 @@ const AnimatedArrow = (props) => {
                                 </span>
                             </CustomLink> : null
                         }
-
                     </li>
                 </ul>
             </div>

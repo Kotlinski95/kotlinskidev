@@ -83,7 +83,7 @@ function DropdownMulti(props) {
 
   function NavItem(props) {
     return (
-      <li className="nav-item">
+      <span className="nav-item">
         <span className="icon-button" onClick={() => {
           props.dropdown && setOpen(!open);
           props.dropdown && dispatch(setMenu(open ? "false" : "true"));
@@ -92,7 +92,7 @@ function DropdownMulti(props) {
         </span>
 
         {open && props.children}
-      </li>
+      </span>
     );
   }
 

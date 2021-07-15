@@ -86,19 +86,19 @@ const Nav = () => {
       <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-          <AboutMeNavigation language={language} click={clickAboutMe} role="navigation" aria-label="navigation about" handleClick={handleClickAboutMe} />
-          <StackNavigation language={language} click={clickStack} role="navigation" aria-label="navigation stack" handleClick={handleClickStack} />
-            <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
-              <li className="line-item">
+          <li><AboutMeNavigation language={language} click={clickAboutMe} role="navigation" aria-label="navigation about" handleClick={handleClickAboutMe} /></li>
+          <li><StackNavigation language={language} click={clickStack} role="navigation" aria-label="navigation stack" handleClick={handleClickStack} /></li>
+          <li> <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
+              <span className="line-item list-item">
                 {language.header.about}
-              </li>
-            </Button>
-            <Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item cursor_hover">{language.header.projects}</li></Link>
-            <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
-              <li className="line-item">
+              </span>
+            </Button></li>
+            <li><Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item cursor_hover">{language.header.projects}</span></Link></li>
+            <li><Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
+              <span className="line-item list-item">
                 {language.header.stack}
-              </li>
-            </Button>
+              </span>
+            </Button></li>
           </ul>
         </div>
         <div className="nav-center line-item cursor_hover">
