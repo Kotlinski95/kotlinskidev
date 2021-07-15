@@ -210,16 +210,16 @@ const NotFound = (props) => {
           </form>
         </div>
         <div id="navigation">
-          <Link className="navigation cursor_hover" to="/">
+          <Link className="navigation cursor_hover" to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='noopener'>
             {language.header.home}
           </Link>
-          <Link className="navigation cursor_hover" to="/aboutme">
+          <Link className="navigation cursor_hover" to="/aboutme" title="Link to aboutme page" aria-label="Link to aboutme page" referrer-policy = 'no-referrer' rel='noopener'>
             {language.header.about}
           </Link>
-          <Link className="navigation cursor_hover" to="/contact">
+          <Link className="navigation cursor_hover" to="/contact" title="Link to contact" aria-label="Link to contact" referrer-policy = 'no-referrer' rel='noopener'>
             {language.footer.pages.contact}
           </Link>
-          <Link className="navigation cursor_hover" to="/myprofile">
+          <Link className="navigation cursor_hover" to="/myprofile" title="Link to my profile" aria-label="Link to my profile" referrer-policy = 'no-referrer' rel='noopener'>
             {language.header.myprofile}
           </Link>
         </div>

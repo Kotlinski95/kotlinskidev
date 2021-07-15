@@ -10,7 +10,7 @@ const ProjectTile = (props) => {
     return (
         <div className="project-tile-wrapper" style={{ width: `${props.width}`, height: `${props.height}`, overflow: 'hidden' }}>
             <RevealImage data-scroll>
-                <Link className="project-tile-link" to={props.url}></Link>
+                <Link className="project-tile-link" to={props.url} title={`Link to ${props.url}`} aria-label={`Link to ${props.url}`} referrer-policy = 'no-referrer' rel='noopener'></Link>
                     <Image className="cursor_hover" src={props.logo} alt="Logo" />
                 <p className="project-tile-title">{props.title}</p>
                 <AnimatedArrow text={language.pages.home.about.seemore} justify="center" textSize="28px" top="0px" bottom="auto" link={props.url} />

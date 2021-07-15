@@ -6,6 +6,7 @@ import {
 } from '../../../styled-components/MainNavigation.styled';
 import { StyledNavLink } from '../../../styled-components/Links';
 import logo from '../../../assets/icons/myprofile.svg';
+import CustomImage from '../../customImage'
 
 function AboutMeNavigation(props) {
 
@@ -23,7 +24,7 @@ function AboutMeNavigation(props) {
             <MainNavigationContainer onClick={handleClick} clicked={click}>
                 <MainNavigationList clicked={click} className="main-navigation-list">
                     <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <img src={logo} alt="Logo" style={{width: '80px', heigth: '80px'}}></img>
+                        <CustomImage src={logo} alt="Logo" width='80px' height='80px' title="Logo"></CustomImage>
                     </div>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>

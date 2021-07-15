@@ -8,6 +8,7 @@ import FaceLeft from '../../assets/stack/faceLeft.png'
 import FaceRight from '../../assets/stack/faceRight.png'
 import { Link } from 'react-router-dom';
 import Button from '../../components/button'
+import CustomImage from '../../components/customImage';
 
 const StackPage = (props) => {
   const dispatch = useDispatch();
@@ -36,10 +37,10 @@ const StackPage = (props) => {
           </div>
           <div className="stack-main__wrapper">
             <div className="stack-main__left">
-              <img src={FaceLeft} alt="FaceLeft" />
+              <CustomImage src={FaceLeft} alt='FaceLeft' title='FaceLeft' width='100%' height='100%' />
             </div>
             <div className="stack-main__right">
-              <img src={FaceRight} alt="FaceRight" />
+              <CustomImage src={FaceRight} alt='FaceRight' title='FaceRight' width='100%' height='100%'/>
             </div>
           </div>
         </div>

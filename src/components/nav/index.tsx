@@ -16,6 +16,8 @@ import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
 import AboutMeNavigation from '../navigation/aboutMeNav';
 import StackNavigation from '../navigation/stackNav';
+import CustomLink from '../customLink'
+import CustomImage from '../customImage'
 
 const styles = {
   bmCrossButton: {
@@ -91,7 +93,7 @@ const Nav = () => {
                 {language.header.about}
               </li>
             </Button>
-            <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
+            <Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item cursor_hover">{language.header.projects}</li></Link>
             <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
               <li className="line-item">
                 {language.header.stack}
@@ -100,10 +102,8 @@ const Nav = () => {
           </ul>
         </div>
         <div className="nav-center line-item cursor_hover">
-          <Link to="/">
-            <LazyLoad height={50} width={50}>
-              <img src={logo} alt="Logo" style={{width: '50', height: '50'}} className="nav-logo" ></img>
-            </LazyLoad>
+          <Link to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='noopener'>
+              <CustomImage src={logo} alt="Logo" width='50' height='50' loading='lazy' className="nav-logo" title='Link to homepage' role='link'></CustomImage>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
@@ -164,7 +164,7 @@ const Nav = () => {
                     zIndex: 999
                   }}
                 >
-                  <img src={moon} />
+                  <CustomImage src={moon} alt='Dark mode' title='Switch to Light mode' width='20px' height='20px' />
                 </div>
               }
               checkedHandleIcon={
@@ -179,7 +179,7 @@ const Nav = () => {
                     zIndex: 999
                   }}
                 >
-                  <img src={sun} className="layout-icon" />
+                  <CustomImage src={sun} className="layout-icon" alt='Light mode' title='Switch to Dark mode' width='20px' height='20px' />
                 </div>
               }
               className="react-switch cursor_hover"

@@ -78,9 +78,9 @@
         }
     }
     .slick-slide {
+        visibility: hidden;
+    }
+    .slick-slide.slick-active{
         visibility: visible;
-        .slick-active{
-            visibility: hidden;
-        }
     }
 }

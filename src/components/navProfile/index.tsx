@@ -41,12 +41,11 @@ const NavProfile = (props) => {
     return(
         <div className="myprofile-nav__wrapper">
             <ul>
-                <Link to="/myprofile/overview"><li className="line-item">{language.pages.myprofile.bookmarks.overview}</li></Link>
-                <Link to="/myprofile/work"><li className="line-item">{language.pages.myprofile.bookmarks.work}</li></Link>
-                <Link to="/myprofile/education"><li className="line-item">{language.pages.myprofile.bookmarks.education}</li></Link>
-                <Link to="/myprofile/contact"><li className="line-item">{language.pages.myprofile.bookmarks.contact}</li></Link>
-                <Link to="/myprofile/hobby"><li className="line-item">{language.pages.myprofile.bookmarks.hobby}</li></Link>
-                {/* <Link to="/myprofile/spare-time"><li className="line-item">{language.pages.myprofile.bookmarks.spareTime}</li></Link> */}
+                <Link to="/myprofile/overview" title="Link to myprofile overview" aria-label="Link to myprofile overview" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item">{language.pages.myprofile.bookmarks.overview}</li></Link>
+                <Link to="/myprofile/work" title="Link to myprofile work" aria-label="Link to myprofile work" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item">{language.pages.myprofile.bookmarks.work}</li></Link>
+                <Link to="/myprofile/education" title="Link to myprofile education" aria-label="Link to myprofile education" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item">{language.pages.myprofile.bookmarks.education}</li></Link>
+                <Link to="/myprofile/contact" title="Link to myprofile contact" aria-label="Link to myprofile contact" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item">{language.pages.myprofile.bookmarks.contact}</li></Link>
+                <Link to="/myprofile/hobby" title="Link to myprofile hobby" aria-label="Link to myprofile hobby" referrer-policy = 'no-referrer' rel='noopener'><li className="line-item">{language.pages.myprofile.bookmarks.hobby}</li></Link>
             </ul>
         </div>
     );
