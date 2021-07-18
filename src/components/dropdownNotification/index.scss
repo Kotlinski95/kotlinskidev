@@ -1,9 +1,5 @@
 /* <li> */
 .dropdown-notification {
-  .navbar-nav{
-    li{
-      padding: 0;
-    }
   .nav-item {
     width: calc(var(--nav-size) * 0.8);
     display: flex;
@@ -114,7 +110,6 @@
       transition: all var(--speed) ease;
     }
   }
-}
 }
   .MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangle {
     font-size: 13px;

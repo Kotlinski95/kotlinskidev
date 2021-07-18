@@ -1,4 +1,3 @@
-import TypedText from '../components/typedText'
 import { setPage } from '../reducers/state'
 import { useDispatch } from 'react-redux'
 import {useEffect} from 'react'
@@ -11,6 +10,11 @@ const ContactPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Contact"));
   const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
+  // useEffect(()=>{
+  //   if (!_store.getState().pageState.mobile){
+  //     HandleLocomotiveScroll();
+  //   }
+  // });
   HandleLocomotiveScroll();
   HandleMouseoverEffects();
   useEffect(() => {

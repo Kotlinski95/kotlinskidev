@@ -1,15 +1,25 @@
 {
-  "short_name": "Adrian Kotliński - portfolio",
-  "name": "Create kotlinskidev portfolio",
+  "short_name": "Kotlinskidev",
+  "name": "Adrian Kotliński - Junior Front-End Developer",
   "icons": [
     {
-      "src": "Adrian_Kotlinski.ico",
+      "src": "kotlinskidev.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e1f7f1",
+  "background_color": "#1c5344"
 }
