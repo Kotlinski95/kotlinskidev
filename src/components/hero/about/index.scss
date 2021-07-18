@@ -1,0 +1,34 @@
+.hero-about-wrapper{
+    padding-top: 5px;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0 20px;
+    .hero-about_hello{
+        font-size: 102px;
+        @media (max-width: 768px){
+            font-size: 50px;
+        }
+        margin: 15px auto;
+        font-family: 'Times New Roman', serif;
+    }
+    .hero-about_hello::after{
+        content: ".";
+        color: rgb(30, 229, 255);
+    }
+    .hero-about_introduce{
+        width: 50%;
+        font-size: 32px;
+        @media (max-width: 768px){
+            font-size: 22px;
+        }
+        font-weight: 400;
+        @media (max-width: 968px){
+            width: 100%;
+        }
+    }
+}
+.arrow-container{
+    @media (max-width: 968px){
+        bottom: 0 !important;
+    }
+}

@@ -1,13 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/_style.scss';
 import App from './App';
+import { Store } from 'redux';
+import { Provider } from 'react-redux'
+import { store } from './store';
+import { CookiesProvider } from 'react-cookie';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+declare global {
+  var _store: Store;
+  var dataLayer: any;
+}
+window._store = store;
+const TRACKING_ID = "UA-196673480-1"; // YOUR_OWN_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
+
+const history = createBrowserHistory();
+// Initialize google analytics page view tracking
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <CookiesProvider>
+        <Router history={history}>
+          <App />
+        </Router>
+      </CookiesProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -16,8 +45,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.unregister();
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
