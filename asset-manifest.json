@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/kotlinskidev/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/kotlinskidev/static/js/main.0fe5a73c.chunk.js",
+    "main.js.map": "/kotlinskidev/static/js/main.0fe5a73c.chunk.js.map",
+    "runtime-main.js": "/kotlinskidev/static/js/runtime-main.c0bf3489.js",
+    "runtime-main.js.map": "/kotlinskidev/static/js/runtime-main.c0bf3489.js.map",
+    "static/js/2.d0eb047a.chunk.js": "/kotlinskidev/static/js/2.d0eb047a.chunk.js",
+    "static/js/2.d0eb047a.chunk.js.map": "/kotlinskidev/static/js/2.d0eb047a.chunk.js.map",
+    "static/js/3.eb2c8977.chunk.js": "/kotlinskidev/static/js/3.eb2c8977.chunk.js",
+    "static/js/3.eb2c8977.chunk.js.map": "/kotlinskidev/static/js/3.eb2c8977.chunk.js.map",
+    "index.html": "/kotlinskidev/index.html",
+    "service-worker.js": "/kotlinskidev/service-worker.js",
+    "service-worker.js.map": "/kotlinskidev/service-worker.js.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/kotlinskidev/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.d0eb047a.chunk.js.LICENSE.txt": "/kotlinskidev/static/js/2.d0eb047a.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/kotlinskidev/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0bf3489.js",
+    "static/js/2.d0eb047a.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.0fe5a73c.chunk.js"
+  ]
+}
