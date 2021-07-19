@@ -1,7 +1,8 @@
 {
   "short_name": "KotlinskiDev",
   "name": "Adrian Kotliński - Junior Front-End Developer",
-  "description": "Portfolio",
+  "scope": ".",
+  "start_url": "/",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,8 +20,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
   "theme_color": "#e1f7f1",
-  "background_color": "#1c5344"
+  "background_color": "#1c5344",
+  "display": "standalone"
 }
