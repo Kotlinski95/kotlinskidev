@@ -1,7 +1,8 @@
 {
   "short_name": "KotlinskiDev!",
   "name": "Adrian Kotliński - Junior Front-End Developer!",
-  "start_url": "/",
+  "scope": "/kotlinskidev",
+  "start_url": "/kotlinskidev",
   "icons": [
     {
       "src": "favicon.ico",
