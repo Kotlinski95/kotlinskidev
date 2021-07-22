@@ -51,6 +51,10 @@ import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { setMobile } from './reducers/state';
+import { useReactPWAInstall } from "react-pwa-install";
+import myLogo from "./assets/icons/logo192.png";
+import TransitionModal from './components/transitionModal';
+
 declare global {
   var _theme: ThemeType;
 }
@@ -68,9 +72,12 @@ function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [isReady, setIsReady] = useState(false);
+  const [openPWApopup, setOpenPWApopup] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();
   isMobile ? dispatch(setMobile(true)) : dispatch(setMobile(false));
+  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
+
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -122,6 +129,9 @@ function App() {
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
       let scroll: any;
+      if (supported() && !isInstalled()){
+        handleInstallPWA();
+      }
       setTimeout(() => {
         scroll = new locomotiveScroll({
           el: document.querySelector(".smooth-scroll"),
@@ -149,6 +159,28 @@ function App() {
     setIsMobile(test);
   };
 
+  const handleInstallPWA = () => {
+    pwaInstall({
+      title: "Install Kotlinskidev Web App",
+      logo: myLogo,
+      features: (
+        <ul>
+          <li>Get better experience from App using PWA!</li>
+          <li>Get some functionalities in offline mode!</li>
+          <li>Stay with me for longer!</li>
+          <li>You can take a look at my portfolio just clicking KotlinskiDev icon :) </li>
+        </ul>
+      ),
+      description: "This is a very good app that does a lot of useful stuff. ",
+    })
+      .then(() => alert("App installed successfully or instructions for install shown"))
+      .catch(() => alert("User opted out from installing"));
+  };
+
+  const handleClosePWA = () => {
+    setOpenPWApopup(false);
+  };
+
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
@@ -166,6 +198,7 @@ function App() {
                 }
 
                 <RouteChangeTracker />
+                <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>
                 <Nav />
                 <div className="main">
                   <Switch location={location} key={location.pathname}>

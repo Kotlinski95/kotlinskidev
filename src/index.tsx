@@ -11,6 +11,7 @@ import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import ReactPWAInstallProvider from "react-pwa-install";
 
 declare global {
   var _store: Store;
@@ -32,9 +33,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <CookiesProvider>
-        <Router history={history}>
-          <App />
-        </Router>
+        <ReactPWAInstallProvider enableLogging>
+          <Router history={history}>
+            <App />
+          </Router>
+        </ReactPWAInstallProvider>
       </CookiesProvider>
     </Provider>
   </React.StrictMode>,

@@ -1,6 +1,9 @@
 {
   "short_name": "KotlinskiDev",
-  "name": "Adrian Kotliński - Junior Front-End Developer",
+  "name": "KotlinskiDev",
+  "description" :"Adrian Kotliński - Junior Front-End Developer",
+  "start_url": ".",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,7 +13,8 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
@@ -18,8 +22,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
   "theme_color": "#e1f7f1",
-  "background_color": "#1c5344"
+  "background_color": "#1c5344",
+  "display": "standalone"
 }
