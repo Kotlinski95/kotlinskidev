@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import ReactPWAInstallProvider  from "react-pwa-install";
 
 ReactDOM.render(
+  <ReactPWAInstallProvider enableLogging>
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  </ReactPWAInstallProvider>,
   document.getElementById('root')
 );
 
@@ -17,14 +20,14 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register();
 
-console.error("SERVICE WORKER: ", navigator.serviceWorker);
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-    console.log('ServiceWorker registration successful with scope:',  registration.scope);
-  }).catch(function(error) {
-    console.log('ServiceWorker registration failed:', error);
-  });
-}
+// console.error("SERVICE WORKER: ", navigator.serviceWorker);
+// if (navigator.serviceWorker) {
+//   navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+//     console.log('ServiceWorker registration successful with scope:',  registration.scope);
+//   }).catch(function(error) {
+//     console.log('ServiceWorker registration failed:', error);
+//   });
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,44 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { useReactPWAInstall } from "react-pwa-install";
 
 function App() {
-
+  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
   const [installable, setInstallable] = useState(false);
   let deferredPrompt: any;
 
-  useEffect(() => {
-    window.addEventListener("beforeinstallprompt", (e: any) => {
-      // Prevent the mini-infobar from appearing on mobile
-      e.preventDefault();
-      // Stash the event so it can be triggered later.
-      deferredPrompt = e;
-      // Update UI notify the user they can install the PWA
-      setInstallable(true);
-    });
-
-    window.addEventListener('appinstalled', () => {
-      // Log install to analytics
-      console.log('INSTALL: Success');
-    });
-  }, []);
-
-  const handleInstallClick = (e: any) => {
-      // Hide the app provided install promotion
-      setInstallable(false);
-      // Show the install prompt
-      deferredPrompt.prompt();
-      // Wait for the user to respond to the prompt
-      deferredPrompt.userChoice.then((choiceResult: any) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        } else {
-          console.log('User dismissed the install prompt');
-        }
-      });
+  const handleClick = () => {
+    pwaInstall({
+      title: "Install Web App",
+      logo: logo,
+      features: (
+        <ul>
+          <li>Cool feature 1</li>
+          <li>Cool feature 2</li>
+          <li>Even cooler feature</li>
+          <li>Works offline</li>
+        </ul>
+      ),
+      description: "This is a very good app that does a lot of useful stuff. ",
+    })
+      .then(() => alert("App installed successfully or instructions for install shown"))
+      .catch(() => alert("User opted out from installing"));
   };
-
 
   return (
     <div className="App">
@@ -55,11 +42,13 @@ function App() {
         >
           Portfolio
         </a>
-        {installable &&
-          <button className="install-button" onClick={handleInstallClick}>
-            INSTALL ME
-          </button>
-        }
+        <div>
+          {supported() && !isInstalled() && (
+            <button type="button" onClick={handleClick}>
+              Install App
+            </button>
+          )}
+        </div>
       </header>
     </div>
   );
