@@ -125,6 +125,7 @@ function App() {
   HandleMouseoverEffects();
   const scrollRef: any = React.createRef();
   let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
+  let safariAgent = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
 
   const HandleLocomotiveScroll = () => {
     useEffect(() => {
@@ -135,7 +136,7 @@ function App() {
       setTimeout(() => {
         scroll = new locomotiveScroll({
           el: document.querySelector(".smooth-scroll"),
-          smooth: !firefoxAgent,
+          smooth: !firefoxAgent && !safariAgent,
           reloadOnContextChange: true,
           smartphone: { smooth: true },
           tablet: { smooth: true },
