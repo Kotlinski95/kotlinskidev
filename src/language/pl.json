@@ -67,7 +67,7 @@
         "cookie_consent": {
             "first_text" : "Ta strona korzysta z plików cookie, aby zwiększyć komfort użytkowania.",
             "second_text": "Zaakceptuj politykę plików cookie, aby uzyskać lepsze wrażenia!",
-            "buttonText": "Akceptuję",
+            "buttonText": "Rozumiem",
             "declineButtonText": "Odrzucam"
         },
         "privacy":{

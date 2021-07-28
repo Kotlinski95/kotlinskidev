@@ -6,13 +6,12 @@ const Cookies = () => {
     return (
         <>
             <CookieConsent
-                enableDeclineButton
                 flipButtons
                 location="bottom"
                 buttonText={language.footer.cookie_consent.buttonText}
                 declineButtonText={language.footer.cookie_consent.declineButtonText}
                 cookieName="Accept_cookies"
-                style={{ background: "#2B373B", padding: '15px 120px 15px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                style={{ background: "#1c5344", padding: '15px 120px 15px 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                 buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                 expires={1}
                 onAccept={() => {
