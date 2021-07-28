@@ -120,22 +120,22 @@ function App() {
   let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
 
   const HandleLocomotiveScroll = () => {
-    useEffect(() => {
-      let scroll: any;
-      setTimeout(() => {
-        scroll = new locomotiveScroll({
-          el: document.querySelector(".smooth-scroll"),
-          smooth: !firefoxAgent,
-          reloadOnContextChange: true,
-          smartphone: { smooth: true },
-          tablet: { smooth: true },
-          lerp: 0.09,
-        });
-      }, 500)
-      return () => {
-        scroll.destroy();
-      }
-    }, []);
+    // useEffect(() => {
+    //   let scroll: any;
+    //   setTimeout(() => {
+    //     scroll = new locomotiveScroll({
+    //       el: document.querySelector(".smooth-scroll"),
+    //       smooth: !firefoxAgent,
+    //       reloadOnContextChange: true,
+    //       smartphone: { smooth: true },
+    //       tablet: { smooth: true },
+    //       lerp: 0.09,
+    //     });
+    //   }, 500)
+    //   return () => {
+    //     scroll.destroy();
+    //   }
+    // }, []);
   }
 
   const routingProps = {

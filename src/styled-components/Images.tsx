@@ -1,6 +1,7 @@
 import { AnyARecord } from 'dns';
 import styled, { css } from 'styled-components';
-import {Theme} from '../settings';
+import { Theme } from '../settings';
+import { InView } from 'react-intersection-observer';
 const {
     breakpoints
 } = Theme;
@@ -74,19 +75,34 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
     }
 `;
 
-export const RevealImage: any = styled.div`
+export const RevealImageDiv: any = styled.div`
     background-color: transparent;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     overflow: hidden;
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
-    &.is-inview {
+    /* &.is-inview {
         transform: translateX(0);
 
         img {
             transform: translateX(0) scale(1);
         }
-    }
+    } */
 `;
+
+export const RevealImage = (props) => {
+    return (
+        <InView triggerOnce threshold={0.1}>
+        {({ inView, ref, entry }) => (
+            <RevealImageDiv {...props}
+                ref={ref}
+                style={{
+                    transform: inView ? 'translateX(0%)' : 'translateX(-50%)',
+                }}
+            />
+        )}
+        </InView>
+    )
+}
 
 export const RevealDiv: any = styled.div`
     background-color: transparent;
