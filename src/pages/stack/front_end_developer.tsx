@@ -10,8 +10,7 @@ import PageTransitioning from '../../components/pageTransitioning/index'
 const FrontEndDeveloperPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("stack/front-end-developer"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -20,7 +19,7 @@ const FrontEndDeveloperPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <StackFrontEnd />

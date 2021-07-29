@@ -105,21 +105,21 @@ const ContactForm = () => {
   return (
     <>
       <div className="contact_form-wrapper">
-        <TextRevealVertical data-scroll><h2 className="projects-hello">{language.pages.contact.title}</h2></TextRevealVertical>
-        <TextRevealHorizontal data-scroll><h2>{language.pages.contact.header}</h2></TextRevealHorizontal>
+        <TextRevealVertical ><h2 className="projects-hello">{language.pages.contact.title}</h2></TextRevealVertical>
+        <TextRevealHorizontal ><h2>{language.pages.contact.header}</h2></TextRevealHorizontal>
         <form className="contact-form" onSubmit={sendEmail}>
           <input className="cursor_hover" type="hidden" name="contact_number" />
-          <ComponentRevealShow data-scroll width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.3s"><input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.6s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.6s"><input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.9s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="0.9s"><input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.2s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.2s"><textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} /></ComponentRevealShow>
-          <ComponentRevealShow data-scroll width="80%" delay="1.5s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.3s"><input className="cursor_hover" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.6s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.6s"><input className="cursor_hover" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.9s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.9s"><input className="cursor_hover" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="1.2s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="1.2s"><textarea className="cursor_hover" name="html_message" placeholder={language.pages.contact.message_placeholder} /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="1.5s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
         </form>
-        <ComponentRevealShow data-scroll width="80%">
+        <ComponentRevealShow width="80%">
         <div className="cursor_hover">
         <ContactContainer >
           <ContactItem >

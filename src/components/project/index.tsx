@@ -69,7 +69,7 @@ const Project: any = () => {
         <SectionContainer project>
             <SectionContainerFluid>
                 <Heading2 project={true}>
-                    <TextRevealVertical data-scroll>
+                    <TextRevealVertical>
                         {name}
                     </TextRevealVertical>
                 </Heading2>
@@ -81,7 +81,7 @@ const Project: any = () => {
                 </ProjectsInfoContainer>
                 <ProjectImageContainer>
                     <ImageWrapper projectmain>
-                        <RevealImage data-scroll>
+                        <RevealImage>
                             <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} alt={alt} />
                         </RevealImage>
                     </ImageWrapper>
@@ -109,7 +109,7 @@ const Project: any = () => {
                 </ProjectList>
                 {text.map((text, index) => {
                     return (
-                        <TextRevealHorizontal data-scroll key={index}>
+                        <TextRevealHorizontal key={index}>
                             <Paragraph project="true" key={index}>
                                 {text}
                             </Paragraph>
@@ -119,24 +119,24 @@ const Project: any = () => {
             </SectionContainerInner>
             <SectionContainerFluid>
                 <ImageWrapper projectoverview>
-                    <RevealImage data-scroll>
+                    <RevealImage>
                         <Image className="cursor_hover" src={mobileOverview} srcSet={`${mobileOverview} 300w, ${desktopOverview} 768w`} alt={alt} />
                     </RevealImage>
                 </ImageWrapper>
                 <ImageWrapper projectrwd>
-                    <RevealImage data-scroll>
+                    <RevealImage>
                         <Image className="cursor_hover" src={mobileRwd} srcSet={`${mobileRwd} 300w, ${desktopRwd} 768w`} alt={alt} />
                     </RevealImage>
                 </ImageWrapper >
             </SectionContainerFluid>
             <SectionContainerFluid nextProject="true">
                 <Heading3 project>
-                    <TextRevealHorizontal data-scroll>
+                    <TextRevealHorizontal>
                         {next}
                     </TextRevealHorizontal>
                 </Heading3>
                 <MainLink className="cursor_hover" to={projects[nextSite].path} project="true" main="true">
-                    <TextRevealHorizontal data-scroll>
+                    <TextRevealHorizontal>
                         {projects[nextSite].name}
                     </TextRevealHorizontal>
                 </MainLink>

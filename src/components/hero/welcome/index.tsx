@@ -23,13 +23,11 @@ const WelcomeComponent = (props) => {
             <SvgHeroBackgroundLeft/>
             <SvgHeroBackgroundRight/>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
-                <div className="welcome-wrapper" data-scroll>
+                <div className="welcome-wrapper">
                     <div className="introduce-text cursor_hover">
-                    {/* <TextRevealVertical delay={.2} data-scroll><h1>{language.pages.home.welcome.header}</h1></TextRevealVertical>
-                    <TextRevealVertical delay={1.2} data-scroll><h2>{language.pages.home.welcome.title}</h2></TextRevealVertical> */}
                     </div>
                 </div>
-                <ScrollDown data-scroll bottom="80px" top="auto" bottomText="30px" topText="auto" display={showScroll} text={language.pages.home.welcome.scroll} />
+                <ScrollDown bottom="80px" top="auto" bottomText="30px" topText="auto" display={showScroll} text={language.pages.home.welcome.scroll} />
             </div>
         </div>
     );

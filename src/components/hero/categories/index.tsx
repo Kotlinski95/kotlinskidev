@@ -108,11 +108,11 @@ const CategoriesComponent = () => {
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
-                <div className="categories-wrapper" data-scroll>
-                    <TextRevealVertical data-scroll><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
+                <div className="categories-wrapper">
+                    <TextRevealVertical><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
                     <Slider {...settings}>
                         {items.map((item, i) => (
-                            <CategoryCollection data-scroll key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
+                            <CategoryCollection key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
                             </CategoryCollection>
                         ))}
                     </Slider>

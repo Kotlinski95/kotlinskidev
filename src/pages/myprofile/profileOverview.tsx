@@ -17,24 +17,24 @@ const MyProfileOverviewPage = (props) => {
         document.title = props.title || "";
     }, [props.title]);
     return (
-        <div data-scroll-section>
+        <div>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                 <div className="myprofile-wrapper">
                     <div className="myprofile-introduce-wrapper">
-                        <div className="myprofile-introduce-img" data-scroll>
+                        <div className="myprofile-introduce-img">
                             <Breadcrumbs />
                             <img src={background}></img>
                         </div>
                         <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px" />
                     </div>
-                    <div className="myprofile-content-wrapper" data-scroll>
+                    <div className="myprofile-content-wrapper">
                         <h1>{language.pages.myprofile.header}</h1>
                         <h2>{language.pages.myprofile.profession}</h2>
                         <hr />
                         <NavProfile page="overview" />
                     </div>
                 </div>
-                <div className="myprofile-category__wrapper" data-scroll>
+                <div className="myprofile-category__wrapper">
                     <ProfileOverview />
                 </div>
             </div>

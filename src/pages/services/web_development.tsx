@@ -23,8 +23,7 @@ import javascript_mobile from '../../assets/landing_page/javascript_mobile.jpg'
 const WebDevelopmentPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("/services/web-development"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -113,7 +112,7 @@ const WebDevelopmentPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner main-services" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <ServiceCarousel slides={Object.keys(data).length} visibleSlides={1} data={data}/>

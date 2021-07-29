@@ -4,7 +4,7 @@ import StackTile from '../../components/stackTile';
 import {
   Css3,
   Javascript,
-  StyledComponents,
+  Styledcomponents,
   Sass,
   Html5,
   Shopify,
@@ -29,7 +29,7 @@ const skills = [
   { name: "Bootstrap", icon: <Bootstrap />, color: "#563d7c" },
   { name: "Rwd", icon: <PhoneDesktop />, color: "#e75a7c" },
   { name: "React", icon: <ReactLogo />, color: "#61dbfb" },
-  { name: "Styled components", icon: <StyledComponents />, color: "#fff" },
+  { name: "Styled components", icon: <Styledcomponents />, color: "#fff" },
   { name: "Shopify", icon: <Shopify />, color: "#764abc" },
   { name: "Git", icon: <Github />, color: "#fff" },
   { name: "NodeJS", icon: <Nodejs />, color: "#0d8618" },
@@ -41,9 +41,9 @@ const StackFrontEnd = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', maxWidth: '100vw' }}>
       <h2 className="stack-hello">{language.pages.stack.front_header}</h2>
-      <div className="stack-wrapper" data-scroll>
+      <div className="stack-wrapper">
         {skills.map((link, index) => (
-          <StackTile data-scroll svg={link.icon} width="150px" heigh="150px" title={link.name} imgTitle="HTML 5" color={link.color} />
+          <StackTile svg={link.icon} width="150px" heigh="150px" title={link.name} imgTitle="HTML 5" color={link.color} />
         ))}
       </div>
     </div>

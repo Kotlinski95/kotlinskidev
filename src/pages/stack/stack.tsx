@@ -12,8 +12,7 @@ import Button from '../../components/button'
 const StackPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Stack"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -21,7 +20,7 @@ const StackPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <div className="stack-main__text-left">

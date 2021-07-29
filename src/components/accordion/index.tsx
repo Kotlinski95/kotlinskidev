@@ -51,7 +51,7 @@ const AccordionText = (props) => {
                 Object.keys(props.text).map(function (key, index) {
                   const content = props.text[key].content;
                   return (
-                    <Accordion data-scroll>
+                    <Accordion>
                       <AccordionSummary
                         expandIcon={<><AddCircleOutlineRoundedIcon /> <RemoveCircleOutlineRoundedIcon /></>}
                         aria-controls="panel1a-content"
@@ -60,7 +60,7 @@ const AccordionText = (props) => {
                         <Typography className={classes.subHeading}>{props.text[key].header}</Typography>
                       </AccordionSummary>
                       <AccordionDetails >
-                        <Typography className={classes.text} data-scroll>
+                        <Typography className={classes.text}>
                           {
                             Object.keys(content).map(function (key, index) {
                               return (
@@ -70,9 +70,9 @@ const AccordionText = (props) => {
                                       <a key={index} target={content[key].target} href={content[key].link}>{content[key].text}</a>
                                       :
                                       key.search("header") > 0 ?
-                                      <h3 data-scroll className="acordion-text-header" key={index}><br /><br />{content[key].text} </h3>
+                                      <h3 className="acordion-text-header" key={index}><br /><br />{content[key].text} </h3>
                                       :
-                                      <span data-scroll className="acordion-text-block" key={index}><br /><br />{content[key].text} </span>
+                                      <span className="acordion-text-block" key={index}><br /><br />{content[key].text} </span>
                                   }
                                 </>
                               )

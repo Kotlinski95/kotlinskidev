@@ -1,10 +1,6 @@
 import styled, { } from 'styled-components';
 import './index.scss'
-import {Theme} from '../../settings'
-
-const {
-    breakpoints
-} = Theme;
+import { InView } from 'react-intersection-observer';
 
 export const TextRevealSpan = styled.span`
     font-family: inherit;
@@ -18,26 +14,38 @@ export const TextRevealSpan = styled.span`
         typeof props.delay === 'number' ? props.delay.toString() + 's' : '.2s'} cubic-bezier(0.12, 1, 0.2, 1), opacity 2s ${(props: any) =>
             typeof props.delay === 'number' ? (props.delay + 0.2).toString() + 's' : '.1s'} cubic-bezier(0.12, .4, 0.2, 1);
     line-height: inherit;
-
-    &.is-inview {
-        transform: translateY(0);
-        opacity: 1;
-    }
 `;
 
 export const TextRevealVertical = (props) => {
     return (
-        <div className="text-reveal__wrapper">
-            <TextRevealSpan {...props} />
-        </div>
+        <InView triggerOnce threshold={0.3}>
+        {({ inView, ref, entry }) => (
+            <TextRevealSpan {...props}
+                ref={ref}
+                style={{
+                    transform: inView ? 'translateY(0)' : 'translateY(60%)',
+                    opacity: inView ? 1 : 0,
+                }}
+            />
+        )}
+        </InView>
     )
 }
 
 export const ComponentRevealShow = (props) => {
     return (
-        <div className="component-reveal__wrapper" style={{ width: props.width }}>
-            <ComponentRevealOpacity {...props} />
-        </div>
+        <InView triggerOnce threshold={0}>
+        {({ inView, ref, entry }) => (
+            <div className="component-reveal__wrapper" style={{ width: props.width }}>
+                <ComponentRevealOpacity {...props}
+                    ref={ref}
+                    style={{
+                        opacity: inView ? 1 : 0,
+                    }}
+                />
+            </div>
+        )}
+        </InView>
     )
 }
 
@@ -55,29 +63,26 @@ export const ComponentRevealOpacity = styled.div`
     }
 `
 
-export const TextRevealHorizontal = styled.div`
+const TextRevealHorizontalDiv = styled.div`
     width: 100%;
     max-width: 100%;
-    transform: translateX(-10%);
     opacity: 0;
-    transition: opacity 0.5s 0.75s, transform 0.3s 0.2s;
-    &.is-inview {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+    transition: opacity 0.5s 0.75s, transform 1s 0.5s;
+
 `
 
-export const RevealImage = styled.div`
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    max-height: 100%;
-    transform: translateX(-100%);
-    overflow: hidden;
-    transition: all 2s;
-    &.is-inview{
-        transform: translateX(0);
-    }
-`;
+export const TextRevealHorizontal = (props) => {
+    return (
+        <InView triggerOnce threshold={0}>
+        {({ inView, ref, entry }) => (
+            <TextRevealHorizontalDiv {...props}
+                ref={ref}
+                style={{
+                    transform: inView ? 'translateX(0%)' : 'translateX(-50%)',
+                    opacity: inView ? 1 : 0,
+                }}
+            />
+        )}
+        </InView>
+    )
+}
