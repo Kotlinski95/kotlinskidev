@@ -8,10 +8,9 @@ import Project from '../../components/project'
 import ContactForm from '../../components/contactForm'
 
 const WebsitePage = (props) => {
-  const { HandleMouseoverEffects, HandleLocomotiveScroll, title } = props;
+  const { HandleMouseoverEffects,title } = props;
   const dispatch = useDispatch();
   dispatch(setPage("projects/website"));
-  HandleLocomotiveScroll();
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -20,7 +19,7 @@ const WebsitePage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <Project />

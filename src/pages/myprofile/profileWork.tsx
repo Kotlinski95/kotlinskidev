@@ -17,7 +17,7 @@ const MyProfileWorkPage = (props) => {
         document.title = props.title || "";
     }, [props.title]);
     return (
-        <div data-scroll-section>
+        <div>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                 <div className="myprofile-wrapper">
                     <div className="myprofile-introduce-wrapper">

@@ -14,13 +14,13 @@ const Footer = () => {
 
     return (
         <div className="footer-wrapper">
-            <div className="footer-head" data-scroll>
+            <div className="footer-head">
                 <ul>
                     <Link to="/services"><li className="line-item">{language.footer.pages.services}</li></Link>
                     <Link to="/contact"><li className="line-item">{language.footer.pages.contact}</li></Link>
                 </ul>
             </div>
-            <div className="footer-body" data-scroll>
+            <div className="footer-body">
                 <ul className="line-item footer-left">
                     <li>@{new Date().getFullYear()} {language.footer.privacy.rights}</li>
                     <Link to="/privacy"><li className="line-item">{language.footer.privacy.policy}</li></Link>

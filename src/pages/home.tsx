@@ -9,8 +9,7 @@ import PageTransitioning from '../components/pageTransitioning/index'
 const HomePage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Homepage"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const {HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
       useEffect(() => {
         document.title = title || "";
@@ -22,7 +21,7 @@ const HomePage = (props) => {
   return (
     <>
     <PageTransitioning/>
-    <div data-scroll-section>
+    <div>
      <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
         <Hero {...routingProps}/>
         <Footer />

@@ -595,17 +595,17 @@ const PrivacyPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <div className="privacy-wrapper" style={{ width: '80%' }}>
-            <AccordionText data-scroll inner={false} title={language.pages.privacy.header} text={privacyContent.main} />
-            <AccordionText data-scroll inner={true} title={language.pages.privacy.interpretation} text={privacyContent.interpretation_definitions} />
-            <AccordionText data-scroll inner={true} title={language.pages.privacy.collecting_data.header} text={privacyContent.collecting_data} />
-            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.children.header} text={privacyContent.children} />
-            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.links.header} text={privacyContent.links} />
-            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.changes.header} text={privacyContent.changes} />
-            <AccordionText data-scroll inner={false} title={language.pages.privacy.collecting_data.contact.header} text={privacyContent.contact} />
+            <AccordionText inner={false} title={language.pages.privacy.header} text={privacyContent.main} />
+            <AccordionText inner={true} title={language.pages.privacy.interpretation} text={privacyContent.interpretation_definitions} />
+            <AccordionText inner={true} title={language.pages.privacy.collecting_data.header} text={privacyContent.collecting_data} />
+            <AccordionText inner={false} title={language.pages.privacy.collecting_data.children.header} text={privacyContent.children} />
+            <AccordionText inner={false} title={language.pages.privacy.collecting_data.links.header} text={privacyContent.links} />
+            <AccordionText inner={false} title={language.pages.privacy.collecting_data.changes.header} text={privacyContent.changes} />
+            <AccordionText inner={false} title={language.pages.privacy.collecting_data.contact.header} text={privacyContent.contact} />
           </div>
         </div>
         <Footer />

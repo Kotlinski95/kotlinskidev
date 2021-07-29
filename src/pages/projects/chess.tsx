@@ -10,8 +10,7 @@ import {useEffect} from 'react';
 const ChessPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("projects/coders-chess"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -19,7 +18,7 @@ const ChessPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <Project />

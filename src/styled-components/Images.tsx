@@ -77,26 +77,21 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
 
 export const RevealImageDiv: any = styled.div`
     background-color: transparent;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     overflow: hidden;
+    opacity: 0;
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
-    /* &.is-inview {
-        transform: translateX(0);
-
-        img {
-            transform: translateX(0) scale(1);
-        }
-    } */
 `;
 
 export const RevealImage = (props) => {
     return (
-        <InView triggerOnce threshold={0.1}>
+        <InView triggerOnce threshold={0}>
         {({ inView, ref, entry }) => (
             <RevealImageDiv {...props}
                 ref={ref}
                 style={{
-                    transform: inView ? 'translateX(0%)' : 'translateX(-50%)',
+                    transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+                    opacity: inView ? '1' : '0',
                 }}
             />
         )}
@@ -120,7 +115,7 @@ export const RevealDiv: any = styled.div`
 interface ImageProps {
     projectscontent: any;
 }
-export const Image: any = styled.img<ImageProps>`
+const ImageStyled: any = styled.img<ImageProps>`
     width: 100%;
     transform: translateX(100%) scale(1.4);
     transform-origin: left;
@@ -135,3 +130,18 @@ export const Image: any = styled.img<ImageProps>`
     `}
     }
 `
+
+export const Image = (props) => {
+    return (
+        <InView triggerOnce threshold={0}>
+        {({ inView, ref, entry }) => (
+            <ImageStyled {...props}
+                ref={ref}
+                style={{
+                    transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+                }}
+            />
+        )}
+        </InView>
+    )
+}
