@@ -128,7 +128,7 @@ $arrow-head-thickness: $shaft-thickness;
     text-decoration: none;
     position: relative;
     transition: all 0.2s;
-
+    @media (min-width: 978px){
     &:hover {
       color: $gray;
 
@@ -182,6 +182,7 @@ $arrow-head-thickness: $shaft-thickness;
           }
         }
       }
+    }
     }
 
     > .arrow-main {

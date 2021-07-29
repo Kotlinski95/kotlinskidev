@@ -251,15 +251,15 @@ const CookiesPage = (props) => {
   return (
     <>
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <div className="cookies-wrapper" style={{ width: '80%' }}>
-            <AccordionText data-scroll inner={false} title={language.pages.cookies.header} text={cookieContent.main} />
-            <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.header} text={cookieContent.interpretation_definitions} />
-            <AccordionText data-scroll inner={true} title={language.pages.cookies.interpretation_definitions.cookies.header} text={cookieContent.cookies} />
-            <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.more.header} text={cookieContent.more} />
-            <AccordionText data-scroll inner={false} title={language.pages.cookies.interpretation_definitions.contact.header} text={cookieContent.contact} />
+            <AccordionText inner={false} title={language.pages.cookies.header} text={cookieContent.main} />
+            <AccordionText inner={true} title={language.pages.cookies.interpretation_definitions.header} text={cookieContent.interpretation_definitions} />
+            <AccordionText inner={true} title={language.pages.cookies.interpretation_definitions.cookies.header} text={cookieContent.cookies} />
+            <AccordionText inner={false} title={language.pages.cookies.interpretation_definitions.more.header} text={cookieContent.more} />
+            <AccordionText inner={false} title={language.pages.cookies.interpretation_definitions.contact.header} text={cookieContent.contact} />
           </div>
         </div>
         <Footer />

@@ -10,14 +10,14 @@ type propsType = {
     src: string
     width: string | number
     height: string | number
-    style?: React.CSSProperties
+    style?: any
     href?: string
     rel?: string
     target?: string
     role?: string
 }
 
-const CustomImage = (props: propsType) => {
+const CustomImage: any = (props: propsType) => {
     const {
         className = '',
         alt = 'Default alterntive image description',

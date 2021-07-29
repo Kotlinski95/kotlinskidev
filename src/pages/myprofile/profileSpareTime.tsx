@@ -18,7 +18,7 @@ const MyProfileSpareTimePage = (props) => {
     }, [props.title]);
     dispatch(setPage("My profile"));
     return (
-        <div data-scroll-section>
+        <div>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                 <div className="myprofile-wrapper">
                     <div className="myprofile-introduce-wrapper">

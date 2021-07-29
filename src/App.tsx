@@ -123,40 +123,9 @@ function App() {
   };
 
   HandleMouseoverEffects();
-  const scrollRef: any = React.createRef();
-  let firefoxAgent = navigator.userAgent.indexOf("Firefox") > -1;
-  let safariAgent = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-    navigator.userAgent &&
-    navigator.userAgent.indexOf('CriOS') == -1 &&
-    navigator.userAgent.indexOf('FxiOS') == -1;
-
-  console.log("SAFARI AGENT: ", safariAgent);
-
-  const HandleLocomotiveScroll = () => {
-    useEffect(() => {
-      let scroll: any;
-      if (supported() && !isInstalled()){
-        handleInstallPWA();
-      }
-      setTimeout(() => {
-        scroll = new locomotiveScroll({
-          el: document.querySelector(".smooth-scroll"),
-          smooth: !firefoxAgent,
-          reloadOnContextChange: true,
-          smartphone: { smooth: true },
-          tablet: { smooth: true },
-          lerp: 0.09,
-        });
-      }, 500)
-      return () => {
-        scroll.destroy();
-      }
-    }, []);
-  }
 
   const routingProps = {
     HandleMouseoverEffects,
-    HandleLocomotiveScroll
   }
 
   const isMobileTest = () => {
@@ -190,7 +159,7 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <div className="App smooth-scroll" data-scroll-container>
+      <div className="App smooth-scroll">
         <AnimatePresence exitBeforeEnter initial={false} >
           {
             isReady ? (

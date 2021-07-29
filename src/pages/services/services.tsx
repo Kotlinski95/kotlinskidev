@@ -13,8 +13,7 @@ import administration_mobile from '../../assets/landing_page/administration_mobi
 const ServicesPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Contact"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  HandleLocomotiveScroll();
+  const {HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -63,7 +62,7 @@ const ServicesPage = (props) => {
   return (
     <div className="scroll-section">
       <PageTransitioning />
-      <div data-scroll-section>
+      <div>
         <div className="main-inner main-services" style={{position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
           <Breadcrumbs />
           <ServiceCarousel slides={Object.keys(data).length} visibleSlides={3} data={data}/>

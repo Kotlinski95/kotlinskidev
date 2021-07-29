@@ -25,9 +25,9 @@ const StackAutomation = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', maxWidth: '100vw' }}>
       <h2 className="stack-hello">{language.pages.stack.automation_header}</h2>
-      <div className="stack-wrapper" data-scroll>
+      <div className="stack-wrapper">
         {skills.map((link) => (
-          <StackTile data-scroll logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
+          <StackTile logo={link.icon} width="150px" heigh="150px" title={link.name} imgTitle="HTML 5" color={link.color} />
         ))}
       </div>
     </div>

@@ -10,7 +10,7 @@ const Projects = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
             <h2 className="projects-hello">{language.pages.projects.header}</h2>
-            <div className="projects-wrapper" data-scroll>
+            <div className="projects-wrapper">
             <ProjectTile logo={website} width="100%" heigh="100%" title={language.pages.projects.website} imgTitle={language.pages.projects.website} url="/projects/website" />
             <ProjectTile logo={startwars} width="100%" heigh="100%" title={language.pages.projects.quiz} imgTitle={language.pages.projects.quiz} url="/projects/star-wars-quiz" />
             <ProjectTile logo={chess} width="100%" heigh="100%" title={language.pages.projects.chess} imgTitle={language.pages.projects.chess} url="/projects/coders-chess" />

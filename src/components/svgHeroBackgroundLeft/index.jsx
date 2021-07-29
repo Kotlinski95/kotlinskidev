@@ -5,7 +5,7 @@ import {ComponentRevealShow} from '../contentReveal'
 const SvgHeroBackgroundLeft = (props) => {
     return (
         <div className="hero-background-left">
-            <ComponentRevealShow data-scroll width="100%" delay="0.6s">
+            <ComponentRevealShow width="100%" delay="0.6s">
             <svg
                 xmlns="https://www.w3.org/2000/svg"
                 width="411"
@@ -623,7 +623,7 @@ const SvgHeroBackgroundLeft = (props) => {
                 </defs>
             </svg>
             </ComponentRevealShow>
-            <ComponentRevealShow data-scroll width="100%" delay="0.9s" filter="blur(6px)">
+            <ComponentRevealShow width="100%" delay="0.9s" filter="blur(6px)">
             <svg
                 xmlns="https://www.w3.org/2000/svg"
                 width="412"

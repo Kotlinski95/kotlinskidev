@@ -42,6 +42,7 @@
     "react-ga": "^3.3.0",
     "react-hook-form": "^7.6.4",
     "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.32.0",
     "react-lazyload": "^3.2.0",
     "react-material-ui-carousel": "^2.2.6",
     "react-messenger-customer-chat": "^0.8.0",

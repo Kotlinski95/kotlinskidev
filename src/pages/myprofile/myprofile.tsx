@@ -19,14 +19,13 @@ import CustomImage from '../../components/customImage';
 const MyProfilePage = (props) => {
     const dispatch = useDispatch();
     dispatch(setPage("My profile"));
-    const { HandleLocomotiveScroll, title } = props;
-    HandleLocomotiveScroll();
+    const { title } = props;
 
     useEffect(() => {
         document.title = title || "";
     }, [title]);
     return (
-        <div data-scroll-section>
+        <div>
             <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
                 <div className="myprofile-wrapper">
                     <div className="myprofile-introduce-wrapper">

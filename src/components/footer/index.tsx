@@ -16,13 +16,13 @@ const Footer = () => {
 
     return (
         <div className="footer-wrapper">
-            <div className="footer-head" data-scroll>
+            <div className="footer-head">
                 <ul>
                     <li><Link to="/services" title={`Link to services`} aria-label={`Link to services`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.services}</span></Link></li>
                     <li><Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.contact}</span></Link></li>
                 </ul>
             </div>
-            <div className="footer-body" data-scroll>
+            <div className="footer-body">
                 <ul className="line-item footer-left">
                     <li><span>@{new Date().getFullYear()} {language.footer.privacy.rights}</span></li>
                     <li><Link to="/privacy" title={`Link to privacy policy`} aria-label={`Link to privacy policy`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.policy}</span></Link></li>

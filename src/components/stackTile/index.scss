@@ -14,23 +14,12 @@
         max-height: 150px;
     }
 
-    svg {
+    .stack-tile-svg,
+    .stack-tile-img {
         transform: rotateX(90deg);
         opacity: 0;
         transition: transform 1s .5s, opacity 1s .5s, color 2s 2s;
         color: #fff;
-    };
-
-    &.is-inview {
-        svg {
-            color: inherit;
-            transform: rotateX(0);
-            opacity: 1;
-            z-index: 11;
-        };
-        .stack-tile-title{
-            opacity: 1;
-        }
     };
 }
 

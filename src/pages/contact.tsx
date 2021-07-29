@@ -9,13 +9,7 @@ import PageTransitioning from '../components/pageTransitioning/index'
 const ContactPage = (props) => {
   const dispatch = useDispatch();
   dispatch(setPage("Contact"));
-  const { HandleLocomotiveScroll, HandleMouseoverEffects, title } = props;
-  // useEffect(()=>{
-  //   if (!_store.getState().pageState.mobile){
-  //     HandleLocomotiveScroll();
-  //   }
-  // });
-  HandleLocomotiveScroll();
+  const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
     document.title = title || "";
@@ -24,7 +18,7 @@ const ContactPage = (props) => {
   return (
     <>
     <PageTransitioning/>
-    <div data-scroll-section>
+    <div>
       <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
         <Breadcrumbs />
         <ContactForm />
