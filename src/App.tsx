@@ -51,6 +51,10 @@ import locomotiveScroll from "locomotive-scroll";
 import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { setMobile } from './reducers/state';
+import { useReactPWAInstall } from "react-pwa-install";
+import myLogo from "./assets/icons/logo192.png";
+import TransitionModal from './components/transitionModal';
+
 declare global {
   var _theme: ThemeType;
 }
@@ -68,9 +72,12 @@ function App() {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [isReady, setIsReady] = useState(false);
+  const [openPWApopup, setOpenPWApopup] = useState(false);
   const location = useLocation();
   const dispatch = useDispatch();
   isMobile ? dispatch(setMobile(true)) : dispatch(setMobile(false));
+  const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
+
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -127,6 +134,28 @@ function App() {
     setIsMobile(test);
   };
 
+  const handleInstallPWA = () => {
+    pwaInstall({
+      title: "Install Kotlinskidev Web App",
+      logo: myLogo,
+      features: (
+        <ul>
+          <li>Get better experience from App using PWA!</li>
+          <li>Get some functionalities in offline mode!</li>
+          <li>Stay with me for longer!</li>
+          <li>You can take a look at my portfolio just clicking KotlinskiDev icon :) </li>
+        </ul>
+      ),
+      description: "This is a very good app that does a lot of useful stuff. ",
+    })
+      .then(() => alert("App installed successfully or instructions for install shown"))
+      .catch(() => alert("User opted out from installing"));
+  };
+
+  const handleClosePWA = () => {
+    setOpenPWApopup(false);
+  };
+
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
@@ -144,98 +173,99 @@ function App() {
                 }
 
                 <RouteChangeTracker />
+                <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>
                 <Nav />
                 <div className="main">
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">
-                      <HomePage {...routingProps} title={language.general.home}/>
+                      <HomePage {...routingProps} title={language.general.titles.home}/>
                     </Route>
                     <Route exact path="/aboutme">
-                      <AboutPage {...routingProps} title={language.general.about}/>
+                      <AboutPage {...routingProps} title={language.general.titles.about}/>
                     </Route>
                     <Route exact path="/contact">
-                      <ContactPage {...routingProps} title={language.general.contact}/>
+                      <ContactPage {...routingProps} title={language.general.titles.contact}/>
                     </Route>
                     <Route exact path="/myprofile">
-                      <MyProfilePage {...routingProps} title={language.general.myprofile}/>
+                      <MyProfilePage {...routingProps} title={language.general.titles.myprofile}/>
                     </Route>
                     <Route exact path="/myprofile/contact">
-                      <MyProfileContactPage {...routingProps} title={language.general.myprofileContact}/>
+                      <MyProfileContactPage {...routingProps} title={language.general.titles.myprofileContact}/>
                     </Route>
                     <Route exact path="/myprofile/education">
-                      <MyProfileEducationPage {...routingProps} title={language.general.myprofileEducation}/>
+                      <MyProfileEducationPage {...routingProps} title={language.general.titles.myprofileEducation}/>
                     </Route>
                     <Route exact path="/myprofile/hobby">
-                      <MyProfileHobbyPage {...routingProps} title={language.general.myprofileHobby}/>
+                      <MyProfileHobbyPage {...routingProps} title={language.general.titles.myprofileHobby}/>
                     </Route>
                     <Route exact path="/myprofile/overview">
-                      <MyProfileOverviewPage {...routingProps} title={language.general.myprofileOverview}/>
+                      <MyProfileOverviewPage {...routingProps} title={language.general.titles.myprofileOverview}/>
                     </Route>
                     <Route exact path="/myprofile/spare-time">
-                      <MyProfileSpareTimePage {...routingProps} title={language.general.myprofileSpareTime}/>
+                      <MyProfileSpareTimePage {...routingProps} title={language.general.titles.myprofileSpareTime}/>
                     </Route>
                     <Route exact path="/myprofile/work">
-                      <MyProfileWorkPage {...routingProps} title={language.general.myprofileWork}/>
+                      <MyProfileWorkPage {...routingProps} title={language.general.titles.myprofileWork}/>
                     </Route>
                     <Route exact path="/stack">
-                      <StackPage {...routingProps} title={language.general.stack}/>
+                      <StackPage {...routingProps} title={language.general.titles.stack}/>
                     </Route>
                     <Route exact path="/projects">
-                      <ProjectsPage {...routingProps} title={language.general.projects}/>
+                      <ProjectsPage {...routingProps} title={language.general.titles.projects}/>
                     </Route>
                     <Route exact path="/projects/portfolio">
-                      <PortfolioPage {...routingProps} title={language.general.projectsPortfolio}/>
+                      <PortfolioPage {...routingProps} title={language.general.titles.projectsPortfolio}/>
                     </Route>
                     <Route exact path="/projects/website">
-                      <WebsitePage {...routingProps} title={language.general.projectsWebsite}/>
+                      <WebsitePage {...routingProps} title={language.general.titles.projectsWebsite}/>
                     </Route>
                     <Route exact path="/projects/star-wars-quiz" >
-                      <QuizPage {...routingProps} title={language.general.projectsQuiz}/>
+                      <QuizPage {...routingProps} title={language.general.titles.projectsQuiz}/>
                     </Route>
                     <Route exact path="/projects/coders-chess">
-                      <ChessPage {...routingProps} title={language.general.projectsChess}/>
+                      <ChessPage {...routingProps} title={language.general.titles.projectsChess}/>
                     </Route>
                     <Route exact path="/projects/real-estate">
-                      <EstatePage {...routingProps} title={language.general.projectsEstate}/>
+                      <EstatePage {...routingProps} title={language.general.titles.projectsEstate}/>
                     </Route>
                     <Route exact path="/privacy">
-                      <PrivacyPage {...routingProps} title={language.general.privacy}/>
+                      <PrivacyPage {...routingProps} title={language.general.titles.privacy}/>
                     </Route>
                     <Route exact path="/cookies">
-                      <CookiesPage {...routingProps} title={language.general.cookies}/>
+                      <CookiesPage {...routingProps} title={language.general.titles.cookies}/>
                     </Route>
                     <Route exact path="/aboutme/plc-carrier">
-                      <PlcCarrierPage {...routingProps} title={language.general.plcCarries}/>
+                      <PlcCarrierPage {...routingProps} title={language.general.titles.plcCarries}/>
                     </Route>
                     <Route exact path="/aboutme/front-end-development">
-                      <FrontEndDevelopmentPage {...routingProps} title={language.general.frontEndDevelopment}/>
+                      <FrontEndDevelopmentPage {...routingProps} title={language.general.titles.frontEndDevelopment}/>
                     </Route>
                     <Route exact path="/aboutme/courses">
-                      <CoursesPage {...routingProps} title={language.general.courses}/>
+                      <CoursesPage {...routingProps} title={language.general.titles.courses}/>
                     </Route>
                     <Route exact path="/aboutme/education">
-                      <EducationPage {...routingProps} title={language.general.education}/>
+                      <EducationPage {...routingProps} title={language.general.titles.education}/>
                     </Route>
                     <Route exact path="/stack/front-end-developer">
-                      <FrontEndDeveloperPage {...routingProps} title={language.general.stackFront}/>
+                      <FrontEndDeveloperPage {...routingProps} title={language.general.titles.stackFront}/>
                     </Route>
                     <Route exact path="/stack/automation-engineer">
-                      <AutomationEngineerPage {...routingProps} title={language.general.stackAutomation}/>
+                      <AutomationEngineerPage {...routingProps} title={language.general.titles.stackAutomation}/>
                     </Route>
                     <Route exact path="/services">
-                      <ServicesPage {...routingProps} title={language.general.services}/>
+                      <ServicesPage {...routingProps} title={language.general.titles.services}/>
                     </Route>
                     <Route exact path="/services/PLC">
-                      <PlcProgrammingPage {...routingProps} title={language.general.servicesPlc}/>
+                      <PlcProgrammingPage {...routingProps} title={language.general.titles.servicesPlc}/>
                     </Route>
                     <Route exact path="/services/shopify">
-                      <ShopifyDevelopmentPage {...routingProps} title={language.general.servicesShopify}/>
+                      <ShopifyDevelopmentPage {...routingProps} title={language.general.titles.servicesShopify}/>
                     </Route>
                     <Route exact path="/services/web-development">
-                      <WebDevelopmentPage {...routingProps} title={language.general.servicesWeb}/>
+                      <WebDevelopmentPage {...routingProps} title={language.general.titles.servicesWeb}/>
                     </Route>
                     <Route>
-                      <NotFoundPage {...routingProps} title={language.general.notFound}/>
+                      <NotFoundPage {...routingProps} title={language.general.titles.notFound}/>
                     </Route>
                   </Switch>
                 </div>

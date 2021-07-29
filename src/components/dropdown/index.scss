@@ -1,4 +1,8 @@
 /* <li> */
+.navbar-nav{
+  li{
+    padding: 0;
+  }
 .nav-item {
   width: calc(var(--nav-size) * 0.8);
   display: flex;
@@ -119,4 +123,5 @@
     transform: translateX(110%);
     transition: all var(--speed) ease;
   }
+}
 }

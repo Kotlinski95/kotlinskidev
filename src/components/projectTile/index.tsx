@@ -13,7 +13,7 @@ const ProjectTile = (props) => {
                 <Link className="project-tile-link" to={props.url}></Link>
                 <Image className="cursor_hover" src={props.logo} alt="Logo" />
                 <p className="project-tile-title">{props.title}</p>
-                <AnimatedArrow text={language.pages.home.about.seemore} justify="center" textSize="28px" top="0px" bottom="auto" link={props.url}/>
+                <AnimatedArrow text={language.pages.home.about.seemore} justify="center" textSize="28px" top="0px" bottom="auto" link={props.url} />
             </RevealImage>
         </div>
     );

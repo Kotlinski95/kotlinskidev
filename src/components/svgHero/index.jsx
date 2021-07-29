@@ -8,8 +8,8 @@ const SvgHeroBackground = (props) => {
         <ComponentRevealShow delay="1s">
         <div className="hero-background">
             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                xmlns="https://www.w3.org/2000/svg"
+                xmlnsXlink="https://www.w3.org/1999/xlink"
                 width="500"
                 height="500"
                 version="1.2"

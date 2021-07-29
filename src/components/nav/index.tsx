@@ -16,6 +16,8 @@ import DropdownMulti from '../dropdown/index.js'
 import NotificationDropdown from '../dropdownNotification/index.js'
 import AboutMeNavigation from '../navigation/aboutMeNav';
 import StackNavigation from '../navigation/stackNav';
+import CustomLink from '../customLink'
+import CustomImage from '../customImage'
 
 const styles = {
   bmCrossButton: {
@@ -84,31 +86,29 @@ const Nav = () => {
       <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-          <AboutMeNavigation language={language} click={clickAboutMe} handleClick={handleClickAboutMe} />
-          <StackNavigation language={language} click={clickStack} handleClick={handleClickStack} />
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
-              <li className="line-item">
+          <li><AboutMeNavigation language={language} click={clickAboutMe} role="navigation" aria-label="navigation about" handleClick={handleClickAboutMe} /></li>
+          <li><StackNavigation language={language} click={clickStack} role="navigation" aria-label="navigation stack" handleClick={handleClickStack} /></li>
+          <li> <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
+              <span className="line-item list-item">
                 {language.header.about}
-              </li>
-            </Button>
-            <Link to="/projects"><li className="line-item cursor_hover">{language.header.projects}</li></Link>
-            <Button className="cursor_hover" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
-              <li className="line-item">
+              </span>
+            </Button></li>
+            <li><Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item cursor_hover">{language.header.projects}</span></Link></li>
+            <li><Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
+              <span className="line-item list-item">
                 {language.header.stack}
-              </li>
-            </Button>
+              </span>
+            </Button></li>
           </ul>
         </div>
         <div className="nav-center line-item cursor_hover">
-          <Link to="/">
-            <LazyLoad height={60}>
-              <img src={logo} alt="Logo" className="nav-logo" ></img>
-            </LazyLoad>
+          <Link to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='noopener'>
+              <CustomImage src={logo} alt="Logo" width='50' height='50' loading='lazy' className="nav-logo" title='Link to homepage' role='link'></CustomImage>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
           <ul>
-            <Switch
+            <li style={{padding: '0'}}><Switch
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
@@ -164,7 +164,7 @@ const Nav = () => {
                     zIndex: 999
                   }}
                 >
-                  <img src={moon} />
+                  <CustomImage src={moon} alt='Dark mode' title='Switch to Light mode' width='20px' height='20px' />
                 </div>
               }
               checkedHandleIcon={
@@ -179,14 +179,14 @@ const Nav = () => {
                     zIndex: 999
                   }}
                 >
-                  <img src={sun} className="layout-icon" />
+                  <CustomImage src={sun} className="layout-icon" alt='Light mode' title='Switch to Dark mode' width='20px' height='20px' />
                 </div>
               }
               className="react-switch cursor_hover"
               id="small-radius-switch"
-            />
-            <NotificationDropdown language={language} />
-            <DropdownMulti language={language}/>
+            /></li>
+            <li style={{padding: '0'}}><NotificationDropdown language={language} /></li>
+            <li style={{padding: '0'}}><DropdownMulti language={language}/></li>
           </ul>
         </div>
       </div>

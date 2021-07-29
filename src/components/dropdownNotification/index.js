@@ -33,6 +33,7 @@ function NotificationDropdown(props) {
     return (
         <>
             <Navbar >
+                <li>
                 <div className="dropdown-notification cursor_hover" ref={wrapperRef} >
                 <NavItem  dropdown={true} icon={
                     <Badge badgeContent={1} color="secondary">
@@ -42,6 +43,7 @@ function NotificationDropdown(props) {
                     <DropdownMenu ></DropdownMenu>
                 </NavItem>
                 </div>
+                </li>
             </Navbar>
         </>
     );
@@ -56,7 +58,7 @@ function NotificationDropdown(props) {
 
     function NavItem(props) {
         return (
-            <li className="nav-item">
+            <span className="nav-item">
                 <span className="icon-button" onClick={() => {
                     props.dropdown && setOpen(!open);
                     props.dropdown && dispatch(setMenuNotification(open ? "false" : "true"));
@@ -65,7 +67,7 @@ function NotificationDropdown(props) {
                 </span>
 
                 {open && props.children}
-            </li>
+            </span>
         );
     }
 

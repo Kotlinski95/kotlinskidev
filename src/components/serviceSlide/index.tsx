@@ -4,6 +4,7 @@ import Button from '../button';
 import {useState} from 'react';
 import TransitionModal from '../../components/transitionModal';
 import { handleTrackingEvent } from '../../analytics';
+import CustomImage from '../customImage'
 
 const ServiceSlide = (props) => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,7 @@ const ServiceSlide = (props) => {
     return (
           <Slide index={props.index}>
             <div className="service-slide-wrapper">
-                <img src={props.src} ></img>
+                <CustomImage src={props.src} width='100%' height='100%' title={props.header} alt={props.header}></CustomImage>
                 <div className="service-slide-content">
                     <h2>{props.header}</h2>
                     <p>{props.text}</p>

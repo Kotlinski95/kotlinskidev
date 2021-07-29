@@ -165,7 +165,7 @@ export const MainLink: any = styled(Link)<MainLinkProps>`
             &::after {
             display: inline-block;
             width: 20px;
-            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="https://www.w3.org/2000/svg">
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 20px;
@@ -269,7 +269,7 @@ export const FooterLink = styled.a<FooterLinkProps>`
             &::after {
             display: inline-block;
             width: 15px;
-            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="https://www.w3.org/2000/svg">
             <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
             </svg>');
             margin-left: 6px;

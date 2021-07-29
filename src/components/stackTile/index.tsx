@@ -1,5 +1,7 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
+import CustomImage from '../customImage'
 import { InView } from 'react-intersection-observer';
 
 const StackTile = (props) => {
@@ -18,17 +20,19 @@ const StackTile = (props) => {
                                     opacity: inView ? '1' : '0',
                             }}>{props.svg}
                         </svg> :
-                            <img
-                                src={props.logo}
-                                alt="Logo"
-                                className="stack-tile-logo stack-tile-img"
-                                title={props.imgTitle}
-                                style={{
-                                    transform: inView ? 'rotateX(0)' : 'rotateX(90deg);',
-                                    color: inView ? 'inherit' : '#fff',
-                                    opacity: inView ? '1' : '0',
-                                }}
-                            ></img>
+                            <CustomImage
+                            src={props.logo}
+                            height={props.height}
+                            width={props.width}
+                            alt={props.imgTitle}
+                            className="stack-tile-logo"
+                            title={props.imgTitle}
+                            style={{
+                                transform: inView ? 'rotateX(0)' : 'rotateX(90deg);',
+                                color: inView ? 'inherit' : '#fff',
+                                opacity: inView ? '1' : '0',
+                            }}>
+                            </CustomImage>
                 }
                 <p className="stack-tile-title">{props.title}</p>
             </div>

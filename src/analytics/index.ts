@@ -1,7 +1,7 @@
 import ReactPixel from 'react-facebook-pixel';
 import ReactGA from 'react-ga';
 
-export const handleTrackingEvent = (eventName, eventAction, eventParameter) => {
+export const handleTrackingEvent = (eventName: any, eventAction: any, eventParameter: any) => {
   // Google analytics event
   ReactGA.event({
     category: eventName,

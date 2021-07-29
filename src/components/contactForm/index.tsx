@@ -12,6 +12,7 @@ import {
 } from '../links/index.jsx';
 
 import CvLink from '../cvLink';
+import { AnyARecord } from 'dns';
 
 const ContactForm = () => {
   function sendEmail(e: any) {
@@ -101,6 +102,10 @@ const ContactForm = () => {
         height: 100%;
     }
 `
+    const formInputs: any = document.getElementsByClassName("form-input");
+    for (const formInput of formInputs){
+      formInput.focus({preventScroll:true});
+    }
 
   return (
     <>

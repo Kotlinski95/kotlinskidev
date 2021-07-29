@@ -20,13 +20,13 @@ const Breadcrumbs = () => {
                         let to = `/${locations.slice(1, index + 1).join('/')}`;
                         return(
                             <>
-                            <NavigateNextIcon /><Link to={to}><li className="line-item cursor_hover"> {value}</li></Link>
+                            <NavigateNextIcon /><Link to={to} title={`Link to ${to}`} aria-label={`Link to ${to}`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item cursor_hover"> {value}</span></Link>
                             </>
                         )
                     }
                     else{
                         return(
-                            <Link to="/"><li className="line-item cursor_hover">{value}</li></Link>
+                            <Link to="/" title={`Link to homepage`} aria-label={`Link to homepage`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item cursor_hover">{value}</span></Link>
                         )
                     }
                 })

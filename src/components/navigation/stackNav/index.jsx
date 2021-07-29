@@ -6,6 +6,7 @@ import {
 } from '../../../styled-components/MainNavigation.styled';
 import { StyledNavLink } from '../../../styled-components/Links';
 import logo from '../../../assets/icons/myprofile.svg';
+import CustomImage from '../../customImage'
 
 function StackNavigation(props) {
 
@@ -20,9 +21,11 @@ function StackNavigation(props) {
         <>
             <MainNavigationContainer onClick={handleClick} clicked={click}>
                 <MainNavigationList clicked={click} className="main-navigation-list">
+                    <li>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <img src={logo} alt="Logo" style={{width: '80px', heigth: '80px'}}></img>
+                        <CustomImage src={logo} alt="Logo" width='80px' height='80px' title="Logo"></CustomImage>
                     </div>
+                    </li>
                     {links.map((link, index) => (
                         <MainNavigationItem key={index}>
                             <StyledNavLink className="styled-nav cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>

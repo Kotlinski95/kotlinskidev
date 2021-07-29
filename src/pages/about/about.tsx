@@ -1,11 +1,12 @@
-import { setPage } from '../../reducers/state'
-import { useDispatch } from 'react-redux'
-import Breadcrumbs from '../../components/breadcrumbs'
-import AnimatedArrow from '../../components/animatedArrow'
-import Footer from '../../components/footer'
-import { TextRevealVertical, TextRevealHorizontal } from '../../components/contentReveal'
-import PageTransitioning from '../../components/pageTransitioning/index'
+import { setPage } from '../../reducers/state';
+import { useDispatch } from 'react-redux';
+import Breadcrumbs from '../../components/breadcrumbs';
+import AnimatedArrow from '../../components/animatedArrow';
+import Footer from '../../components/footer';
+import { TextRevealVertical, TextRevealHorizontal } from '../../components/contentReveal';
+import PageTransitioning from '../../components/pageTransitioning/index';
 import {useEffect} from 'react';
+import CustomLink from '../../components/customLink';
 
 const AboutPage = (props) => {
   const dispatch = useDispatch();

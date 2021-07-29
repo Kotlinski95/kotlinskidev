@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import AddCircleOutlineRoundedIcon from '@material-ui/icons/AddCircleOutlineRounded';
 import RemoveCircleOutlineRoundedIcon from '@material-ui/icons/RemoveCircleOutlineRounded';
 import {Theme} from '../../settings'
+import CustomLink from '../customLink'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -67,7 +68,7 @@ const AccordionText = (props) => {
                                 <>
                                   {
                                     content[key].link ?
-                                      <a key={index} target={content[key].target} href={content[key].link}>{content[key].text}</a>
+                                      <CustomLink key={index} target={content[key].target} href={content[key].link} title={`Link to: ${content[key].link}`}>{content[key].text}</CustomLink>
                                       :
                                       key.search("header") > 0 ?
                                       <h3 className="acordion-text-header" key={index}><br /><br />{content[key].text} </h3>
@@ -104,7 +105,7 @@ const AccordionText = (props) => {
                       <>
                         {
                           props.text[key].link ?
-                            <a key={index} target={props.text[key].target} href={props.text[key].link}>{props.text[key].text}</a>
+                            <CustomLink key={index} target={props.text[key].target} href={props.text[key].link} title={`Link to: ${props.text[key].link}`}>{props.text[key].text}</CustomLink>
                             :
                             key.search("header") > 0 ?
                             <h2 className="acordion-text-header" key={index}><br /><br />{props.text[key].text} </h2>

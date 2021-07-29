@@ -67,7 +67,7 @@
         "cookie_consent": {
             "first_text" : "Ta strona korzysta z plików cookie, aby zwiększyć komfort użytkowania.",
             "second_text": "Zaakceptuj politykę plików cookie, aby uzyskać lepsze wrażenia!",
-            "buttonText": "Akceptuję",
+            "buttonText": "Rozumiem",
             "declineButtonText": "Odrzucam"
         },
         "privacy":{
@@ -338,7 +338,7 @@
                     "chrome": "W przeglądarce internetowej Chrome odwiedź tę stronę firmy Google: ",
                     "chrome_link": "https://support.google.com/accounts/answer/32050",
                     "explorer": "W przypadku przeglądarki internetowej Internet Explorer odwiedź tę stronę firmy Microsoft: ",
-                    "explorer_link": "http://support.microsoft.com/kb/278835",
+                    "explorer_link": "https://support.microsoft.com/kb/278835",
                     "firefox":"W przypadku przeglądarki internetowej Firefox odwiedź tę stronę w witrynie Mozilla: ",
                     "firefox_link": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored ",
                     "safari" : "W przeglądarce Safari odwiedź tę stronę firmy Apple: ",
@@ -593,14 +593,14 @@
                 "sobre": {
                     "header": "Sobre Software House",
                     "text": "W kwietniu 2021 roku rozpocząłem pracę dla Sobre Software House na stanowisku web developera. Pracuję głównie w branży e-commerce jako junior Shopify Developer, współtworząc oprogramowanie dla sklepów internetowych na zlecenia firmy Reckitt. ",
-                    "link": "http://www.sobre.pl/",
+                    "link": "https://www.sobre.pl/",
                     "link_label": "Więcej na temat Sobre"
                 },
                 "easy_code": {
                     "header": "Easy Coder",
                     "text": "W grudniu 2020 roku podjąłem pierwszą pracę jako junior Front-End Developer w Easy Coder Piotr Mirosz, była to pierwsza okazja na zapoznanie się z pracą jako web developer. Przez następne 4 miesiące pracowałem m.in przy projektach e-commerce w Shopify, współtworzyłem aplikacje internetowe w React i Next JS.",
                     "text_ace": "Aktualnie firma rozpoznawalna jest pod nazwą ACE Agency. W kwietniu 2021 roku zostałem przeniesiony z ACE Agency do Sobre Software House",
-                    "link": "http://www.aceagency.com/",
+                    "link": "https://www.aceagency.com/",
                     "link_label": "Więcej na temat ACE Agency"
                 }
             },
@@ -645,7 +645,7 @@
                 "agh": {
                     "header": "Mgr inż. Automatyki i Robotyki",
                     "text": "Studia na kierunku Automatyka i Robotyka podjąłem na AGH w Krakowie, podczas 11 semestrów zdobyłem wiele umiejętności, które z powodzeniem mogę wykorzystać jako programista. Podczas zajęć nie tylko rozwinąłem swoje umiejętności programistyczne, ale również analityczne myślenie, logikę, algorytmikę oraz teorię sterowania i automatyzacji.",
-                    "link": "http://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
+                    "link": "https://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
                     "link_label": "Więcej o Automatyce i Robotyce na AGH"
                 },
                 "zs6": {

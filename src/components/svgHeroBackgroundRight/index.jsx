@@ -7,7 +7,7 @@ const SvgHeroBackgroundRight = (props) => {
         <div className="hero-background-right">
              <ComponentRevealShow width="100%" delay="0.6s">
             <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="https://www.w3.org/2000/svg"
                 width="413"
                 height="409"
                 fill="none"
@@ -626,7 +626,7 @@ const SvgHeroBackgroundRight = (props) => {
             </ComponentRevealShow>
             <ComponentRevealShow width="100%" delay="0.9s" filter="blur(6px)">
             <svg
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="https://www.w3.org/2000/svg"
                 width="412"
                 height="408"
                 fill="none"

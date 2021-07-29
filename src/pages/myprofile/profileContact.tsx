@@ -9,6 +9,7 @@ import NavProfile from '../../components/navProfile'
 import ProfileContact from '../../components/myprofile/contact'
 import Footer from '../../components/footer'
 import {useEffect } from 'react';
+import CustomImage from '../../components/customImage';
 
 const MyProfileContactPage = (props) => {
     const dispatch = useDispatch();
@@ -23,9 +24,9 @@ const MyProfileContactPage = (props) => {
                     <div className="myprofile-introduce-wrapper">
                         <div className="myprofile-introduce-img">
                             <Breadcrumbs />
-                            <img src={background}></img>
+                            <CustomImage src={background} alt='myprofile background' title='myprofile background' width='100%' height='100%'></CustomImage>
                         </div>
-                        <ProfileImage url={logo} width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px" />
+                        <ProfileImage url={logo} title='Adrian Kotliński - Junior Front-End Developer' width="168px" height="178px" position="absolute" left="calc(50% - 84px)" bottom="125px" />
                     </div>
                     <div className="myprofile-content-wrapper">
                         <h1>{language.pages.myprofile.header}</h1>

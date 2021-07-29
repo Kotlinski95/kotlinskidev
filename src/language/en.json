@@ -338,7 +338,7 @@
                     "chrome": "For the Chrome web browser, please visit this page from Google: ",
                     "chrome_link": "https://support.google.com/accounts/answer/32050",
                     "explorer": "For the Internet Explorer web browser, please visit this page from Microsoft: ",
-                    "explorer_link": "http://support.microsoft.com/kb/278835",
+                    "explorer_link": "https://support.microsoft.com/kb/278835",
                     "firefox":"For the Firefox web browser, please visit this page from Mozilla: ",
                     "firefox_link": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored ",
                     "safari" : "For the Safari web browser, please visit this page from Apple: ",
@@ -594,14 +594,14 @@
                 "sobre": {
                     "header": "Sobre Software House",
                     "text": "In April 2021, I started working for Sobre Software House as a web developer. I work mainly in the e-commerce industry as a junior Shopify Developer, co-creating software for online stores commissioned by Reckitt.",
-                    "link": "http://www.sobre.pl/",
+                    "link": "https://www.sobre.pl/",
                     "link_label": "More about Sobre"
                 },
                 "easy_code": {
                     "header": "Easy Coder",
                     "text": "In December 2020, I started my first job as a junior Front-End Developer at Easy Coder Piotr Mirosz, it was the first opportunity to learn about working as a web developer. For the next 4 months I worked, among others, on e-commerce projects in Shopify, I also co-created web applications in React and Next JS.",
                     "text_ace": "Currently, the company is recognized under the name ACE Agency. In April 2021, I was transferred from the ACE Agency to Sobre Software House",
-                    "link": "http://www.aceagency.com/",
+                    "link": "https://www.aceagency.com/",
                     "link_label": "More about ACE Agency"
                 }
             },
@@ -646,7 +646,7 @@
                 "agh": {
                     "header": "MSc. Automation and Robotics",
                     "text": "I studied Automation and Robotics at AGH in Krakow, during 11 semesters I gained many skills that I can successfully use as a programmer. During the classes, I not only developed my programming skills, but also analytical thinking, logic, algorithmics and the theory of control and automation.",
-                    "link": "http://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
+                    "link": "https://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
                     "link_label": "More about Automation and Robotics at AGH"
                 },
                 "zs6": {

@@ -52,12 +52,12 @@ export const GlobalStyles = createGlobalStyle`
 
   //==========  Navigation section ==================
 
-  .flex-wrapper .nav-left ul li,
-  .flex-wrapper .nav-right ul li {
+  .flex-wrapper .nav-left ul .list-item,
+  .flex-wrapper .nav-right ul .list-item {
     color: ${({ theme }) => theme.nav.menuItemColor};
   }
-  .flex-wrapper .nav-left ul li:hover,
-  .flex-wrapper .nav-right ul li:hover {
+  .flex-wrapper .nav-left ul .list-item:hover,
+  .flex-wrapper .nav-right ul .list-item:hover {
     color: ${({ theme }) => theme.nav.menuItemColorHover};
   }
 
