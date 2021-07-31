@@ -85,6 +85,8 @@
     }
 
     .nav-logo {
+      -webkit-transform:translate3d(0,0,0);
+      transform:translate3d(0,0,0);
       width: 50px;
       z-index: 1000;
       position: absolute;
@@ -109,6 +111,8 @@
     left: 0;
 
     .nav-logo {
+      -webkit-transform:translate3d(0,0,0);
+      transform:translate3d(0,0,0);
       width: 60px;
       height: auto;
       position: absolute;

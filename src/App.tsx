@@ -47,8 +47,6 @@ import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
 import React, { useEffect, useState } from 'react';
-import locomotiveScroll from "locomotive-scroll";
-import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { setMobile } from './reducers/state';
 import { useReactPWAInstall } from "react-pwa-install";
@@ -159,8 +157,7 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <div className="App smooth-scroll">
-        <AnimatePresence exitBeforeEnter initial={false} >
+      <div className="App">
           {
             isReady ? (
               <>
@@ -276,7 +273,6 @@ function App() {
               )
 
           }
-        </AnimatePresence>
       </div>
       <Cookies />
     </ThemeProvider>

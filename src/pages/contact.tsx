@@ -18,7 +18,7 @@ const ContactPage = (props) => {
   return (
     <>
     <PageTransitioning/>
-    <div>
+    <div className="main-inner__wrapper">
       <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
         <Breadcrumbs />
         <ContactForm />

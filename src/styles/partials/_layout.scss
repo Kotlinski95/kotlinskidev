@@ -7,6 +7,8 @@
 html {
   height: 100%;
   overflow: hidden;
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
 }
 
 body {
@@ -16,6 +18,12 @@ body {
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
+
+  // -webkit-backface-visibility: hidden;
+  // -webkit-transform-style: preserve-3d;
+  // transform-style: preserve-3d;
+  // -webkit-perspective: 1000;
+  // perspective: 1000;
 }
 
 body::-webkit-scrollbar {
@@ -81,11 +89,17 @@ main {
     min-height: v.$MainInnerHeight;
     height: 100%;
     box-sizing: border-box;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
 
     @media (max-width: 868px) {
       min-height: 400px;
       overflow: hidden;
     }
+  }
+  .main-inner__wrapper{
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
   }
 }
 

@@ -35,8 +35,12 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
         ${props =>
         props.projectscontent &&
         css`
+            -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
+            transition: -webkit-transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
+            -o-transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
             transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
-            height: 80vw;
+            transition: transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01), -webkit-transform 1.2s cubic-bezier(0.14, 0.99, 0.43, 1.01);
+            height: 80vw;}
         `}
 
         ${props =>
@@ -76,50 +80,65 @@ export const ImageWrapper: any = styled.div<ImageWrapperProps>`
 `;
 
 export const RevealImageDiv: any = styled.div`
-    background-color: transparent;
-    transform: translateX(-100%);
+     background-color: transparent;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     overflow: hidden;
-    opacity: 0;
+    /* opacity: 0; */
+    -webkit-transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    -o-transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    transition: transform 1s .2s cubic-bezier(.87,.03,.12,1), -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0); 
 `;
 
 export const RevealImage = (props) => {
     return (
         <InView triggerOnce threshold={0}>
-        {({ inView, ref, entry }) => (
-            <RevealImageDiv {...props}
-                ref={ref}
-                style={{
-                    transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
-                    opacity: inView ? '1' : '0',
-                }}
-            />
-        )}
+            {({ inView, ref, entry }) => (
+                <RevealImageDiv {...props}
+                    ref={ref}
+                    style={{
+                        transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+                        // opacity: inView ? '1' : '0',
+                    }}
+                />
+            )}
         </InView>
     )
 }
 
 export const RevealDiv: any = styled.div`
     background-color: transparent;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     overflow: hidden;
+    -webkit-transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    -o-transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
-    &.is-inview {
-        transform: translateX(0);
-
-        div {
-            transform: translateX(0) scale(1);
-        }
-    }
+    transition: transform 1s .2s cubic-bezier(.87,.03,.12,1), -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
 `;
 interface ImageProps {
     projectscontent: any;
 }
 const ImageStyled: any = styled.img<ImageProps>`
-    width: 100%;
-    transform: translateX(100%) scale(1.4);
-    transform-origin: left;
+   width: 100%;
+    -webkit-transform: translateX(100%) scale(1.4);
+        -ms-transform: translateX(100%) scale(1.4);
+            transform: translateX(100%) scale(1.4);
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
+    -webkit-transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    transition: -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    -o-transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
     transition: transform 1s .2s cubic-bezier(.87,.03,.12,1);
+    transition: transform 1s .2s cubic-bezier(.87,.03,.12,1), -webkit-transform 1s .2s cubic-bezier(.87,.03,.12,1);
 
     @media ${breakpoints.lg} {
         ${props =>
@@ -134,14 +153,14 @@ const ImageStyled: any = styled.img<ImageProps>`
 export const Image = (props) => {
     return (
         <InView triggerOnce threshold={0}>
-        {({ inView, ref, entry }) => (
-            <ImageStyled {...props}
-                ref={ref}
-                style={{
-                    transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
-                }}
-            />
-        )}
+            {({ inView, ref, entry }) => (
+                <ImageStyled {...props}
+                    ref={ref}
+                    style={{
+                        transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+                    }}
+                />
+            )}
         </InView>
     )
 }

@@ -1,10 +1,20 @@
-.myprofile-wrapper{
+.myprofile-wrapper {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    .breadcrumbs{
+
+    .breadcrumbs {
         position: absolute;
         z-index: 10;
         top: 0;
@@ -14,63 +24,105 @@
         padding: 5px;
         text-align: center;
     }
-    .myprofile-introduce-wrapper{
+
+    .myprofile-introduce-wrapper {
         width: 100vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
-        .myprofile-introduce-img{
+
+        .myprofile-introduce-img {
             position: relative;
-            img{
+
+            img {
                 position: relative;
                 max-width: 100vw;
                 margin-top: 0px;
                 z-index: 0;
             }
         }
-        .profileImage-wrapper{
+
+        .profileImage-wrapper {
+            -webkit-transform: translateY(180px);
+            -ms-transform: translateY(180px);
             transform: translateY(180px);
         }
 
     }
-    .myprofile-content-wrapper{
+
+    .myprofile-content-wrapper {
         width: 70vw;
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             width: 100vw;
         }
-        h1{
+
+        h1 {
             text-align: center;
             margin-top: 40px;
+            -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
             transform: translateY(20px);
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
-        hr{
+
+        hr {
             opacity: 0.2;
             margin: 0;
-            @media (max-width: 768px){
+
+            @media (max-width: 768px) {
                 margin-bottom: 20px;
             }
         }
-        .myprofile-nav__wrapper ul{
+
+        .myprofile-nav__wrapper ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         }
     }
 }
-.myprofile-category__wrapper{
+
+.myprofile-category__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 70vw;
     margin: 25px auto;
     border-radius: 10px;
-    @media (max-width: 768px){
+
+    @media (max-width: 768px) {
         margin: 0;
         border-radius: 0;
         width: 100vw;
