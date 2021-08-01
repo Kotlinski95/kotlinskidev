@@ -19,7 +19,7 @@ const CustomLink = (props: propsType) => {
         className,
         children,
         style,
-        href = '/',
+        href = '',
         referrerpolicy = 'no-referrer',
         rel='noopener',
         target='_blank',

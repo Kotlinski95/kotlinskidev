@@ -1,13 +1,13 @@
 import './index.scss';
 import StackTile from '../../components/stackTile';
-import Tia from '../../assets/stack/tia.svg'
-import Motors from '../../assets/stack/motors.svg'
-import Plc from '../../assets/stack/plc.svg'
-import Hmi from '../../assets/stack/HMI.svg'
-import Embedded from '../../assets/stack/cpu.svg'
-import Scada from '../../assets/stack/scada.svg'
-import Safety from '../../assets/stack/safety.svg'
-import Microcontroller from '../../assets/stack/microcontroller.svg'
+import Tia from '../../assets/stack/tia.png'
+import Motors from '../../assets/stack/motors.png'
+import Plc from '../../assets/stack/plc.png'
+import Hmi from '../../assets/stack/HMI.png'
+import Embedded from '../../assets/stack/cpu.png'
+import Scada from '../../assets/stack/scada.png'
+import Safety from '../../assets/stack/safety.png'
+import Microcontroller from '../../assets/stack/microcontroller.png'
 
 
 const skills = [
@@ -27,7 +27,7 @@ const StackAutomation = () => {
       <h2 className="stack-hello">{language.pages.stack.automation_header}</h2>
       <div className="stack-wrapper">
         {skills.map((link) => (
-          <StackTile logo={link.icon} width="150px" heigh="150px" title={link.name} imgTitle="HTML 5" color={link.color} />
+          <StackTile logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
         ))}
       </div>
     </div>

@@ -9,6 +9,10 @@ html {
   overflow: hidden;
   -webkit-transform:translate3d(0,0,0);
   transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility:     hidden;
 }
 
 body {

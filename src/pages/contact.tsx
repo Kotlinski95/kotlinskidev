@@ -12,8 +12,11 @@ const ContactPage = (props) => {
   const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     document.title = title || "";
-}, [title]);
+  }, [title]);
 
   return (
     <>

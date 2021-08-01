@@ -12,6 +12,7 @@ import { Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import ReactPWAInstallProvider from "react-pwa-install";
+import { ScrollToTop } from 'react-router-scroll-to-top';
 
 declare global {
   var _store: Store;
@@ -29,12 +30,17 @@ history.listen(location => {
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });
 
+const handlePageChange: any = (): any => {
+  window.scrollTo(0, 0);
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <CookiesProvider>
         <ReactPWAInstallProvider enableLogging>
           <Router history={history}>
+            <ScrollToTop />
             <App />
           </Router>
         </ReactPWAInstallProvider>

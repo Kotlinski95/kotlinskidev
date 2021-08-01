@@ -76,6 +76,10 @@ function App() {
   isMobile ? dispatch(setMobile(true)) : dispatch(setMobile(false));
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location])
+
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -154,6 +158,10 @@ function App() {
     setOpenPWApopup(false);
   };
 
+  const handlePageChange: any = (): any => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
@@ -180,7 +188,7 @@ function App() {
                     <Route exact path="/aboutme">
                       <AboutPage {...routingProps} title={language.general.titles.about}/>
                     </Route>
-                    <Route exact path="/contact">
+                    <Route exact path="/contact" >
                       <ContactPage {...routingProps} title={language.general.titles.contact}/>
                     </Route>
                     <Route exact path="/myprofile">

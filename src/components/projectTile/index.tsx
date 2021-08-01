@@ -8,7 +8,7 @@ import {
 
 const ProjectTile = (props) => {
     return(
-        <div className="project-tile-wrapper" style={{width: `${props.width}`, height: `${props.height}`, overflow: 'hidden'}}>
+        <div className="project-tile-wrapper" style={{width: `${props.width}`, height: `${props.height}`}}>
             <RevealImage>
                 <Link className="project-tile-link" to={props.url}></Link>
                 <Image className="cursor_hover" src={props.logo} alt="Logo" />
