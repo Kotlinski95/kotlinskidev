@@ -30,10 +30,6 @@ history.listen(location => {
   ReactGA.pageview(location.pathname); // Record a pageview for the given page
 });
 
-const handlePageChange: any = (): any => {
-  window.scrollTo(0, 0);
-};
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

@@ -17,6 +17,7 @@ import { ReactComponent as ContactIcon } from '../../assets/icons/contact.svg';
 import { ReactComponent as AboutPlcIcon } from '../../assets/icons/about_plc.svg';
 import { ReactComponent as AboutFrontIcon } from '../../assets/icons/about_front.svg';
 import { ReactComponent as AboutEducationIcon } from '../../assets/icons/about_education.svg';
+import { ReactComponent as CursorIcon } from '../../assets/icons/about_education.svg';
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
@@ -28,6 +29,8 @@ import { setMenu } from '../../reducers/menu'
 import { CvPdf } from '../../docs';
 import { handleTrackingEvent } from '../../analytics';
 import CustomLink from '../customLink'
+import Switch from '@material-ui/core/Switch';
+import { setCursor } from '../../reducers/animation';
 
 function DropdownMulti(props) {
   const language = props.language;
@@ -39,6 +42,22 @@ function DropdownMulti(props) {
     setCookie('language', "Polski", { path: '/' });
   }
   dispatch(setLanguage(cookies.language));
+
+  const [cookiesCursor, setCookieCursor] = useCookies(['cursor']);
+  if (!cookiesCursor.cursor) {
+    setCookieCursor('cursor', 'false', { path: '/' });
+  }
+  dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+
+  const [cursorAnimation, setCursorAnimation] = useState(JSON.parse(cookiesCursor.cursor));
+
+  const handleCursorAnimation = (event) => {
+    const checked = event.target.checked ? 'true' : 'false';
+    setCursorAnimation(JSON.parse(checked));
+    dispatch(setCursor(JSON.parse(checked)));
+    setCookieCursor('cursor', checked, { path: '/' });
+    console.log("CursorAnimationEffect: ", event.target.name, " checked: ", checked);
+  };
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
@@ -159,6 +178,25 @@ function DropdownMulti(props) {
       );
     }
 
+    function AnimationItem(props) {
+      return (
+        <span className="menu-item" onClick={(e) => {
+          setCookieCursor(!JSON.parse(cookiesCursor.cursor));
+          dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
+          setCursorAnimation(!JSON.parse(cookiesCursor.cursor));
+          // handleCursorAnimation(e);
+          console.log("COOKIE CURSOR EFFECT: ", JSON.parse(cookiesCursor.cursor));
+
+          props.goToMenu && setActiveMenu(props.goToMenu);
+          !props.goToMenu && setOpen(false);
+        }}>
+          <span className="icon-button">{props.leftIcon}</span>
+          {props.children}
+          <span className="icon-right">{props.rightIcon}</span>
+        </span>
+      );
+    }
+
     return (
       <div className="dropdown cursor_hover" style={{ height: (menuHeight + 30) }} ref={dropdownRef}>
 
@@ -219,6 +257,26 @@ function DropdownMulti(props) {
         </CSSTransition>
 
         <CSSTransition
+          in={activeMenu === 'animation'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="settings" leftIcon={<ArrowIcon />}>
+              <h3>{language.header.animation}</h3>
+            </DropdownItem>
+            <AnimationItem goToMenu="settings" leftIcon={ <CursorIcon />}>
+              <Switch
+              checked={cursorAnimation}
+              color="primary"
+              name="checkedB"
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            /> Cursor Effect</AnimationItem>
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
           in={activeMenu === 'settings'}
           timeout={500}
           classNames="menu-secondary"
@@ -233,6 +291,11 @@ function DropdownMulti(props) {
               rightIcon={<ChevronIcon />}
               goToMenu="language">
               {language.header.language}
+            </DropdownItem>
+            <DropdownItem
+              leftIcon={<CursorIcon />}
+              goToMenu="animation">
+              {language.header.animation}
             </DropdownItem>
           </div>
         </CSSTransition>

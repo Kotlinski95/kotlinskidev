@@ -77,7 +77,9 @@ function App() {
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!location.pathname.includes('myprofile')) {
+      document.querySelector("body")!.scrollTo(0, 0);
+    }
   }, [location])
 
   switch (actualTheme) {
@@ -156,10 +158,6 @@ function App() {
 
   const handleClosePWA = () => {
     setOpenPWApopup(false);
-  };
-
-  const handlePageChange: any = (): any => {
-    window.scrollTo(0, 0);
   };
 
   return (
