@@ -99,9 +99,14 @@ function App() {
     const notificationState = _store.getState().notificationState.notificationOpen;
     (menuState === "false" && notificationState === "false") ? setIsHovered(set) : setIsHovered(false);
   }
-
+  document.addEventListener('DOMContentLoaded', function(event) {
+    console.log('DOMContentLoaded Ready:');
+  });
   useEffect(() => {
-    setIsReady(true);
+    setTimeout(() => {
+      console.log('UseEffect Ready:');
+      setIsReady(true);
+    }, 1000);
     return () => {
       setIsReady(false);
     }
@@ -110,20 +115,28 @@ function App() {
   const HandleMouseoverEffects = () => {
     useEffect(() => {
       window.addEventListener('resize', isMobileTest);
-      document.querySelectorAll(".cursor_hover").forEach(el => {
-        el.addEventListener("mouseover", () => IsHovered(true));
-        el.addEventListener("mouseout", () => IsHovered(false));
-      });
+      if (_store.getState().animationState.cursor) {
+        document.querySelectorAll(".cursor_hover").forEach(el => {
+          el.addEventListener("mouseover", () => IsHovered(true));
+          el.addEventListener("mouseout", () => IsHovered(false));
+        });
+      }
+      else {
+        document.querySelectorAll(".cursor_hover").forEach(el => {
+          el.removeEventListener("mouseover", () => setIsHovered(true));
+          el.removeEventListener("mouseout", () => setIsHovered(false));
+        });
+      }
+
       isMobileTest();
       return () => {
         window.removeEventListener('resize', isMobileTest);
-
         document.querySelectorAll(".cursor_hover").forEach(el => {
           el.removeEventListener("mouseover", () => setIsHovered(true));
           el.removeEventListener("mouseout", () => setIsHovered(false));
         });
       };
-    }, []);
+    }, [_store.getState().animationState.cursor]);
   };
 
   HandleMouseoverEffects();
@@ -167,13 +180,10 @@ function App() {
           {
             isReady ? (
               <>
-                {
-                  isMobile ? (
-                    <Cursor isMobile={isMobile} />
-                  ) : (
-                    <Cursor isHovered={isHovered} />
-                  )
-                }
+                {/* {
+                  _store.getState().animationState.cursor ?
+                    <Cursor isMobile={isMobile} isHovered={isHovered}/> : null
+                } */}
 
                 <RouteChangeTracker />
                 <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>

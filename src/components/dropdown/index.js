@@ -37,26 +37,26 @@ function DropdownMulti(props) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
-  const iconArrow = document.querySelectorAll('.dropdown-menu .navItem-icon')[0];
-  if (!cookies.language) {
-    setCookie('language', "Polski", { path: '/' });
-  }
-  dispatch(setLanguage(cookies.language));
-
   const [cookiesCursor, setCookieCursor] = useCookies(['cursor']);
-  if (!cookiesCursor.cursor) {
-    setCookieCursor('cursor', 'false', { path: '/' });
-  }
-  dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+  useEffect(() => {
+    if (!cookies.language) {
+      setCookie('language', "Polski", { path: '/' });
+    }
+    dispatch(setLanguage(cookies.language));
+
+    if (!cookiesCursor.cursor) {
+      setCookieCursor('cursor', 'false', { path: '/' });
+    }
+    dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+  }, []);
 
   const [cursorAnimation, setCursorAnimation] = useState(JSON.parse(cookiesCursor.cursor));
 
   const handleCursorAnimation = (event) => {
-    const checked = event.target.checked ? 'true' : 'false';
-    setCursorAnimation(JSON.parse(checked));
-    dispatch(setCursor(JSON.parse(checked)));
-    setCookieCursor('cursor', checked, { path: '/' });
-    console.log("CursorAnimationEffect: ", event.target.name, " checked: ", checked);
+    event.preventDefault();
+    setCookieCursor('cursor', !JSON.parse(cookiesCursor.cursor) , { path: '/' });
+    dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
+    setCursorAnimation(!JSON.parse(cookiesCursor.cursor));
   };
 
   function useOutsideAlerter(ref) {
@@ -181,14 +181,7 @@ function DropdownMulti(props) {
     function AnimationItem(props) {
       return (
         <span className="menu-item" onClick={(e) => {
-          setCookieCursor(!JSON.parse(cookiesCursor.cursor));
-          dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
-          setCursorAnimation(!JSON.parse(cookiesCursor.cursor));
-          // handleCursorAnimation(e);
-          console.log("COOKIE CURSOR EFFECT: ", JSON.parse(cookiesCursor.cursor));
-
-          props.goToMenu && setActiveMenu(props.goToMenu);
-          !props.goToMenu && setOpen(false);
+          handleCursorAnimation(e);
         }}>
           <span className="icon-button">{props.leftIcon}</span>
           {props.children}
@@ -266,7 +259,7 @@ function DropdownMulti(props) {
             <DropdownItem goToMenu="settings" leftIcon={<ArrowIcon />}>
               <h3>{language.header.animation}</h3>
             </DropdownItem>
-            <AnimationItem goToMenu="settings" leftIcon={ <CursorIcon />}>
+            <AnimationItem leftIcon={ <CursorIcon />}>
               <Switch
               checked={cursorAnimation}
               color="primary"
