@@ -103,10 +103,7 @@ function App() {
     console.log('DOMContentLoaded Ready:');
   });
   useEffect(() => {
-    setTimeout(() => {
-      console.log('UseEffect Ready:');
-      setIsReady(true);
-    }, 1000);
+    setIsReady(true);
     return () => {
       setIsReady(false);
     }

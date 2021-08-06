@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+
 html {
   height: 100%;
   overflow: hidden;
@@ -13,6 +15,9 @@ html {
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
   backface-visibility:     hidden;
+  background: rgb(24, 24, 24) !important;
+  background-image: linear-gradient(180deg,#171718 18.97%,#1c5344) !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,12 +27,10 @@ body {
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
-
-  // -webkit-backface-visibility: hidden;
-  // -webkit-transform-style: preserve-3d;
-  // transform-style: preserve-3d;
-  // -webkit-perspective: 1000;
-  // perspective: 1000;
+  background: rgb(24, 24, 24) !important;
+  background-image: linear-gradient(180deg,#171718 18.97%,#1c5344) !important;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: contain;
 }
 
 body::-webkit-scrollbar {
@@ -40,7 +43,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   box-shadow: transparent;
-  background-color: transparent;
+  background-color: #1c5344;
 
   @media (max-width: 769px) {
     display: none;

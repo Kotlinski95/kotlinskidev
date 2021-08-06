@@ -103,7 +103,7 @@ export const darkTheme = {
   body: '#1a4137',
   text: '#e1f7f1',
   toggleBorder: '#6B8096',
-  gradient: 'linear-gradient(180deg,#171718 18.97%,#1c5344)',
+  gradient: 'rgb(24, 24, 24);',
   gradientrevert: 'linear-gradient(180deg,#1c5344 0%,#171718 100%)',
   burgermenu: "#D0E2F2",
   scrollbarColor: "#ffffff",

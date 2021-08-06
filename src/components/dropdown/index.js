@@ -38,21 +38,26 @@ function DropdownMulti(props) {
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
   const [cookiesCursor, setCookieCursor] = useCookies(['cursor']);
-  useEffect(() => {
-    if (!cookies.language) {
-      setCookie('language', "Polski", { path: '/' });
-    }
-    dispatch(setLanguage(cookies.language));
+  const [cursorAnimation, setCursorAnimation] = useState(false);
 
+  if (!cookies.language) {
+    setCookie('language', "Polski", { path: '/' });
+  }
+  dispatch(setLanguage(cookies.language));
+
+  useEffect(() => {
     if (!cookiesCursor.cursor) {
       setCookieCursor('cursor', 'false', { path: '/' });
     }
-    dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
-  }, []);
-
-  const [cursorAnimation, setCursorAnimation] = useState(JSON.parse(cookiesCursor.cursor));
+    else {
+      dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+      setCursorAnimation(JSON.parse(cookiesCursor.cursor));
+    }
+    console.log("UseEffectOld: ", cookiesCursor.cursor);
+  },[cookiesCursor])
 
   const handleCursorAnimation = (event) => {
+    console.log("handlecursorAnimationJSon: ", JSON.parse(cookiesCursor.cursor))
     event.preventDefault();
     setCookieCursor('cursor', !JSON.parse(cookiesCursor.cursor) , { path: '/' });
     dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
