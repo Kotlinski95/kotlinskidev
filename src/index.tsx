@@ -12,6 +12,7 @@ import { Router } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import ReactPWAInstallProvider from "react-pwa-install";
+import { ScrollToTop } from 'react-router-scroll-to-top';
 
 declare global {
   var _store: Store;
@@ -35,6 +36,7 @@ ReactDOM.render(
       <CookiesProvider>
         <ReactPWAInstallProvider enableLogging>
           <Router history={history}>
+            <ScrollToTop />
             <App />
           </Router>
         </ReactPWAInstallProvider>

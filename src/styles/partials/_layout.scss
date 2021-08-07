@@ -4,9 +4,20 @@
   box-sizing: border-box;
 }
 
+
+
 html {
   height: 100%;
   overflow: hidden;
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility:     hidden;
+  background: rgb(24, 24, 24) !important;
+  background-image: linear-gradient(180deg,#171718 18.97%,#1c5344) !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,6 +27,10 @@ body {
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden;
+  background: rgb(24, 24, 24) !important;
+  background-image: linear-gradient(180deg,#171718 18.97%,#1c5344) !important;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: contain;
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +43,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   box-shadow: transparent;
-  background-color: transparent;
+  background-color: #1c5344;
 
   @media (max-width: 769px) {
     display: none;
@@ -81,11 +96,17 @@ main {
     min-height: v.$MainInnerHeight;
     height: 100%;
     box-sizing: border-box;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
 
     @media (max-width: 868px) {
       min-height: 400px;
       overflow: hidden;
     }
+  }
+  .main-inner__wrapper{
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
   }
 }
 

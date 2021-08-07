@@ -82,10 +82,8 @@ const Project: any = () => {
                 </ProjectsInfoContainer>
                 <ProjectImageContainer>
                     <ImageWrapper projectmain>
-                        <RevealImage data-scroll>
-                        <LazyLoad height='100%' once>
+                        <RevealImage>
                             <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} alt={alt} />
-                        </LazyLoad>
                         </RevealImage>
                     </ImageWrapper>
                     <ProjectsInfoContainer projectIcons>

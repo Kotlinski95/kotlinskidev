@@ -47,8 +47,6 @@ import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
 import React, { useEffect, useState } from 'react';
-import locomotiveScroll from "locomotive-scroll";
-import { AnimatePresence } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { setMobile } from './reducers/state';
 import { useReactPWAInstall } from "react-pwa-install";
@@ -78,6 +76,12 @@ function App() {
   isMobile ? dispatch(setMobile(true)) : dispatch(setMobile(false));
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
 
+  React.useEffect(() => {
+    if (!location.pathname.includes('myprofile')) {
+      document.querySelector("body")!.scrollTo(0, 0);
+    }
+  }, [location])
+
   switch (actualTheme) {
     case "Light":
       window._theme = lightTheme;
@@ -95,7 +99,9 @@ function App() {
     const notificationState = _store.getState().notificationState.notificationOpen;
     (menuState === "false" && notificationState === "false") ? setIsHovered(set) : setIsHovered(false);
   }
-
+  document.addEventListener('DOMContentLoaded', function(event) {
+    console.log('DOMContentLoaded Ready:');
+  });
   useEffect(() => {
     setIsReady(true);
     return () => {
@@ -106,20 +112,28 @@ function App() {
   const HandleMouseoverEffects = () => {
     useEffect(() => {
       window.addEventListener('resize', isMobileTest);
-      document.querySelectorAll(".cursor_hover").forEach(el => {
-        el.addEventListener("mouseover", () => IsHovered(true));
-        el.addEventListener("mouseout", () => IsHovered(false));
-      });
+      if (_store.getState().animationState.cursor) {
+        document.querySelectorAll(".cursor_hover").forEach(el => {
+          el.addEventListener("mouseover", () => IsHovered(true));
+          el.addEventListener("mouseout", () => IsHovered(false));
+        });
+      }
+      else {
+        document.querySelectorAll(".cursor_hover").forEach(el => {
+          el.removeEventListener("mouseover", () => setIsHovered(true));
+          el.removeEventListener("mouseout", () => setIsHovered(false));
+        });
+      }
+
       isMobileTest();
       return () => {
         window.removeEventListener('resize', isMobileTest);
-
         document.querySelectorAll(".cursor_hover").forEach(el => {
           el.removeEventListener("mouseover", () => setIsHovered(true));
           el.removeEventListener("mouseout", () => setIsHovered(false));
         });
       };
-    }, []);
+    }, [_store.getState().animationState.cursor]);
   };
 
   HandleMouseoverEffects();
@@ -159,18 +173,14 @@ function App() {
   return (
     <ThemeProvider theme={window._theme}>
       <GlobalStyles />
-      <div className="App smooth-scroll">
-        <AnimatePresence exitBeforeEnter initial={false} >
+      <div className="App">
           {
             isReady ? (
               <>
-                {
-                  isMobile ? (
-                    <Cursor isMobile={isMobile} />
-                  ) : (
-                    <Cursor isHovered={isHovered} />
-                  )
-                }
+                {/* {
+                  _store.getState().animationState.cursor ?
+                    <Cursor isMobile={isMobile} isHovered={isHovered}/> : null
+                } */}
 
                 <RouteChangeTracker />
                 <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>
@@ -183,7 +193,7 @@ function App() {
                     <Route exact path="/aboutme">
                       <AboutPage {...routingProps} title={language.general.titles.about}/>
                     </Route>
-                    <Route exact path="/contact">
+                    <Route exact path="/contact" >
                       <ContactPage {...routingProps} title={language.general.titles.contact}/>
                     </Route>
                     <Route exact path="/myprofile">
@@ -276,7 +286,6 @@ function App() {
               )
 
           }
-        </AnimatePresence>
       </div>
       <Cookies />
     </ThemeProvider>

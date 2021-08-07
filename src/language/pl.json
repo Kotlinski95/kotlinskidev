@@ -45,6 +45,7 @@
         "cv": "Curriculum Vitae",
         "settings" : "Ustawienia",
         "language": "Język",
+        "animation": "Animacje",
         "pages": {
             "carrier_plc": "Kariera programisty PLC",
             "carrier_front": "Kariera Front-End Developera",

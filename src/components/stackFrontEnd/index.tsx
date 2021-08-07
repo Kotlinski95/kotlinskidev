@@ -43,7 +43,7 @@ const StackFrontEnd = () => {
       <h2 className="stack-hello">{language.pages.stack.front_header}</h2>
       <div className="stack-wrapper">
         {skills.map((link, index) => (
-          <StackTile svg={link.icon} width="150px" heigh="150px" title={link.name} imgTitle="HTML 5" color={link.color} />
+          <StackTile svg={link.icon} width="150px" heigh="150px" title={link.name} imgTitle={link.name} color={link.color} />
         ))}
       </div>
     </div>

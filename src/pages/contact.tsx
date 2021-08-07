@@ -12,13 +12,16 @@ const ContactPage = (props) => {
   const { HandleMouseoverEffects, title } = props;
   HandleMouseoverEffects();
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     document.title = title || "";
-}, [title]);
+  }, [title]);
 
   return (
     <>
     <PageTransitioning/>
-    <div>
+    <div className="main-inner__wrapper">
       <div className="main-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
         <Breadcrumbs />
         <ContactForm />

@@ -1,10 +1,10 @@
 .projects-wrapper {
     width: 80vw;
-    display: grid;
-    grid-template-columns: calc(40vw - 0px) calc(40vw - 0px);
-    grid-template-rows: calc(40vw - 0px) calc(40vw - 0px);
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     border: 1px solid #fff;
     margin: 15px;
     box-sizing: border-box;

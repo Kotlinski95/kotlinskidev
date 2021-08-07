@@ -17,6 +17,7 @@ import { ReactComponent as ContactIcon } from '../../assets/icons/contact.svg';
 import { ReactComponent as AboutPlcIcon } from '../../assets/icons/about_plc.svg';
 import { ReactComponent as AboutFrontIcon } from '../../assets/icons/about_front.svg';
 import { ReactComponent as AboutEducationIcon } from '../../assets/icons/about_education.svg';
+import { ReactComponent as CursorIcon } from '../../assets/icons/about_education.svg';
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
@@ -28,17 +29,40 @@ import { setMenu } from '../../reducers/menu'
 import { CvPdf } from '../../docs';
 import { handleTrackingEvent } from '../../analytics';
 import CustomLink from '../customLink'
+import Switch from '@material-ui/core/Switch';
+import { setCursor } from '../../reducers/animation';
 
 function DropdownMulti(props) {
   const language = props.language;
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
-  const iconArrow = document.querySelectorAll('.dropdown-menu .navItem-icon')[0];
+  const [cookiesCursor, setCookieCursor] = useCookies(['cursor']);
+  const [cursorAnimation, setCursorAnimation] = useState(false);
+
   if (!cookies.language) {
     setCookie('language', "Polski", { path: '/' });
   }
   dispatch(setLanguage(cookies.language));
+
+  useEffect(() => {
+    if (!cookiesCursor.cursor) {
+      setCookieCursor('cursor', 'false', { path: '/' });
+    }
+    else {
+      dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+      setCursorAnimation(JSON.parse(cookiesCursor.cursor));
+    }
+    console.log("UseEffectOld: ", cookiesCursor.cursor);
+  },[cookiesCursor])
+
+  const handleCursorAnimation = (event) => {
+    console.log("handlecursorAnimationJSon: ", JSON.parse(cookiesCursor.cursor))
+    event.preventDefault();
+    setCookieCursor('cursor', !JSON.parse(cookiesCursor.cursor) , { path: '/' });
+    dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
+    setCursorAnimation(!JSON.parse(cookiesCursor.cursor));
+  };
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
@@ -159,6 +183,18 @@ function DropdownMulti(props) {
       );
     }
 
+    function AnimationItem(props) {
+      return (
+        <span className="menu-item" onClick={(e) => {
+          handleCursorAnimation(e);
+        }}>
+          <span className="icon-button">{props.leftIcon}</span>
+          {props.children}
+          <span className="icon-right">{props.rightIcon}</span>
+        </span>
+      );
+    }
+
     return (
       <div className="dropdown cursor_hover" style={{ height: (menuHeight + 30) }} ref={dropdownRef}>
 
@@ -219,6 +255,26 @@ function DropdownMulti(props) {
         </CSSTransition>
 
         <CSSTransition
+          in={activeMenu === 'animation'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="settings" leftIcon={<ArrowIcon />}>
+              <h3>{language.header.animation}</h3>
+            </DropdownItem>
+            <AnimationItem leftIcon={ <CursorIcon />}>
+              <Switch
+              checked={cursorAnimation}
+              color="primary"
+              name="checkedB"
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            /> Cursor Effect</AnimationItem>
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
           in={activeMenu === 'settings'}
           timeout={500}
           classNames="menu-secondary"
@@ -233,6 +289,11 @@ function DropdownMulti(props) {
               rightIcon={<ChevronIcon />}
               goToMenu="language">
               {language.header.language}
+            </DropdownItem>
+            <DropdownItem
+              leftIcon={<CursorIcon />}
+              goToMenu="animation">
+              {language.header.animation}
             </DropdownItem>
           </div>
         </CSSTransition>

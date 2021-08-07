@@ -83,7 +83,6 @@ const Cursor = ({ isHovered = false, isMobile = false }) => {
     }, [])
 
     useEffect(() => {
-
         document.addEventListener("mousemove", (event) => {
             const { clientX, clientY } = event;
 
