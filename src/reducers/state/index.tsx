@@ -6,14 +6,16 @@ import type { RootState } from '../../store'
 interface pageState {
   page: string,
   theme: string,
-  language: string
+  language: string,
+  mobile: boolean
 }
 
 // Define the initial state using that type
 const initialState: pageState = {
   page: "Home",
   theme: getCookie("theme") ? getCookie("theme") : "Dark",
-  language: getCookie("language") ? getCookie("language") : "English"
+  language: getCookie("language") ? getCookie("language") : "English",
+  mobile: false,
 } as pageState
 
 export const counterSlice = createSlice({
@@ -31,14 +33,17 @@ export const counterSlice = createSlice({
     setPage: (state, action: PayloadAction<string>) => {
       state.page = action.payload;
     },
+    setMobile: (state, action: PayloadAction<boolean>) => {
+      state.mobile = action.payload;
+    },
   },
 })
 
-export const { setTheme, setLanguage, setPage } = counterSlice.actions
+export const { setTheme, setLanguage, setPage, setMobile } = counterSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectedPage = (state: RootState) => state.pageState.page
-export const selectedTheme = (state: RootState) => state.pageState.theme
-export const selectedLanguage = (state: RootState) => state.pageState.language
-
-export default counterSlice.reducer
+export const selectedPage = (state: RootState) => state.pageState.page;
+export const selectedTheme = (state: RootState) => state.pageState.theme;
+export const selectedLanguage = (state: RootState) => state.pageState.language;
+export const selectedMobile = (state: RootState) => state.pageState.mobile;
+export const counterReducer = counterSlice.reducer;

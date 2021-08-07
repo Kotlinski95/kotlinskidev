@@ -13,25 +13,20 @@ const Breadcrumbs = () => {
     }
   return (
     <div>
-        <p className="breadcrumbs">
+        <p className="breadcrumbs cursor_hover" >
             {
                 locations.map((value, index) => {
-                    console.log("value: ", value, "index: ", index);
                     if (index > 0 && locations.length > 1){
-                        const last = index === locations.length - 1;
                         let to = `/${locations.slice(1, index + 1).join('/')}`;
-                        console.log("last: ",last , "to: ", to);
                         return(
                             <>
-                            <NavigateNextIcon /><Link to={to}><li className="line-item"> {value}</li></Link>
+                            <NavigateNextIcon /><Link to={to} title={`Link to ${to}`} aria-label={`Link to ${to}`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item cursor_hover"> {value}</span></Link>
                             </>
                         )
                     }
                     else{
-                        let to = `/`;
-                        console.log("to: ", to);
                         return(
-                            <Link to="/"><li className="line-item">{value}</li></Link>
+                            <Link to="/" title={`Link to homepage`} aria-label={`Link to homepage`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item cursor_hover">{value}</span></Link>
                         )
                     }
                 })

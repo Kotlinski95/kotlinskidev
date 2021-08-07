@@ -1,25 +1,23 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/adrian_kotlinski.png';
+import logo from '../../assets/icons/myprofile.svg';
 import moon from '../../assets/moon.png'
 import sun from '../../assets/sun.png'
-import { slide as Menu } from 'react-burger-menu';
 import { useState } from 'react'
-import { iconEN, iconPL } from '../../language'
-import ReactLanguageSelect from 'react-languages-select';
 import Switch from "react-switch";
-import 'react-languages-select/css/react-languages-select.css';
-import 'react-languages-select/scss/react-languages-select.scss';
 import { useDispatch } from 'react-redux';
-import { setTheme, setLanguage } from '../../reducers/state';
+import { setTheme } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
 import { getCookie } from '../../services';
 import LazyLoad from 'react-lazyload';
 import Button from '@material-ui/core/Button';
-import Menus from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import React from 'react';
 import ReactGA from 'react-ga';
+import DropdownMulti from '../dropdown/index.js'
+import NotificationDropdown from '../dropdownNotification/index.js'
+import AboutMeNavigation from '../navigation/aboutMeNav';
+import StackNavigation from '../navigation/stackNav';
+import CustomLink from '../customLink'
+import CustomImage from '../customImage'
 
 const styles = {
   bmCrossButton: {
@@ -36,8 +34,15 @@ const Nav = () => {
   const [areMenusOpen, setAreMenusOpen] = useState(false);
   const bmItem = document.querySelectorAll(".bm-item");
   const dispatch = useDispatch();
+
   const [cookies, setCookie] = useCookies(['language', 'theme']);
   const [checked, setChecked] = useState(getCookie("theme") === "Dark" ? false : true);
+
+  const [clickAboutMe, setClickAboutMe] = useState(false);
+  const handleClickAboutMe = () => setClickAboutMe(!clickAboutMe);
+
+  const [clickStack, setClickStack] = useState(false);
+  const handleClickStack = () => setClickStack(!clickStack);
 
   if (!getCookie("theme")) {
     setCookie('theme', "Dark", { path: '/' });
@@ -46,79 +51,12 @@ const Nav = () => {
   function handleCloseAfterLink(event: any) {
     setAreMenusOpen(false);
   }
-  const [anchorElAbout, setAnchorElAbout] = React.useState<null | HTMLElement>(null);
-  const [anchorElStack, setAnchorElStack] = React.useState<null | HTMLElement>(null);
-  const handleClickMenuAbout = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorElAbout(event.currentTarget);
-  };
-
-  const handleCloseMenuAbout = () => {
-    setAnchorElAbout(null);
-  };
-  const handleClickMenuStack = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorElStack(event.currentTarget);
-  };
-
-  const handleCloseMenuStack = () => {
-    setAnchorElStack(null);
-  };
-
 
   if (bmItem) {
     bmItem.forEach(element => {
       element.removeEventListener("click", handleCloseAfterLink);
       element.addEventListener("click", handleCloseAfterLink);
     })
-  }
-
-  const closeAllMenusOnEsc = (e: any) => {
-    e = e || window.event;
-    if (e.key === 'Escape' || e.keyCode === 27) {
-      if (areMenusOpen) {
-        setAreMenusOpen(false);
-      }
-    }
-  };
-
-  const handleOpen = () => {
-    setAreMenusOpen(true);
-  }
-  const handleClose = () => {
-    setAreMenusOpen(false);
-  }
-
-  function onSelectLanguage(e) {
-    const icons: any = document.getElementsByClassName('flag-select__option__label');
-    const languageIcon = icons[0];
-    setTimeout(() => {
-      switch (e) {
-        case 'pt':
-          if (icons != null) {
-            dispatch(setLanguage("Polski"));
-            setCookie('language', "Polski", { path: '/' });
-            languageIcon.innerHTML = '';
-            const img = document.createElement('img');
-            img.src = iconPL;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-        case 'en':
-          if (icons != null) {
-            dispatch(setLanguage("English"));
-            setCookie('language', "English", { path: '/' });
-            languageIcon.innerHTML = '';
-            const img = document.createElement('img');
-            img.src = iconEN;
-            img.alt = 'Icon not found';
-            img.classList.add('flag-icon');
-            languageIcon.appendChild(img);
-          }
-          break;
-      }
-      //ref.userLanguage.updateSelected("pt")
-    }, 0);
   }
 
   function handleChange() {
@@ -143,125 +81,40 @@ const Nav = () => {
     }, 0);
   }
 
-  window.onload = function () {
-    const icons: any = document.getElementsByClassName('flag-select__option__label');
-    const languageIcon = icons[0];
-    if (cookies.language) {
-      dispatch(setLanguage(cookies.language));
-      setTimeout(() => {
-        switch (cookies.language) {
-          case 'Polski':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              const img = document.createElement('img');
-              img.src = iconPL;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-          case 'English':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              const img = document.createElement('img');
-              img.src = iconEN;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-        }
-      }, 0);
-    }
-    else {
-      setTimeout(() => {
-        switch (languageIcon.innerHTML) {
-          case 'Polski':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              dispatch(setLanguage("Polski"));
-              setCookie('language', "Polski", { path: '/' });
-              const img = document.createElement('img');
-              img.src = iconPL;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-          case 'English':
-            if (icons != null) {
-              languageIcon.innerHTML = '';
-              dispatch(setLanguage("English"));
-              setCookie('language', "English", { path: '/' });
-              const img = document.createElement('img');
-              img.src = iconEN;
-              img.alt = 'Icon not found';
-              img.classList.add('flag-icon');
-              languageIcon.appendChild(img);
-            }
-            break;
-        }
-      }, 0);
-    }
-  };
-
   return (
     <div>
-      <div className="flex-wrapper">
+      <div className="flex-wrapper navigation">
         <div className="nav-left line-item item-half">
           <ul>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuAbout}>
-              <li className="line-item">
+          <li><AboutMeNavigation language={language} click={clickAboutMe} role="navigation" aria-label="navigation about" handleClick={handleClickAboutMe} /></li>
+          <li><StackNavigation language={language} click={clickStack} role="navigation" aria-label="navigation stack" handleClick={handleClickStack} /></li>
+          <li> <Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickAboutMe}>
+              <span className="line-item list-item">
                 {language.header.about}
-              </li>
-            </Button>
-            <Menus
-              id="simple-menu"
-              anchorEl={anchorElAbout}
-              keepMounted
-              open={Boolean(anchorElAbout)}
-              onClose={handleCloseMenuAbout}
-            >
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/plc-carrier">{language.header.pages.carrier_plc}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/front-end-development">{language.header.pages.carrier_front}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/courses">{language.header.pages.courses}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuAbout}><Link to="/aboutme/education">{language.header.pages.education}</Link></MenuItem>
-            </Menus>
-            <Link to="/projects"><li className="line-item">{language.header.projects}</li></Link>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenuStack}>
-              <li className="line-item">
+              </span>
+            </Button></li>
+            <li><Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item cursor_hover">{language.header.projects}</span></Link></li>
+            <li><Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
+              <span className="line-item list-item">
                 {language.header.stack}
-              </li>
-            </Button>
-            <Menus
-              id="simple-menu"
-              anchorEl={anchorElStack}
-              keepMounted
-              open={Boolean(anchorElStack)}
-              onClose={handleCloseMenuStack}
-            >
-              <MenuItem className="menuItem" onClick={handleCloseMenuStack}><Link to="/stack/front-end-developer">{language.header.pages.software_enginner}</Link></MenuItem>
-              <MenuItem className="menuItem" onClick={handleCloseMenuStack}><Link to="/stack/automation-engineer">{language.header.pages.automation_enginner}</Link></MenuItem>
-            </Menus>
+              </span>
+            </Button></li>
           </ul>
         </div>
-
-        <div className="nav-center line-item">
-          <Link to="/">
-            <LazyLoad height={70}>
-              <img src={logo} alt="Logo" className="nav-logo"></img>
-            </LazyLoad>
+        <div className="nav-center line-item cursor_hover">
+          <Link to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='noopener'>
+              <CustomImage src={logo} alt="Logo" width='50' height='50' loading='lazy' className="nav-logo" title='Link to homepage' role='link'></CustomImage>
           </Link>
         </div>
         <div className="nav-right line-item item-half nav-icons">
           <ul>
-            <Switch
+            <li style={{padding: '0'}}><Switch
               checked={checked}
               onChange={handleChange}
               handleDiameter={28}
-              offColor="#23222e"
+              offColor="#53665e"
               onColor="#eaedf0"
-              offHandleColor="#3d3b52"
+              offHandleColor="#2d2d30"
               onHandleColor="#D0E2F2"
               height={40}
               width={80}
@@ -275,7 +128,8 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
-                    color: "orange",
+                    zIndex: 999,
+                    color: "#D0E2F2",
                     paddingRight: 2
                   }}
                 >
@@ -290,12 +144,13 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     fontSize: 15,
+                    zIndex: 999,
                     color: "#3d3b52",
                     paddingRight: 2
                   }}
                 >
                   Light
-              </div>
+                </div>
 
               }
               uncheckedHandleIcon={
@@ -305,10 +160,11 @@ const Nav = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
-                  <img src={moon} />
+                  <CustomImage src={moon} alt='Dark mode' title='Switch to Light mode' width='20px' height='20px' />
                 </div>
               }
               checkedHandleIcon={
@@ -319,35 +175,20 @@ const Nav = () => {
                     alignItems: "center",
                     height: "100%",
                     color: "#3d3b52",
-                    fontSize: 15
+                    fontSize: 15,
+                    zIndex: 999
                   }}
                 >
-                  <img src={sun} className="layout-icon" />
+                  <CustomImage src={sun} className="layout-icon" alt='Light mode' title='Switch to Dark mode' width='20px' height='20px' />
                 </div>
               }
-              className="react-switch"
+              className="react-switch cursor_hover"
               id="small-radius-switch"
-            />
-            <ReactLanguageSelect
-              defaultLanguage="en" languages={["en", "pt"]} customLabels={{ "en": "English", "pt": "Polski" }} selectedSize={14} onSelect={onSelectLanguage} />
+            /></li>
+            <li style={{padding: '0'}}><NotificationDropdown language={language} /></li>
+            <li style={{padding: '0'}}><DropdownMulti language={language}/></li>
           </ul>
         </div>
-        <div className="nav-mobile">
-          <Menu onClose={handleClose} onOpen={handleOpen} customOnKeyDown={closeAllMenusOnEsc} isOpen={areMenusOpen} right styles={styles}>
-            <div className="nav-center-mobile line-item">
-              <Link to="/">
-                <img src={logo} alt="Logo" className="nav-logo"></img>
-              </Link>
-            </div>
-            <Link to="/" className="menu-item" id="home">{language.header.home}</Link>
-            <Link to="/aboutme" className="menu-item" id="buy">{language.header.about}</Link>
-            <Link to="/projects" className="menu-item" id="sell">{language.header.projects}</Link>
-            <Link to="/stack" className="menu-item" id="agent">{language.header.stack}</Link>
-            <Link to="/contact" className="menu-item" id="offices">{language.header.contact}</Link>
-            <Link to="/login"><li className="line-item">{language.header.login}</li></Link>
-          </Menu>
-        </div>
-
       </div>
     </div>
   );

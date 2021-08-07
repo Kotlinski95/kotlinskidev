@@ -1,14 +1,50 @@
 {
     "general": {
-        "website": "kotlinskidev.pl"
+        "website": "kotlinskidev.pl",
+        "titles": {
+            "home": "Adrian Kotliński | FrontEnd Developer",
+            "about": "O mnie | Adrian K. | FrontEnd Developer",
+            "courses": "Kursy | Adrian K. | FrontEnd Developer",
+            "education": "Edukacja | Adrian K. | FrontEnd Developer",
+            "frontEndDevelopment": "Programista Web | Adrian K. | FrontEnd Developer",
+            "plcCarrier": "Kariera PLC | Adrian K. | FrontEnd Developer",
+            "myprofile": "Mój profil | Adrian K. | FrontEnd Developer",
+            "myprofileContact": "Profil - Kontakt | Adrian K. | FrontEnd Developer",
+            "myprofileEducation": "Profil - Edukacja | Adrian K. | FrontEnd Developer",
+            "myprofileHobby": "Profil - Hobby | Adrian K. | FrontEnd Developer",
+            "myprofileOverview": "Profil | Adrian K. | FrontEnd Developer",
+            "myprofileSpareTime": "Profil - czas wolny | Adrian K. | FrontEnd Developer",
+            "myprofileWork": "Profil - praca | Adrian K. | FrontEnd Developer",
+            "projects": "Projekty | Adrian K. | FrontEnd Developer",
+            "projectsChess": "Szachy | Adrian K. | FrontEnd Developer",
+            "projectsEstate": "Strona agencji | Adrian K. | FrontEnd Developer",
+            "projectsPortfolio": "Portfolio | Adrian K. | FrontEnd Developer",
+            "projectsQuiz": "Quiz | Adrian K. | FrontEnd Developer",
+            "projectsWebsite": "Portfolio | Adrian K. | FrontEnd Developer",
+            "services": "Usługi | Adrian K. | FrontEnd Developer",
+            "servicesPlc":"Usługi - PLC | Adrian K. | FrontEnd Developer",
+            "servicesShopify": "Usługi - Shopify | Adrian K. | FrontEnd Developer",
+            "servicesWeb": "Usługi - Web | Adrian K. | FrontEnd Developer",
+            "stack": "Technologie | Adrian K. | FrontEnd Developer",
+            "stackAutomation": "Technologie Automatyka | Adrian K. | FrontEnd Developer",
+            "stackFront": "Technologie FrontEnd | Adrian K. | FrontEnd Developer",
+            "contact": "Kontakt | Adrian K. | FrontEnd Developer",
+            "cookies": "Ciasteczka | Adrian K. | FrontEnd Developer",
+            "notFound" :"Strony nie znaleziono | Adrian K. | FrontEnd Developer",
+            "privacy" : "Polityka prywatności | Adrian K. | FrontEnd Developer"
+        }
     },
     "header": {
         "about": "O mnie",
+        "myprofile": "Mój profil",
         "projects": "Projekty",
         "stack": "Technologie",
         "contact": "Kontakt",
         "login": "Logowanie",
         "home" : "Strona główna",
+        "cv": "Curriculum Vitae",
+        "settings" : "Ustawienia",
+        "language": "Język",
         "pages": {
             "carrier_plc": "Kariera programisty PLC",
             "carrier_front": "Kariera Front-End Developera",
@@ -16,6 +52,10 @@
             "education": "Edukacja",
             "software_enginner": "Front-End Development",
             "automation_enginner": "Automatyka"
+        },
+        "notification": {
+            "header": "Komunikat",
+            "text": "Strona jest w trakcie tworzenia, niektóre funkcjonalności mogą być jeszcze niedostępne. Przepraszam, za chwilowe trudności i brak wszystkich treści, pracuję nad tym :)"
         }
     },
     "typedText": {
@@ -27,12 +67,13 @@
         "cookie_consent": {
             "first_text" : "Ta strona korzysta z plików cookie, aby zwiększyć komfort użytkowania.",
             "second_text": "Zaakceptuj politykę plików cookie, aby uzyskać lepsze wrażenia!",
-            "buttonText": "Akceptuję",
+            "buttonText": "Rozumiem",
             "declineButtonText": "Odrzucam"
         },
         "privacy":{
             "rights": "https://kotlinskidev.pl - Wszelkie prawa zastrzeżone.",
-            "policy": "Polityka prywatności & przetwarzanie danych osobych"
+            "policy": "Polityka prywatności & przetwarzanie danych osobych",
+            "cookies": "Polityka plików cookie"
         },
         "pages": {
             "services": "Usługi",
@@ -40,6 +81,636 @@
             "web": "Tworzenie aplikacji web i stron www",
             "shopify": "Tworzenie sklepów e-commerce w platformie shopify",
             "plc": "Programowanie sterowników przemysłowych (PLC)"
+        }
+    },
+    "not_found": {
+        "header": "Nie mogłem znaleźć tego, czego szukałeś.",
+        "paragraph_reason": "Niestety nie można znaleźć szukanej strony. Może być chwilowo niedostępna, przeniesiona lub już nie istnieje.",
+        "paragraph_todo": "Sprawdź, czy podany adres URL nie zawiera błędów i spróbuj ponownie. Ewentualnie poszukaj tego, czego brakuje lub rozejrzyj się po pozostałej części mojej witryny.",
+        "search_placeholder": "Szukaj.."
+    },
+    "pages": {
+        "home": {
+            "welcome": {
+                "header": "Adrian Kotliński",
+                "title": "Junior Front-end Developer",
+                "scroll": "Przewiń niżej"
+            },
+            "about": {
+                "header": "Cześć",
+                "text": "Nazywam się Adrian Kotlinski, mieszkam w Katowicach. Swoją przygodę z FrontEndem rozpocząłem pod koniec 2020 roku. Od tamtej pory na naukę poświęcam każdą wolną chwilę i sprawia mi ona ogromną przyjemność. Ciągle dążę do poszerzania swoich kompetencji poprzez poznawanie najnowszych rozwiązań i technologii.",
+                "seemore": "Zobacz więcej"
+            },
+            "categories": {
+                "header": "Zapraszam Cię do odwiedzenia pozostałych stron",
+                "about": "O mnie",
+                "projects": "Projekty",
+                "stack": "Technologie",
+                "services": "Usługi",
+                "profile": "Profil"
+            }
+        },
+        "privacy": {
+            "header": "Polityka prywatności",
+            "update": "Ostatnia aktualizacja: May 19, 2021",
+            "describe": "Niniejsza Polityka prywatności opisuje nasze zasady i procedury dotyczące gromadzenia, wykorzystywania i ujawniania Twoich informacji podczas korzystania z Usługi oraz zawiera informacje o Twoich prawach do prywatności oraz o tym, jak prawo Cię chroni.",
+            "personal_data": "Używamy Twoich danych osobowych w celu świadczenia i ulepszania Usługi. Korzystając z Usługi, zgadzasz się na zbieranie i wykorzystywanie informacji zgodnie z niniejszą Polityką prywatności. Niniejsza Polityka prywatności została stworzona przy pomocy ",
+            "generator": "Generator Polityki Prywatności",
+            "interpretation": "Interpretacja i definicje",
+            "interpretation_header": "Interpretacja",
+            "interpretation_text": "Słowa, których pierwsza litera jest pisana wielką literą, mają znaczenie określone w następujących warunkach. Poniższe definicje mają to samo znaczenie niezależnie od tego, czy występują w liczbie pojedynczej czy mnogiej.",
+            "definitions": {
+                "header": "Definicje",
+                "text": "Do celów niniejszej Polityki prywatności:",
+                "account_title": "Konto",
+                "account_label": " oznacza unikalne konto utworzone dla Ciebie w celu uzyskania dostępu do naszej Usługi lub części naszej Usługi.",
+                "company_title": "Firma",
+                "company_label": " (określane w niniejszej Umowie jako „Firma”, „My”, „Nas” lub „Nasz”) odnosi się do kotlinskidev",
+                "cookies_title": "Ciasteczka",
+                "cookies_label": " to małe pliki, które są umieszczane na Twoim komputerze, urządzeniu mobilnym lub innym urządzeniu przez witrynę internetową, zawierające szczegóły Twojej historii przeglądania tej witryny i jej wielu zastosowań.",
+                "country_title": "Kraj",
+                "country_label": " dotyczy: Polski",
+                "device_title": "Urządzenie",
+                "device_label": " oznacza każde urządzenie, które może uzyskać dostęp do Usługi, takie jak komputer, telefon komórkowy lub tablet cyfrowy.",
+                "personal_title": "Dane osobiste",
+                "personal_label": " to wszelkie informacje dotyczące zidentyfikowanej lub możliwej do zidentyfikowania osoby.",
+                "service_title": "Usługa",
+                "service_label": " odnosi się do Serwisu(strony internetowej).",
+                "service_provider_title": "Dostawca usługi",
+                "service_provider_label": " oznacza każdą osobę fizyczną lub prawną, która przetwarza dane w imieniu Spółki. Odnosi się do firm zewnętrznych lub osób zatrudnionych przez Firmę w celu ułatwienia korzystania z Usługi, świadczenia Usługi w imieniu Spółki, świadczenia usług związanych z Usługą lub pomocy Spółce w analizowaniu sposobu korzystania z Usługi.",
+                "social_title": "Usługa mediów społecznościowych innej firmy",
+                "social_label": " odnosi się do dowolnej witryny internetowej lub dowolnego serwisu społecznościowego, za pośrednictwem którego Użytkownik może się zalogować lub założyć konto w celu korzystania z Usługi.",
+                "usage_title": "Dane dotyczące użytkowania",
+                "usage_label": " odnosi się do danych zbieranych automatycznie, generowanych przez korzystanie z Usługi lub z samej infrastruktury Usługi (na przykład czas trwania wizyty na stronie).",
+                "website_title": "Strona internetowa",
+                "website_label": " odnosi się do kotlinskidev, dostępne pod adresem ",
+                "website_link": "https://www.kotlinskidev.pl",
+                "you_title": "Ty",
+                "you_label": " oznacza osobę uzyskującą dostęp do Usługi lub korzystającą z niej, firmę lub inny podmiot prawny, w imieniu którego taka osoba uzyskuje dostęp do Usługi lub z niej korzysta, stosownie do przypadku."
+            },
+            "collecting_data":{
+                "header": "Gromadzenie i wykorzystywanie danych osobowych",
+                "text": "Rodzaje gromadzonych danych",
+                "personal": {
+                    "header": "Dane osobiste",
+                    "text": "Korzystając z naszej Usługi, możemy poprosić Cię o podanie nam pewnych danych osobowych, które można wykorzystać do skontaktowania się z Tobą lub zidentyfikowania Cię. Informacje umożliwiające identyfikację osoby mogą obejmować między innymi:",
+                    "email": "Adres e-mail",
+                    "name": "Imię i nazwisko",
+                    "phone": "Numer telefonu",
+                    "address": "Adres, województwo, kod pocztowy, miasto",
+                    "usage": "Dane dotyczące użytkowania"
+                },
+                "usage": {
+                    "header": "Dane dotyczące użytkowania",
+                    "collection": "Dane dotyczące użytkowania są zbierane automatycznie podczas korzystania z Usługi.",
+                    "include": "Dane dotyczące użytkowania mogą obejmować takie informacje, jak adres protokołu internetowego Twojego urządzenia (np. Adres IP), typ przeglądarki, wersja przeglądarki, strony naszego Serwisu, które odwiedzasz, czas i data Twojej wizyty, czas spędzony na tych stronach, unikalne urządzenie identyfikatory i inne dane diagnostyczne.",
+                    "access": "Kiedy uzyskujesz dostęp do Usługi za pomocą urządzenia mobilnego lub za pośrednictwem urządzenia mobilnego, możemy automatycznie zbierać określone informacje, w tym między innymi rodzaj używanego urządzenia mobilnego, unikalny identyfikator Twojego urządzenia mobilnego, adres IP Twojego urządzenia mobilnego, Twój telefon komórkowy system operacyjny, rodzaj używanej mobilnej przeglądarki internetowej, unikalne identyfikatory urządzeń i inne dane diagnostyczne.",
+                    "collect": "Możemy również gromadzić informacje, które Twoja przeglądarka wysyła za każdym razem, gdy odwiedzasz naszą Usługę lub gdy uzyskujesz dostęp do Usługi za pomocą urządzenia mobilnego lub przez urządzenie mobilne."
+                },
+                "third": {
+                    "header": "Informacje z zewnętrznych usług mediów społecznościowych",
+                    "text": "Firma umożliwia Użytkownikowi utworzenie konta i zalogowanie się w celu korzystania z Usługi za pośrednictwem następujących zewnętrznych usług mediów społecznościowych:",
+                    "google": "Google",
+                    "facebook": "Facebook",
+                    "twitter": "Twitter",
+                    "register": "Jeśli zdecydujesz się zarejestrować za pośrednictwem usługi mediów społecznościowych strony trzeciej lub w inny sposób przyznać nam dostęp do usługi mediów społecznościowych strony trzeciej, możemy gromadzić dane osobowe, które są już powiązane z kontem usługi mediów społecznościowych strony trzeciej, takie jak imię i nazwisko, adres e-mail, Twoje działania lub Twoja lista kontaktów skojarzona z tym kontem.",
+                    "additional": "Możesz również mieć możliwość udostępnienia Firmie dodatkowych informacji za pośrednictwem swojego konta w usłudze mediów społecznościowych innej firmy. Jeśli zdecydujesz się podać takie informacje i dane osobowe, podczas rejestracji lub w inny sposób, udzielasz Firmie zgody na ich używanie, udostępnianie i przechowywanie w sposób zgodny z niniejszą Polityką prywatności."
+                },
+                "tracking": {
+                    "header": "Technologie śledzenia i pliki cookie",
+                    "cookies": "Używamy plików cookie i podobnych technologii śledzenia, aby śledzić aktywność w naszym serwisie i przechowywać określone informacje. Wykorzystywane technologie śledzenia to sygnały nawigacyjne, znaczniki i skrypty do gromadzenia i śledzenia informacji oraz do ulepszania i analizowania naszej Usługi. Technologie, których używamy, mogą obejmować:",
+                    "cookies_title": "Pliki cookie lub pliki cookie przeglądarki.",
+                    "cookies_text": "Cookie to mały plik umieszczany na Twoim Urządzeniu. Możesz poinstruować swoją przeglądarkę, aby odrzucała wszystkie pliki cookie lub wskazywała, kiedy plik cookie jest wysyłany. Jeśli jednak nie zaakceptujesz plików cookie, możesz nie być w stanie korzystać z niektórych części naszej Usługi. O ile nie dostosowałeś ustawień przeglądarki tak, aby odrzucała pliki cookie, nasz serwis może używać plików cookie.",
+                    "flash_title": "Pliki cookie Flash.",
+                    "flash_text": "Niektóre funkcje naszej Usługi mogą wykorzystywać lokalnie przechowywane obiekty (lub pliki cookie Flash) do zbierania i przechowywania informacji o Twoich preferencjach lub Twojej aktywności w naszym Serwisie. Pliki cookie Flash nie są zarządzane przez te same ustawienia przeglądarki, które są używane w przypadku plików cookie przeglądarki. Więcej informacji na temat usuwania plików cookie Flash można znaleźć w artykule „Gdzie mogę zmienić ustawienia dotyczące wyłączania lub usuwania lokalnych obiektów udostępnionych?” dostępne o",
+                    "flash_link" : "https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_",
+                    "beacons_title": "Sygnały nawigacyjne w sieci Web.",
+                    "beacons_text": "Niektóre sekcje naszej Usługi i nasze wiadomości e-mail mogą zawierać małe pliki elektroniczne zwane sygnalizatorami sieciowymi (nazywane również czystymi gifami, znacznikami pikselowymi i jednopikselowymi gifami), które pozwalają Firmie, na przykład, zliczać użytkowników, którzy odwiedzili te strony. lub otworzył wiadomość e-mail i inne powiązane statystyki witryny (na przykład rejestrowanie popularności określonej sekcji i weryfikacja integralności systemu i serwera).",
+                    "persistent": "Pliki cookie mogą być plikami „trwałymi” lub „sesyjnymi”. Trwałe pliki cookie pozostają na Twoim komputerze osobistym lub urządzeniu mobilnym, gdy przejdziesz do trybu offline, natomiast sesyjne pliki cookie są usuwane, gdy tylko zamkniesz przeglądarkę internetową. Dowiedz się więcej o plikach cookie:",
+                    "what_cookies_are": "Co to są pliki cookie?",
+                    "session": "Używamy zarówno sesyjnych, jak i trwałych plików cookie do celów określonych poniżej:",
+                    "necessary": "Niezbędne pliki cookie",
+                    "type": "Typ: sesyjne pliki cookie",
+                    "administered": "Administrowany przez: Us",
+                    "purpose": "Cel: Te pliki cookie są niezbędne do świadczenia usług dostępnych za pośrednictwem Witryny i umożliwienia korzystania z niektórych jej funkcji. Pomagają w uwierzytelnianiu użytkowników i zapobiegają nieuczciwemu korzystaniu z kont użytkowników. Bez tych plików cookie usługi, o które prosiłeś, nie mogą być świadczone, a my używamy tych plików cookie wyłącznie do świadczenia tych usług.",
+                    "cookies_policy": "Polityka plików cookie / akceptacja powiadomień Pliki cookie",
+                    "cookies_policy_type": "Typ: trwałe pliki cookie",
+                    "cookies_policy_administered": "Administrowany przez: Us",
+                    "cookies_purpose": "Cel: Te pliki cookie identyfikują, czy użytkownicy zaakceptowali użycie plików cookie w Witrynie.",
+                    "cookies_functionality": "Funkcjonalne pliki cookie",
+                    "cookies_functionality_type": "Typ: trwałe pliki cookie",
+                    "cookies_functionality_administered": "Administrowany przez: Us",
+                    "cookies_website": "Cel: Te pliki cookie pozwalają nam zapamiętać wybory dokonywane podczas korzystania z Witryny, takie jak zapamiętanie danych logowania lub preferencji językowych. Celem tych plików cookie jest zapewnienie bardziej osobistego doświadczenia i uniknięcie konieczności ponownego wprowadzania preferencji za każdym razem, gdy korzystasz z Witryny.",
+                    "more": "Aby uzyskać więcej informacji na temat używanych przez nas plików cookie i Twoich wyborów dotyczących plików cookie, odwiedź naszą Politykę plików cookie lub sekcję dotyczącą plików cookie w naszej Polityce prywatności."
+                },
+                "use_personal": {
+                    "header": "Wykorzystywanie danych osobowych",
+                    "text": "Firma może wykorzystywać dane osobowe w następujących celach:",
+                    "service_title": "Aby świadczyć i utrzymywać naszą usługę",
+                    "service_text": ", w tym do monitorowania korzystania z naszej Usługi.",
+                    "manage_account_title": "Aby zarządzać swoim kontem:",
+                    "manage_account_text": "do zarządzania Twoją rejestracją jako użytkownika Usługi. Podane przez Ciebie dane osobowe mogą dać Ci dostęp do różnych funkcjonalności Usługi, które są dostępne dla Ciebie jako zarejestrowanego użytkownika.",
+                    "performance_title": "W celu wykonania umowy:",
+                    "performance_text": "opracowanie, zgodność i zawarcie umowy zakupu produktów, towarów lub usług, które kupiłeś lub jakiejkolwiek innej umowy z nami za pośrednictwem Usługi.",
+                    "contact_title": "Skontaktować się z Tobą: ",
+                    "contact_text": "Aby skontaktować się z Tobą za pośrednictwem poczty e-mail, połączeń telefonicznych, SMS-ów lub innych równoważnych form komunikacji elektronicznej, takich jak powiadomienia push aplikacji mobilnej dotyczące aktualizacji lub komunikacji informacyjnej związanej z funkcjami, produktami lub zakontraktowanymi usługami, w tym aktualizacjami zabezpieczeń, gdy jest to konieczne lub uzasadnione do ich realizacji.",
+                    "provide_title": "Aby Ci zapewnić",
+                    "provide_text": "z aktualnościami, ofertami specjalnymi i ogólnymi informacjami o innych towarach, usługach i wydarzeniach, które oferujemy, które są podobne do tych, które już kupiłeś lub o które pytałeś, chyba że zdecydowałeś się nie otrzymywać takich informacji.",
+                    "manage_request_title": "Aby zarządzać Twoimi prośbami:",
+                    "manage_request_text": "Aby uczestniczyć i zarządzać Twoimi prośbami do nas.",
+                    "business_title": "Do transferów biznesowych: ",
+                    "business_text": "Możemy wykorzystać Twoje dane do oceny lub przeprowadzenia fuzji, zbycia, restrukturyzacji, reorganizacji, rozwiązania lub innej sprzedaży lub przeniesienia niektórych lub wszystkich naszych aktywów, czy to w ramach kontynuacji działalności, czy w ramach upadłości, likwidacji lub podobnego postępowania, w którym posiadane przez nas Dane Osobowe dotyczące użytkowników naszych Usług znajdują się wśród przekazanych aktywów.",
+                    "other_title": "Do innych celów: ",
+                    "other_text": "Możemy wykorzystywać Twoje informacje do innych celów, takich jak analiza danych, identyfikacja trendów użytkowania, określanie skuteczności naszych kampanii promocyjnych oraz ocena i ulepszanie naszej Usługi, produktów, usług, marketingu i Twoich doświadczeń.",
+                    "situations":"Możemy udostępniać Twoje dane osobowe w następujących sytuacjach: ",
+                    "web_provider_title": "Z dostawcami usług: ",
+                    "web_provider_text": "Możemy udostępniać Twoje dane osobowe Usługodawcom w celu monitorowania i analizowania korzystania z naszej Usługi oraz kontaktowania się z Tobą.",
+                    "business_transfer_title": "W przypadku transferów biznesowych:",
+                    "business_transfer_text": "Możemy udostępniać lub przekazywać Twoje dane osobowe w związku z lub w trakcie negocjacji jakiejkolwiek fuzji, sprzedaży aktywów Spółki, finansowania lub nabycia całości lub części naszej działalności innej firmie.",
+                    "affiliates_title": "Z podmiotami stowarzyszonymi:",
+                    "affiliates_text": "Możemy udostępniać Twoje dane naszym podmiotom stowarzyszonym, w którym to przypadku będziemy wymagać od tych podmiotów stowarzyszonych przestrzegania niniejszej Polityki prywatności. Podmioty stowarzyszone obejmują naszą firmę macierzystą i wszelkie inne spółki zależne, partnerów joint venture lub inne firmy, które kontrolujemy lub które są pod wspólną kontrolą z nami.",
+                    "business_partners_title": "Z partnerami biznesowymi: ",
+                    "business_partners_text": "Możemy udostępniać Twoje dane naszym partnerom biznesowym, aby oferować Ci określone produkty, usługi lub promocje.",
+                    "other_users_title": "Z innymi użytkownikami: ",
+                    "other_users_text": "kiedy udostępniasz dane osobowe lub w inny sposób wchodzisz w interakcje w miejscach publicznych z innymi użytkownikami, takie informacje mogą być przeglądane przez wszystkich użytkowników i mogą być publicznie rozpowszechniane na zewnątrz. Jeśli wchodzisz w interakcje z innymi użytkownikami lub rejestrujesz się za pośrednictwem usługi mediów społecznościowych strony trzeciej, Twoje kontakty w usłudze mediów społecznościowych strony trzeciej mogą zobaczyć Twoje imię i nazwisko, profil, zdjęcia i opis Twojej aktywności. Podobnie inni użytkownicy będą mogli przeglądać opisy Twojej aktywności, komunikować się z Tobą i przeglądać Twój profil.",
+                    "content_title": "Za Twoją zgodą: ",
+                    "content_text": "Za Twoją zgodą możemy ujawnić Twoje dane osobowe w jakimkolwiek innym celu."
+                },
+                "retention": {
+                    "header": "Przechowywanie Twoich danych osobowych",
+                    "retent": "Firma będzie przechowywać Twoje dane osobowe tylko tak długo, jak będzie to konieczne do celów określonych w niniejszej Polityce prywatności. Będziemy przechowywać i wykorzystywać Twoje dane osobowe w zakresie niezbędnym do wypełnienia naszych zobowiązań prawnych (na przykład, jeśli jesteśmy zobowiązani do zachowania Twoich danych w celu przestrzegania obowiązujących przepisów), rozwiązywania sporów i egzekwowania naszych umów prawnych i zasad.",
+                    "usage": "Firma zachowa również Dane dotyczące użytkowania do celów analizy wewnętrznej. Dane dotyczące użytkowania są zazwyczaj przechowywane przez krótszy okres czasu, z wyjątkiem sytuacji, gdy dane te są wykorzystywane do wzmocnienia bezpieczeństwa lub poprawy funkcjonalności naszej Usługi lub jesteśmy prawnie zobowiązani do przechowywania tych danych przez dłuższy czas."
+                },
+                "transfer": {
+                    "header": "Przekazywanie Twoich danych osobowych",
+                    "information": "Twoje dane, w tym Dane Osobowe, są przetwarzane w biurach operacyjnych Spółki oraz w każdym innym miejscu, w którym znajdują się strony zaangażowane w przetwarzanie. Oznacza to, że informacje te mogą być przekazywane i przechowywane na komputerach znajdujących się poza Twoim stanem, prowincją, krajem lub inną jurysdykcją rządową, w której przepisy dotyczące ochrony danych mogą różnić się od przepisów obowiązujących w Twojej jurysdykcji.",
+                    "consent": "Twoja zgoda na niniejszą Politykę prywatności, a następnie przesłanie przez Ciebie takich informacji oznacza Twoją zgodę na to przeniesienie.",
+                    "company": "Firma podejmie wszelkie uzasadnione kroki, aby zapewnić, że Twoje dane są traktowane w bezpieczny sposób i zgodnie z niniejszą Polityką prywatności, a żadne przekazywanie Twoich danych osobowych do organizacji lub kraju nie będzie miało miejsca, chyba że istnieją odpowiednie kontrole, w tym bezpieczeństwo Twoje dane i inne dane osobowe."
+                },
+                "disclosure":{
+                    "header": "Ujawnienie Twoich danych osobowych",
+                    "business_title": "Transakcje biznesowe",
+                    "business_text": "Jeśli Firma jest zaangażowana w fuzję, przejęcie lub sprzedaż aktywów, Twoje Dane Osobowe mogą zostać przekazane. Powiadomimy Cię, zanim Twoje dane osobowe zostaną przekazane i będą podlegać innej Polityce prywatności.",
+                    "law_title": "Egzekwowanie prawa",
+                    "law_text": "W pewnych okolicznościach Spółka może być zobowiązana do ujawnienia Twoich Danych Osobowych, jeśli jest to wymagane przez prawo lub w odpowiedzi na ważne żądania władz publicznych (np. Sądu lub agencji rządowej).",
+                    "legal_title": "Inne wymagania prawne",
+                    "legal_text": "Firma może ujawnić Twoje dane osobowe w dobrej wierze, że takie działanie jest konieczne, aby:",
+                    "comply": "Przestrzegaj zobowiązania prawnego",
+                    "protect": "Chronić i bronić praw lub własności Spółki",
+                    "prevent": "Zapobiegaj lub badaj możliwe wykroczenia w związku z Usługą",
+                    "personal_safety": "Chroń bezpieczeństwo osobiste Użytkowników Serwisu lub społeczeństwa",
+                    "liability": "Chronić przed odpowiedzialnością prawną"
+                },
+                "security": {
+                    "header": "Bezpieczeństwo Twoich danych osobowych",
+                    "text": "Bezpieczeństwo Twoich danych osobowych jest dla nas ważne, ale pamiętaj, że żadna metoda transmisji przez Internet ani metoda elektronicznego przechowywania danych nie jest w 100% bezpieczna. Chociaż staramy się wykorzystywać komercyjnie akceptowalne sposoby ochrony Twoich danych osobowych, nie możemy zagwarantować ich całkowitego bezpieczeństwa."
+                },
+                "children": {
+                    "header": "Prywatność dzieci",
+                    "text": "Nasza usługa nie jest skierowana do osób poniżej 13. roku życia. Nie zbieramy świadomie danych osobowych od osób poniżej 13. roku życia. Jeśli jesteś rodzicem lub opiekunem i wiesz, że Twoje dziecko przekazało nam dane osobowe, prosimy Skontaktuj się z nami. Jeśli dowiemy się, że zebraliśmy dane osobowe od kogokolwiek poniżej 13 roku życia bez weryfikacji zgody rodziców, podejmujemy kroki w celu usunięcia tych informacji z naszych serwerów.",
+                    "rely": "Jeśli musimy polegać na zgodzie jako podstawie prawnej przetwarzania Twoich danych, a Twój kraj wymaga zgody rodzica, możemy wymagać zgody Twojego rodzica, zanim zbierzemy i wykorzystamy te informacje."
+                },
+                "links": {
+                    "header": "Linki do innych witryn internetowych",
+                    "text": "Nasz Serwis może zawierać linki do innych stron internetowych, które nie są przez nas obsługiwane. Jeśli klikniesz łącze strony trzeciej, zostaniesz przekierowany do witryny tej osoby trzeciej. Zdecydowanie zalecamy zapoznanie się z Polityką prywatności każdej odwiedzanej witryny.",
+                    "responsibility": "Nie mamy kontroli i nie ponosimy żadnej odpowiedzialności za zawartość, politykę prywatności lub praktyki jakichkolwiek witryn lub usług stron trzecich."
+                },
+                "changes" :{
+                    "header": "Zmiany w niniejszej Polityce prywatności",
+                    "update": "Od czasu do czasu możemy aktualizować naszą Politykę prywatności. Powiadomimy Cię o wszelkich zmianach, publikując nową Politykę prywatności na tej stronie.",
+                    "let_know": "Poinformujemy Cię za pośrednictwem poczty e-mail i / lub wyraźnego powiadomienia w naszej usłudze, zanim zmiana zacznie obowiązywać, i zaktualizujemy datę „ostatniej aktualizacji” u góry niniejszej Polityki prywatności.",
+                    "advised": "Zaleca się okresowe przeglądanie niniejszej Polityki prywatności pod kątem wszelkich zmian. Zmiany w niniejszej Polityce prywatności obowiązują, gdy zostaną opublikowane na tej stronie."
+                },
+                "contact": {
+                    "header": "Skontaktuj się z nami",
+                    "questions": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej Polityki prywatności, możesz skontaktować się z nami:",
+                    "email": "E-mailem: kotlinski95@gmail.com",
+                    "page": "Odwiedzając tę ​​stronę w naszej witrynie:",
+                    "page_url": "https://www.kotlinskidev.pl/contact"
+                }
+            }
+        },
+        "cookies": {
+            "header": "Polityka plików cookies",
+            "update": "Ostatnia aktualizacja: 19 maja 2021 r",
+            "explains": "Niniejsza Polityka plików cookie wyjaśnia, czym są pliki cookie i jak ich używamy. Powinieneś przeczytać tę politykę, abyś mógł zrozumieć, jakiego rodzaju plików cookie używamy lub jakie informacje zbieramy za pomocą plików cookie i jak te informacje są wykorzystywane. Niniejsza Polityka Cookies została stworzona przy pomocy",
+            "generator": "Generator Polityki Cookies.",
+            "cookies": "Pliki cookie zazwyczaj nie zawierają żadnych informacji umożliwiających identyfikację użytkownika, ale dane osobowe, które przechowujemy o Tobie, mogą być powiązane z informacjami przechowywanymi w plikach cookie i uzyskanymi z nich. Więcej informacji o tym, jak wykorzystujemy, przechowujemy i zabezpieczamy Twoje dane osobowe, znajdziesz w naszej Polityce prywatności.",
+            "sensitive": "Nie przechowujemy wrażliwych danych osobowych, takich jak adresy pocztowe, hasła do kont itp. W plikach cookie, których używamy.",
+            "interpretation_definitions": {
+                "header": "Interpretacja i definicje",
+                "interpretation": {
+                    "header": "Interpretacja",
+                    "text": "Słowa, których pierwsza litera jest pisana wielką literą, mają znaczenie określone w następujących warunkach. Poniższe definicje mają to samo znaczenie niezależnie od tego, czy występują w liczbie pojedynczej czy mnogiej."
+                },
+                "definitions":{
+                    "header": "Definicje",
+                    "text": "Na potrzeby niniejszej Polityki plików cookie:",
+                    "company_title": "Firma",
+                    "company_text": "rokreślane jako „Firma”, „My”, „Nas” lub „Nasz” w niniejszej Polityce plików cookie) odnosi się do kotlinskidev.",
+                    "cookies_title": "Ciasteczka",
+                    "cookies_text": "oznacza małe pliki, które są umieszczane na Twoim komputerze, urządzeniu mobilnym lub innym urządzeniu przez witrynę internetową, zawierające szczegóły Twojej historii przeglądania tej witryny i jej wielu zastosowań.",
+                    "website_title": "Strona internetowa",
+                    "website_text": "odnosi się do kotlinskidev, dostępne pod adresem ",
+                    "website_url": "https://www.kotlinskidev.pl/",
+                    "you_title": "Ty",
+                    "you_text": "oznacza osobę fizyczną uzyskującą dostęp do Witryny lub korzystającą z niej, firmę lub jakąkolwiek osobę prawną, w imieniu której taka osoba uzyskuje dostęp lub korzysta z Witryny, stosownie do przypadku."
+                },
+                "cookies": {
+                    "header": "Korzystanie z plików cookie",
+                    "text": "Typ plików cookie, których używamy",
+                    "persistent": "Pliki cookie mogą być plikami „trwałymi” lub „sesyjnymi”. Trwałe pliki cookie pozostają na Twoim komputerze osobistym lub urządzeniu mobilnym, gdy przejdziesz do trybu offline, natomiast sesyjne pliki cookie są usuwane, gdy tylko zamkniesz przeglądarkę internetową.",
+                    "session": "Używamy zarówno sesyjnych, jak i trwałych plików cookie do celów określonych poniżej:",
+                    "essential_cookies_text": "Niezbędne pliki cookie",
+                    "essential_cookies_type": "Typ: sesyjne pliki cookie",
+                    "essential_cookies_administrated": "Administrowany przez: Us",
+                    "essential_cookies_purpose": "Cel: Te pliki cookie są niezbędne do świadczenia usług dostępnych za pośrednictwem Witryny i umożliwienia korzystania z niektórych jej funkcji. Pomagają w uwierzytelnianiu użytkowników i zapobiegają nieuczciwemu korzystaniu z kont użytkowników. Bez tych plików cookie usługi, o które prosiłeś, nie mogą być świadczone, a my używamy tych plików cookie wyłącznie do świadczenia tych usług.",
+                    "functional_cookies_text": "Funkcjonalne pliki cookie",
+                    "functional_cookies_type": "Typ: trwałe pliki cookie",
+                    "functional_cookies_administrated": "Administrowany przez: Us",
+                    "functional_cookies_purpose": "Cel: Te pliki cookie pozwalają nam zapamiętać wybory dokonywane podczas korzystania z Witryny, takie jak zapamiętanie danych logowania lub preferencji językowych. Celem tych plików cookie jest zapewnienie bardziej osobistego doświadczenia i uniknięcie konieczności ponownego wprowadzania preferencji za każdym razem, gdy korzystasz z Witryny."
+                },
+                "choises":{
+                    "header": "Twoje wybory dotyczące plików cookie",
+                    "text": "Jeśli wolisz uniknąć korzystania z plików cookie w Witrynie, najpierw musisz wyłączyć korzystanie z plików cookie w swojej przeglądarce, a następnie usunąć pliki cookie zapisane w przeglądarce, powiązane z tą witryną. W każdej chwili możesz skorzystać z tej opcji, aby uniemożliwić korzystanie z plików cookie.",
+                    "not_accept": "Jeśli nie zaakceptujesz naszych plików cookie, możesz doświadczyć pewnych niedogodności w korzystaniu z Witryny, a niektóre funkcje mogą nie działać poprawnie.",
+                    "delete" : "Jeśli chcesz usunąć pliki cookie lub poinstruować przeglądarkę internetową, aby usunęła lub odrzuciła pliki cookie, odwiedź strony pomocy swojej przeglądarki internetowej.",
+                    "chrome": "W przeglądarce internetowej Chrome odwiedź tę stronę firmy Google: ",
+                    "chrome_link": "https://support.google.com/accounts/answer/32050",
+                    "explorer": "W przypadku przeglądarki internetowej Internet Explorer odwiedź tę stronę firmy Microsoft: ",
+                    "explorer_link": "https://support.microsoft.com/kb/278835",
+                    "firefox":"W przypadku przeglądarki internetowej Firefox odwiedź tę stronę w witrynie Mozilla: ",
+                    "firefox_link": "https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored ",
+                    "safari" : "W przeglądarce Safari odwiedź tę stronę firmy Apple: ",
+                    "safari_link": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac",
+                    "other": "W przypadku każdej innej przeglądarki internetowej odwiedź oficjalne strony internetowe swojej przeglądarki."
+                },
+                "more": {
+                    "header": "Więcej informacji o plikach cookie",
+                    "text": "Możesz dowiedzieć się więcej o plikach cookie: ",
+                    "cookies_what_are": "Co to są pliki cookie?"
+                },
+                "contact": {
+                    "header": "Skontaktuj się z nami",
+                    "text": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej Polityki plików cookie, możesz skontaktować się z nami:",
+                    "email": "E-mailem: kotlinski95@gmail.com",
+                    "website": "Odwiedzając tę ​​stronę w naszej witrynie:",
+                    "website_url": " https://www.kotlinskidev.pl/contact"
+                }
+            }
+        },
+        "contact": {
+            "title": "Kontakt",
+            "write": "Napisz do mnie!",
+            "header": "Masz pytanie lub chcesz się ze mną skontaktować? A może masz jakieś uwagi dotyczące strony? Napisz do mnie maila.",
+            "name": "Imię",
+            "name_placeholder": "Jak się mogę do Ciebie zwracać?",
+            "email": "Email",
+            "email_placeholder": "Gdzie mogę wysłać odpowiedź?",
+            "subject": "Temat",
+            "subject_placeholder": "O czym chcesz porozmawiać?",
+            "message": "Wiadomość",
+            "message_placeholder": "Treść wiadomości może być dowolna!",
+            "send": "Wyślij",
+            "feedback": "Dziękuję za Twoją wiadomość! Wyślę odpowiedź tak szybko, jak to możliwe.",
+            "mail": "kotlinski95@gmail.com",
+            "phone": "+48 608 418 911"
+        },
+        "stack":{
+            "front_header": "Umiejętności Front-end developera",
+            "automation_header": "Umiejętności Automatyka",
+            "automation": "Automatyka",
+            "web": "Web development",
+            "stack": "Zobacz moje umiejętności",
+            "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
+            "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów."
+        },
+        "projects":{
+            "header": "Projekty",
+            "portfolio": "Podstawowe portfolio",
+            "quiz": "Quiz o gwiezdnych wojnach",
+            "chess": "Internetowe szachy",
+            "estate": "Strona biura nieruchomości",
+            "website": "Strona wizytówka",
+            "next": "Następny projekt",
+            "p1_portfolio" : {
+                "header": "Portfolio",
+                "description": "Portfolio single Page Application (SPA)",
+                "date": "01/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/myPortfolio",
+                    "live": "https://kotlinski95.github.io/myPortfolio/"
+                },
+                "details": {
+                   "intro": "Jest to mój pierwszy projekt Front-Endowy zrealizowany w oparciu o HTML, CSS.",
+                   "text": "Realizacja tego projektu była częścią kursu Coders-Camp po pierwszych rozdziałach dotyczących zaganień z HTML i CSS.",
+                   "finish": "Projekt ten nie jest aktualnym portfolio, jest to jedynie przykładowy projekt wykonany w oparciu o wspomniane technologie, aktualne portfolio to strona, na której się znajdujesz :) "
+                }
+            },
+            "p2_starWarsQuiz" : {
+                "header": "Star Wars Quiz",
+                "description": "Quiz wiedzy o gwiezdnych wojnach",
+                "date": "02/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/StarWarsQuiz",
+                    "live": "https://coderscamp2020-joaosebastiao-team.github.io/StarWarsQuiz/"
+                },
+                "details": {
+                   "intro": "Quiz o gwiezdnych wojnach jest drugim projektem wykonanym w ramach kursu Coders-Camp.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu JavaScript.",
+                   "finish": "Gra polega na odgadniciu jaknajwięj ilości postaci lub pojazdów z popularnej sagi Gwiezdne wojny. Gracz podczas rozgrywki rywalizuje z komputerem o jak najlepszy rezultat. Wyniki gry są zapisywane w formie tabeli, tak aby gracze mogli ze sobą konkurować."
+                }
+            },
+            "p3_codersChess" : {
+                "header": "Coders Chess",
+                "description": "Internetowe szachy",
+                "date": "03/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/coders-chess",
+                    "live": "https://coders-chess.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "Internetowe szachy Coders-chess to kolejny projekt wykonany w ramach kursu Coders-Camp, tym razem jako uczestnicy za zadanie mieliśmy stworzyć gre przeglądarkową opartą na TypeScript",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript oraz TypeScript.",
+                   "finish": "Gracze po wpisaniu swoich imion i wybraniu czasu gry stają ze sobą do rozgrywki. gra zawiera podpowiedzi możliwych ruchów po naciśniciu na daną figurę. Po prawej stronie plansy zapisywane są ruchy graczy. Na planszy pojawiają się zbite figury przeciwnika. Gra kończy się przez szach-mat."
+                }
+            },
+            "p4_estate" : {
+                "header": "Real Estate App",
+                "description": "Strona biura nieruchomości",
+                "date": "04/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/real-estate",
+                    "live": "https://real-estate-coders-camp.herokuapp.com/"
+                },
+                "details": {
+                   "intro": "Aplikacja biura nieruchomości to ostatni projekt w ramach kursu Coders-Camp.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript, TypeScript, React oraz Node JS.",
+                   "finish": "Strona zawiera własną bazę danych napisaną w Node JS z wykorzystaniem Mongo DB. Sama strona oparta jest na Reactcie i TypeScripcie. Użytkownik może na stronie przeglądać zamieszczone ogłoszenia mieszkań na sprzedaż i wynajem. Może się zalogować aby dokonać rezerwacji bądź zakupu."
+                }
+            },
+            "p5_website" : {
+                "header": "Strona wizytówka",
+                "description": "Strona na której się właśnie znajdujesz",
+                "date": "06/2021",
+                "stack": {
+                    "html": "HTML",
+                    "css": "CSS",
+                    "js": "JavaScript",
+                    "ts": "TypeScript",
+                    "react": "React",
+                    "redux": "Redux",
+                    "node": "Node JS"
+                },
+                "links": {
+                    "github": "https://github.com/Kotlinski95/kotlinskidev",
+                    "live": "https://www.kotlinskidev.pl/"
+                },
+                "details": {
+                   "intro": "Jest to jak dotąd mój największy projekt. Prywatna strona wizytówka z moimi dotychczasowymi osiągnięciami!",
+                   "text": "Projekt ten realizowany głównie w oparciu o React i Redux, w większości napisany został z wykorzystaniem języka TypeScript",
+                   "finish": "Strona zawiera sporo informacji o mnie, moich umiejętnościach, doświadczeniach oraz edukacji. Jest wygodną formą kontaktu ze mną poprzez specjalnie przygotowany formularz, udostępniony mail oraz numer telefonu lub poprzez messengera."
+                }
+            }
+        },
+        "myprofile": {
+            "header": "Adrian Kotliński",
+            "profession": "Junior Front-end developer",
+            "bookmarks": {
+                "overview": "Przegląd",
+                "work": "Praca",
+                "education" : "Edukacja",
+                "contact": "Informacje kontaktowe",
+                "hobby" : "Zainteresowania",
+                "spareTime": "Czas wolny"
+            },
+            "overview": {
+                "header": "Podstawowe informacje:",
+                "study_label": "Studia: ",
+                "study_text": "Akademia Górniczo-Hutnicza w Krakowie. Automatyka i Robotyka mgr.",
+                "live_label": "Mieszka w : ",
+                "live_text": "Katowice",
+                "home_label":"Pochodzi z: ",
+                "home_text": "Żory",
+                "birthday_label" : "Urodzony: ",
+                "birthday_text" : "11.02.1995",
+                "phone_label" : "Telefon kontaktowy",
+                "phone_text": " + 48 608 418 911"
+            },
+            "work" : {
+                "header": "Doświadczenie zawodowe:",
+                "sobre_time": "04.2021 - obecnie: ",
+                "sobre_name": "Sobre",
+                "sobre_title": "SOBRE Software house",
+                "script_studio_time": "12.2020 - 04.2021: ",
+                "script_studio_name": "Script Studio",
+                "script_studio_title": "Script-Studio (easy-coder)",
+                "blumenbecker_time": "09.2018 - 10.2020: ",
+                "blumenbecker_name": "Blumenbecker Enginneering Polska",
+                "blumenbecker_title": "Blumenbecker Engineering Polska",
+                "br_time": "08.2018: ",
+                "br_name": "Bernecker&Rainer",
+                "br_title": "Bernecker&Rainer",
+                "abis_time": "07.2018: ",
+                "abis_name": "Abis sp.z.o.o"
+            },
+            "education": {
+                "header": " Edukacja:",
+                "agh_2_time": " 02.2018 - 04.2021",
+                "agh_2_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Metrologia II stopień",
+                "agh_1_time": " 10.2015 - 02.2018",
+                "agh_1_name": " Akademia Górniczo-Hutnicza w Krakowie - Automatyka i Robotyka I stopień",
+                "zs6_time": " 10.2011 - 04.2015",
+                "zs6_name": " Technikum nr 4 w Jastrzebiu-Zdroju - Mechatronika",
+                "agh_title": "Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie",
+                "zs6_title": "Zespół Szkół nr 6 im. Króla Jana III Sobieskiego"
+            },
+            "contact": {
+                "header": "Dane kontaktowe:",
+                "mail_label": "Email: ",
+                "mail": "kotlinski95@gmail.com",
+                "phone_label": "Telefon kontaktowy: ",
+                "phone": "+48 608 418 911"
+            },
+            "hobby": {
+                "header": "Zainteresowania:",
+                "running": "Bieganie",
+                "music": "Muzyka",
+                "coding": "Programowanie",
+                "films": "Filmy"
+            }
+        },
+        "aboutme": {
+            "main" : {
+                "header": "O mnie",
+                "text": "Nazywam się Adrian Kotliński, mieszkam w Katowicach. Studiowałem Automatykę i Robotykę na Akademii Górniczo Hutniczej w Krakowie. Jestem adeptem sztuki web developmentu ciągle szukającym nowych wyzwań w tym obszarze. Uwielbiam minimalistyczny design oraz subtelne animacje. Chcę rozwijać się w technologiach związanych z TypeScript oraz React, właśnie na potrzeby samokształcenia w tym obszarze powstała niniejsza strona.",
+                "see_myprofile": "Więcej na moim profilu",
+                "education_header": "Proces nauczania",
+                "education_text": "Programowaniem ogólnie zacząłem interesować się już około roku 2014. Pod koniec technikum wiedziałem już, że to z tym chcę wiązać swoją przyszłość. Na studiach poznałem wiele ciekawych języków programowania, początkowo swoją drogę skupiłem na automatyce przemysłowej i programowani aplikacji w przemyśle automotive, co było ściśle związane z moim kierunkiem studiów.",
+                "education_course" :"Dopiero pod koniec 2020 roku, zmienilem kierunek na web development. Przystąpiłem do kursu ",
+                "education_continue": " ,będącym zdalnym kursem programowania webowego, dzięki któremu nauczylem się wielu podstaw pozwalających na tworzenie samodzielnych projektów. To właśnie tam miałem pierwszą styczność z Reactem. Nauczyłem się tam również wielu dobrych praktyk programowania. W między czasie uczestniczylem również w ogólnopolskim zdalnym kursie programowania coders camp, na którym przez okres 5 miesięcy poznawałem zagadnienia związane z JavaScript, TypeScirpt, React oraz NodeJS. Kurs ten ukończylem w kwietniu 2020 roku, od tamtej pory każdego dnia kontynuuję samodzielną naukę. Nie tylko utrwalam zdobytą do tej pory wiedzę, ale również uczę się nowych rozwiązań i technologii.",
+                "see_education": "Więcej o moim wykształceniu",
+                "see_courses": "Więcej o moich kursach",
+                "see_easycode": "Easy-Code ",
+                "personality_header": "Osobowość",
+                "personality_text": "Trochę o mnie - jestem osobą spokojną i ambitną. Uwielbiam pracę w zespole oraz naukę nowych rzeczy. Nie boję się wyzwań, wręcz przeciwnie - sam ciągle ich poszukuję. Samodzielne rozwiązywanie problemów jest, moim zdaniem, najlepszym sposobem nauki.",
+                "see_blog": "Więcej o mnie na moim blogu",
+                "experience_header": "Doświadczenie",
+                "experience_text": "Swoją karierę programistyczną zacząłem w 2018 roku, gdzie w jeszcze w trakcie studiów pracowałem jako programista systemow sterowania automotive na wielu zagranicznych projektach. Doświadczenie na zagranicznych projektach znacząco podniosło mój poziom języka angielskiego. Nie mam najmniejszych problemów z rozumieniem dokumentacji czy komunikacją. Od grudnia 2020 roku zacząłem zdobywać pierwsze doświadczenia jako web-developer. Aktualnie pracuję jako junior front-end developer, zajmując się developmentem sklepów internetowych na platformie shopify. Praca ta znacząco podniosła mój poziom wiedzy na temat środowiska IT, pracy w zespole, metod Agile i Scrum, obsługi Git'a oraz przedewszystkim programowania webowego.",
+                "see_experience_plc": "Więcej o moim doświadczeniu programisty PLC",
+                "see_experience_web": "Więcej o moim wykształceniu web-developera",
+                "contact": "Kontakt",
+                "contact_text": "Serdecznie zapraszam do kontaktu, czy to w sprawie pracy czy luźnej rozmowy. Z chęcią odpiszę na każdą wiadomość jaką dostanę.",
+                "see_contact": "Przejdź do formularza kontaktowego"
+            },
+            "front": {
+                "header": "Kariera web developera",
+                "text" : "Nazywam się Adrian Kotliński, swoją karierę z web developmentem rozpocząłem we wrześniu 2020 roku. Od wielu lat zajmuje się programowaniem, jednak ścieżka Front endu jest dla mnie stosunkowo nowa. Ciągle poznaję ten świat i rozwijam swoje umiejętności w tym obszarze.",
+                "back_to_home": "Więcej o mnie",
+                "sobre": {
+                    "header": "Sobre Software House",
+                    "text": "W kwietniu 2021 roku rozpocząłem pracę dla Sobre Software House na stanowisku web developera. Pracuję głównie w branży e-commerce jako junior Shopify Developer, współtworząc oprogramowanie dla sklepów internetowych na zlecenia firmy Reckitt. ",
+                    "link": "https://www.sobre.pl/",
+                    "link_label": "Więcej na temat Sobre"
+                },
+                "easy_code": {
+                    "header": "Easy Coder",
+                    "text": "W grudniu 2020 roku podjąłem pierwszą pracę jako junior Front-End Developer w Easy Coder Piotr Mirosz, była to pierwsza okazja na zapoznanie się z pracą jako web developer. Przez następne 4 miesiące pracowałem m.in przy projektach e-commerce w Shopify, współtworzyłem aplikacje internetowe w React i Next JS.",
+                    "text_ace": "Aktualnie firma rozpoznawalna jest pod nazwą ACE Agency. W kwietniu 2021 roku zostałem przeniesiony z ACE Agency do Sobre Software House",
+                    "link": "https://www.aceagency.com/",
+                    "link_label": "Więcej na temat ACE Agency"
+                }
+            },
+            "plc": {
+                "header": "Kariera programisty PLC",
+                "text": "Pierwsze lata swojej pracy jako programista spędziłem głównie na stanowisku Automatyka, gdzie zajmowałem się programowaniem sterowników przemysłowych. Dziedzina ta jest mi szczególnie bliska i bezpośrednio związana z moim wykształceniem. Obecnie ciągle dąże do doskonalenia swoich umiejętności programistycznych, jednak jestem bardziej ukierunkowany na dziedzinę web developmentu. Jako programista Automatyk miałem doczynienia z programowaniem sterowników firmy Siemens, Allen Bradley, B&R, Mitsubishi w językach LAD, ST, SCL, C, C++",
+                "back_to_home": "Więcej o mnie",
+                "blumenbecker": {
+                    "header": "Blumenbecker Engineering Polska",
+                    "text": "W tej firmie pracowałem na stanowisku Programisty Systemów Sterowania w branży automotive. Zajmowałem się wdrażaniem zautomatyzowanych linii przemysłowych w fabrykach samochodowych. Praca ta wiązała się z częstymi wyjazdami zagranicznymi, co pozwoliło mi na udoskonalenie zdolności językowych (głównie języka angielskiego). Pracowałem głównie ze standardem VASS (dla grupy VW) jako programista sterowników firmy Siemens oraz serwonapędów SEW.",
+                    "link": "https://www.blumenbecker.com/pl/firma/grupy-blumenbecker/blumenbecker-engineering-polska-sp-z-oo",
+                    "link_label": "Więcej na temat Blumenbecker Engineering Polska"
+                },
+                "bernecker": {
+                    "header": "Bernecker&Rainer",
+                    "text": "W tej firmie odbywałem staż związany z programowaniem PLC firmy B&R oraz serwonapędów ACOPOS w środowisku Automation Studio. Pracowałem z takimi językami jak ST, C , C++, które pozwalają na wykorzystanie wysokopoziomowych języków programowania do sterowania aplikacjami przemysłowymi.",
+                    "link": "https://www.br-automation.com/pl/o-nas/",
+                    "link_label": "Więcej na temat Bernecker&Rainer"
+                }
+            },
+            "courses": {
+                "header": "Kursy i szkolenia",
+                "text": "Dziedzina programowania polega na ciągłym doskonaleniu swoich umiejętności, dlatego swoją przygodę z web developmentem rozpocząłem od uczestnictwa w dwóch kursach programistycznych",
+                "back_to_home": "Więcej o mnie",
+                "easy_code": {
+                    "header": "Easy Code",
+                    "text": "Kurs ten obejmuje bardzo szeroką tematykę ze świata Front-Endu. Nauczyłem się tutaj podstaw web developmentu (HTML,CSS, JavaScript), ale także wgłębiłem się w tajniki TypeScript oraz ReactJS. Te umiejętności pozwoliły mi na dostanie pierwszej propozycji pracy i możliwość dalszego rozwoju w tej dziedzinie.",
+                    "link": "https://easy-code.io/blog/article/5Jn92JIZDad91IxGqs3m6c",
+                    "link_label": "Więcej o Easy Code"
+                },
+                "coders_camp": {
+                    "header": "Coders Camp",
+                    "text": "Do kursu Coders Camp przystąpiłem w jego szóstej edycji, która była jego pierwszą edycją ogólnopolską prowadzoną w sposób zdalny. Tematyka kursu obejmowała przypomnienie podstaw (HTML, CSS), którego znajomość była sprawdzana podczas testów rekrutacyjnych. W dalszej części kursu sprawdzana była wiedza teoretyczna i praktyczna z tematów: JavaScript, TypeScript, React JS oraz Node JS.",
+                    "link": "https://coderscamp.edu.pl/",
+                    "link_label": "Więcej o Coders Camp"
+                }
+            },
+            "education": {
+                "header": "Wykształcenie",
+                "text": "Już od wielu lat jestem pasjonatem programowania,elektroniki i nowinek technicznych. To dlatego jako szkołę średnią wybrałem technikum Mechatroniczne, które łączyło wszystkie te dziedziny. Na studia wybrałem węższą specjalizację dotyczącą obszaru Automatyki przemysłowej. Teraz po wielu latach doświadczeń, zdobytym doświadczeniu i umiejętnościach chcę ukierunkować się w obszarze programowanie webowego.",
+                "back_to_home": "Więcej o mnie",
+                "agh": {
+                    "header": "Mgr inż. Automatyki i Robotyki",
+                    "text": "Studia na kierunku Automatyka i Robotyka podjąłem na AGH w Krakowie, podczas 11 semestrów zdobyłem wiele umiejętności, które z powodzeniem mogę wykorzystać jako programista. Podczas zajęć nie tylko rozwinąłem swoje umiejętności programistyczne, ale również analityczne myślenie, logikę, algorytmikę oraz teorię sterowania i automatyzacji.",
+                    "link": "https://www.imir.agh.edu.pl/pl/studia/kierunki/automatyka_i_robotyka/",
+                    "link_label": "Więcej o Automatyce i Robotyce na AGH"
+                },
+                "zs6": {
+                    "header": "Technik Mechatronik",
+                    "text": "Kierunek Technik Mechatronik w Zespole Szkół nr 6 w Jastrzbiu-Zdroju okazał się bardzo dobrym wyborem aby zdobyć umiejętności techniczne i wyjść poza program oferowany w liceum ogólnokształcącym. To właśnie tam zdobyłem pierwsze doświadczenie z językami programowania takimi jak C, C++ oraz umiejętności programowania sterowników przemysłowych.",
+                    "link": "https://zs6sobieski.pl/rekrutacja/rekrutacja-technikum-nr-4/technikum-nr-4-profile-zawodow/technik-mechatronik/",
+                    "link_label": "Więcej o kierunku technik Mechatronik w ZS6"
+                }
+            }
+        },
+        "cv": {
+            "link": "CV / Podgląd"
+        },
+        "services": {
+            "buttonText" : "Więcej",
+            "popup": {
+                "title": "Informacja!",
+                "text": "Obecnie pracuję nad opisem pakietów usług. Jeśli jeszcze nie skończyłem śmiało napisz do mnie lub zadzwoń aby dowiedzieć się więcej.",
+                "buttonText": "Rozumiem"
+            },
+            "web": {
+                "header": "Web development",
+                "text": "Tworzenie aplikacji web i stron www",
+                "link": "/services/web-development",
+                "inner": {
+                    "header1": "SPA / Apliakcje i sklepy internetowe",
+                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o bibliotekę ReactJS, HTML5,CSS3, ES6/TypeScript.",
+                    "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
+                    "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
+                    "header3": "Kodowanie PSD do HTML/CSS/JS",
+                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
+                    "header4": "Czysty kod",
+                    "text4": "Czytelność kodu nadal traktowana jest jako coś mało istotnego, jednak nieczytelny kod znacznie wydłua czas potrzebny do napisania czegokolwiek i może prowadzić do nieprzewidywanych błędów w aplikacjach.",
+                    "header5": "Administracja stron internetowych",
+                    "text5": "Wdrożenie i utrzymanie strony/aplikacji internetowej w tym okresowe raporty z testów automatycznych i manualnych wybranych funkcjonalności.",
+                    "header6": "JavaScript / TypeScript",
+                    "text6": "Jako web developer pracuję z językiem JavaScript/TypeScript, aby rozszerzyć zakres oferowanych usług mogę podjąć się dowonlego projektu korzystającego z tych technologii. "
+                }
+            },
+            "shopify": {
+                "header": "E-commerce Shopify",
+                "text": "Tworzenie sklepów internetowych z użyciem Shopify",
+                "link": "/services/shopify",
+                "inner": {
+                    "header1": "Tworzenie unikalnych szablonów sklepów",
+                    "text1": "Każdy sklep powinien się wyróżniać spośród innych. Wykonam personalizowane szablony dostosowane pod klienta, aby efekt user-experience był na jak najwyższym poziomie.",
+                    "header2": "Optymalizacja sklepu",
+                    "text2": "Dbam aby szablon spełniał wszelkie wymogi SEO oraz aby sklep działał płynnie i szybko.",
+                    "header3": "Zakupy na każdym urządzeniu",
+                    "text3": "Obecnie coraz więcej użytkowników korzysta z urządzeń mobilnych podczas zakupów. Dbam o prawidłowe funkcjonowanie sklepu również na wszystkich urządzeniach mobilnych."
+                }
+            },
+            "plc": {
+                "header": "PLC",
+                "text": "Programowanie sterowników przemysłowych",
+                "link": "/services/PLC",
+                "inner": {
+                    "header1": "Programowanie PLC",
+                    "text1": "Posiadam kilkuletnie doświadczenie w programowaniu sterowników przemysłowych firmy Siemens, Bernecker&Rainer oraz Mitsubishi.",
+                    "header2": "Uruchomienia obiektów automatyki",
+                    "text2": "Pracowałem na uruchomieniach w kilku fabrykach automotive na terenie Polski oraz Niemczec. Jestem zaznajomiony z technologią procesową, sterowaniem napędów oraz tworzeniem wizualizacji.",
+                    "header3": "Aplikacje Smart Home",
+                    "text3": "Jestem fanem majsterkowania i elektrniki, chętnie podejmę się wyzwań związanych z tworzeniem aplikacji Smart Home (ze względu na możliwość tworzenia aplikacji smart w Java Script chętnie rozwinę swoje umiejętności w tym obszarze)."
+                }
+            }
         }
     }
 }

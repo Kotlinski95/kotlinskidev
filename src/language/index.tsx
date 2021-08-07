@@ -1,7 +1,7 @@
 import language_EN from './en.json'
 import language_PL from './pl.json'
 import iconPL from '../assets/poland.png';
-import iconEN from '../assets/united-kingdom.png';
+import iconEN from '../assets/united_kingdom.png';
 import { selectedLanguage } from '../reducers/state';
 import { useSelector } from 'react-redux';
 declare global {

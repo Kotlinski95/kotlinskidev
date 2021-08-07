@@ -1,0 +1,38 @@
+.hero-background-left {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: auto;
+  left: 0;
+  top: 30px;
+  filter: blur(10);
+  @media (max-width: 968px){
+    display: none;
+  }
+  .injected-svg:last-of-type {
+    margin-top: -25px;
+  }
+  .circle:nth-of-type(2n) {
+    animation: animationFrames linear 6s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+  }
+  .circle:nth-of-type(2n + 1) {
+    animation: animationFrames linear 6s;
+    animation-delay: 3s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes animationFrames {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}

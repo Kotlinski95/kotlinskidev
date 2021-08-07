@@ -1,80 +1,60 @@
 import './index.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CookieConsent, { Cookies } from "react-cookie-consent";
-import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt } from 'react-icons/fa';
+import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import ServicesNavigation from '../navigation/servicesNav';
+import { useState } from 'react'
+import { handleTrackingEvent } from '../../analytics'
+import LazyLoad from 'react-lazyload';
+import CustomLink from '../customLink'
 
 const Footer = () => {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      setAnchorEl(event.currentTarget);
-    };
 
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
 
     return (
         <div className="footer-wrapper">
-            <CookieConsent
-                enableDeclineButton
-                flipButtons
-                location="bottom"
-                buttonText={language.footer.cookie_consent.buttonText}
-                declineButtonText={language.footer.cookie_consent.declineButtonText}
-                cookieName="Accept_cookies"
-                style={{ background: "#2B373B" }}
-                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-                expires={1}
-            >
-                {language.footer.cookie_consent.first_text}{" "}
-                <span style={{ fontSize: "15px" }}>{language.footer.cookie_consent.second_text}</span>
-            </CookieConsent>
             <div className="footer-head">
                 <ul>
-                    <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                    <li className="line-item">
-                        {language.footer.pages.services}
-                    </li>
-                    </Button>
-                    <Menu
-                        id="simple-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/web-development">{language.footer.pages.web}</Link></MenuItem>
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/shopify">{language.footer.pages.shopify}</Link></MenuItem>
-                        <MenuItem className="menuItem" onClick={handleClose}><Link to="/services/PLC">{language.footer.pages.plc}</Link></MenuItem>
-                    </Menu>
-                    <Link to="/contact"><li className="line-item">{language.footer.pages.contact}</li></Link>
+                    <li><Link to="/services" title={`Link to services`} aria-label={`Link to services`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.services}</span></Link></li>
+                    <li><Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.pages.contact}</span></Link></li>
                 </ul>
             </div>
             <div className="footer-body">
                 <ul className="line-item footer-left">
-                    <li>@{new Date().getFullYear()} {language.footer.privacy.rights}</li>
-                    <Link to="/privacy"><li className="line-item">{language.footer.privacy.policy}</li></Link>
+                    <li><span>@{new Date().getFullYear()} {language.footer.privacy.rights}</span></li>
+                    <li><Link to="/privacy" title={`Link to privacy policy`} aria-label={`Link to privacy policy`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.policy}</span></Link></li>
+                    <li><Link to="/cookies" title={`Link to cookies`} aria-label={`Link to cookies`} referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item">{language.footer.privacy.cookies}</span></Link></li>
                 </ul>
-                <ul className="line-item footer-right">
-                    <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
-                        <li><a href="https://www.instagram.com/adriankotlinski/" target="_blank"><FaInstagram /></a></li>
-                        <li><a href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank"><FaFacebookSquare /></a></li>
-                        <li><a href="https://www.linkedin.com/in/adriankotlinski/" target="_blank"><FaLinkedin /></a></li>
-                        <li><a href="mailto:kotlinski95@gmail.com"><FaAt /></a></li>
-                    </IconContext.Provider>
+                <ul className="line-item footer-right cursor_hover">
+                    <li>
+                        <IconContext.Provider value={{ size: "2em", className: "social-icons" }}>
+                        <span className='list-item'><CustomLink href="https://github.com/Kotlinski95/" target="_blank" rel="nofollow noopener noreferrer" title="github" className="cursor_hover" onClick={() => {
+                            handleTrackingEvent("Github", "Github clicked", { page: `${_store.getState().pageState.page}` });
+                        }}><FaGithub /></CustomLink></span>
+                        <span className='list-item'><CustomLink href="https://www.instagram.com/adriankotlinski/" target="_blank" rel="nofollow noopener noreferrer" title="instagram" className="cursor_hover" onClick={() => {
+                            handleTrackingEvent("Instagram", "Instagram clicked", { page: `${_store.getState().pageState.page}` });
+                        }}><FaInstagram /></CustomLink></span>
+                        <span className='list-item'><CustomLink href="https://www.facebook.com/adrian.kotlinski.9/" target="_blank" rel="nofollow noopener noreferrer" title="facebook" className="cursor_hover" onClick={() => {
+                            handleTrackingEvent("Facebook", "Facebook clicked", { page: `${_store.getState().pageState.page}` });
+                        }}><FaFacebookSquare /></CustomLink></span>
+                        <span className='list-item'><CustomLink href="https://www.linkedin.com/in/adriankotlinski/" target="_blank" rel="nofollow noopener noreferrer" title="linkedin" className="cursor_hover" onClick={() => {
+                            handleTrackingEvent("Linkedin", "Linkedin clicked", { page: `${_store.getState().pageState.page}` });
+                        }}><FaLinkedin /></CustomLink></span>
+                        <span className='list-item'><CustomLink href="mailto:kotlinski95@gmail.com" title="mail"  className="cursor_hover" onClick={() => {
+                            handleTrackingEvent("Email", "Mail clicked", { page: `${_store.getState().pageState.page}` });
+                        }}><FaAt /></CustomLink></span>
+                        </IconContext.Provider>
+                    </li>
                 </ul>
             </div>
             <div className="messenger-wrapper">
-                <MessengerCustomerChat
-                    pageId="103180541943288"
-                    appId="490872805660284"
-                />
+                    <MessengerCustomerChat
+                        pageId="103180541943288"
+                        appId="490872805660284"
+                    />
             </div>
         </div>
 

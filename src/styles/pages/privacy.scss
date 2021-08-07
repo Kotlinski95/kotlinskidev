@@ -1,0 +1,15 @@
+.privacy-wrapper,
+.cookies-wrapper{
+  text-align: center;
+  a:hover{
+    color: inherit;
+  }
+}
+
+body::-webkit-scrollbar-track {
+  display: initial;
+}
+
+body::-webkit-scrollbar-thumb {
+  display: initial;
+}
