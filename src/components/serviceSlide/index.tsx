@@ -26,7 +26,7 @@ const ServiceSlide = (props) => {
                     <h2>{props.header}</h2>
                     <p>{props.text}</p>
                     <Button onClick={handleOpen} link={props.link} text={props.buttonText} />
-                    <TransitionModal open={open} handleClose={handleClose} title={props.popup.title} text={props.popup.text} buttonText={props.popup.buttonText}/>
+                    <TransitionModal open={open} handleClose={handleClose} handleClosePopup={handleClose} title={props.popup.title} text={props.popup.text} buttonText={props.popup.buttonText}/>
                 </div>
             </div>
           </Slide>

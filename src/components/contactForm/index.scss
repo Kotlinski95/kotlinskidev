@@ -66,4 +66,10 @@
     .contact-button:hover{
         cursor: pointer;
     }
+    .contact-form .field-error{
+        border: 2px solid red;
+    }
+    .contact-form .field-fullfilled{
+        border: 2px solid green;
+    }
 }
