@@ -59,6 +59,7 @@ export const GlobalStyles = createGlobalStyle`
   .flex-wrapper .nav-left ul .list-item:hover,
   .flex-wrapper .nav-right ul .list-item:hover {
     color: ${({ theme }) => theme.nav.menuItemColorHover};
+    background-color: transparent;
   }
 
   .styled-nav--text{
@@ -84,6 +85,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   .footer-wrapper ul .line-item:hover {
     color: ${({ theme }) => theme.footer.menuItemColorHover};
+    background-color: transparent;
   }
   .footer-body .footer-right li a{
     color: ${({ theme }) => theme.footer.menuItemColor};
@@ -93,11 +95,13 @@ export const GlobalStyles = createGlobalStyle`
   }
   .MuiButtonBase-root.menuItem a:hover{
     color: ${({ theme }) => theme.footer.menuItemColorHover};
+    background-color: transparent;
   }
 
   .navigation .MuiButtonBase-root.MuiButton-root.MuiButton-text li:hover,
   .navigation .nav-left ul a li:hover{
     color: ${({ theme }) => theme.nav.linkHover};
+    background-color: transparent;
   }
   //============ material ui- menu, menu items =======
   #simple-menu .MuiPaper-root{
@@ -136,6 +140,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   .breadcrumbs .line-item:hover{
     color: ${({ theme }) => theme.typedText.colorHover};
+    background-color: transparent;
   }
   // =========== 404 page ============
   #navigation a.navigation:hover {

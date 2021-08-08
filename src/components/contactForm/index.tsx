@@ -1,12 +1,14 @@
 import './index.scss'
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
-import {Theme} from '../../settings';
+import CustomLink from '../customLink';
+import { Theme } from '../../settings';
 import { Phone, Mail } from '@styled-icons/fluentui-system-regular';
-import {ComponentRevealShow, TextRevealVertical, TextRevealHorizontal} from '../contentReveal';
-import {handleTrackingEvent} from '../../analytics'
-import { useEffect } from 'react'
+import { ComponentRevealShow, TextRevealVertical, TextRevealHorizontal } from '../contentReveal';
+import { handleTrackingEvent } from '../../analytics'
+import { useEffect, useState } from 'react'
 import emailRegExp from '../../regExp/email'
+import Loader from '../loader'
 
 import {
   CryptoMailLink,
@@ -17,15 +19,16 @@ import CvLink from '../cvLink';
 import { AnyARecord } from 'dns';
 
 const ContactForm = () => {
-
+  const [sent, send] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
   useEffect(() => {
     function validateFirstName(e) {
-      console.log("Validate first name start ", e.target)
       if (e.target.value.length < 3 && e.target.value.length > 0) {
         e.target.classList.add('field-error');
         e.target.classList.remove('field-fullfilled');
       }
-      else if (e.target.value.length >= 3){
+      else if (e.target.value.length >= 3) {
         e.target.classList.remove('field-error');
         e.target.classList.add('field-fullfilled');
       }
@@ -35,10 +38,9 @@ const ContactForm = () => {
       }
     }
     function validateEmail(e) {
-      console.log("Validate email start ", e.target.value, 'regexp: ', emailRegExp);
       let regEmail = emailRegExp();
       const regexp = new RegExp(regEmail);
-      if(!regexp.test(e.target.value) && e.target.value.length > 0){
+      if (!regexp.test(e.target.value) && e.target.value.length > 0) {
         e.target.classList.add('field-error');
         e.target.classList.remove('field-fullfilled');
       }
@@ -53,12 +55,11 @@ const ContactForm = () => {
 
     }
     function validateSubject(e) {
-      console.log("Validate subject start ", e.target.value);
       if (e.target.value.length < 3 && e.target.value.length > 0) {
         e.target.classList.add('field-error');
         e.target.classList.remove('field-fullfilled');
       }
-      else if (e.target.value.length >= 3){
+      else if (e.target.value.length >= 3) {
         e.target.classList.remove('field-error');
         e.target.classList.add('field-fullfilled');
       }
@@ -68,12 +69,11 @@ const ContactForm = () => {
       }
     }
     function validateContent(e) {
-      console.log("Validate content start ", e.target.value);
       if (e.target.value.length < 3 && e.target.value.length > 0) {
         e.target.classList.add('field-error');
         e.target.classList.remove('field-fullfilled');
       }
-      else if (e.target.value.length >= 3){
+      else if (e.target.value.length >= 3) {
         e.target.classList.remove('field-error');
         e.target.classList.add('field-fullfilled');
       }
@@ -124,30 +124,33 @@ const ContactForm = () => {
       content?.removeEventListener('focus', validateContent);
       content?.removeEventListener('blur', validateContent);
     };
-  },[]);
+  }, []);
 
   function sendEmail(e: any) {
     e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
     const contactForm = document.querySelector('.contact-form');
     const validate = formValidate(contactForm);
-    console.log("Form validate: ", formValidate(contactForm));
+    setSending(true);
+    setError(false);
+    send(false);
     if (validate) {
       emailjs.sendForm('service_sq6uips', 'template_knzgey8', e.target, 'user_m3DpFoPmnhavjj56KHKAl')
-      .then((result) => {
-        window.location.reload();  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
-        handleTrackingEvent("Email", "Email Sent", {page: `${_store.getState().pageState.page}`});
-      }, (error) => {
-        console.log(error.text);
-      });
+        .then((result) => {
+          send(true);
+          setSending(false);
+          setError(false);
+          handleTrackingEvent("Email", "Email Sent", { page: `${_store.getState().pageState.page}` });
+        }, (error) => {
+          setSending(false);
+          send(false);
+          setError(true);
+        });
     }
   }
   function formValidate(form) {
-    console.log("Form: ", form);
     const inputs = document.getElementsByClassName("form-field");
     for (const input of inputs) {
-      console.log("Form input: ", input);
-      if (input.classList.contains('field-error')){
-        console.log("OHOHO, ERROR IN FORM!")
+      if (input.classList.contains('field-error')) {
         return false;
       }
     }
@@ -155,12 +158,12 @@ const ContactForm = () => {
   }
   const updateMail = (e) => {
     e.target.href = 'mailto:' + e.target.dataset.name + '@' + e.target.dataset.domain + '.' + e.target.dataset.tld;
-    handleTrackingEvent("Email", "Email clicked", {page: `${_store.getState().pageState.page}`});
+    handleTrackingEvent("Email", "Email clicked", { page: `${_store.getState().pageState.page}` });
   };
 
   const updatePhone = (e) => {
     e.target.href = 'tel: +48' + e.target.dataset.first + e.target.dataset.second + e.target.dataset.third;
-    handleTrackingEvent("Phone", "Phone clicked", {page: `${_store.getState().pageState.page}`});
+    handleTrackingEvent("Phone", "Phone clicked", { page: `${_store.getState().pageState.page}` });
   };
 
   const {
@@ -229,10 +232,10 @@ const ContactForm = () => {
         height: 100%;
     }
 `
-    const formInputs: any = document.getElementsByClassName("form-input");
-    for (const formInput of formInputs){
-      formInput.focus({preventScroll:true});
-    }
+  const formInputs: any = document.getElementsByClassName("form-input");
+  for (const formInput of formInputs) {
+    formInput.focus({ preventScroll: true });
+  }
 
   return (
     <>
@@ -242,48 +245,63 @@ const ContactForm = () => {
         <form className="contact-form" onSubmit={sendEmail}>
           <input className="cursor_hover" type="hidden" name="contact_number" />
           <ComponentRevealShow width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
-          <ComponentRevealShow width="80%" delay="0.3s"><input className="cursor_hover form-field" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} required/></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.3s"><input className="cursor_hover form-field" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} required /></ComponentRevealShow>
           <ComponentRevealShow width="80%" delay="0.5s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
-          <ComponentRevealShow width="80%" delay="0.5s"><input className="cursor_hover form-field" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} required/></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.5s"><input className="cursor_hover form-field" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} required /></ComponentRevealShow>
           <ComponentRevealShow width="80%" delay="0.7s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
-          <ComponentRevealShow width="80%" delay="0.7s"><input className="cursor_hover form-field" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} required/></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.7s"><input className="cursor_hover form-field" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} required /></ComponentRevealShow>
           <ComponentRevealShow width="80%" delay="0.9s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
-          <ComponentRevealShow width="80%" delay="0.9s"><textarea className="cursor_hover form-field" name="html_message" placeholder={language.pages.contact.message_placeholder} required/></ComponentRevealShow>
-          <ComponentRevealShow width="80%" delay="1.1s"><input type="submit" value={language.pages.contact.send} className="contact-button cursor_hover" /></ComponentRevealShow>
+          <ComponentRevealShow width="80%" delay="0.9s"><textarea className="cursor_hover form-field" name="html_message" placeholder={language.pages.contact.message_placeholder} required /></ComponentRevealShow>
+          <div className="consent_wrapper">
+            <ComponentRevealShow width="10%" delay="0.9s"><input className="cursor_hover" id="form-consent" type="checkbox" name="consent" placeholder={language.pages.contact.subject_placeholder} required /><span className="checkmark"></span> </ComponentRevealShow>
+            <ComponentRevealShow width="90%" delay="0.9s"><label className="consent-label" htmlFor="form-consent">{language.pages.contact.consent} <CustomLink href="/privacy">{language.pages.contact.consent_regulamin}</CustomLink>{language.pages.contact.consent_and}<CustomLink href="/privacy">{language.pages.contact.consent_privacy}</CustomLink></label></ComponentRevealShow>
+          </div>
+          {
+            sending ?
+              <Loader /> :
+              sent ?
+                <h3>{language.pages.contact.feedback}</h3> :
+                <ComponentRevealShow width="80%" delay="1.1s"><input type="submit" value={language.pages.contact.send} className="cursor_hover btn" /></ComponentRevealShow>
+          }
+          {
+            error ?
+              <h3 className="error_message">{language.pages.contact.error}</h3> :
+              ''
+          }
         </form>
         <ComponentRevealShow width="80%">
-        <div className="cursor_hover">
-        <ContactContainer >
-          <ContactItem >
-            <SvgWrapper>
-              <Mail />
-            </SvgWrapper>
-            <CryptoMailLink
-              className= "CryptoMailLink"
-              href="mailto:someWeirdEmail@onet.xyz"
-              data-name="kotlinski95"
-              data-domain="gmail"
-              data-tld="com"
-              onClick={updateMail}
-            />
-          </ContactItem>
-          <ContactItem>
-            <SvgWrapper>
-              <Phone />
-            </SvgWrapper>
-            <CryptoPhoneLink
-              className="CryptoPhoneLink"
-              href="tel:608418911"
-              data-first="608"
-              data-second="418"
-              data-third="911"
-              onClick={updatePhone}
-            />
-          </ContactItem>
-        </ContactContainer>
-        </div>
+          <div className="cursor_hover">
+            <ContactContainer >
+              <ContactItem >
+                <SvgWrapper>
+                  <Mail />
+                </SvgWrapper>
+                <CryptoMailLink
+                  className="CryptoMailLink"
+                  href="mailto:someWeirdEmail@onet.xyz"
+                  data-name="kotlinski95"
+                  data-domain="gmail"
+                  data-tld="com"
+                  onClick={updateMail}
+                />
+              </ContactItem>
+              <ContactItem>
+                <SvgWrapper>
+                  <Phone />
+                </SvgWrapper>
+                <CryptoPhoneLink
+                  className="CryptoPhoneLink"
+                  href="tel:608418911"
+                  data-first="608"
+                  data-second="418"
+                  data-third="911"
+                  onClick={updatePhone}
+                />
+              </ContactItem>
+            </ContactContainer>
+          </div>
         </ComponentRevealShow>
-        <CvLink/>
+        <CvLink />
       </div>
     </>
   );

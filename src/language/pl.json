@@ -374,8 +374,13 @@
             "message_placeholder": "Treść wiadomości może być dowolna!",
             "send": "Wyślij",
             "feedback": "Dziękuję za Twoją wiadomość! Wyślę odpowiedź tak szybko, jak to możliwe.",
+            "error": "Przepraszam, coś poszło nie tak. Sprobuj wysłać wiadomość ponownie :(",
             "mail": "kotlinski95@gmail.com",
-            "phone": "+48 608 418 911"
+            "phone": "+48 608 418 911",
+            "consent" : "*Akceptuję ",
+            "consent_and": " i ",
+            "consent_regulamin" : "regulamin",
+            "consent_privacy" : "politykę prywatności"
         },
         "stack":{
             "front_header": "Umiejętności Front-end developera",
