@@ -374,8 +374,13 @@
             "message_placeholder": "You can write about anything you want!",
             "send": "Send",
             "feedback": "Thank you for your message! I'll send you response as fast as I can.",
+            "error": "Sorry, something went wrong. Try to send the message again. :(",
             "mail": "kotlinski95@gmail.com",
-            "phone": "+48 608 418 911"
+            "phone": "+48 608 418 911",
+            "consent" : "*I accept ",
+            "consent_and": " and ",
+            "consent_regulamin" : "regulation",
+            "consent_privacy" : "privacy policy"
         },
         "stack":{
             "front_header": "Front-end developer stack",

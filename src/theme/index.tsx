@@ -100,7 +100,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
-  body: '#1a4137',
+  body: '#0d2c24',
   text: '#e1f7f1',
   toggleBorder: '#6B8096',
   gradient: 'rgb(24, 24, 24);',
@@ -116,7 +116,7 @@ export const darkTheme = {
     darkBackground: '#53665e',
     menuItemColor: '#D0E2F2' ,
     menuItemColorHover: '#000000',
-    DropdownColorHover: '#1a4137',
+    DropdownColorHover: '#0d2c24',
     DropdownColorIcon: '#D0E2F2',
     linkHover: '#ffffff',
     navListBackground: '#1a4137',
@@ -128,9 +128,9 @@ export const darkTheme = {
   footer: {
     linkColor: '#D0E2F2',
     lightBackground: '#2d2d30',
-    darkBackground: '#171718',
+    darkBackground: 'rgb(24,24,24)',
     menuItemColor: '#D0E2F2',
-    menuItemColorHover: '#727272',
+    menuItemColorHover: '#308259',
   },
   notFoundPage:{
     itemSelected: '#0e604b',
@@ -154,7 +154,7 @@ export const darkTheme = {
   },
   contact:{
     formBackground: 'transparent',
-    inputBackground: 'rgba(0,0,0,0.2)',
+    inputBackground: '#0d2c24',
     inputColor: '#D0E2F2',
     buttonHover: '#e1f7f1',
     buttonHoverColor: '#060505',
