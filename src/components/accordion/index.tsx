@@ -8,6 +8,7 @@ import AddCircleOutlineRoundedIcon from '@material-ui/icons/AddCircleOutlineRoun
 import RemoveCircleOutlineRoundedIcon from '@material-ui/icons/RemoveCircleOutlineRounded';
 import {Theme} from '../../settings'
 import CustomLink from '../customLink'
+import { nanoid } from 'nanoid'
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -52,15 +53,17 @@ const AccordionText = (props) => {
                 Object.keys(props.text).map(function (key, index) {
                   const content = props.text[key].content;
                   return (
-                    <Accordion>
+                    <Accordion key={nanoid(10)}>
                       <AccordionSummary
                         expandIcon={<><AddCircleOutlineRoundedIcon /> <RemoveCircleOutlineRoundedIcon /></>}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
+                        key={nanoid(10)}
                       >
                         <Typography className={classes.subHeading}>{props.text[key].header}</Typography>
                       </AccordionSummary>
-                      <AccordionDetails >
+                      <AccordionDetails
+                        key={nanoid(10)}>
                         <Typography className={classes.text}>
                           {
                             Object.keys(content).map(function (key, index) {
@@ -68,12 +71,12 @@ const AccordionText = (props) => {
                                 <>
                                   {
                                     content[key].link ?
-                                      <CustomLink key={index} target={content[key].target} href={content[key].link} title={`Link to: ${content[key].link}`}>{content[key].text}</CustomLink>
+                                      <CustomLink key={nanoid(10)} target={content[key].target} href={content[key].link} title={`Link to: ${content[key].link}`}>{content[key].text}</CustomLink>
                                       :
                                       key.search("header") > 0 ?
-                                      <h3 className="acordion-text-header" key={index}><br /><br />{content[key].text} </h3>
+                                      <h3 className="acordion-text-header" key={nanoid(10)}><br /><br />{content[key].text} </h3>
                                       :
-                                      <span className="acordion-text-block" key={index}><br /><br />{content[key].text} </span>
+                                      <span className="acordion-text-block" key={nanoid(10)}><br /><br />{content[key].text} </span>
                                   }
                                 </>
                               )
@@ -105,12 +108,12 @@ const AccordionText = (props) => {
                       <>
                         {
                           props.text[key].link ?
-                            <CustomLink key={index} target={props.text[key].target} href={props.text[key].link} title={`Link to: ${props.text[key].link}`}>{props.text[key].text}</CustomLink>
+                            <CustomLink key={nanoid(10)} target={props.text[key].target} href={props.text[key].link} title={`Link to: ${props.text[key].link}`}>{props.text[key].text}</CustomLink>
                             :
                             key.search("header") > 0 ?
-                            <h2 className="acordion-text-header" key={index}><br /><br />{props.text[key].text} </h2>
+                            <h2 className="acordion-text-header" key={nanoid(10)}><br /><br />{props.text[key].text} </h2>
                             :
-                            <span className="acordion-text-block" key={index}><br /><br />{props.text[key].text} </span>
+                            <span className="acordion-text-block" key={nanoid(10)}><br /><br />{props.text[key].text} </span>
                         }
                       </>
                     )

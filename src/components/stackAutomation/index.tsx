@@ -8,6 +8,7 @@ import Embedded from '../../assets/stack/cpu.png'
 import Scada from '../../assets/stack/scada.png'
 import Safety from '../../assets/stack/safety.png'
 import Microcontroller from '../../assets/stack/microcontroller.png'
+import { nanoid } from 'nanoid'
 
 
 const skills = [
@@ -27,7 +28,7 @@ const StackAutomation = () => {
       <h2 className="stack-hello">{language.pages.stack.automation_header}</h2>
       <div className="stack-wrapper">
         {skills.map((link) => (
-          <StackTile logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
+          <StackTile key={nanoid(10)} logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
         ))}
       </div>
     </div>

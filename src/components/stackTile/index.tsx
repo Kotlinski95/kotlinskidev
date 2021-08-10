@@ -15,13 +15,12 @@ const StackTile = (props) => {
                     style={{ width: `${props.width}`, height: `${props.height}`, color: `${props.color}` }}
                     title={props.title}
                 >
-                <Link className="stack-tile-link" to={props.url}></Link>
                 {
                         props.svg ?
                         <svg
                             className='stack-tile-svg'
                             style={{
-                                    transform: inView ? 'rotateX(0)' : 'rotateX(90deg);',
+                                    transform: inView ? 'rotateX(0)' : 'rotateX(90deg)',
                                     color: inView ? 'inherit' : '#fff',
                                     opacity: inView ? '1' : '0',
                             }}>{props.svg}
@@ -34,7 +33,7 @@ const StackTile = (props) => {
                             className="stack-tile-img"
                             title={props.imgTitle}
                             style={{
-                                transform: inView ? 'rotateX(0)' : 'rotateX(90deg);',
+                                transform: inView ? 'rotateX(0)' : 'rotateX(90deg)',
                                 color: inView ? 'inherit' : '#fff',
                                 opacity: inView ? '1' : '0',
                             }}>
