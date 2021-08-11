@@ -107,6 +107,9 @@
         cursor: pointer;
         background: linear-gradient(180deg, #0d2c24, #69cf9c);
     }
+    .form-field:focus{
+        box-shadow: 0 0px 40px rgb(105 207 156 / 60%);
+    }
 
     .consent_wrapper {
         display: flex;
@@ -125,6 +128,7 @@
             width: 30px;
             height: 30px;
             position: relative;
+            box-shadow: 0 0px 35px rgb(105 207 156 / 60%);
         }
 
         input[type="checkbox"]:hover,

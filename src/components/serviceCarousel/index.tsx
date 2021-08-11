@@ -3,8 +3,6 @@ import React from 'react';
 import { CarouselProvider, Slider, ButtonBack, ButtonNext, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import ServiceSlide from '../serviceSlide';
-import { nanoid } from 'nanoid'
-
 
 const ServiceCarousel = (props) => {
   const isMobile = _store.getState().pageState.mobile;
@@ -20,8 +18,10 @@ const ServiceCarousel = (props) => {
 
           props.data.map((element,index) => {
             const image = isMobile ? element.imageMobile : element.image;
-            return(
-              <ServiceSlide key={nanoid(10)} index={index} buttonText={element.buttonText} link={element.link} src={image} header={element.header} text={element.text} popup={element.popup}></ServiceSlide>
+            return (
+              <React.Fragment key={index}>
+                <ServiceSlide  index={index} buttonText={element.buttonText} link={element.link} src={image} header={element.header} text={element.text} popup={element.popup}></ServiceSlide>
+              </React.Fragment>
             );
           })
         }
