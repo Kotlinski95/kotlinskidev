@@ -14,7 +14,7 @@ const Button = (props: propsType) => {
     } = props;
     return (
             link ?
-                <Link to={link} title={`Link to ${link}`} aria-label={`Link to ${link}`} referrer-policy='no-referrer' rel='noopener'><button onClick={onClick} className="btn cursor_hover">{text}</button></Link>
+                <Link to={link} title={`Link to ${link}`} aria-label={`Link to ${link}`} referrer-policy='no-referrer' rel='preload'><button onClick={onClick} className="btn cursor_hover">{text}</button></Link>
                 :
                 <button onClick={onClick} className="btn cursor_hover">{text}</button>
     )
