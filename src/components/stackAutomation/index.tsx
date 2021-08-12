@@ -2,12 +2,12 @@ import './index.scss';
 import StackTile from '../../components/stackTile';
 import Tia from '../../assets/stack/tia.png'
 import Motors from '../../assets/stack/motors.png'
-import Plc from '../../assets/stack/plc.png'
+import Plc from '../../assets/stack/plc.webp'
 import Hmi from '../../assets/stack/HMI.png'
-import Embedded from '../../assets/stack/cpu.png'
+import Embedded from '../../assets/stack/cpu.webp'
 import Scada from '../../assets/stack/scada.png'
 import Safety from '../../assets/stack/safety.png'
-import Microcontroller from '../../assets/stack/microcontroller.png'
+import Microcontroller from '../../assets/stack/microcontroller.webp'
 import { nanoid } from 'nanoid'
 
 
