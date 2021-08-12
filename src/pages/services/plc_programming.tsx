@@ -7,13 +7,13 @@ import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
 import ServiceCarousel from '../../components/serviceCarousel'
 
-import plc from '../../assets/landing_page/plc.jpg'
-import industry from '../../assets/landing_page/industry.jpg'
-import smart_home from '../../assets/landing_page/smart_home.jpg'
+import plc from '../../assets/landing_page/plc.webp'
+import industry from '../../assets/landing_page/industry.webp'
+import smart_home from '../../assets/landing_page/smart_home.webp'
 
-import plc_mobile from '../../assets/landing_page/plc_mobile.jpg'
-import industry_mobile from '../../assets/landing_page/industry_mobile.jpg'
-import smart_home_mobile from '../../assets/landing_page/smart_home_mobile.jpg'
+import plc_mobile from '../../assets/landing_page/plc_mobile.webp'
+import industry_mobile from '../../assets/landing_page/industry_mobile.webp'
+import smart_home_mobile from '../../assets/landing_page/smart_home_mobile.webp'
 
 const PlcProgrammingPage = (props) => {
   const dispatch = useDispatch();

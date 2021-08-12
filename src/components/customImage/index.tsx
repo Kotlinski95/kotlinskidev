@@ -27,7 +27,7 @@ const CustomImage: any = (props: propsType) => {
         height = '0px',
         style,
         href,
-        rel = 'noopener',
+        rel = 'preload',
         target = '_blank',
         role,
     } = props;

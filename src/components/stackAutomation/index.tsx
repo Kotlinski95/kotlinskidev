@@ -2,12 +2,13 @@ import './index.scss';
 import StackTile from '../../components/stackTile';
 import Tia from '../../assets/stack/tia.png'
 import Motors from '../../assets/stack/motors.png'
-import Plc from '../../assets/stack/plc.png'
+import Plc from '../../assets/stack/plc.webp'
 import Hmi from '../../assets/stack/HMI.png'
-import Embedded from '../../assets/stack/cpu.png'
+import Embedded from '../../assets/stack/cpu.webp'
 import Scada from '../../assets/stack/scada.png'
 import Safety from '../../assets/stack/safety.png'
-import Microcontroller from '../../assets/stack/microcontroller.png'
+import Microcontroller from '../../assets/stack/microcontroller.webp'
+import { nanoid } from 'nanoid'
 
 
 const skills = [
@@ -27,7 +28,7 @@ const StackAutomation = () => {
       <h2 className="stack-hello">{language.pages.stack.automation_header}</h2>
       <div className="stack-wrapper">
         {skills.map((link) => (
-          <StackTile logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
+          <StackTile key={nanoid(10)} logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
         ))}
       </div>
     </div>

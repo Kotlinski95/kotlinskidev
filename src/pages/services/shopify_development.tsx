@@ -7,13 +7,13 @@ import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
 import ServiceCarousel from '../../components/serviceCarousel'
 
-import shopify from '../../assets/landing_page/shopify.jpg'
-import shopify_tablet from '../../assets/landing_page/shopify_tablet.jpg'
-import shopify_rwd from '../../assets/landing_page/shopify_rwd.jpg'
+import shopify from '../../assets/landing_page/shopify.webp'
+import shopify_tablet from '../../assets/landing_page/shopify_tablet.webp'
+import shopify_rwd from '../../assets/landing_page/shopify_rwd.webp'
 
-import shopify_mobile from '../../assets/landing_page/shopify_mobile.jpg'
-import shopify_tablet_mobile from '../../assets/landing_page/shopify_tablet_mobile.jpg'
-import shopify_rwd_mobile from '../../assets/landing_page/shopify_rwd_mobile.jpg'
+import shopify_mobile from '../../assets/landing_page/shopify_mobile.webp'
+import shopify_tablet_mobile from '../../assets/landing_page/shopify_tablet_mobile.webp'
+import shopify_rwd_mobile from '../../assets/landing_page/shopify_rwd_mobile.webp'
 
 const ShopifyDevelopmentPage = (props) => {
   const dispatch = useDispatch();

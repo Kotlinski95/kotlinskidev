@@ -10,7 +10,7 @@ const AnimatedArrow = (props) => {
                 <ul>
                     <li>
                         {props.link ?
-                        <Link title={`Link to ${props.link}`} aria-label={`Link to ${props.link}`} referrer-policy = 'no-referrer' rel='noopener' className="animated-arrow" to={props.link} onClick={()=>{
+                        <Link title={`Link to ${props.link}`} aria-label={`Link to ${props.link}`} referrer-policy = 'no-referrer' rel='preload' className="animated-arrow" to={props.link} onClick={()=>{
                             handleTrackingEvent("Arrow", "Animated arrow link clicked", { page: `${_store.getState().pageState.page}`, href : props.link });
                         }}>
                             <span className="the-arrow -left">

@@ -1,39 +1,9 @@
-import HomePage from '../src/pages/home';
+
 import Nav from '../src/components/nav';
 import RouteChangeTracker from '../src/components/routeChangeTracker';
-import AboutPage from './pages/about/about';
-import NotFoundPage from './pages/not_found';
-import ContactPage from './pages/contact';
-import MyProfilePage from './pages/myprofile/myprofile';
-import MyProfileContactPage from './pages/myprofile/profileContact';
-import MyProfileEducationPage from './pages/myprofile/profileEducation';
-import MyProfileHobbyPage from './pages/myprofile/profileHobby';
-import MyProfileOverviewPage from './pages/myprofile/profileOverview';
-import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime';
-import MyProfileWorkPage from './pages/myprofile/profileWork';
-import StackPage from './pages/stack/stack';
-import ProjectsPage from './pages/projects/projects';
-import PortfolioPage from './pages/projects/portfolio';
-import WebsitePage from './pages/projects/website';
-import QuizPage from './pages/projects/quiz';
-import ChessPage from './pages/projects/chess';
-import EstatePage from './pages/projects/estate';
-import PrivacyPage from '../src/pages/privacy';
-import CookiesPage from '../src/pages/cookies';
-import PlcCarrierPage from './pages/about/plc_carrier';
-import FrontEndDevelopmentPage from './pages/about/front_end_development';
-import CoursesPage from './pages/about/courses';
-import EducationPage from './pages/about/education';
-import FrontEndDeveloperPage from './pages/stack/front_end_developer';
-import AutomationEngineerPage from './pages/stack/automation_engineer';
-import ServicesPage from './pages/services/services';
-import PlcProgrammingPage from './pages/services/plc_programming';
-import WebDevelopmentPage from './pages/services/web_development';
-import ShopifyDevelopmentPage from './pages/services/shopify_development';
 import Cookies from './components/cookiesConsent';
 import LoadingScreen from './components/loadingScreen/index.jsx';
 import Cursor from './components/cursor/index.jsx';
-
 import {
   Switch,
   Route,
@@ -46,13 +16,44 @@ import { GlobalStyles } from './theme/global';
 import { selectedTheme } from './reducers/state';
 import { useSelector } from 'react-redux';
 import ReactPixel from 'react-facebook-pixel';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMobile } from './reducers/state';
 import { useReactPWAInstall } from "react-pwa-install";
 import myLogo from "./assets/icons/logo192.png";
 import TransitionModal from './components/transitionModal';
+import Loader from './components/loader'
 
+import MyProfilePage from './pages/myprofile/myprofile';
+import MyProfileContactPage from './pages/myprofile/profileContact';
+import MyProfileEducationPage from './pages/myprofile/profileEducation';
+import MyProfileHobbyPage from './pages/myprofile/profileHobby';
+import MyProfileOverviewPage from './pages/myprofile/profileOverview';
+import MyProfileSpareTimePage from './pages/myprofile/profileSpareTime';
+import MyProfileWorkPage from './pages/myprofile/profileWork';
+const HomePage = React.lazy(() => import('../src/pages/home'));
+const AboutPage = React.lazy(() => import('./pages/about/about'));
+const NotFoundPage = React.lazy(() => import('./pages/not_found'));
+const ContactPage = React.lazy(() => import('./pages/contact'));
+const StackPage = React.lazy(() => import('./pages/stack/stack'));
+const ProjectsPage = React.lazy(() => import('./pages/projects/projects'));
+const PortfolioPage = React.lazy(() => import('./pages/projects/portfolio'));
+const WebsitePage = React.lazy(() => import('./pages/projects/website'));
+const QuizPage = React.lazy(() => import('./pages/projects/quiz'));
+const ChessPage = React.lazy(() => import('./pages/projects/chess'));
+const EstatePage = React.lazy(() => import('./pages/projects/estate'));
+const PrivacyPage = React.lazy(() => import('../src/pages/privacy'));
+const CookiesPage = React.lazy(() => import('../src/pages/cookies'));
+const PlcCarrierPage = React.lazy(() => import('./pages/about/plc_carrier'));
+const FrontEndDevelopmentPage = React.lazy(() => import('./pages/about/front_end_development'));
+const CoursesPage = React.lazy(() => import('./pages/about/courses'));
+const EducationPage = React.lazy(() => import('./pages/about/education'));
+const FrontEndDeveloperPage = React.lazy(() => import('./pages/stack/front_end_developer'));
+const AutomationEngineerPage = React.lazy(() => import('./pages/stack/automation_engineer'));
+const ServicesPage = React.lazy(() => import('./pages/services/services'));
+const PlcProgrammingPage = React.lazy(() => import('./pages/services/plc_programming'));
+const WebDevelopmentPage = React.lazy(() => import('./pages/services/web_development'));
+const ShopifyDevelopmentPage = React.lazy(() => import('./pages/services/shopify_development'));
 declare global {
   var _theme: ThemeType;
 }
@@ -181,10 +182,10 @@ function App() {
                   _store.getState().animationState.cursor ?
                     <Cursor isMobile={isMobile} isHovered={isHovered}/> : null
                 } */}
-
                 <RouteChangeTracker />
                 <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>
                 <Nav />
+                <Suspense fallback={<Loader />}>
                 <div className="main">
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">
@@ -279,6 +280,7 @@ function App() {
                     </Route>
                   </Switch>
                 </div>
+                </Suspense>
               </>
             )
               : (
