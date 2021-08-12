@@ -389,7 +389,67 @@
             "web": "Web development",
             "stack": "Zobacz moje umiejętności",
             "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
-            "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów."
+            "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów.",
+            "html": {
+                "title": "HTML 5",
+                "close": "zamknij",
+                "text": "HTML mam w małym palcu"
+            },
+            "css": {
+                "title": "Css 3",
+                "close": "zamknij",
+                "text": "Jestem mistrzem CSS"
+            },
+            "js": {
+                "title": "JavaScript",
+                "close": "zamknij",
+                "text": "Nawet przez sen rozmwiam w JavaScripcie!"
+            },
+            "sass": {
+                "title": "Sass",
+                "close": "zamknij",
+                "text": "Sass nie ma przede mna tajemnic!"
+            },
+            "bootstrap": {
+                "title": "Bootstrap",
+                "close": "zamknij",
+                "text": "Tak, dalej sie go uzywa!"
+            },
+            "rwd": {
+                "title": "Rwd",
+                "close": "zamknij",
+                "text": "Dostowanie strony pod wszystkie urzadzenia to dla mnie pikuś"
+            },
+            "react": {
+                "title": "React",
+                "close": "zamknij",
+                "text": "Hooki i propsy to dla mnie bulka z maslem"
+            },
+            "styledComponents": {
+                "title": "Styled Components",
+                "close": "zamknij",
+                "text": "Gdy komponenty to za duzo roboty!"
+            },
+            "shopify": {
+                "title": "Shopify",
+                "close": "zamknij",
+                "text": "bo krol ecommerce jest tylko jeden :) "
+            },
+            "git": {
+                "title": "Git",
+                "close": "zamknij",
+                "text": "Ludzie dziela sie na tych co robia backup oraz na tych, którzy go beda robili... ja naleze do pierwszej grupy."
+            },
+            "node": {
+                "title": "Node JS",
+                "close": "zamknij",
+                "text": "Nawet FrontEnd Dev powinien umieć zakodzik jakiegoś endpointa :) "
+            },
+            "typeScript": {
+                "title": "TypeScript",
+                "close": "zamknij",
+                "text": "Bo w zyciu najwazniejsza jest kontrola!"
+            }
         },
         "projects":{
             "header": "Projekty",
