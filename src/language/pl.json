@@ -391,9 +391,10 @@
             "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
             "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów.",
             "html": {
-                "title": "HTML 5",
+                "title": "HTML",
+                "intro": "Stale rozwijam swoje umiejętności w zakresie pisania w HTML, aktualnie staram się zagłębić w tajniki SEO aby strona była jak najlepiej pozycjonowana w wyszukiwarkach.",
                 "close": "zamknij",
-                "text": "HTML mam w małym palcu"
+                "text": "HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości. HTML nie jest językiem programowania; jest językiem znaczników (ang. markup language). HTML składa się z serii znaczników (tagów), których używa się do zamknięcia, opakowania różnych części treści, tak aby wyglądały i/lub działały w określony sposób. Z pomocą tagów możesz ze słów czy obrazów zrobić linki do innych stron, sprawić by były napisane kursywą, większą czcionką, wytłuścić je itd. Strona na której sie znajdujesz, nie powstała by bez HTML. Głównym elementem strony jest plik index.html na którym bazuje cała strona."
             },
             "css": {
                 "title": "Css 3",

@@ -1,13 +1,18 @@
 $count: 10;
 $time: 2; //in seconds
-$size: 30;
+$size: 100;
 $color: #ffffff;
 
 .holder.loader {
   margin: 10px 0 5px;
   position: relative;
-  width: 30px;
-  height: 30px;
+}
+.loader_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .loader .preloader {
