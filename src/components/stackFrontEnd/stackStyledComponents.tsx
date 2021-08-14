@@ -1,6 +1,9 @@
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
+import CustomImage from '../customImage';
+import StyledIntroPhoto from '../../assets/stack/details/styled.webp';
+import StyledPhoto from '../../assets/stack/details/styled_components.webp';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,7 +29,12 @@ export const StackStyledComponentsComponent = (props) => {
     <div className={classes.paper}>
         <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
         <h2 id="transition-modal-title">{language.pages.stack.styledComponents.title}</h2>
-        <p id="transition-modal-description">{language.pages.stack.styledComponents.text}</p>
+        <div className="transition-popup__content">
+          <CustomImage src={StyledIntroPhoto} alt='Styled component' title='Styled component' width='90%' height='auto' />
+          <p id="transition-modal-description">{language.pages.stack.styledComponents.intro}</p>
+          <CustomImage src={StyledPhoto} alt='Styled component example' title='Styled component example' width='90%' height='auto' />
+          <p id="transition-modal-description">{language.pages.stack.styledComponents.text}</p>
+        </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.styledComponents.close} />
     </div>
     </div>

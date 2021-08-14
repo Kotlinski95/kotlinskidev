@@ -394,62 +394,85 @@
                 "title": "HTML",
                 "intro": "Stale rozwijam swoje umiejętności w zakresie pisania w HTML, aktualnie staram się zagłębić w tajniki SEO aby strona była jak najlepiej pozycjonowana w wyszukiwarkach.",
                 "close": "zamknij",
-                "text": "HTML (Hypertext Markup Language) jest to kod używany do tworzenia struktury strony i jej zawartości. HTML nie jest językiem programowania; jest językiem znaczników (ang. markup language). HTML składa się z serii znaczników (tagów), których używa się do zamknięcia, opakowania różnych części treści, tak aby wyglądały i/lub działały w określony sposób. Z pomocą tagów możesz ze słów czy obrazów zrobić linki do innych stron, sprawić by były napisane kursywą, większą czcionką, wytłuścić je itd. Strona na której sie znajdujesz, nie powstała by bez HTML. Głównym elementem strony jest plik index.html na którym bazuje cała strona."
+                "text": "HTML jest to kod używany do tworzenia struktury strony i jej zawartości. HTML nie jest językiem programowania; jest językiem znaczników. HTML składa się z serii znaczników (tagów), których używa się do zamknięcia, opakowania różnych części treści, tak aby wyglądały i/lub działały w określony sposób. Strona na której sie znajdujesz, nie powstała by bez HTML. Głównym elementem strony jest plik index.html na którym bazuje cała strona.",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/HTML_basics"
             },
             "css": {
-                "title": "Css 3",
+                "title": "Css",
                 "close": "zamknij",
-                "text": "Jestem mistrzem CSS"
+                "text": "To właśnie dzięki wykorzystaniu CSS powstał cały wygląd tej strony! Na każdym kroku poszerzam swoje umiejętności posługiwaniem się stylami, aby tworzyć strony, które swoim wyglądem pozwalają zyskać uwagę użytkowników i zwiększyć rating strony.",
+                "intro": "Podobnie jak HTML, CSS nie jest językiem programowania. Nie jest jednak też językiem znaczników — jest językiem arkuszy stylów. Oznacza to, że pozwala on selektywnie stosować style do elementów w dokumentach HTML. Za pomoca styli możemy nadać stronie dowolny wygląd!",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/CSS_basics"
             },
             "js": {
                 "title": "JavaScript",
+                "intro": "JavaScript to język programowania, który umożliwia wdrożenie na stronie internetowej skomplikowanych elementów, dzięki którym strona ta może nie tylko wyświetlać statyczne informacje, ale również obsługiwać zmianę treść odpowiednio do sytuacji, wyświetlać interaktywne mapy i animacje grafiki 2D/3D , wyświetlać video itd.",
                 "close": "zamknij",
-                "text": "Nawet przez sen rozmwiam w JavaScripcie!"
+                "text": "Rozwój w obszarze JavaScriptu to mój główny cel, coraz to większa biegłość posługiwania się tym językiem sprawia, że jestem w stanie pisać coraz bardziej zaawansowane aplikacje webowe. Językiem tym posługuję się na codzień. Swoją znajomość ocenia na poziomie dobrym, wystarczającym do samodzielnego pisania aplikacji internetowych.",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
             },
             "sass": {
                 "title": "Sass",
                 "close": "zamknij",
-                "text": "Sass nie ma przede mna tajemnic!"
+                "intro": "SASS jest pre procesorem CSS-a, jest to rozszerzenie możliwości zapisu CSS-a.Preprocesor Sass to narzędzie, dzięki któremu piszemy kod podobny do zwykłego CSS, jednak z wieloma ulepszeniami, a który na końcu jest kompilowany do zwykłego formatu CSS; Sass umożliwia pisanie kodu w dwóch składniach – SASS lub SCSS",
+                "text": "Aktualny projekt wykorzystuje w głównej mierze Sass, całość jest kompilowana przez React do klasycznego Css. Widzę wiele zalet stosowania preprocesora Sass i staram się rozwijać w tym kierunku głównie w połączeniu z biblioteką React.",
+                "source": "https://grafmag.pl/artykuly/wstep-do-sass-prepreocesora-jezyka-css"
             },
             "bootstrap": {
                 "title": "Bootstrap",
                 "close": "zamknij",
-                "text": "Tak, dalej sie go uzywa!"
+                "intro": "Bootstrap to najpopularniejszy framework CSS stworzony i rozwijany przez programistów serwisu Twitter. Bazuje głównie na gotowych rozwiązaniach HTML i CSS. Bootstrap zawiera zestaw przydatnych komponentów ułatwiających pracę Front-End Developera i tworzenia responsywnych stron internetowych oraz aplikacji internetowych. Główną zaletą implementacji Bootstrapa jest siatką, która w zależności od wielkości ekranu dostosowuje szerokość elementów i ustala kolejność ich wyświetlania w kolumnie. Dodatkowo zawiera długą listę predefiniowanych klas, do stylizacji najpotrzebniejszych elementów",
+                "text": "W swoich projektach zazywczaj staram się nie korzystać z tej biblioteki, opierając się o własne style. W pracy jednak często korzystam z tej biblioteki na potrzeby różnych projektów, więc znam podstawy pracy z tą biblioteką",
+                "source": "https://psd2css.pl/baza-wiedzy/co-to-jest-bootstrap"
             },
             "rwd": {
                 "title": "Rwd",
                 "close": "zamknij",
-                "text": "Dostowanie strony pod wszystkie urzadzenia to dla mnie pikuś"
+                "intro": "RWD (responsive web design) to sposób projektowania uniwersalnych stron www, które prawidłowo będą dostosowywały się do wielkości okna przeglądarki wszystkich urządzeń, uwzględniając m.in. tablety, smartfony, telewizory i monitory o standardowych i wysokich rozdzielczościach.",
+                "text": "Prawidłowe działanie aplikacji web zarówno w formie desktop jak i na urządzeniach mobile jest kluczowe, zawsze dbam o to, aby moje aplikacje prawidłowo działały na każdym urządzeniu i przykładam do tego ogromną wagę.",
+                "source": "https://www.artefakt.pl/blog/web-design/responsive-web-design-czym-jest-i-do-czego-sluzy"
             },
             "react": {
                 "title": "React",
                 "close": "zamknij",
-                "text": "Hooki i propsy to dla mnie bulka z maslem"
+                "intro": "React jest tak zwaną biblioteką języka programowania JavaScript. Wykorzystuje się ją podczas tworzenia interfejsów użytkownika dla różnego typu aplikacji. Dostępna jest dla szerokiego grona odbiorców na zasadzie open source. Dzięki niej możesz więc stworzyć bardzo złożony interfejs, składający się z małych, oddzielonych od siebie elementów. ",
+                "text": "Biblioteka React jest jedną z moich ulubionych i to w tym kierunku chce się rozwijać, staram się regularnie z niej korzystać i poszerzać swoje umiejętności w tym zakresie. Uważam, że posiadam sporą wiedzę w tym temacie a samą znajomość Reacta oceniam na dobrą. Świadczyć o tym może ta strona, która w całości napisana została w oparciu o tę bibliotekę!",
+                "source": "https://global4net.com/ecommerce/czym-jest-react-i-jakie-ma-zalety/"
             },
             "styledComponents": {
                 "title": "Styled Components",
                 "close": "zamknij",
-                "text": "Gdy komponenty to za duzo roboty!"
+                "intro": "Styled components to biblioteka, która korzysta ze stringów interpolowanych wprowadzonych w wersji JavaScript ES6. Pozwala ona na bardzo proste stylowanie komponentów React poprzez dodanie stylów bezpośrednio do komponentu.",
+                "text": "Nie jestem zwolennikiem bezpośredniego stylowania, jednak w przypadku tej biblioteki widzę sporo korzyści płynących z bezpośredniego stylowania prostych komponentów, które znacznie przyśpieszają pracę, bez koneiczności tworzenia osobnego komponentu. Przy okazji poszerzania wiedzy z zakresu React postanowiłem zapoznać się również i z tą biblioteką, dlatego ta strona również posiada kilka komponentów utworzonych z wykorzystaniem styled-components.",
+                "source": "https://www.margo-group.com/pl/aktualnosci/dlaczego-warto-zaczac-uzywac-styled-components-bezstresowe-stylowanie-z-nowoczesna-technologia/"
             },
             "shopify": {
                 "title": "Shopify",
                 "close": "zamknij",
-                "text": "bo krol ecommerce jest tylko jeden :) "
+                "intro": "Shopify to najpopularniejsza platforma e-commerce na rynku i jest używana w ponad 175 krajach na całym świecie. Założona w 2004 roku, pomaga handlowcom z całego świata hostować i tworzyć stronę internetową, przesyłać produkty, zbierać płatności i zarabiać pieniądze w Internecie .",
+                "text": "Z platformą shopify mam styczność codziennie, aktualnie pracuję jako junior Front-End developer, zajmujący się tworzenie sklepów internetowych korzystających z tej platformy. W firmie jako shopify developer jestem odpowiedzialny za tworzenie sklepów, optymalizację stron, wdrażanie nowych funkcjonalności na życzenie klienta oraz naprawa bieżących błędów na stronach.",
+                "source": "https://www.moj-startup.pl/shopify-opinie/#Co_to_jest_Shopify"
             },
             "git": {
                 "title": "Git",
                 "close": "zamknij",
-                "text": "Ludzie dziela sie na tych co robia backup oraz na tych, którzy go beda robili... ja naleze do pierwszej grupy."
+                "intro": "Git to system kontroli wersji. Śledzi kolejne zmiany w kodzie i zapisuje poszczególne wersje. Dzięki temu prawie nic nie ginie. Możemy otworzyć historię, jak zmieniał się kod. Git śledzi także zmiany w plikach graficznych. Jest bardzo popularny wśród programistów i grafików. Nawet jeśli się pomylisz albo po jakimś czasie okaże się, że Twoje zmiany idą w złą stronę i nie jesteś w stanie dzięki nim osiągnąć swojego celu, bez problemu jesteś w stanie to wycofać.",
+                "text": "Jestem wielkim fanem gita i nie wyobrażam sobie pracy bez tego narzędzia. Wersjonowanie kody jest niezbędne przy pracy jako programista. W pracy do kontroli wersji plików wykorzystuje na codzień takie narzędzia jak bitbucket oraz github, które znam na dobry poziomie i swobodnie z nich korzystam.",
+                "source": "https://panizkomputerem.pl/czym-jest-git/"
             },
             "node": {
                 "title": "Node JS",
                 "close": "zamknij",
-                "text": "Nawet FrontEnd Dev powinien umieć zakodzik jakiegoś endpointa :) "
+                "intro": "Node.js jest środowiskiem uruchomieniowym do wykonywania kodu JavaScript. Wcześniej programiści uruchamiali swój kod JavaScript tylko za pomocą przeglądarek. Dzisiaj Node.js pracuje niezależnie od przeglądarki i pozwala na uruchamianie kodu JavaScript również poza przeglądarką. Node.js jako środowisko uruchomieniowe pozwala nie tylko w łatwiejszy sposób tworzyć aplikacje webowe. Jest także narzędziem do tworzenia aplikacji po stronie serwera, wszelkiego rodzaju skryptów i bibliotek.",
+                "text": "Z Node Js korzystam na potrzeby własnych aplikacji, nie pracuje zawodowo z tym frameworkiem, jednak uważam, że nawet Front-End developer powinien mieć podstawową wiedzę z tego zakresu. Z mojej perspektywy jest to świetne narzędzie wykorzystujące znany mi język JavaScript, dlatego wybrałem właśnie je do stworzenia backendu tej strony.",
+                "source": "https://zacznijprogramowac.net/slowniczek-javascript/co-to-jest-node-js/"
             },
             "typeScript": {
                 "title": "TypeScript",
                 "close": "zamknij",
-                "text": "Bo w zyciu najwazniejsza jest kontrola!"
+                "intro": "TypeScript jest darmowym i otwartym językiem programowania stworzonym i rozwijanym przez Microsoft od 2012 roku. Jest rozwinięciem JavaScriptu, w którym dodano opcjonalne statyczne typowanie i kilka dodatkowych rzeczy. TypeScript kompiluje się do JavaScriptu i może być używany zarówno po stronie serwera (node.js), jak i w przeglądarce.",
+                "text": "Z mojej perspektywy TypeScript jest niezbędnym następcą klasycznego JavaScriptu, chociaż sam jest do niego kompilowalny w ostateczności, umożliwia pisanie znacznie bezpieczniejszego i efektywniejszego kodu niż w przypadku zwykłego Js'a. Od momentu kiedy poczułem się pewnie korzystając z JavaScript, staram się teraz korzystać przy każdej okazji z TypeScript. Możesz zauważyć, że właśnie ta strona została napisana niemalże w całości korzystając z TypeScipt :)",
+                "source": "https://typeofweb.com/typescript-czesc-1/"
             }
         },
         "projects":{

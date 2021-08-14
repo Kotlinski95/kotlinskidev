@@ -1,6 +1,8 @@
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
+import CustomImage from '../customImage'
+import BootstrapPhoto from '../../assets/stack/details/bootstrap.webp'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,7 +28,11 @@ export const StackBootstrapComponent = (props) => {
     <div className={classes.paper}>
         <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
         <h2 id="transition-modal-title">{language.pages.stack.bootstrap.title}</h2>
-        <p id="transition-modal-description">{language.pages.stack.bootstrap.text}</p>
+        <div className="transition-popup__content">
+          <p id="transition-modal-description">{language.pages.stack.bootstrap.intro}</p>
+          <CustomImage src={BootstrapPhoto} alt='Bootstrap' title='Bootstrap' width='90%' height='auto' />
+          <p id="transition-modal-description">{language.pages.stack.bootstrap.text}</p>
+        </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.bootstrap.close} />
     </div>
     </div>

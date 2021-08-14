@@ -4,8 +4,6 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import Button from '../button';
-import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -32,7 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const TransitionModal = (props) => {
     const classes = useStyles();
-
     return (
         <div className='transition-modal'>
             <Modal
