@@ -1,5 +1,7 @@
 import Link from '../customLink'
 import './index.scss'
+import ImageModal from '../imageModal'
+import { useState } from 'react'
 
 type propsType = {
     className?: string
@@ -14,9 +16,19 @@ type propsType = {
     rel?: string
     target?: string
     role?: string
+    modal?: string | boolean
 }
 
 const CustomImage: any = (props: propsType) => {
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     const {
         className = '',
         alt = 'Default alterntive image description',
@@ -30,6 +42,7 @@ const CustomImage: any = (props: propsType) => {
         rel = 'preload',
         target = '_blank',
         role,
+        modal = false
     } = props;
 
     return (
@@ -54,18 +67,50 @@ const CustomImage: any = (props: propsType) => {
                 </img>
             </Link>
             :
+            modal ?
+            <>
+            <ImageModal open={open}>
             <img
-                className={className}
-                style={style}
-                alt={alt}
-                loading={loading}
-                title={title}
-                src={src}
-                width={width}
-                height={height}
-                role={role}
+            className={className}
+            style={style}
+            alt={alt}
+            loading={loading}
+            title={title}
+            src={src}
+            width={width}
+            height={height}
+            role={role}
+            onClick={handleClose}
             >
             </img>
+            </ImageModal>
+                <img
+                    className={className}
+                    style={style}
+                    alt={alt}
+                    loading={loading}
+                    title={title}
+                    src={src}
+                    width={width}
+                    height={height}
+                    role={role}
+                    onClick={handleOpen}
+                >
+            </img>
+            </>
+                :
+                <img
+                    className={className}
+                    style={style}
+                    alt={alt}
+                    loading={loading}
+                    title={title}
+                    src={src}
+                    width={width}
+                    height={height}
+                    role={role}
+                >
+                </img>
     )
 }
 
