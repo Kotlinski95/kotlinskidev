@@ -12,18 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: 'center',
             justifyContent: 'center',
             maxWidth: '100vw',
-        },
-        paper: {
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            backgroundColor: '#1a4137',
-            color: '#e1f7f1',
-            border: '2px solid #000',
-            borderRadius: '15px',
-            boxShadow: theme.shadows[5],
-            padding: theme.spacing(2, 4, 3),
+            maxHeight: '100vh',
         },
     }),
 );
@@ -31,10 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
 const ImageModal = (props) => {
     const classes = useStyles();
     return (
-        <div className='transition-modal'>
+        <div className='image-modal'>
             <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
+                aria-labelledby="image-modal-title"
+                aria-describedby="image-modal-description"
                 className={classes.modal}
                 open={props.open}
                 onClose={props.handleClose}

@@ -30,7 +30,7 @@ export const StackTypeScriptComponent = (props) => {
         <h2 id="transition-modal-title">{language.pages.stack.typeScript.title}</h2>
         <div className="transition-popup__content">
           <p id="transition-modal-description">{language.pages.stack.typeScript.intro}</p>
-          <CustomImage src={TypeScriptPhoto} alt='TypeScript' title='TypeScript' width='90%' height='auto' />
+          <CustomImage src={TypeScriptPhoto} alt='TypeScript' title='TypeScript' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.typeScript.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.typeScript.close} />

@@ -30,7 +30,7 @@ const CustomImage: any = (props: propsType) => {
         setOpen(false);
     };
     const {
-        className = '',
+        className = 'custom-image',
         alt = 'Default alterntive image description',
         loading = 'lazy',
         title = 'Default title',
@@ -68,36 +68,40 @@ const CustomImage: any = (props: propsType) => {
             </Link>
             :
             modal ?
-            <>
-            <ImageModal open={open}>
-            <img
-            className={className}
-            style={style}
-            alt={alt}
-            loading={loading}
-            title={title}
-            src={src}
-            width={width}
-            height={height}
-            role={role}
-            onClick={handleClose}
-            >
-            </img>
-            </ImageModal>
-                <img
-                    className={className}
-                    style={style}
-                    alt={alt}
-                    loading={loading}
-                    title={title}
-                    src={src}
-                    width={width}
-                    height={height}
-                    role={role}
-                    onClick={handleOpen}
-                >
-            </img>
-            </>
+                <>
+                    <ImageModal open={open}>
+                        <>
+                            <img
+                                className={className}
+                                style={style}
+                                alt={alt}
+                                loading={loading}
+                                title={title}
+                                src={src}
+                                width={width}
+                                height={height}
+                                role={role}
+                                onClick={handleClose}
+                                data-modal={modal}
+                            >
+                            </img>
+                            <button className="image-modal-close" onClick={handleClose}>{language.pages.stack.css.close}</button>
+                        </>
+                    </ImageModal>
+                    <img
+                        className={className}
+                        style={style}
+                        alt={alt}
+                        loading={loading}
+                        title={title}
+                        src={src}
+                        width={width}
+                        height={height}
+                        role={role}
+                        onClick={handleOpen}
+                    >
+                    </img>
+                </>
                 :
                 <img
                     className={className}

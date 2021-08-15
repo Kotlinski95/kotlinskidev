@@ -30,7 +30,7 @@ export const StackRwdComponent = (props) => {
         <h2 id="transition-modal-title">{language.pages.stack.rwd.title}</h2>
         <div className="transition-popup__content">
           <p id="transition-modal-description">{language.pages.stack.rwd.intro}</p>
-          <CustomImage src={RwdPhoto} alt='Rwd' title='Responsive Web Design' width='90%' height='auto' />
+          <CustomImage src={RwdPhoto} alt='Rwd' title='Responsive Web Design' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.rwd.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.rwd.close} />

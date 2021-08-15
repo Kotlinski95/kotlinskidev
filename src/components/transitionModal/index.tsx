@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: 'center',
             justifyContent: 'center',
             maxWidth: '100vw',
+            maxHeight: '100vh',
         },
         paper: {
             display: 'flex',

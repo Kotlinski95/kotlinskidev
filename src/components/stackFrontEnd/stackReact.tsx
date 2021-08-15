@@ -30,7 +30,7 @@ export const StackReactComponent = (props) => {
         <h2 id="transition-modal-title">{language.pages.stack.react.title}</h2>
         <div className="transition-popup__content">
           <p id="transition-modal-description">{language.pages.stack.react.intro}</p>
-          <CustomImage src={ReactPhoto} alt='React' title='React' width='90%' height='auto' />
+          <CustomImage src={ReactPhoto} alt='React' title='React' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.react.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.react.close} />

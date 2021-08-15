@@ -30,9 +30,9 @@ export const StackShopifyComponent = (props) => {
         <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
         <h2 id="transition-modal-title">{language.pages.stack.shopify.title}</h2>
         <div className="transition-popup__content">
-          <CustomImage src={ShopifyIntroPhoto} alt='Shopify' title='Shopify' width='90%' height='auto' />
+          <CustomImage src={ShopifyIntroPhoto} alt='Shopify' title='Shopify' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.shopify.intro}</p>
-          <CustomImage src={ShopifyPhoto} alt='Shopify theme layout' title='Shopify theme layout' width='90%' height='auto' />
+          <CustomImage src={ShopifyPhoto} alt='Shopify theme layout' title='Shopify theme layout' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.shopify.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.shopify.close} />

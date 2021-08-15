@@ -29,7 +29,7 @@ export const StackSassComponent = (props) => {
         <h2 id="transition-modal-title">{language.pages.stack.sass.title}</h2>
         <div className="transition-popup__content">
           <p id="transition-modal-description">{language.pages.stack.sass.intro}</p>
-          <CustomImage src={SassPhoto} alt='Sass' title='Sass' width='90%' height='auto' />
+          <CustomImage src={SassPhoto} alt='Sass' title='Sass' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.sass.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.sass.close} />

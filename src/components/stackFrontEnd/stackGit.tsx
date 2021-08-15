@@ -30,7 +30,7 @@ export const StackGitComponent = (props) => {
         <h2 id="transition-modal-title">{language.pages.stack.git.title}</h2>
         <div className="transition-popup__content">
           <p id="transition-modal-description">{language.pages.stack.git.intro}</p>
-          <CustomImage src={GitPhoto} alt='git' title='git' width='90%' height='auto' />
+          <CustomImage src={GitPhoto} alt='git' title='git' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.git.text}</p>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.git.close} />
