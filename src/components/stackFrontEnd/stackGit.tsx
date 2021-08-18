@@ -2,6 +2,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
 import CustomImage from '../customImage'
+import CustomLink from '../customLink'
 import GitPhoto from '../../assets/stack/details/git.webp'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,6 +33,7 @@ export const StackGitComponent = (props) => {
           <p id="transition-modal-description">{language.pages.stack.git.intro}</p>
           <CustomImage src={GitPhoto} alt='git' title='git' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.git.text}</p>
+          <CustomLink href={language.pages.stack.git.source} target="_blank">{language.pages.stack.git.source} </CustomLink>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.git.close} />
     </div>

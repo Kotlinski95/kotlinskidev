@@ -184,7 +184,7 @@
                     "cookies_text": "Cookie to mały plik umieszczany na Twoim Urządzeniu. Możesz poinstruować swoją przeglądarkę, aby odrzucała wszystkie pliki cookie lub wskazywała, kiedy plik cookie jest wysyłany. Jeśli jednak nie zaakceptujesz plików cookie, możesz nie być w stanie korzystać z niektórych części naszej Usługi. O ile nie dostosowałeś ustawień przeglądarki tak, aby odrzucała pliki cookie, nasz serwis może używać plików cookie.",
                     "flash_title": "Pliki cookie Flash.",
                     "flash_text": "Niektóre funkcje naszej Usługi mogą wykorzystywać lokalnie przechowywane obiekty (lub pliki cookie Flash) do zbierania i przechowywania informacji o Twoich preferencjach lub Twojej aktywności w naszym Serwisie. Pliki cookie Flash nie są zarządzane przez te same ustawienia przeglądarki, które są używane w przypadku plików cookie przeglądarki. Więcej informacji na temat usuwania plików cookie Flash można znaleźć w artykule „Gdzie mogę zmienić ustawienia dotyczące wyłączania lub usuwania lokalnych obiektów udostępnionych?” dostępne o",
-                    "flash_link" : "https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_",
+                    "flash_link" : "https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.StackTiaComponent#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_",
                     "beacons_title": "Sygnały nawigacyjne w sieci Web.",
                     "beacons_text": "Niektóre sekcje naszej Usługi i nasze wiadomości e-mail mogą zawierać małe pliki elektroniczne zwane sygnalizatorami sieciowymi (nazywane również czystymi gifami, znacznikami pikselowymi i jednopikselowymi gifami), które pozwalają Firmie, na przykład, zliczać użytkowników, którzy odwiedzili te strony. lub otworzył wiadomość e-mail i inne powiązane statystyki witryny (na przykład rejestrowanie popularności określonej sekcji i weryfikacja integralności systemu i serwera).",
                     "persistent": "Pliki cookie mogą być plikami „trwałymi” lub „sesyjnymi”. Trwałe pliki cookie pozostają na Twoim komputerze osobistym lub urządzeniu mobilnym, gdy przejdziesz do trybu offline, natomiast sesyjne pliki cookie są usuwane, gdy tylko zamkniesz przeglądarkę internetową. Dowiedz się więcej o plikach cookie:",
@@ -390,18 +390,25 @@
             "stack": "Zobacz moje umiejętności",
             "automation_text": "Zawsze fascynowała mnie nowoczesna technologia, sztuczna inteligencja, elektronika i programowanie. Staram się łączyć swoje zainteresowania i rozwijać w tych technologiach.",
             "web_text": "Aktualnie rozwijam się w dziedzinie web developmentu i staram się doskonalić swoje umiejętności w tym zakresie poprzez realizację własnych projektów.",
+            "StackTiaComponent": {
+                "title": "StackTiaComponent",
+                "intro": "Stale rozwijam swoje umiejętności w zakresie pisania w StackTiaComponent, aktualnie staram się zagłębić w tajniki SEO aby strona była jak najlepiej pozycjonowana w wyszukiwarkach.",
+                "close": "zamknij",
+                "text": "StackTiaComponent jest to kod używany do tworzenia struktury strony i jej zawartości. StackTiaComponent nie jest językiem programowania; jest językiem znaczników. StackTiaComponent składa się z serii znaczników (tagów), których używa się do zamknięcia, opakowania różnych części treści, tak aby wyglądały i/lub działały w określony sposób. Strona na której sie znajdujesz, nie powstała by bez StackTiaComponent. Głównym elementem strony jest plik index.StackTiaComponent na którym bazuje cała strona.",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/StackTiaComponent_basics"
+            },
             "html": {
                 "title": "HTML",
-                "intro": "Stale rozwijam swoje umiejętności w zakresie pisania w HTML, aktualnie staram się zagłębić w tajniki SEO aby strona była jak najlepiej pozycjonowana w wyszukiwarkach.",
+                "intro": "Nieustannie rozwijam swoje umiejętności w zakresie HTML, obecnie staram się zgłębić tajniki SEO, aby strona była jak najlepiej pozycjonowana w wyszukiwarkach.",
                 "close": "zamknij",
-                "text": "HTML jest to kod używany do tworzenia struktury strony i jej zawartości. HTML nie jest językiem programowania; jest językiem znaczników. HTML składa się z serii znaczników (tagów), których używa się do zamknięcia, opakowania różnych części treści, tak aby wyglądały i/lub działały w określony sposób. Strona na której sie znajdujesz, nie powstała by bez HTML. Głównym elementem strony jest plik index.html na którym bazuje cała strona.",
+                "text": "HTML to kod używany do strukturyzowania strony i jej zawartości. HTML nie jest językiem programowania, to język znaczników. HTML składa się z serii tagów, które są używane do zamykania i owijania różnych części treści tak, aby wyglądały i / lub działały w określony sposób. Strona, na której się znajdujesz, nie powstałaby bez HTML. Głównym elementem strony jest plik index.html, na którym oparta jest cała strona.",
                 "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/HTML_basics"
             },
             "css": {
                 "title": "Css",
                 "close": "zamknij",
                 "text": "To właśnie dzięki wykorzystaniu CSS powstał cały wygląd tej strony! Na każdym kroku poszerzam swoje umiejętności posługiwaniem się stylami, aby tworzyć strony, które swoim wyglądem pozwalają zyskać uwagę użytkowników i zwiększyć rating strony.",
-                "intro": "Podobnie jak HTML, CSS nie jest językiem programowania. Nie jest jednak też językiem znaczników — jest językiem arkuszy stylów. Oznacza to, że pozwala on selektywnie stosować style do elementów w dokumentach HTML. Za pomoca styli możemy nadać stronie dowolny wygląd!",
+                "intro": "Podobnie jak StackTiaComponent, CSS nie jest językiem programowania. Nie jest jednak też językiem znaczników — jest językiem arkuszy stylów. Oznacza to, że pozwala on selektywnie stosować style do elementów w dokumentach StackTiaComponent. Za pomoca styli możemy nadać stronie dowolny wygląd!",
                 "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/CSS_basics"
             },
             "js": {
@@ -421,7 +428,7 @@
             "bootstrap": {
                 "title": "Bootstrap",
                 "close": "zamknij",
-                "intro": "Bootstrap to najpopularniejszy framework CSS stworzony i rozwijany przez programistów serwisu Twitter. Bazuje głównie na gotowych rozwiązaniach HTML i CSS. Bootstrap zawiera zestaw przydatnych komponentów ułatwiających pracę Front-End Developera i tworzenia responsywnych stron internetowych oraz aplikacji internetowych. Główną zaletą implementacji Bootstrapa jest siatką, która w zależności od wielkości ekranu dostosowuje szerokość elementów i ustala kolejność ich wyświetlania w kolumnie. Dodatkowo zawiera długą listę predefiniowanych klas, do stylizacji najpotrzebniejszych elementów",
+                "intro": "Bootstrap to najpopularniejszy framework CSS stworzony i rozwijany przez programistów serwisu Twitter. Bazuje głównie na gotowych rozwiązaniach StackTiaComponent i CSS. Bootstrap zawiera zestaw przydatnych komponentów ułatwiających pracę Front-End Developera i tworzenia responsywnych stron internetowych oraz aplikacji internetowych. Główną zaletą implementacji Bootstrapa jest siatką, która w zależności od wielkości ekranu dostosowuje szerokość elementów i ustala kolejność ich wyświetlania w kolumnie. Dodatkowo zawiera długą listę predefiniowanych klas, do stylizacji najpotrzebniejszych elementów",
                 "text": "W swoich projektach zazywczaj staram się nie korzystać z tej biblioteki, opierając się o własne style. W pracy jednak często korzystam z tej biblioteki na potrzeby różnych projektów, więc znam podstawy pracy z tą biblioteką",
                 "source": "https://psd2css.pl/baza-wiedzy/co-to-jest-bootstrap"
             },
@@ -473,6 +480,62 @@
                 "intro": "TypeScript jest darmowym i otwartym językiem programowania stworzonym i rozwijanym przez Microsoft od 2012 roku. Jest rozwinięciem JavaScriptu, w którym dodano opcjonalne statyczne typowanie i kilka dodatkowych rzeczy. TypeScript kompiluje się do JavaScriptu i może być używany zarówno po stronie serwera (node.js), jak i w przeglądarce.",
                 "text": "Z mojej perspektywy TypeScript jest niezbędnym następcą klasycznego JavaScriptu, chociaż sam jest do niego kompilowalny w ostateczności, umożliwia pisanie znacznie bezpieczniejszego i efektywniejszego kodu niż w przypadku zwykłego Js'a. Od momentu kiedy poczułem się pewnie korzystając z JavaScript, staram się teraz korzystać przy każdej okazji z TypeScript. Możesz zauważyć, że właśnie ta strona została napisana niemalże w całości korzystając z TypeScipt :)",
                 "source": "https://typeofweb.com/typescript-czesc-1/"
+            },
+            "tia": {
+                "title": "TIA Portal",
+                "close": "zamknij",
+                "intro": "Platforma projektowa TIA Portal pozwala na integrację nowoczesnych komponentów automatyki przemysłowej, co ułatwia realizację koncepcji przemysłu 4.0 w fabrykach i zakładach produkcyjnych.",
+                "text": "Jako automatyk przemysłowy w zakładach automotive zajmowałem się programowaniem sterowników przemysłowych firmy Siemens. Środowiskiem uruchomieniowym dla tych sterowników jest właśnie TIA portal. Brałem udział w kilku projektach zajmując się programowanie PLC, wizualizacji HMI, systemów SCADA oraz Motion Control w TIA V15 oraz V16.",
+                "source": "https://new.siemens.com/pl/pl/produkty/automatyka/tia-portal.StackTiaComponent"
+            },
+            "plc": {
+                "title": "Programmable Logic Controller (PLC)",
+                "close": "zamknij",
+                "intro": "Programowalne sterowniki logiczne (PLC) to małe komputery przemysłowe z modułowymi komponentami zaprojektowanymi do automatyzacji niestandardowych procesów sterowania. Sterowniki PLC są często używane w fabrykach i zakładach przemysłowych do sterowania silnikami, pompami, oświetleniem, wentylatorami, wyłącznikami automatycznymi i innymi maszynami. ",
+                "text": "Jako automatyk przemysłowy w zakładach automotive zajmowałem się programowaniem sterowników przemysłowych kilku różnych firm takich jak Siemens, B&R, Mitsubishi. Sterownik pełni w takim układzie rolę układu sterowania i jest odpowiedzialny za sekwencję pracy całej zautomatyzowanej linii przemysłowej, często sięgających nawet kilkuset metrów.",
+                "source": "https://polskiprzemysl.com.pl/utrzymanie-ruchu/co-to-jest-sterownik-plc/"
+            },
+            "hmi": {
+                "title": "Human-Machine Interface (HMI)",
+                "close": "zamknij",
+                "intro": "HMI to przemysłowy interfejs między maszyną lub procesem a operatorem, który go obsługuje. Dzięki HMI osoba odpowiedzialna za realizację zadań produkcyjnych może wpływać na przebieg procesu i go kontrolować.",
+                "text": "Jako automatyk przemysłowy miałem również doczynienia z tworzeniem wizualizacji na panele operatorskie. Moim zadaniem było stworzyć interfejs umożliwiający operatorowi sterowanie maszyną lub linią produkcyjną. Tworzyłem wizualizacją zarówno w środowisku Tia Portal jak i Automation Studio.",
+                "source": "https://www.astor.com.pl/poradnikautomatyka/wszystko-o-hmi-co-automatyk-powinien-wiedziec/"
+            },
+            "embedded": {
+                "title": "Systemy wbudowane",
+                "close": "zamknij",
+                "intro": "Systemem wbudowanym jest system komputerowy składający się z odpowiednio dobranych komponentów sprzętowych i programowych, często zaprojektowany pod kątem określonej aplikacji programowej. Odpowiada ona za realizację jego funkcji i wpływa na sposób komunikacji z użytkownikiem.",
+                "text": "Już w trakcie technikum zainteresowałem się szeroko pojętą elektroniką i majsterkowaniem. Hobbysticznie zdarza mi się zajmować programowanie miktrokontrolerów i małych układów sterowania na własny użytek w oparciu o Raspberry PI lub Arduino.",
+                "source": "https://automatykab2b.pl/temat-miesiaca/39446-systemy-wbudowane"
+            },
+            "motion": {
+                "title": "Systemy Napędowe",
+                "close": "zamknij",
+                "intro": "Technika napędowa odnosi się do dyscypliny, która ogólnie dotyczy systemów technicznych do generowania ruchu poprzez przenoszenie siły. Pomimo, że technika napędowa opiera się na słowie „napęd”, termin ten nie jest związany z układem przeniesienia napędu znanym np. z samochodów. Chodzi raczej o napędzanie i sterowanie ruchomymi elementami maszyn oraz zestaw części, które ten ruch zapewniają.",
+                "text": "Jako automatyk przemysłowy w branży automotive zajmowałem się tworzeniem układów sterowania składających się w przypadkach niektórych linii produkcyjnych z kilkudziesięciu napędów, były to głównie serwonapędy SEW programowane z wykorzystaniem MotionStudio.",
+                "source": "https://www.igus.pl/info/drive-technology-drylin-drive-systems"
+            },
+            "scada": {
+                "title": "Supervisory Control And Data Acquisition",
+                "close": "zamknij",
+                "intro": "SCADA to skrót od Supervisory Control And Data Acquisition co możemy dosłownie przetłumaczyć jako nadzór i akwizycja danych. W rzeczywistości SCADA to system informatyczny nadzorujący przebieg procesu technologicznego, jest nadrzędny w stosunku do warstwy sprzętowej (sterowniki, moduły I/O) i realizuje następujące zadania: Wymiana danych w czasie rzeczywistym ze sterownikiem PLC lub modułem I/O, przetwarzanie informacji w czasie rzeczywistym, wyświetlanie informacji na ekranie w postaci czytelnej dla człowieka, utrzymywanie bazy danych w czasie rzeczywistym z informacjami technologicznymi, zarządzanie alarmami oraz sygnalizacja alarmów, przygotowanie i generowanie raportów o postępach procesu technologicznego oraz archiwizacja informacji technologicznych.",
+                "text": "Jako automatyk przemysłowy w branży automotive zajmowałem się tworzeniem wizualizacji systemów scada w oparciu o program WinCC, system taki zapewniał pełną wizualizację pracy lini, informację o alarmach i przestojach na linii oraz wydajność linii w czasie.",
+                "source": "https://iautomatyka.pl/co-to-jest-scada-i-co-daje-wizualizacja-procesow-przemyslowych/"
+            },
+            "safety": {
+                "title": "Systemy bezpieczeństwa",
+                "close": "zamknij",
+                "intro": "Systemy bezpieczeństwa stanowią połączenie niezawodnych czujników i elastycznego sterownika bezpieczeństwa. Nadają się w szczególności do zastosowań cechujących się wysokimi wymaganiami w zakresie ochrony ludzi. Systemy te można łatwo zintegrować z istniejącymi instalacjami, a dzięki dołączonej dokumentacji i przykładowym programom – szybko uruchomić.",
+                "text": "Jednym z kluczowych czynników podczas pracy na linii produkcyjnej jest bezpieczeństwo pracowników. Zadaniem automatyka przemysłowego jest nie tylko zapewnienie napisania w pełni działającego programu, ale także obsługa czujników bezpieczeństwa oraz bezpieczne sterowanie elementami wykonawczymi, aby zapewnić pełne bezpieczeństwo ludziom pracującym przy linii.",
+                "source": "https://www.sick.com/pl/pl/systemy-bezpieczenstwa-i-rozwiazania-w-zakresie-bezpieczenstwa/systemy-bezpieczenstwa/c/g449152"
+            },
+            "microcontroller": {
+                "title": "Mikrokontroler",
+                "close": "zamknij",
+                "intro": "Mikrokontroler to jedno z najistotniejszych urządzeń w robotyce. Ten niewielki mikrokomputer jednoukładowy, zwany też scalonym systemem mikroprocesorowym, zawiera między innymi podzespoły takie jak pamięć RAM, jednostkę CPU i różne układy wejścia/wyjścia, a także pamięć napisanego programu ROM lub Flash. Urządzenie służy bezpośrednio do sterowania urządzeniami elektronicznymi, co w robotyce ma oczywiście ogromne znaczenie.",
+                "text": "W wolnym czasie lubię zająć się programowaniem mikrokontrolerów dla własnych celów (np. samojezdny robot mobilny), głównie w oparciu o takie układy jak Raspberry Pi oraz Arduino.",
+                "source": "https://botland.com.pl/blog/mikrokontroler-jak-to-dziala/"
             }
         },
         "projects":{
@@ -488,7 +551,7 @@
                 "description": "Portfolio single Page Application (SPA)",
                 "date": "01/2021",
                 "stack": {
-                    "html": "HTML",
+                    "StackTiaComponent": "StackTiaComponent",
                     "css": "CSS"
                 },
                 "links": {
@@ -496,8 +559,8 @@
                     "live": "https://kotlinski95.github.io/myPortfolio/"
                 },
                 "details": {
-                   "intro": "Jest to mój pierwszy projekt Front-Endowy zrealizowany w oparciu o HTML, CSS.",
-                   "text": "Realizacja tego projektu była częścią kursu Coders-Camp po pierwszych rozdziałach dotyczących zaganień z HTML i CSS.",
+                   "intro": "Jest to mój pierwszy projekt Front-Endowy zrealizowany w oparciu o StackTiaComponent, CSS.",
+                   "text": "Realizacja tego projektu była częścią kursu Coders-Camp po pierwszych rozdziałach dotyczących zaganień z StackTiaComponent i CSS.",
                    "finish": "Projekt ten nie jest aktualnym portfolio, jest to jedynie przykładowy projekt wykonany w oparciu o wspomniane technologie, aktualne portfolio to strona, na której się znajdujesz :) "
                 }
             },
@@ -506,7 +569,7 @@
                 "description": "Quiz wiedzy o gwiezdnych wojnach",
                 "date": "02/2021",
                 "stack": {
-                    "html": "HTML",
+                    "StackTiaComponent": "StackTiaComponent",
                     "css": "CSS",
                     "js": "JavaScript"
                 },
@@ -525,7 +588,7 @@
                 "description": "Internetowe szachy",
                 "date": "03/2021",
                 "stack": {
-                    "html": "HTML",
+                    "StackTiaComponent": "StackTiaComponent",
                     "css": "CSS",
                     "js": "JavaScript",
                     "ts": "TypeScript"
@@ -536,7 +599,7 @@
                 },
                 "details": {
                    "intro": "Internetowe szachy Coders-chess to kolejny projekt wykonany w ramach kursu Coders-Camp, tym razem jako uczestnicy za zadanie mieliśmy stworzyć gre przeglądarkową opartą na TypeScript",
-                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript oraz TypeScript.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu StackTiaComponent, CSS, JavaScript oraz TypeScript.",
                    "finish": "Gracze po wpisaniu swoich imion i wybraniu czasu gry stają ze sobą do rozgrywki. gra zawiera podpowiedzi możliwych ruchów po naciśniciu na daną figurę. Po prawej stronie plansy zapisywane są ruchy graczy. Na planszy pojawiają się zbite figury przeciwnika. Gra kończy się przez szach-mat."
                 }
             },
@@ -545,7 +608,7 @@
                 "description": "Strona biura nieruchomości",
                 "date": "04/2021",
                 "stack": {
-                    "html": "HTML",
+                    "StackTiaComponent": "StackTiaComponent",
                     "css": "CSS",
                     "js": "JavaScript",
                     "ts": "TypeScript",
@@ -558,7 +621,7 @@
                 },
                 "details": {
                    "intro": "Aplikacja biura nieruchomości to ostatni projekt w ramach kursu Coders-Camp.",
-                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu HTML, CSS, JavaScript, TypeScript, React oraz Node JS.",
+                   "text": "Projekt ten realizowany był w zespole 5-osobowym, gdzie wykorzystana została wiedza z zakresu StackTiaComponent, CSS, JavaScript, TypeScript, React oraz Node JS.",
                    "finish": "Strona zawiera własną bazę danych napisaną w Node JS z wykorzystaniem Mongo DB. Sama strona oparta jest na Reactcie i TypeScripcie. Użytkownik może na stronie przeglądać zamieszczone ogłoszenia mieszkań na sprzedaż i wynajem. Może się zalogować aby dokonać rezerwacji bądź zakupu."
                 }
             },
@@ -567,7 +630,7 @@
                 "description": "Strona na której się właśnie znajdujesz",
                 "date": "06/2021",
                 "stack": {
-                    "html": "HTML",
+                    "StackTiaComponent": "StackTiaComponent",
                     "css": "CSS",
                     "js": "JavaScript",
                     "ts": "TypeScript",
@@ -717,13 +780,13 @@
                 "back_to_home": "Więcej o mnie",
                 "easy_code": {
                     "header": "Easy Code",
-                    "text": "Kurs ten obejmuje bardzo szeroką tematykę ze świata Front-Endu. Nauczyłem się tutaj podstaw web developmentu (HTML,CSS, JavaScript), ale także wgłębiłem się w tajniki TypeScript oraz ReactJS. Te umiejętności pozwoliły mi na dostanie pierwszej propozycji pracy i możliwość dalszego rozwoju w tej dziedzinie.",
+                    "text": "Kurs ten obejmuje bardzo szeroką tematykę ze świata Front-Endu. Nauczyłem się tutaj podstaw web developmentu (StackTiaComponent,CSS, JavaScript), ale także wgłębiłem się w tajniki TypeScript oraz ReactJS. Te umiejętności pozwoliły mi na dostanie pierwszej propozycji pracy i możliwość dalszego rozwoju w tej dziedzinie.",
                     "link": "https://easy-code.io/blog/article/5Jn92JIZDad91IxGqs3m6c",
                     "link_label": "Więcej o Easy Code"
                 },
                 "coders_camp": {
                     "header": "Coders Camp",
-                    "text": "Do kursu Coders Camp przystąpiłem w jego szóstej edycji, która była jego pierwszą edycją ogólnopolską prowadzoną w sposób zdalny. Tematyka kursu obejmowała przypomnienie podstaw (HTML, CSS), którego znajomość była sprawdzana podczas testów rekrutacyjnych. W dalszej części kursu sprawdzana była wiedza teoretyczna i praktyczna z tematów: JavaScript, TypeScript, React JS oraz Node JS.",
+                    "text": "Do kursu Coders Camp przystąpiłem w jego szóstej edycji, która była jego pierwszą edycją ogólnopolską prowadzoną w sposób zdalny. Tematyka kursu obejmowała przypomnienie podstaw (StackTiaComponent, CSS), którego znajomość była sprawdzana podczas testów rekrutacyjnych. W dalszej części kursu sprawdzana była wiedza teoretyczna i praktyczna z tematów: JavaScript, TypeScript, React JS oraz Node JS.",
                     "link": "https://coderscamp.edu.pl/",
                     "link_label": "Więcej o Coders Camp"
                 }
@@ -762,11 +825,11 @@
                 "link": "/services/web-development",
                 "inner": {
                     "header1": "SPA / Apliakcje i sklepy internetowe",
-                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o bibliotekę ReactJS, HTML5,CSS3, ES6/TypeScript.",
+                    "text1": "Tworzenie całej warstwy klienta aplikacji internetowej lub wybranych komponentów w oparciu o bibliotekę ReactJS, StackTiaComponent5,CSS3, ES6/TypeScript.",
                     "header2": "Dostosowanie do różnych przeglądarek i urządzeń",
                     "text2": "Dostosowanie strony internetowej do wybranych przeglądarek i urządzeń mobilnych z uwzględnieniem różnych rozdzielczości (tzw. Responsive Web Design).",
-                    "header3": "Kodowanie PSD do HTML/CSS/JS",
-                    "text3": "Pocięcie i zakodowanie do HTML5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
+                    "header3": "Kodowanie PSD do StackTiaComponent/CSS/JS",
+                    "text3": "Pocięcie i zakodowanie do StackTiaComponent5, CSS3 i JavaScript dostarczonego projektu graficznego strony internetowej, apliakcji web i innych.",
                     "header4": "Czysty kod",
                     "text4": "Czytelność kodu nadal traktowana jest jako coś mało istotnego, jednak nieczytelny kod znacznie wydłua czas potrzebny do napisania czegokolwiek i może prowadzić do nieprzewidywanych błędów w aplikacjach.",
                     "header5": "Administracja stron internetowych",

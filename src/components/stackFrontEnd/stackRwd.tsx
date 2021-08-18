@@ -2,6 +2,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
 import CustomImage from '../customImage'
+import CustomLink from '../customLink'
 import RwdPhoto from '../../assets/stack/details/rwd.webp'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,6 +33,7 @@ export const StackRwdComponent = (props) => {
           <p id="transition-modal-description">{language.pages.stack.rwd.intro}</p>
           <CustomImage src={RwdPhoto} alt='Rwd' title='Responsive Web Design' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.rwd.text}</p>
+          <CustomLink href={language.pages.stack.rwd.source} target="_blank">{language.pages.stack.rwd.source} </CustomLink>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.rwd.close} />
     </div>

@@ -2,6 +2,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
 import CustomImage from '../customImage';
+import CustomLink from '../customLink'
 import ShopifyIntroPhoto from '../../assets/stack/details/shopify.webp';
 import ShopifyPhoto from '../../assets/stack/details/shopify2.webp';
 
@@ -34,6 +35,7 @@ export const StackShopifyComponent = (props) => {
           <p id="transition-modal-description">{language.pages.stack.shopify.intro}</p>
           <CustomImage src={ShopifyPhoto} alt='Shopify theme layout' title='Shopify theme layout' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.shopify.text}</p>
+          <CustomLink href={language.pages.stack.shopify.source} target="_blank">{language.pages.stack.shopify.source} </CustomLink>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.shopify.close} />
     </div>

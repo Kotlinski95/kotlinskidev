@@ -284,7 +284,7 @@ function App() {
               </>
             )
               : (
-                <LoadingScreen />
+                <Loader />
               )
 
           }

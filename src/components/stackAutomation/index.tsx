@@ -10,16 +10,24 @@ import Safety from '../../assets/stack/safety.png'
 import Microcontroller from '../../assets/stack/microcontroller.webp'
 import { nanoid } from 'nanoid'
 
+import { StackTiaComponent } from './stackTia'
+import { StackEmbeddedComponent } from './stackEmbedded'
+import { StackHmiComponent } from './stackHmi'
+import { StackMicrocontrollersComponent } from './stackMicrocontrollers'
+import { StackMotionComponent } from './stackMotion'
+import { StackPlcComponent } from './stackPlc'
+import { StackSafetyComponent } from './stackSafety'
+import { StackScadaComponent } from './stackScada'
 
 const skills = [
-  { name: "TIA Portal", icon: Tia, color: "" },
-  { name: "PLC Siemens", icon: Plc, color: "" },
-  { name: "HMI", icon: Hmi, color: "" },
-  { name: "Embedded systems", icon: Embedded, color: "" },
-  { name: "Motion control", icon: Motors, color: "" },
-  { name: "Scada", icon: Scada, color: "" },
-  { name: "Safety systems", icon: Safety, color: "" },
-  { name: "Microcontrollers", icon: Microcontroller, color: "" },
+  { name: "TIA Portal", icon: Tia, color: "" , component: StackTiaComponent},
+  { name: "PLC Siemens", icon: Plc, color: "" , component: StackPlcComponent},
+  { name: "HMI", icon: Hmi, color: "" , component: StackHmiComponent},
+  { name: "Embedded systems", icon: Embedded, color: "" , component: StackEmbeddedComponent},
+  { name: "Motion control", icon: Motors, color: "" , component: StackMotionComponent},
+  { name: "Scada", icon: Scada, color: "" , component: StackScadaComponent},
+  { name: "Safety systems", icon: Safety, color: "" , component: StackSafetyComponent},
+  { name: "Microcontrollers", icon: Microcontroller, color: "" , component: StackMicrocontrollersComponent},
 ];
 
 const StackAutomation = () => {
@@ -28,7 +36,7 @@ const StackAutomation = () => {
       <h2 className="stack-hello">{language.pages.stack.automation_header}</h2>
       <div className="stack-wrapper">
         {skills.map((link) => (
-          <StackTile key={nanoid(10)} logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
+          <StackTile component={link.component} key={nanoid(10)} logo={link.icon} width="150px" height="150px" title={link.name} imgTitle={link.name} color={link.color} />
         ))}
       </div>
     </div>

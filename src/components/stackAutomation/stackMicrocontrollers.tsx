@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
 import CustomImage from '../customImage'
 import CustomLink from '../customLink'
-import JsPhoto from '../../assets/stack/details/js_image.webp'
+import MicrocontrollerPhoto from '../../assets/stack/details/microcontroller.webp'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -22,20 +22,20 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export const StackJsComponent = (props) => {
+export const StackMicrocontrollersComponent = (props) => {
   const classes = useStyles();
   return (
     <div className="transition-popup__wrapper" style={{outline: 0}}>
     <div className={classes.paper}>
         <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
-        <h2 id="transition-modal-title">{language.pages.stack.js.title}</h2>
+        <h2 id="transition-modal-title">{language.pages.stack.microcontroller.title}</h2>
         <div className="transition-popup__content">
-          <p id="transition-modal-description">{language.pages.stack.js.intro}</p>
-          <CustomImage src={JsPhoto} alt='JavaScript' title='JavaScript' width='90%' height='auto' modal='true'/>
-          <p id="transition-modal-description">{language.pages.stack.js.text}</p>
-          <CustomLink href={language.pages.stack.js.source} target="_blank">{language.pages.stack.js.source} </CustomLink>
+          <p id="transition-modal-description">{language.pages.stack.microcontroller.intro}</p>
+          <CustomImage src={MicrocontrollerPhoto} alt='microcontroller' title='microcontroller' width='90%' height='auto' modal='true'/>
+          <p id="transition-modal-description">{language.pages.stack.microcontroller.text}</p>
+          <CustomLink href={language.pages.stack.microcontroller.source} target="_blank">{language.pages.stack.microcontroller.source} </CustomLink>
         </div>
-        <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.js.close} />
+        <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.microcontroller.close} />
     </div>
     </div>
   )

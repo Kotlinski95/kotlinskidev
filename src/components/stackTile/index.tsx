@@ -8,6 +8,7 @@ const StackTile = (props) => {
     const [openTile, setOpen] = useState(false);
 
     const handleOpen = () => {
+        console.log("OPEN!");
         setOpen(true);
     };
     const handleClose = () => {
@@ -34,8 +35,8 @@ const StackTile = (props) => {
                                         opacity: inView ? '1' : '0',
                                     }}>{props.svg}
                                 </svg> :
+                                <div onClick={handleOpen}>
                                 <CustomImage
-                                    onClick={handleOpen}
                                     src={props.logo}
                                     height={props.height}
                                     width={props.width}
@@ -48,6 +49,7 @@ const StackTile = (props) => {
                                         opacity: inView ? '1' : '0',
                                     }}>
                                 </CustomImage>
+                                </div>
                         }
                         <p
                             className="stack-tile-title"

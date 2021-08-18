@@ -23,6 +23,12 @@
     max-height: 50vh;
     margin-bottom: 10px;
     padding-right: 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    a{
+        word-wrap: break-word;
+    }
     @media (max-width: 650px){
         max-height: 80vh;
     }

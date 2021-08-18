@@ -473,6 +473,62 @@
                 "intro": "TypeScript is a free and open source programming language created and developed by Microsoft since 2012. It is a development of JavaScript that adds optional static typing and a few extra things. TypeScript compiles to JavaScript and can be used both on the server side (node.js) and in the browser.",
                 "text": "From my perspective, TypeScript is an indispensable successor to classic JavaScript, although it is compilable itself as a last resort, it allows you to write much safer and more efficient code than in the case of regular Js. From the moment I felt comfortable using JavaScript, I now try to use TypeScript at every opportunity. You may notice that this page was written almost entirely using TypeScipt :)",
                 "source": "https://typeofweb.com/typescript-czesc-1/"
+            },
+            "tia": {
+                "title": "TIA Portal",
+                "close": "close",
+                "intro": "The TIA Portal design platform allows the integration of modern industrial automation components, which facilitates the implementation of the concept of industry 4.0 in factories and production plants.",
+                "text": "As an industrial automation specialist in automotive plants, I was involved in programming Siemens industrial controllers. The TIA portal is the runtime environment for these drivers. I took part in several projects dealing with PLC programming, HMI visualization, SCADA systems and Motion Control in TIA V15 and V16.",
+                "source": "https://new.siemens.com/pl/pl/produkty/automatyka/tia-portal.StackTiaComponent"
+            },
+            "plc": {
+                "title": "Programmable Logic Controller (PLC)",
+                "close": "close",
+                "intro": "Programmable logic controllers (PLCs) are small industrial computers with modular components designed to automate custom control processes. PLCs are often used in factories and industrial plants to control motors, pumps, lighting, fans, circuit breakers and other machinery.",
+                "text": "As an industrial automation specialist in automotive plants, I was involved in the programming of industrial controllers of several different companies, such as Siemens, B&R, and Mitsubishi. The controller plays the role of a control system in such a system and is responsible for the sequence of work of the entire automated industrial line, often reaching even several hundred meters.",
+                "source": "https://polskiprzemysl.com.pl/utrzymanie-ruchu/co-to-jest-sterownik-plc/"
+            },
+            "hmi": {
+                "title": "Human-Machine Interface (HMI)",
+                "close": "close",
+                "intro": "An HMI is an industrial interface between a machine or process and the operator who operates it. Thanks to HMI, the person responsible for the implementation of production tasks can influence and control the process.",
+                "text": "As an industrial automation specialist, I also dealt with the creation of visualizations for operator panels. My task was to create an interface that would allow the operator to control the machine or production line. I created visualization in both the Tia Portal and Automation Studio environments.",
+                "source": "https://www.astor.com.pl/poradnikautomatyka/wszystko-o-hmi-co-automatyk-powinien-wiedziec/"
+            },
+            "embedded": {
+                "title": "Embedded systems",
+                "close": "close",
+                "intro": "An embedded system is a computer system consisting of appropriately selected hardware and software components, often designed for a specific software application. It is responsible for the performance of its functions and affects the way of communication with the user.",
+                "text": "Already during the technical school, I became interested in widely understood electronics and DIY. As a hobby, I sometimes program mictrocontrollers and small control systems for my own use based on Raspberry PI or Arduino.",
+                "source": "https://automatykab2b.pl/temat-miesiaca/39446-systemy-wbudowane"
+            },
+            "motion": {
+                "title": "Motion systems",
+                "close": "close",
+                "intro": "Drive technology refers to a discipline that generally relates to technical systems for generating motion through the transmission of force. Although the propulsion technology is based on the word 'propulsion', this term is not related to the transmission system known, for example, from cars. Rather, it is about driving and controlling the moving parts of machines and the set of parts that ensure this movement.",
+                "text": "As an industrial automation specialist in the automotive industry, I was involved in the creation of control systems consisting in some production lines of several dozen drives, these were mainly SEW servo drives programmed with the use of MotionStudio.",
+                "source": "https://www.igus.pl/info/drive-technology-drylin-drive-systems"
+            },
+            "scada": {
+                "title": "Supervisory Control And Data Acquisition",
+                "close": "close",
+                "intro": "SCADA stands for Supervisory Control And Data Acquisition, which we can literally translate as supervision and data acquisition. In fact, SCADA is an IT system supervising the course of the technological process, it is superior to the hardware layer (controllers, I / O modules) and performs the following tasks: Real-time data exchange with a PLC or I / O module, real-time information processing , displaying information on the screen in a human-readable form, maintaining a database in real time with technological information, alarm management and alarm signaling, preparation and generation of reports on the progress of the technological process and archiving of technological information.",
+                "text": "As an industrial automation specialist in the automotive industry, I was involved in the creation of scada systems visualization based on the WinCC program, such a system provided full visualization of the line operation, information about alarms and line downtimes, and line efficiency over time.",
+                "source": "https://iautomatyka.pl/co-to-jest-scada-i-co-daje-wizualizacja-procesow-przemyslowych/"
+            },
+            "safety": {
+                "title": "Safety systems",
+                "close": "close",
+                "intro": "Safety systems are a combination of reliable sensors and a flexible safety controller. They are particularly suitable for applications with high demands on human protection. These systems can be easily integrated into existing installations, and thanks to the included documentation and sample programs - they can be quickly put into operation.",
+                "text": "One of the key factors when working on a production line is employee safety. The task of industrial automation is not only to ensure the writing of a fully functioning program, but also the operation of safety sensors and safe control of actuators to ensure complete safety of people working on the line.",
+                "source": "https://www.sick.com/pl/pl/systemy-bezpieczenstwa-i-rozwiazania-w-zakresie-bezpieczenstwa/systemy-bezpieczenstwa/c/g449152"
+            },
+            "microcontroller": {
+                "title": "Microcontrollers",
+                "close": "close",
+                "intro": "The microcontroller is one of the most important devices in robotics. This tiny single-chip microcomputer, also known as an integrated microprocessor system, includes components such as RAM, CPU and various I / O circuits, as well as written ROM or Flash memory. The device is used directly to control electronic devices, which is of course of great importance in robotics.",
+                "text": "In my spare time I like to deal with programming microcontrollers for my own purposes (e.g. a self-propelled mobile robot), mainly based on systems such as Raspberry Pi and Arduino.",
+                "source": "https://botland.com.pl/blog/mikrokontroler-jak-to-dziala/"
             }
         },
         "projects":{

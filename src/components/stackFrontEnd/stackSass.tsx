@@ -2,6 +2,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Button from '../button';
 import CustomImage from '../customImage'
+import CustomLink from '../customLink'
 import SassPhoto from '../../assets/stack/details/sass_image.webp'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -31,6 +32,7 @@ export const StackSassComponent = (props) => {
           <p id="transition-modal-description">{language.pages.stack.sass.intro}</p>
           <CustomImage src={SassPhoto} alt='Sass' title='Sass' width='90%' height='auto' modal='true'/>
           <p id="transition-modal-description">{language.pages.stack.sass.text}</p>
+          <CustomLink href={language.pages.stack.sass.source} target="_blank">{language.pages.stack.sass.source} </CustomLink>
         </div>
         <Button onClick={props.handleClose} link={props.link} text={language.pages.stack.sass.close} />
     </div>
