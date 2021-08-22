@@ -190,6 +190,20 @@
     }
 }
 
+.contact-hello {
+    font-size: 102px;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 60px;
+    }
+    margin: 15px auto;
+    font-family: 'Times New Roman', serif;
+  }
+  .contact-hello::after {
+    content: '.';
+    color: rgb(30, 229, 255);
+  }
+
 @keyframes btnAnimation {
     0% {
         opacity: 0.45;

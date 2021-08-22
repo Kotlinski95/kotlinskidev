@@ -13,6 +13,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { TextRevealVertical } from '../../contentReveal'
 import { nanoid } from 'nanoid'
+import ScrollMagic from 'scrollmagic'
 
 const CategoriesComponent = () => {
     function getWindowDimensions() {
@@ -106,11 +107,23 @@ const CategoriesComponent = () => {
         slidesToScroll: 1,
         cssEase: "linear"
     }
+    useEffect(() => {
+        const controller = new ScrollMagic.Controller();
+
+        // create a scene
+        new ScrollMagic.Scene({
+          triggerElement: '.categories-hello',
+          reverse: false,
+          triggerHook: 0.9
+        })
+          .setClassToggle('.categories-hello', 'fade-in') // pins the element for the the scene's duration
+        .addTo(controller); // assign the scene to the controller
+      }, [])
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', position: 'relative' }}>
                 <div className="categories-wrapper">
-                    <TextRevealVertical><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
+                    <TextRevealVertical><h2 className="categories-hello">{language.pages.home.categories.header}</h2></TextRevealVertical>
                     <Slider {...settings}>
                         {items.map((item, i) => (
                             <CategoryCollection key={nanoid(10)} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
