@@ -7,6 +7,7 @@ import {
 import { StyledNavLink } from '../../../styled-components/Links';
 import logo from '../../../assets/icons/myprofile.svg';
 import CustomImage from '../../customImage'
+import { nanoid } from 'nanoid'
 
 function ServicesNavigation(props) {
 
@@ -28,7 +29,7 @@ function ServicesNavigation(props) {
                     </div>
                     </li>
                     {links.map((link, index) => (
-                        <MainNavigationItem key={index}>
+                        <MainNavigationItem key={nanoid(10)}>
                             <StyledNavLink className="styled-nav cursor_hover" to={link.path} exact activeClassName="current" main="true" clicked={click ? "hack" : undefined}>
                             <span className="styled-nav--text">{link.name}</span>
                             </StyledNavLink>

@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { TextRevealVertical } from '../../contentReveal'
+import { nanoid } from 'nanoid'
 
 const CategoriesComponent = () => {
     function getWindowDimensions() {
@@ -112,7 +113,7 @@ const CategoriesComponent = () => {
                     <TextRevealVertical><h2>{language.pages.home.categories.header}</h2></TextRevealVertical>
                     <Slider {...settings}>
                         {items.map((item, i) => (
-                            <CategoryCollection key={i} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
+                            <CategoryCollection key={nanoid(10)} url={item.url} title={item.title} logo={item.logo} width={item.width} height={item.height}>
                             </CategoryCollection>
                         ))}
                     </Slider>

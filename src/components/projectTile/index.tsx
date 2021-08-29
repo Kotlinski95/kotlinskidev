@@ -8,9 +8,9 @@ import {
 
 const ProjectTile = (props) => {
     return(
-        <div className="project-tile-wrapper" style={{width: `${props.width}`, height: `${props.height}`, overflow: 'hidden'}}>
+        <div className="project-tile-wrapper" style={{width: `${props.width}`, height: `${props.height}`}}>
             <RevealImage>
-                <Link className="project-tile-link" to={props.url}></Link>
+                <Link className="project-tile-link" to={props.url} title={`Link to project: ${props.title}`} aria-label={`Link to project: ${props.title}`} referrer-policy = 'no-referrer' rel='preload'></Link>
                 <Image className="cursor_hover" src={props.logo} alt="Logo" />
                 <p className="project-tile-title">{props.title}</p>
                 <AnimatedArrow text={language.pages.home.about.seemore} justify="center" textSize="28px" top="0px" bottom="auto" link={props.url} />

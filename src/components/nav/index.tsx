@@ -93,7 +93,7 @@ const Nav = () => {
                 {language.header.about}
               </span>
             </Button></li>
-            <li><Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='noopener'><span className="line-item list-item cursor_hover">{language.header.projects}</span></Link></li>
+            <li><Link to="/projects" title="Link to projects page" aria-label="Link to projects page" referrer-policy = 'no-referrer' rel='preload'><span className="line-item list-item cursor_hover">{language.header.projects}</span></Link></li>
             <li><Button className="cursor_hover" role="button" aria-label="simple-menu" aria-haspopup="true" onClick={handleClickStack}>
               <span className="line-item list-item">
                 {language.header.stack}
@@ -102,7 +102,7 @@ const Nav = () => {
           </ul>
         </div>
         <div className="nav-center line-item cursor_hover">
-          <Link to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='noopener'>
+          <Link to="/" title="Link to homepage" aria-label="Link to homepage" referrer-policy = 'no-referrer' rel='preload'>
               <CustomImage src={logo} alt="Logo" width='50' height='50' loading='lazy' className="nav-logo" title='Link to homepage' role='link'></CustomImage>
           </Link>
         </div>

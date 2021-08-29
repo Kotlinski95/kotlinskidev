@@ -2,13 +2,15 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {counterReducer} from '../reducers/state'
 import {menuReducer} from '../reducers/menu'
-import {notificationReducer} from '../reducers/notification'
+import { notificationReducer } from '../reducers/notification'
+import {animationReducer} from '../reducers/animation'
 
 export const store = configureStore({
     reducer: {
         pageState: counterReducer,
         menuState: menuReducer,
-        notificationState: notificationReducer
+        notificationState: notificationReducer,
+        animationState: animationReducer,
     },
   })
   // Infer the `RootState` and `AppDispatch` types from the store itself

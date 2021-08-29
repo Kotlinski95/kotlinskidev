@@ -5,6 +5,7 @@ import {useState} from 'react';
 import TransitionModal from '../../components/transitionModal';
 import { handleTrackingEvent } from '../../analytics';
 import CustomImage from '../customImage'
+import { nanoid } from 'nanoid'
 
 const ServiceSlide = (props) => {
   const [open, setOpen] = useState(false);
@@ -25,8 +26,8 @@ const ServiceSlide = (props) => {
                 <div className="service-slide-content">
                     <h2>{props.header}</h2>
                     <p>{props.text}</p>
-                    <Button onClick={handleOpen} link={props.link} text={props.buttonText} />
-                    <TransitionModal open={open} handleClose={handleClose} title={props.popup.title} text={props.popup.text} buttonText={props.popup.buttonText}/>
+                    <Button key={nanoid()} onClick={handleOpen} link={props.link} text={props.buttonText} />
+                    <TransitionModal open={open} handleClose={handleClose} handleClosePopup={handleClose} title={props.popup.title} text={props.popup.text} buttonText={props.popup.buttonText}/>
                 </div>
             </div>
           </Slide>

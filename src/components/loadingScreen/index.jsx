@@ -1,5 +1,6 @@
 import './index.scss'
 import styled, { css, keyframes } from 'styled-components';
+import { nanoid } from 'nanoid'
 
 const wave = keyframes`
   50%,
@@ -84,7 +85,7 @@ const LoadingScreen = () => {
         <LoadingScreenStyled className={`loading-screen-styled`}>
             <AnimatedDotsContainer>
                 {dots.map((dot, index) => (
-                    <AnimatedDot key={index} color={dot.color} delay={dot.delay}>
+                    <AnimatedDot key={nanoid(10)} color={dot.color} delay={dot.delay}>
                     </AnimatedDot>
                 ))}
             </AnimatedDotsContainer>

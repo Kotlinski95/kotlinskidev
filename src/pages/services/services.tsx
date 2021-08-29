@@ -6,9 +6,9 @@ import Footer from '../../components/footer'
 import PageTransitioning from '../../components/pageTransitioning/index'
 import ServiceCarousel from '../../components/serviceCarousel'
 
-import programming_mobile from '../../assets/landing_page/programming_mobile.jpg'
-import rwd_mobile from '../../assets/landing_page/rwd_mobile.jpg'
-import administration_mobile from '../../assets/landing_page/administration_mobile.jpg'
+import programming_mobile from '../../assets/landing_page/programming_mobile.webp'
+import rwd_mobile from '../../assets/landing_page/rwd_mobile.webp'
+import administration_mobile from '../../assets/landing_page/administration_mobile.webp'
 
 const ServicesPage = (props) => {
   const dispatch = useDispatch();

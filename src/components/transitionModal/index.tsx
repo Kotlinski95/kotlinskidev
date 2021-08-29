@@ -47,7 +47,7 @@ const TransitionModal = (props) => {
                 }}
             >
                 <Fade in={props.open}>
-                    <div className="transition-popup__wrapper">
+                    <div className="transition-popup__wrapper" style={{outline: 0}}>
                     <div className={classes.paper}>
                         <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
                         <h2 id="transition-modal-title">{props.title}</h2>

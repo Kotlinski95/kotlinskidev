@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from '../customLink'
 import './index.scss'
 
@@ -28,13 +27,33 @@ const CustomImage: any = (props: propsType) => {
         height = '0px',
         style,
         href,
-        rel='noopener',
-        target='_blank',
+        rel = 'preload',
+        target = '_blank',
         role,
     } = props;
 
-    const ImageElement = () => {
-        return (
+    return (
+        href ?
+            <Link
+                href={href}
+                rel={rel}
+                target={target}
+                title={title}
+            >
+                <img
+                    className={className}
+                    style={style}
+                    alt={alt}
+                    loading={loading}
+                    title={title}
+                    src={src}
+                    width={width}
+                    height={height}
+                    role={role}
+                >
+                </img>
+            </Link>
+            :
             <img
                 className={className}
                 style={style}
@@ -47,20 +66,6 @@ const CustomImage: any = (props: propsType) => {
                 role={role}
             >
             </img>
-        )
-    };
-
-    return (
-        href ?
-            <Link
-            href={href}
-            rel={rel}
-            target={target}
-            title={title}
-            >
-                <ImageElement />
-            </Link>
-            : <ImageElement />
     )
 }
 

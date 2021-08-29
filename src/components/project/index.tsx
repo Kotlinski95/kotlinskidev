@@ -2,6 +2,7 @@ import './index.scss'
 import { useLocation } from "react-router";
 import { handleTrackingEvent } from '../../analytics';
 import LazyLoad from 'react-lazyload';
+import { nanoid } from 'nanoid'
 
 import {
     SectionContainer,
@@ -82,10 +83,8 @@ const Project: any = () => {
                 </ProjectsInfoContainer>
                 <ProjectImageContainer>
                     <ImageWrapper projectmain>
-                        <RevealImage data-scroll>
-                        <LazyLoad height='100%' once>
+                        <RevealImage>
                             <Image src={mobileThumb} srcSet={`${mobileThumb} 300w, ${desktopThumb} 768w`} alt={alt} />
-                        </LazyLoad>
                         </RevealImage>
                     </ImageWrapper>
                     <ProjectsInfoContainer projectIcons>
@@ -104,7 +103,7 @@ const Project: any = () => {
                 <ProjectList>
                     {stack.map((stack, index) => {
                         return (
-                            <ProjectItem project="true" key={index}>
+                            <ProjectItem project="true" key={nanoid(10)}>
                                 {stack}
                             </ProjectItem>
                         )
@@ -112,8 +111,8 @@ const Project: any = () => {
                 </ProjectList>
                 {text.map((text, index) => {
                     return (
-                        <TextRevealHorizontal key={index}>
-                            <Paragraph project="true" key={index}>
+                        <TextRevealHorizontal key={nanoid(10)}>
+                            <Paragraph project="true" key={nanoid(10)}>
                                 {text}
                             </Paragraph>
                         </TextRevealHorizontal>

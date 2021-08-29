@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-import {Theme} from '../settings';
+import { Theme } from '../settings';
+import right from '../assets/icons/right.svg'
 
 let {
     colors: {
@@ -268,17 +269,13 @@ export const FooterLink = styled.a<FooterLinkProps>`
         css`
             &::after {
             display: inline-block;
-            width: 15px;
-            content: url('data:image/svg+xml;charset=UTF-8, <svg viewBox="0 0 387 391" fill="none" xmlns="https://www.w3.org/2000/svg">
-            <path d="M0 195.5H385.5M385.5 195.5L191 1M385.5 195.5L191 390" stroke="white" stroke-width= "20"/>
-            </svg>');
-            margin-left: 6px;
-            transform: rotate(-45deg);
-
-            @media ${breakpoints.xs} {
-                margin-left: 9px;
-                width: clamp(15px, 2vw, 30px);
-            }   
+            content: '';
+            margin-left: 9px;
+            transform: rotate(90deg);
+            width: 0;
+	        height: 0;
+	        border-top: 21px solid #fff;
+	        border-right: 21px solid transparent;
         }
     `} 
 `

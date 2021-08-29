@@ -17,6 +17,7 @@ import { ReactComponent as ContactIcon } from '../../assets/icons/contact.svg';
 import { ReactComponent as AboutPlcIcon } from '../../assets/icons/about_plc.svg';
 import { ReactComponent as AboutFrontIcon } from '../../assets/icons/about_front.svg';
 import { ReactComponent as AboutEducationIcon } from '../../assets/icons/about_education.svg';
+import { ReactComponent as CursorIcon } from '../../assets/icons/about_education.svg';
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../reducers/state';
 import { useCookies } from 'react-cookie';
@@ -28,17 +29,40 @@ import { setMenu } from '../../reducers/menu'
 import { CvPdf } from '../../docs';
 import { handleTrackingEvent } from '../../analytics';
 import CustomLink from '../customLink'
+import Switch from '@material-ui/core/Switch';
+import { setCursor } from '../../reducers/animation';
 
 function DropdownMulti(props) {
   const language = props.language;
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [cookies, setCookie] = useCookies(['language']);
-  const iconArrow = document.querySelectorAll('.dropdown-menu .navItem-icon')[0];
+  const [cookiesCursor, setCookieCursor] = useCookies(['cursor']);
+  const [cursorAnimation, setCursorAnimation] = useState(false);
+
   if (!cookies.language) {
     setCookie('language', "Polski", { path: '/' });
   }
   dispatch(setLanguage(cookies.language));
+
+  useEffect(() => {
+    if (!cookiesCursor.cursor) {
+      setCookieCursor('cursor', 'false', { path: '/' });
+    }
+    else {
+      dispatch(setCursor(JSON.parse(cookiesCursor.cursor)));
+      setCursorAnimation(JSON.parse(cookiesCursor.cursor));
+    }
+    console.log("UseEffectOld: ", cookiesCursor.cursor);
+  },[cookiesCursor])
+
+  const handleCursorAnimation = (event) => {
+    console.log("handlecursorAnimationJSon: ", JSON.parse(cookiesCursor.cursor))
+    event.preventDefault();
+    setCookieCursor('cursor', !JSON.parse(cookiesCursor.cursor) , { path: '/' });
+    dispatch(setCursor(!JSON.parse(cookiesCursor.cursor)));
+    setCursorAnimation(!JSON.parse(cookiesCursor.cursor));
+  };
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
@@ -159,6 +183,18 @@ function DropdownMulti(props) {
       );
     }
 
+    function AnimationItem(props) {
+      return (
+        <span className="menu-item" onClick={(e) => {
+          handleCursorAnimation(e);
+        }}>
+          <span className="icon-button">{props.leftIcon}</span>
+          {props.children}
+          <span className="icon-right">{props.rightIcon}</span>
+        </span>
+      );
+    }
+
     return (
       <div className="dropdown cursor_hover" style={{ height: (menuHeight + 30) }} ref={dropdownRef}>
 
@@ -169,14 +205,14 @@ function DropdownMulti(props) {
           unmountOnExit
           onEnter={calcHeight}>
           <div className="menu">
-            <Link to="/myprofile/overview" title={`Link to myprofile overview`} aria-label={`Link to myprofile overview`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<ProfileIcon />}>{language.header.myprofile}</DropdownItem></Link>
+            <Link to="/myprofile/overview" title={`Link to myprofile overview`} aria-label={`Link to myprofile overview`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<ProfileIcon />}>{language.header.myprofile}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<AboutIcon />}
               rightIcon={<ChevronIcon />}
               goToMenu="about">
               {language.header.about}
             </DropdownItem>
-            <Link to="/projects" title={`Link to projects`} aria-label={`Link to projects`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<ProjectsIcon />}>{language.header.projects}</DropdownItem></Link>
+            <Link to="/projects" title={`Link to projects`} aria-label={`Link to projects`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<ProjectsIcon />}>{language.header.projects}</DropdownItem></Link>
             <DropdownItem
               leftIcon={<StackIcon />}
               rightIcon={<ChevronIcon />}
@@ -189,7 +225,7 @@ function DropdownMulti(props) {
               goToMenu="services">
               {language.footer.pages.services}
             </DropdownItem>
-            <Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<ContactIcon />}>{language.footer.pages.contact}</DropdownItem></Link>
+            <Link to="/contact" title={`Link to contact form`} aria-label={`Link to contact form`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<ContactIcon />}>{language.footer.pages.contact}</DropdownItem></Link>
             <CustomLink href={CvPdf} target='_blank' title={`Link to my CV`} onClick={() => {
               handleTrackingEvent("CV", "CV clicked", { page: `${window._store.getState().pageState.page}`, source: 'menu' });
             }}><DropdownItem leftIcon={<CvIcon />} >{language.header.cv}</DropdownItem></CustomLink>
@@ -219,6 +255,26 @@ function DropdownMulti(props) {
         </CSSTransition>
 
         <CSSTransition
+          in={activeMenu === 'animation'}
+          timeout={500}
+          classNames="menu-secondary"
+          unmountOnExit
+          onEnter={calcHeight}>
+          <div className="menu">
+            <DropdownItem goToMenu="settings" leftIcon={<ArrowIcon />}>
+              <h3>{language.header.animation}</h3>
+            </DropdownItem>
+            <AnimationItem leftIcon={ <CursorIcon />}>
+              <Switch
+              checked={cursorAnimation}
+              color="primary"
+              name="checkedB"
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            /> Cursor Effect</AnimationItem>
+          </div>
+        </CSSTransition>
+
+        <CSSTransition
           in={activeMenu === 'settings'}
           timeout={500}
           classNames="menu-secondary"
@@ -234,6 +290,11 @@ function DropdownMulti(props) {
               goToMenu="language">
               {language.header.language}
             </DropdownItem>
+            <DropdownItem
+              leftIcon={<CursorIcon />}
+              goToMenu="animation">
+              {language.header.animation}
+            </DropdownItem>
           </div>
         </CSSTransition>
 
@@ -247,10 +308,10 @@ function DropdownMulti(props) {
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.header.about}</h3>
             </DropdownItem>
-            <Link to="/aboutme/front-end-development" title={`Link to about me page - Front End Development`} aria-label={`Link to about me - front end development section`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<AboutFrontIcon />}>{language.header.pages.carrier_front}</DropdownItem></Link>
-            <Link to="/aboutme/plc-carrier" title={`Link to about me page - PLC Carrier`} aria-label={`Link to about me page - PLC Carrier`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<AboutPlcIcon />}>{language.header.pages.carrier_plc}</DropdownItem></Link>
-            <Link to="/aboutme/courses" title={`Link to my courses`} aria-label={`Link to my courses`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🦋">{language.header.pages.courses}</DropdownItem></Link>
-            <Link to="/aboutme/education" title={`Link to my education`} aria-label={`Link to my education`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon={<AboutEducationIcon />}>{language.header.pages.education}</DropdownItem></Link>
+            <Link to="/aboutme/front-end-development" title={`Link to about me page - Front End Development`} aria-label={`Link to about me - front end development section`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<AboutFrontIcon />}>{language.header.pages.carrier_front}</DropdownItem></Link>
+            <Link to="/aboutme/plc-carrier" title={`Link to about me page - PLC Carrier`} aria-label={`Link to about me page - PLC Carrier`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<AboutPlcIcon />}>{language.header.pages.carrier_plc}</DropdownItem></Link>
+            <Link to="/aboutme/courses" title={`Link to my courses`} aria-label={`Link to my courses`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🦋">{language.header.pages.courses}</DropdownItem></Link>
+            <Link to="/aboutme/education" title={`Link to my education`} aria-label={`Link to my education`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon={<AboutEducationIcon />}>{language.header.pages.education}</DropdownItem></Link>
           </div>
         </CSSTransition>
 
@@ -264,8 +325,8 @@ function DropdownMulti(props) {
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.header.stack}</h3>
             </DropdownItem>
-            <Link to="/stack/front-end-developer" title={`Link to my front end skills`} aria-label={`Link to my front end skills`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🦘">{language.header.pages.software_enginner}</DropdownItem></Link>
-            <Link to="/stack/automation-engineer" title={`Link to my automation engineering stack`} aria-label={`Link to my automation engineering stack`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🐸">{language.header.pages.automation_enginner}</DropdownItem></Link>
+            <Link to="/stack/front-end-developer" title={`Link to my front end skills`} aria-label={`Link to my front end skills`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🦘">{language.header.pages.software_enginner}</DropdownItem></Link>
+            <Link to="/stack/automation-engineer" title={`Link to my automation engineering stack`} aria-label={`Link to my automation engineering stack`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🐸">{language.header.pages.automation_enginner}</DropdownItem></Link>
           </div>
         </CSSTransition>
 
@@ -279,9 +340,9 @@ function DropdownMulti(props) {
             <DropdownItem  goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>{language.footer.pages.services}</h3>
             </DropdownItem>
-            <Link to="/services/web-development" title={`Link to web decelopment services`} aria-label={`Link to web decelopment services`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🦘">{language.footer.pages.web}</DropdownItem></Link>
-            <Link to="/services/shopify" title={`Link to shopify development services`} aria-label={`Link to shopify development services`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🦋">{language.footer.pages.shopify}</DropdownItem></Link>
-            <Link to="/services/PLC" title={`Link to PLC programming services`} aria-label={`Link to PLC programming services`} referrer-policy = 'no-referrer' rel='noopener'><DropdownItem leftIcon="🐸">{language.footer.pages.plc}</DropdownItem></Link>
+            <Link to="/services/web-development" title={`Link to web decelopment services`} aria-label={`Link to web decelopment services`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🦘">{language.footer.pages.web}</DropdownItem></Link>
+            <Link to="/services/shopify" title={`Link to shopify development services`} aria-label={`Link to shopify development services`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🦋">{language.footer.pages.shopify}</DropdownItem></Link>
+            <Link to="/services/PLC" title={`Link to PLC programming services`} aria-label={`Link to PLC programming services`} referrer-policy = 'no-referrer' rel='preload'><DropdownItem leftIcon="🐸">{language.footer.pages.plc}</DropdownItem></Link>
           </div>
         </CSSTransition>
       </div>
