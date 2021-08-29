@@ -2,6 +2,7 @@ import './index.scss'
 import React, { Suspense} from 'react'
 import WelcomeComponent from './welcome/index';
 import Loader from '../loader';
+import HorizontalSection from '../horizontalSection'
 const CategoriesComponent = React.lazy(() => import('./categories/index'));
 const AboutComponent = React.lazy(() => import('./about/index'));
 const ContactComponent = React.lazy(() => import('./contact/index'));
@@ -29,6 +30,7 @@ const Hero = (props) => {
           <Suspense fallback={<Loader/>}>
             <ContactComponent />
           </Suspense>
+          <HorizontalSection />
 
         </div>
       );
