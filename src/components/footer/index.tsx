@@ -3,13 +3,14 @@ import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
 import { IconContext } from "react-icons";
-import { handleTrackingEvent } from '../../analytics'
-import Loader from '../loader'
-import CustomLink from '../customLink'
+import { handleTrackingEvent } from '../../analytics';
+import Loader from '../loader';
+import CustomLink from '../customLink';
 const MessengerCustomerChat = React.lazy(() => import('react-messenger-customer-chat'));
 
 const Footer = () => {
     return (
+        <React.Fragment>
         <div className="footer-wrapper">
             <div className="footer-head">
                 <ul>
@@ -55,7 +56,7 @@ const Footer = () => {
 
             </div>
         </div>
-
+        </React.Fragment>
     );
 };
 export default Footer;
