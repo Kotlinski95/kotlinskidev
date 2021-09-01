@@ -23,6 +23,7 @@ import { useReactPWAInstall } from "react-pwa-install";
 import myLogo from "./assets/icons/logo192.png";
 import TransitionModal from './components/transitionModal';
 import Loader from './components/loader'
+import ScrollToTop from './components/scrollToTop';
 
 import MyProfilePage from './pages/myprofile/myprofile';
 import MyProfileContactPage from './pages/myprofile/profileContact';
@@ -187,6 +188,7 @@ function App() {
                 <Nav />
                 <Suspense fallback={<Loader />}>
                 <div className="main">
+                  <ScrollToTop />
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">
                       <HomePage {...routingProps} title={language.general.titles.home}/>
