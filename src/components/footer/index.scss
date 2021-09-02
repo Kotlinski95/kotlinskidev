@@ -105,4 +105,18 @@
     padding: 0;
     margin-bottom: 4px;
   }
+  .footer-rights{
+    display: flex;
+    justify-content: center;
+    span::before{
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-image: radial-gradient(ellipse at center,rgba(255,255,255,.1) 0,transparent 100%);
+      position: absolute;
+      display: block;
+      left: 0;
+      top: -7px;
+    }
+  }
 }

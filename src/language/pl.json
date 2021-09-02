@@ -720,5 +720,9 @@
                 }
             }
         }
+    },
+    "contact_popup": {
+        "title": "Cześć",
+        "text": "Zapraszam do kontaktu:"
     }
 }
