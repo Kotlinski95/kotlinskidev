@@ -723,5 +723,9 @@
                 }
             }
         }
+    },
+    "contact_popup": {
+        "title": "Hello",
+        "text": "Feel free to contact me:"
     }
 }

@@ -23,6 +23,6 @@
 $NavHeight: 60px;
 $FooterHeight: 114px;
 $BeadcrumbsHeight: 44px;
-$MainHeight: calc(100vh - 60px);
-$MainInnerHeight: calc(100vh - 60px - 114px);
-$MainServiceHeight: calc(100vh - 60px - 114px - 44px);
+$MainHeight: calc(100vh - 60px - 40px);
+$MainInnerHeight: calc(100vh - 60px - 40px - 135px);
+$MainServiceHeight: calc(100vh - 60px - 40px - 135px - 44px);

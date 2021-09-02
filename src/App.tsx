@@ -25,6 +25,7 @@ import TransitionModal from './components/transitionModal';
 import Loader from './components/loader';
 import ScrollToTop from './components/scrollToTop';
 import Banner from './components/banner';
+import ContactPopup from './components/contactPopup'
 
 import MyProfilePage from './pages/myprofile/myprofile';
 import MyProfileContactPage from './pages/myprofile/profileContact';
@@ -212,6 +213,7 @@ function App() {
                 <Banner />
                 <Suspense fallback={<Loader />}>
                 <div className="main">
+                  <ContactPopup />
                   <ScrollToTop />
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">

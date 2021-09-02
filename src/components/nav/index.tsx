@@ -83,10 +83,16 @@ const Nav = () => {
   }
 
   const NavigationView = inView => {
-    const scrollToTop = document.getElementsByClassName('scroll-to-top__wrapper')[0];
-    console.log("scrollToTop: ", scrollToTop, "in view: ", inView);
+    const scrollToTop = document.querySelector('.scroll-to-top__wrapper');
+    const contactPopup = document.querySelector('.contact-popup__wrapper');
+    const contactPopupContent = document.querySelector('.contact-popup__content');
+
     if (scrollToTop !== undefined) {
-      inView ? scrollToTop.classList.remove('outside-view') : scrollToTop.classList.add('outside-view');
+      inView ? scrollToTop?.classList.remove('outside-view') : scrollToTop?.classList.add('outside-view');
+    }
+    if (contactPopup !== undefined && contactPopupContent !== undefined) {
+      inView ? contactPopup?.classList.remove('outside-view') : contactPopup?.classList.add('outside-view');
+      inView && contactPopupContent?.classList.remove('active');
     }
 
   }

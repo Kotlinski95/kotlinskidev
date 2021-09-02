@@ -323,5 +323,8 @@ textarea::placeholder{
 .main-services{
   background: ${({ theme }) => theme.services.background};
 }
-
+// ================= Contact popup ===============
+.contact-popup__content{
+  background: ${({ theme }) => theme.body};
+}
 `;
