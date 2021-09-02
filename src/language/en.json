@@ -450,7 +450,7 @@
                 },
                 "links": {
                     "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/coders-chess",
-                    "live": "https://coders-chess.herokuapp.com/"
+                    "live": "http://coders-chess.herokuapp.com/"
                 },
                 "details": {
                    "intro": "Internet chess Coders-chess is another project made as part of the Coders-Camp course, this time as participants we had to create a browser game based on TypeScript.",
@@ -609,7 +609,7 @@
                     "header": "Easy Coder",
                     "text": "In December 2020, I started my first job as a junior Front-End Developer at Easy Coder Piotr Mirosz, it was the first opportunity to learn about working as a web developer. For the next 4 months I worked, among others, on e-commerce projects in Shopify, I also co-created web applications in React and Next JS.",
                     "text_ace": "Currently, the company is recognized under the name ACE Agency. In April 2021, I was transferred from the ACE Agency to Sobre Software House",
-                    "link": "https://www.aceagency.com/",
+                    "link": "https://ace-agency.co/",
                     "link_label": "More about ACE Agency"
                 }
             },
