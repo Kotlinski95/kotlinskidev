@@ -312,7 +312,7 @@ function App() {
               </>
             )
               : (
-                <LoadingScreen />
+                <Loader />
               )
 
           }

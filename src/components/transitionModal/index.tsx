@@ -4,8 +4,6 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import Button from '../button';
-import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -13,6 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            maxWidth: '100vw',
+            maxHeight: '100vh',
         },
         paper: {
             display: 'flex',
@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const TransitionModal = (props) => {
     const classes = useStyles();
-
     return (
         <div className='transition-modal'>
             <Modal
@@ -47,14 +46,7 @@ const TransitionModal = (props) => {
                 }}
             >
                 <Fade in={props.open}>
-                    <div className="transition-popup__wrapper" style={{outline: 0}}>
-                    <div className={classes.paper}>
-                        <CloseIcon className="modal-close" onClick={props.handleClosePopup}/>
-                        <h2 id="transition-modal-title">{props.title}</h2>
-                        <p id="transition-modal-description">{props.text}</p>
-                        <Button onClick={props.handleClose} link={props.link} text={props.buttonText} />
-                    </div>
-                    </div>
+                    {props.children}
                 </Fade>
             </Modal>
         </div>

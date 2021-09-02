@@ -391,7 +391,147 @@
             "web": "Web development",
             "stack": "See my technology stack",
             "automation_text": "I have always been fascinated by modern technology, artificial intelligence, electronics and programming. I try to combine my interests and develop in these technologies.",
-            "web_text": "I'm currently developing in the field of web technologies and I'm trying to improve my skills in this area by implementing my own projects"
+            "web_text": "I'm currently developing in the field of web technologies and I'm trying to improve my skills in this area by implementing my own projects",
+            "html": {
+                "title": "HTML",
+                "intro": "I'm constantly developing my skills in the field of HTML writing, currently I'm trying to delve into the secrets of SEO so that the website is positioned in the best search engines.",
+                "close": "close",
+                "text": "HTML is the code used to structure the page and its content. HTML isn't a programming language; is a markup language. HTML consists of a series of tags (tags) that are used to enclose and wrap different parts of your content so that they look and / or act a certain way. The page you are on would not be created without HTML. The main element of the page is the index.html file on which the entire page is based.",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/HTML_basics"
+            },
+            "css": {
+                "title": "Css",
+                "close": "close",
+                "text": "It's thanks to the use of CSS that the entire appearance of this website was created! At every step, I'm expanding my skills in using styles to create pages that with their appearance allow them to gain the attention of users and increase the site's rating.",
+                "intro": "Like HTML, CSS isn't a programming language. But it's also not a markup language - it's a style sheet language. This means that it allows you to selectively apply styles to elements in HTML documents. With the help of styles, we can give the website any look!",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/Getting_started_with_the_web/CSS_basics"
+            },
+            "js": {
+                "title": "JavaScript",
+                "intro": "JavaScript is a programming language that allows the implementation of complex elements on the website, thanks to which the website can't only display static information, but also handle changing the content according to the situation, display interactive maps and animations of 2D / 3D graphics, display video, etc.",
+                "close": "close",
+                "text": "The development in the area of ​​JavaScript is my main goal, the increasing proficiency in this language makes me able to write more and more advanced web applications. I use this language on a daily basis. He assesses his knowledge at a good level, sufficient to write web applications on his own.",
+                "source": "https://developer.mozilla.org/pl/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+            },
+            "sass": {
+                "title": "Sass",
+                "close": "close",
+                "intro": "SASS is a CSS preprocessor, it's an extension of the CSS writable capabilities. Sass preprocessor is a tool by which we write code similar to regular CSS, but with many improvements, and which is finally compiled to plain CSS; Sass allows you to write code in two syntaxes - SASS or SCSS.",
+                "text": "The current project uses mainly Sass, everything is compiled by React to the classic Css. I see many advantages of using the Sass preprocessor and I try to develop in this direction mainly in conjunction with the React library.",
+                "source": "https://grafmag.pl/artykuly/wstep-do-sass-prepreocesora-jezyka-css"
+            },
+            "bootstrap": {
+                "title": "Bootstrap",
+                "close": "close",
+                "intro": "Bootstrap is the most popular CSS framework created and developed by Twitter developers. It's mainly based on ready-made HTML and CSS solutions. Bootstrap contains a set of useful components to facilitate the work of a Front-End Developer and the creation of responsive websites and web applications. The main advantage of the Bootstrap implementation is the grid, which, depending on the screen size, adjusts the width of the elements and sets the order in which they appear in the column. Additionally, it includes a long list of predefined classes for styling the most necessary elements.",
+                "text": "In my projects, I try not to use this library, relying on my own styles. At work, however, I often use this library for various projects, so I know the basics of working with this library.",
+                "source": "https://psd2css.pl/baza-wiedzy/co-to-jest-bootstrap"
+            },
+            "rwd": {
+                "title": "Rwd",
+                "close": "close",
+                "intro": "RWD (responsive web design) is a way of designing universal websites that will properly adapt to the size of the browser window of all devices, taking into account e.g. tablets, smartphones, TVs and monitors with standard and high resolutions.",
+                "text": "The proper functioning of the web application, both in the form of a desktop and on mobile devices, is crucial, I always make sure that my applications work properly on every device and I attach great importance to it.",
+                "source": "https://www.artefakt.pl/blog/web-design/responsive-web-design-czym-jest-i-do-czego-sluzy"
+            },
+            "react": {
+                "title": "React",
+                "close": "close",
+                "intro": "React is a so-called JavaScript programming language library. It's used when creating user interfaces for various types of applications. It is available to a wide audience on an open source basis. Thanks to it, you can create a very complex interface, consisting of small, separated elements. ",
+                "text": "The React library is one of my favorites and it's in this direction that I want to develop, I try to use it regularly and expand my skills in this area. I believe that I have a lot of knowledge in this topic and I rate my knowledge of React as good. This page, which was entirely written based on this library, can prove it!",
+                "source": "https://global4net.com/ecommerce/czym-jest-react-i-jakie-ma-zalety/"
+            },
+            "styledComponents": {
+                "title": "Styled Components",
+                "close": "close",
+                "intro": "Styled components is a library that uses interpolated strings introduced in JavaScript ES6. It allows you to easily style React components by adding styles directly to the component.",
+                "text": "I'm not a fan of direct styling, but in the case of this library I see a lot of benefits from direct styling simple components, which greatly speed up the work, without the need to create a separate component. While expanding my knowledge in the field of React, I also decided to get acquainted with this library, which is why this page also has several components created using styled-components.",
+                "source": "https://www.margo-group.com/pl/aktualnosci/dlaczego-warto-zaczac-uzywac-styled-components-bezstresowe-stylowanie-z-nowoczesna-technologia/"
+            },
+            "shopify": {
+                "title": "Shopify",
+                "close": "close",
+                "intro": "Shopify is one of the most popular e-commerce platform on the market and is used in over 175 countries around the world. Founded in 2004, it helps merchants around the world host and build a website, upload products, collect payments and earn money online.",
+                "text": "I've contact with the shopify platform every day, currently I work as a junior Front-End developer dealing with the creation of online stores using this platform. In the company, as a shopify developer, I am responsible for creating stores, website optimization, implementing new functionalities at the customer's request and repairing current errors on websites.",
+                "source": "https://www.moj-startup.pl/shopify-opinie/#Co_to_jest_Shopify"
+            },
+            "git": {
+                "title": "Git",
+                "close": "close",
+                "intro": "Git is a version control system. Tracks subsequent code changes and saves individual versions. Thanks to this, almost nothing is lost. We can open up the history of how the code has changed. Git also tracks changes to image files. It's very popular with programmers and graphic designers. Even if you make a mistake or after some time it turns out that your changes are going in the wrong direction and you are not able to achieve your goal thanks to them, you can easily withdraw it.",
+                "text": "I'm a huge fan of git and I cannot imagine working without this tool. Code versioning is essential when working as a programmer. At work, I use tools such as bitbucket and github to control file versions on a daily basis, which I know at a good level and I use them freely.",
+                "source": "https://panizkomputerem.pl/czym-jest-git/"
+            },
+            "node": {
+                "title": "Node JS",
+                "close": "close",
+                "intro": "Node.js is the runtime for executing JavaScript code. Previously, developers only ran their JavaScript code with browsers. Today Node.js works independently of the browser and allows you to run JavaScript code outside the browser as well. Node.js as a runtime environment allows not only to create web applications in an easier way. It's also a tool for creating server side applications, all kinds of scripts and libraries.",
+                "text": "I use Node Js for my own applications, I do not work professionally with this framework, but I think that even a Front-End developer should have basic knowledge in this field. From my perspective, it is a great tool that uses the JavaScript language I know, so I chose it to create the backend of this website.",
+                "source": "https://zacznijprogramowac.net/slowniczek-javascript/co-to-jest-node-js/"
+            },
+            "typeScript": {
+                "title": "TypeScript",
+                "close": "close",
+                "intro": "TypeScript is a free and open source programming language created and developed by Microsoft since 2012. It is a development of JavaScript that adds optional static typing and a few extra things. TypeScript compiles to JavaScript and can be used both on the server side (node.js) and in the browser.",
+                "text": "From my perspective, TypeScript is an indispensable successor to classic JavaScript, although it is compilable itself as a last resort, it allows you to write much safer and more efficient code than in the case of regular Js. From the moment I felt comfortable using JavaScript, I now try to use TypeScript at every opportunity. You may notice that this page was written almost entirely using TypeScipt :)",
+                "source": "https://typeofweb.com/typescript-czesc-1/"
+            },
+            "tia": {
+                "title": "TIA Portal",
+                "close": "close",
+                "intro": "The TIA Portal design platform allows the integration of modern industrial automation components, which facilitates the implementation of the concept of industry 4.0 in factories and production plants.",
+                "text": "As an industrial automation specialist in automotive plants, I was involved in programming Siemens industrial controllers. The TIA portal is the runtime environment for these drivers. I took part in several projects dealing with PLC programming, HMI visualization, SCADA systems and Motion Control in TIA V15 and V16.",
+                "source": "https://new.siemens.com/pl/pl/produkty/automatyka/tia-portal.StackTiaComponent"
+            },
+            "plc": {
+                "title": "Programmable Logic Controller (PLC)",
+                "close": "close",
+                "intro": "Programmable logic controllers (PLCs) are small industrial computers with modular components designed to automate custom control processes. PLCs are often used in factories and industrial plants to control motors, pumps, lighting, fans, circuit breakers and other machinery.",
+                "text": "As an industrial automation specialist in automotive plants, I was involved in the programming of industrial controllers of several different companies, such as Siemens, B&R, and Mitsubishi. The controller plays the role of a control system in such a system and is responsible for the sequence of work of the entire automated industrial line, often reaching even several hundred meters.",
+                "source": "https://polskiprzemysl.com.pl/utrzymanie-ruchu/co-to-jest-sterownik-plc/"
+            },
+            "hmi": {
+                "title": "Human-Machine Interface (HMI)",
+                "close": "close",
+                "intro": "An HMI is an industrial interface between a machine or process and the operator who operates it. Thanks to HMI, the person responsible for the implementation of production tasks can influence and control the process.",
+                "text": "As an industrial automation specialist, I also dealt with the creation of visualizations for operator panels. My task was to create an interface that would allow the operator to control the machine or production line. I created visualization in both the Tia Portal and Automation Studio environments.",
+                "source": "https://www.astor.com.pl/poradnikautomatyka/wszystko-o-hmi-co-automatyk-powinien-wiedziec/"
+            },
+            "embedded": {
+                "title": "Embedded systems",
+                "close": "close",
+                "intro": "An embedded system is a computer system consisting of appropriately selected hardware and software components, often designed for a specific software application. It is responsible for the performance of its functions and affects the way of communication with the user.",
+                "text": "Already during the technical school, I became interested in widely understood electronics and DIY. As a hobby, I sometimes program mictrocontrollers and small control systems for my own use based on Raspberry PI or Arduino.",
+                "source": "https://automatykab2b.pl/temat-miesiaca/39446-systemy-wbudowane"
+            },
+            "motion": {
+                "title": "Motion systems",
+                "close": "close",
+                "intro": "Drive technology refers to a discipline that generally relates to technical systems for generating motion through the transmission of force. Although the propulsion technology is based on the word 'propulsion', this term is not related to the transmission system known, for example, from cars. Rather, it is about driving and controlling the moving parts of machines and the set of parts that ensure this movement.",
+                "text": "As an industrial automation specialist in the automotive industry, I was involved in the creation of control systems consisting in some production lines of several dozen drives, these were mainly SEW servo drives programmed with the use of MotionStudio.",
+                "source": "https://www.igus.pl/info/drive-technology-drylin-drive-systems"
+            },
+            "scada": {
+                "title": "Supervisory Control And Data Acquisition",
+                "close": "close",
+                "intro": "SCADA stands for Supervisory Control And Data Acquisition, which we can literally translate as supervision and data acquisition. In fact, SCADA is an IT system supervising the course of the technological process, it is superior to the hardware layer (controllers, I / O modules) and performs the following tasks: Real-time data exchange with a PLC or I / O module, real-time information processing , displaying information on the screen in a human-readable form, maintaining a database in real time with technological information, alarm management and alarm signaling, preparation and generation of reports on the progress of the technological process and archiving of technological information.",
+                "text": "As an industrial automation specialist in the automotive industry, I was involved in the creation of scada systems visualization based on the WinCC program, such a system provided full visualization of the line operation, information about alarms and line downtimes, and line efficiency over time.",
+                "source": "https://iautomatyka.pl/co-to-jest-scada-i-co-daje-wizualizacja-procesow-przemyslowych/"
+            },
+            "safety": {
+                "title": "Safety systems",
+                "close": "close",
+                "intro": "Safety systems are a combination of reliable sensors and a flexible safety controller. They are particularly suitable for applications with high demands on human protection. These systems can be easily integrated into existing installations, and thanks to the included documentation and sample programs - they can be quickly put into operation.",
+                "text": "One of the key factors when working on a production line is employee safety. The task of industrial automation is not only to ensure the writing of a fully functioning program, but also the operation of safety sensors and safe control of actuators to ensure complete safety of people working on the line.",
+                "source": "https://www.sick.com/pl/pl/systemy-bezpieczenstwa-i-rozwiazania-w-zakresie-bezpieczenstwa/systemy-bezpieczenstwa/c/g449152"
+            },
+            "microcontroller": {
+                "title": "Microcontrollers",
+                "close": "close",
+                "intro": "The microcontroller is one of the most important devices in robotics. This tiny single-chip microcomputer, also known as an integrated microprocessor system, includes components such as RAM, CPU and various I / O circuits, as well as written ROM or Flash memory. The device is used directly to control electronic devices, which is of course of great importance in robotics.",
+                "text": "In my spare time I like to deal with programming microcontrollers for my own purposes (e.g. a self-propelled mobile robot), mainly based on systems such as Raspberry Pi and Arduino.",
+                "source": "https://botland.com.pl/blog/mikrokontroler-jak-to-dziala/"
+            }
         },
         "projects":{
             "header": "Projects",
