@@ -134,6 +134,9 @@ export const GlobalStyles = createGlobalStyle`
 .menu-item:hover {
     background-color: ${({ theme }) => theme.nav.DropdownColorHover};
   }
+.banner_wrapper{
+  background-color: ${({ theme }) => theme.nav.navListBackground};
+}
 //============ breadcrumbs =======
   .breadcrumbs .line-item{
     color: ${({ theme }) => theme.typedText.color};

@@ -1,6 +1,8 @@
 {
     "general": {
         "website": "kotlinskidev.pl",
+        "pageTitle": "\u2764 \ufe0f come back!",
+        "banner" : "The website is under construction. Some functionalities may not be available yet, if you have any questions, please contact me!",
         "titles": {
             "home": "Adrian Kotliński | FrontEnd Developer",
             "about": "About me | Adrian K. | FrontEnd Developer",

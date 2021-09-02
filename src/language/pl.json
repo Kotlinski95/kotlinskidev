@@ -1,6 +1,8 @@
 {
     "general": {
         "website": "kotlinskidev.pl",
+        "pageTitle": "\u2764 \ufe0f wróć do mnie!",
+        "banner" : "Strona jest w trakcie budowy. Niektóre funkcjonalności mogą być jeszcze niedostępne, w razie pytań zapraszam do kontaktu!",
         "titles": {
             "home": "Adrian Kotliński | FrontEnd Developer",
             "about": "O mnie | Adrian K. | FrontEnd Developer",
