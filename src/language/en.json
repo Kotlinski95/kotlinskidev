@@ -382,7 +382,13 @@
             "consent" : "*I accept ",
             "consent_and": " and ",
             "consent_regulamin" : "regulation",
-            "consent_privacy" : "privacy policy"
+            "consent_privacy" : "privacy policy",
+            "clues": {
+                "first_name": "The field should be at least 3 characters long",
+                "email": "The field should have the format appropriate for e-mails, e.g. john.smith@gmail.com",
+                "topic": "The field should be at least 3 characters long",
+                "message": "The field should be at least 3 characters long"
+            }
         },
         "stack":{
             "front_header": "Front-end developer stack",
