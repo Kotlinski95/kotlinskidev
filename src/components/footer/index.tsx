@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaFacebookSquare, FaLinkedin, FaAt, FaGithub, FaTwitterSquare } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import { handleTrackingEvent } from '../../analytics';
 import Loader from '../loader';
@@ -41,6 +41,9 @@ const Footer = () => {
                                 <span className='list-item'><CustomLink href="mailto:kotlinski95@gmail.com" title="mail" className="cursor_hover" onClick={() => {
                                     handleTrackingEvent("Email", "Mail clicked", { page: `${_store.getState().pageState.page}` });
                                 }}><FaAt /></CustomLink></span>
+                                <span className='list-item'><CustomLink href="https://twitter.com/AdiKotlinski" title="twitter" className="cursor_hover" onClick={() => {
+                                    handleTrackingEvent("Twitter", "Twitter clicked", { page: `${_store.getState().pageState.page}` });
+                                }}><FaTwitterSquare /></CustomLink></span>
                             </IconContext.Provider>
                         </li>
                     </ul>
