@@ -9,6 +9,7 @@ import { handleTrackingEvent } from '../../analytics'
 import { useEffect, useState } from 'react'
 import emailRegExp from '../../regExp/email'
 import Loader from '../loader'
+import { Regulations } from '../../docs';
 
 import {
   CryptoMailLink,
@@ -245,16 +246,58 @@ const ContactForm = () => {
         <form className="contact-form" onSubmit={sendEmail}>
           <input className="cursor_hover" type="hidden" name="contact_number" />
           <ComponentRevealShow width="80%" delay="0.3s"><label>{language.pages.contact.name}</label></ComponentRevealShow>
-          <div className="contact-form__inpt-wrapper"><ComponentRevealShow width="80%" delay="0.3s"><input className="cursor_hover form-field" type="text" name="from_name" placeholder={language.pages.contact.name_placeholder} required /><p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.first_name}</span></p></ComponentRevealShow></div>
+          <div className="contact-form__inpt-wrapper">
+            <ComponentRevealShow width="80%" delay="0.3s">
+              <input className="cursor_hover form-field"
+                type="text"
+                name="from_name"
+                placeholder={language.pages.contact.name_placeholder}
+                minLength={3}
+                maxLength={60}
+                required />
+              <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.first_name}</span></p>
+            </ComponentRevealShow>
+          </div>
           <ComponentRevealShow width="80%" delay="0.5s"><label>{language.pages.contact.email}</label></ComponentRevealShow>
-          <div className="contact-form__inpt-wrapper"><ComponentRevealShow width="80%" delay="0.5s"><input className="cursor_hover form-field" type="email" name="from_email" placeholder={language.pages.contact.email_placeholder} required /> <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.email}</span></p></ComponentRevealShow></div>
+          <div className="contact-form__inpt-wrapper">
+            <ComponentRevealShow width="80%" delay="0.5s">
+              <input className="cursor_hover form-field"
+                type="email" name="from_email"
+                minLength={3}
+                maxLength={60}
+                placeholder={language.pages.contact.email_placeholder}
+                required />
+              <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.email}</span></p>
+            </ComponentRevealShow>
+          </div>
           <ComponentRevealShow width="80%" delay="0.7s"><label>{language.pages.contact.subject}</label></ComponentRevealShow>
-          <div className="contact-form__inpt-wrapper"><ComponentRevealShow width="80%" delay="0.7s"><input className="cursor_hover form-field" type="text" name="subject" placeholder={language.pages.contact.subject_placeholder} required /> <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.topic}</span></p></ComponentRevealShow></div>
+          <div className="contact-form__inpt-wrapper">
+            <ComponentRevealShow width="80%" delay="0.7s">
+              <input className="cursor_hover form-field"
+                type="text"
+                name="subject"
+                minLength={3}
+                maxLength={100}
+                placeholder={language.pages.contact.subject_placeholder}
+                required />
+              <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.topic}</span></p>
+            </ComponentRevealShow>
+          </div>
           <ComponentRevealShow width="80%" delay="0.9s"><label>{language.pages.contact.message}</label></ComponentRevealShow>
-          <div className="contact-form__inpt-wrapper"><ComponentRevealShow width="80%" delay="0.9s"><textarea className="cursor_hover form-field" name="html_message" placeholder={language.pages.contact.message_placeholder} required /> <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.message}</span></p></ComponentRevealShow></div>
+          <div className="contact-form__inpt-wrapper">
+            <ComponentRevealShow width="80%" delay="0.9s">
+              <textarea className="cursor_hover form-field"
+                name="html_message"
+                minLength={3}
+                maxLength={1000}
+                placeholder={language.pages.contact.message_placeholder}
+                required />
+              <p className="input-clue__sign">&#10068;<span className="input-clue">{language.pages.contact.clues.message}</span></p>
+            </ComponentRevealShow>
+          </div>
           <div className="consent_wrapper">
             <ComponentRevealShow width="10%" delay="0.9s"><input className="cursor_hover" id="form-consent" type="checkbox" name="consent" placeholder={language.pages.contact.subject_placeholder} required /><span className="checkmark"></span> </ComponentRevealShow>
-            <ComponentRevealShow width="90%" delay="0.9s"><label className="consent-label" htmlFor="form-consent">{language.pages.contact.consent} <CustomLink href="/privacy">{language.pages.contact.consent_regulamin}</CustomLink>{language.pages.contact.consent_and}<CustomLink href="/privacy">{language.pages.contact.consent_privacy}</CustomLink></label></ComponentRevealShow>
+            <ComponentRevealShow width="90%" delay="0.9s"><label className="consent-label" htmlFor="form-consent">{language.pages.contact.consent} <CustomLink href={Regulations}>{language.pages.contact.consent_regulamin}</CustomLink>{language.pages.contact.consent_and}<CustomLink href="/privacy">{language.pages.contact.consent_privacy}</CustomLink></label></ComponentRevealShow>
           </div>
           {
             sending ?
