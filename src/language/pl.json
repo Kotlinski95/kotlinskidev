@@ -1,6 +1,8 @@
 {
     "general": {
         "website": "kotlinskidev.pl",
+        "pageTitle": "\u2764 \ufe0f wróć do mnie!",
+        "banner" : "Strona jest w trakcie budowy. Niektóre funkcjonalności mogą być jeszcze niedostępne, w razie pytań zapraszam do kontaktu!",
         "titles": {
             "home": "Adrian Kotliński | FrontEnd Developer",
             "about": "O mnie | Adrian K. | FrontEnd Developer",
@@ -380,7 +382,13 @@
             "consent" : "*Akceptuję ",
             "consent_and": " i ",
             "consent_regulamin" : "regulamin",
-            "consent_privacy" : "politykę prywatności"
+            "consent_privacy" : "politykę prywatności",
+            "clues": {
+                "first_name": "Pole powinno mieć długość minimum 3 znaków",
+                "email": "Pole powinno mieć format właściwy dla maili np. jan.kowalski@gmail.com",
+                "topic": "Pole powinno mieć długość minimum 3 znaków",
+                "message": "Pole powinno mieć długość minimum 3 znaków"
+            }
         },
         "stack":{
             "front_header": "Umiejętności Front-end developera",
@@ -595,7 +603,7 @@
                 },
                 "links": {
                     "github": "https://github.com/CodersCamp2020-JoaoSebastiao-Team/coders-chess",
-                    "live": "https://coders-chess.herokuapp.com/"
+                    "live": "http://coders-chess.herokuapp.com/"
                 },
                 "details": {
                    "intro": "Internetowe szachy Coders-chess to kolejny projekt wykonany w ramach kursu Coders-Camp, tym razem jako uczestnicy za zadanie mieliśmy stworzyć gre przeglądarkową opartą na TypeScript",
@@ -753,7 +761,7 @@
                     "header": "Easy Coder",
                     "text": "W grudniu 2020 roku podjąłem pierwszą pracę jako junior Front-End Developer w Easy Coder Piotr Mirosz, była to pierwsza okazja na zapoznanie się z pracą jako web developer. Przez następne 4 miesiące pracowałem m.in przy projektach e-commerce w Shopify, współtworzyłem aplikacje internetowe w React i Next JS.",
                     "text_ace": "Aktualnie firma rozpoznawalna jest pod nazwą ACE Agency. W kwietniu 2021 roku zostałem przeniesiony z ACE Agency do Sobre Software House",
-                    "link": "https://www.aceagency.com/",
+                    "link": "https://ace-agency.co/",
                     "link_label": "Więcej na temat ACE Agency"
                 }
             },
@@ -865,5 +873,9 @@
                 }
             }
         }
+    },
+    "contact_popup": {
+        "title": "Cześć",
+        "text": "Zapraszam do kontaktu:"
     }
 }

@@ -134,6 +134,9 @@ export const GlobalStyles = createGlobalStyle`
 .menu-item:hover {
     background-color: ${({ theme }) => theme.nav.DropdownColorHover};
   }
+.banner_wrapper{
+  background-color: ${({ theme }) => theme.nav.navListBackground};
+}
 //============ breadcrumbs =======
   .breadcrumbs .line-item{
     color: ${({ theme }) => theme.typedText.color};
@@ -320,5 +323,8 @@ textarea::placeholder{
 .main-services{
   background: ${({ theme }) => theme.services.background};
 }
-
+// ================= Contact popup ===============
+.contact-popup__content{
+  background: ${({ theme }) => theme.body};
+}
 `;

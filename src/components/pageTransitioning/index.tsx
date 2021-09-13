@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { motion } from "framer-motion";
 
-const transition = { duration: 0.7, ease: "easeInOut" };
+const transition = { duration: 1.3, ease: "easeInOut" };
 const variants = {
     initial: {
         y: 0,
-        opacity: 1,
+        opacity: 0.9,
         transition: transition
     },
     initialFirst: {
         y: 0,
-        opacity: 1,
+        opacity: 0.9,
         delay: 1,
         transition: transition
     },
