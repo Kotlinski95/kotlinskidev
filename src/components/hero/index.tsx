@@ -30,8 +30,7 @@ const Hero = (props) => {
           <Suspense fallback={<Loader/>}>
             <ContactComponent />
           </Suspense>
-          <HorizontalSection />
-
+          {/* <HorizontalSection /> */}
         </div>
       );
 };
