@@ -241,7 +241,7 @@ const ContactForm = () => {
   return (
     <>
       <div className="contact_form-wrapper">
-        <TextRevealVertical ><h2 className="projects-hello">{language.pages.contact.title}</h2></TextRevealVertical>
+        <TextRevealVertical ><h2 className="contact-hello">{language.pages.contact.title}</h2></TextRevealVertical>
         <TextRevealHorizontal ><h2>{language.pages.contact.header}</h2></TextRevealHorizontal>
         <form className="contact-form" onSubmit={sendEmail}>
           <input className="cursor_hover" type="hidden" name="contact_number" />

@@ -6,7 +6,7 @@ import AnimatedArrow from '../../components/animatedArrow'
 import Footer from '../../components/footer'
 import { TextRevealVertical, TextRevealHorizontal } from '../../components/contentReveal'
 import PageTransitioning from '../../components/pageTransitioning/index'
-import {useEffect} from 'react';
+import { useEffect } from 'react';
 
 const FrontEndDevelopmentPage = (props) => {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const FrontEndDevelopmentPage = (props) => {
             <TextRevealVertical><h1 className="aboutme_title">{language.pages.aboutme.front.header}</h1></TextRevealVertical>
             <TextRevealHorizontal><h3 className="aboutme_text">{language.pages.aboutme.front.text}</h3></TextRevealHorizontal>
             <TextRevealHorizontal><AnimatedArrow text={language.pages.aboutme.front.back_to_home} justify="flex-start" textSize="28px" top="auto" bottom="0px" link="/aboutme" /></TextRevealHorizontal>
-            <TextRevealVertical><h2 className="aboutme_title">{language.pages.aboutme.front.sobre.header}</h2></TextRevealVertical>
+            <TextRevealVertical><h2 className="aboutme_title" id="my-sticky-element">{language.pages.aboutme.front.sobre.header}</h2></TextRevealVertical>
             <TextRevealHorizontal><h4 className="aboutme_text">{language.pages.aboutme.front.sobre.text}</h4></TextRevealHorizontal>
             <TextRevealHorizontal><AnimatedArrow text={language.pages.aboutme.front.sobre.link_label} justify="flex-start" textSize="28px" top="auto" bottom="0px" href={language.pages.aboutme.front.sobre.link} /></TextRevealHorizontal>
             <TextRevealVertical><h2 className="aboutme_title">{language.pages.aboutme.front.easy_code.header}</h2></TextRevealVertical>
