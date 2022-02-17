@@ -17,8 +17,8 @@
     "static/js/5.b7b8e4b8.chunk.js": "/kotlinskidev/static/js/5.b7b8e4b8.chunk.js",
     "static/js/5.b7b8e4b8.chunk.js.map": "/kotlinskidev/static/js/5.b7b8e4b8.chunk.js.map",
     "main.css": "/kotlinskidev/static/css/main.d1b9ecd8.chunk.css",
-    "main.js": "/kotlinskidev/static/js/main.107a3949.chunk.js",
-    "main.js.map": "/kotlinskidev/static/js/main.107a3949.chunk.js.map",
+    "main.js": "/kotlinskidev/static/js/main.baaacd03.chunk.js",
+    "main.js.map": "/kotlinskidev/static/js/main.baaacd03.chunk.js.map",
     "runtime-main.js": "/kotlinskidev/static/js/runtime-main.67917671.js",
     "runtime-main.js.map": "/kotlinskidev/static/js/runtime-main.67917671.js.map",
     "static/js/8.9594eb10.chunk.js": "/kotlinskidev/static/js/8.9594eb10.chunk.js",
@@ -262,6 +262,6 @@
     "static/js/runtime-main.67917671.js",
     "static/js/8.9594eb10.chunk.js",
     "static/css/main.d1b9ecd8.chunk.css",
-    "static/js/main.107a3949.chunk.js"
+    "static/js/main.baaacd03.chunk.js"
   ]
 }
