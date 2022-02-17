@@ -84,6 +84,9 @@ function App() {
     if (!location.pathname.includes('myprofile')) {
       document.querySelector("body")!.scrollTo(0, 0);
     }
+    if (location.pathname.includes('kotlinskidev')) {
+      location.pathname = "/";
+    }
   }, [location])
 
   React.useEffect(() => {
