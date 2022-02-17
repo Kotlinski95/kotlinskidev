@@ -1,0 +1,2 @@
+(this.webpackJsonpkotlinskidev=this.webpackJsonpkotlinskidev||[]).push([[33],{271:function(t,e,n){},298:function(t,e,n){"use strict";n.r(e);n(271);var s=n(211),c=n(2);e.default=function(){return Object(c.jsx)("div",{className:"hero-contact-wrapper",children:Object(c.jsx)(s.a,{})})}}}]);
+//# sourceMappingURL=33.828324d5.chunk.js.map
