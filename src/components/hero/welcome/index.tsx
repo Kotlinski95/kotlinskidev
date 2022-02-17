@@ -6,6 +6,7 @@ import SvgHeroBackgroundRight from '../../svgHeroBackgroundRight'
 import SvgHeroBackground from '../../svgHero'
 
 const WelcomeComponent = (props) => {
+
     const [show, setShow] = useState(false);
     const [showScroll, setShowScroll] = useState("none");
     const { language } = props;

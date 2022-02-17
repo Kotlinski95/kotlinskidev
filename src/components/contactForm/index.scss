@@ -71,6 +71,52 @@
         opacity: 0.5;
     }
 
+    .contact-form__inpt-wrapper{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .input-clue{
+            position: absolute;
+            right: calc(10% + 7px);
+            bottom: 25px;
+            min-width: 125px;
+            min-height: 50px;
+            padding: 10px;
+            background-color: #364a43;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+            transition: opacity 1s;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .input-clue__sign{
+        content: "\2754";
+        font-size: 22px;
+        line-height: 25px;
+        position: absolute;
+        right: calc(10% + 7px);
+        top: 0px;
+        width: 25px;
+        height: 25px;
+        margin: 15px 0;
+    }
+
+    .input-clue__sign:hover{
+        cursor: pointer;
+        .input-clue{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     .contact-form .field-error {
         border: 2px solid red;
     }
@@ -108,7 +154,11 @@
         background: linear-gradient(180deg, #0d2c24, #69cf9c);
     }
     .form-field:focus{
-        box-shadow: 0 0px 40px rgb(105 207 156 / 60%);
+        box-shadow: inset 0 0px 20px rgb(105 207 156 / 60%);
+    }
+    .form-field{
+        padding-right: 35px;
+        position: relative;
     }
 
     .consent_wrapper {
@@ -128,7 +178,7 @@
             width: 30px;
             height: 30px;
             position: relative;
-            box-shadow: 0 0px 35px rgb(105 207 156 / 60%);
+            box-shadow: inset 0 0px 35px rgb(105 207 156 / 60%);
         }
 
         input[type="checkbox"]:hover,
@@ -144,6 +194,7 @@
             width: 30px;
             height: 30px;
             background: #0d2c24;
+            box-shadow: inset 0 0px 10px rgb(105 207 156 / 60%);
         }
 
         input[type="checkbox"]:checked::after {
@@ -189,6 +240,20 @@
         background-color: transparent;
     }
 }
+
+.contact-hello {
+    font-size: 102px;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 60px;
+    }
+    margin: 15px auto;
+    font-family: 'Times New Roman', serif;
+  }
+  .contact-hello::after {
+    content: '.';
+    color: rgb(30, 229, 255);
+  }
 
 @keyframes btnAnimation {
     0% {

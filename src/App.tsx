@@ -22,7 +22,10 @@ import { setMobile } from './reducers/state';
 import { useReactPWAInstall } from "react-pwa-install";
 import myLogo from "./assets/icons/logo192.png";
 import TransitionModal from './components/transitionModal';
-import Loader from './components/loader'
+import Loader from './components/loader';
+import ScrollToTop from './components/scrollToTop';
+import Banner from './components/banner';
+import ContactPopup from './components/contactPopup'
 
 import MyProfilePage from './pages/myprofile/myprofile';
 import MyProfileContactPage from './pages/myprofile/profileContact';
@@ -82,6 +85,27 @@ function App() {
       document.querySelector("body")!.scrollTo(0, 0);
     }
   }, [location])
+
+  React.useEffect(() => {
+    let pageTitle;
+    let interval;
+    window.onblur = function () {
+      pageTitle = document.title;
+      interval = setInterval(()=>{
+        if (pageTitle === document.title){
+          document.title = language.general.pageTitle; 
+        }
+        else{
+          document.title = pageTitle;
+        }
+      },1500)
+    }
+    window.onfocus = function () {
+      clearInterval(interval);
+      document.title = pageTitle;
+    }
+  }, [])
+
 
   switch (actualTheme) {
     case "Light":
@@ -184,9 +208,13 @@ function App() {
                 } */}
                 <RouteChangeTracker />
                 <TransitionModal open={openPWApopup} handleClose={handleInstallPWA} handleClosePopup={handleClosePWA} title="KotlinskiDEV PWA Application" text="Install my application to get better experience using PWA" buttonText="Install"/>
+
                 <Nav />
+                <Banner />
                 <Suspense fallback={<Loader />}>
                 <div className="main">
+                  <ContactPopup />
+                  <ScrollToTop />
                   <Switch location={location} key={location.pathname}>
                     <Route exact path="/">
                       <HomePage {...routingProps} title={language.general.titles.home}/>
@@ -284,7 +312,7 @@ function App() {
               </>
             )
               : (
-                <LoadingScreen />
+                <Loader />
               )
 
           }
